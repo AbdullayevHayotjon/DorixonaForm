@@ -33,6 +33,7 @@
             btExit = new Button();
             btDeletePill = new Button();
             btSellPill = new Button();
+            btUpdatePill = new Button();
             SuspendLayout();
             // 
             // btAddPill
@@ -50,7 +51,7 @@
             // 
             btSettings.BackColor = Color.LightSkyBlue;
             btSettings.Font = new Font("Trebuchet MS", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btSettings.Location = new Point(441, 500);
+            btSettings.Location = new Point(441, 584);
             btSettings.Name = "btSettings";
             btSettings.Size = new Size(600, 60);
             btSettings.TabIndex = 18;
@@ -61,7 +62,7 @@
             // 
             btExit.BackColor = Color.LightSkyBlue;
             btExit.Font = new Font("Trebuchet MS", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btExit.Location = new Point(441, 581);
+            btExit.Location = new Point(441, 664);
             btExit.Name = "btExit";
             btExit.Size = new Size(600, 60);
             btExit.TabIndex = 17;
@@ -91,12 +92,24 @@
             btSellPill.Text = "Dori sotish";
             btSellPill.UseVisualStyleBackColor = false;
             // 
+            // btUpdatePill
+            // 
+            btUpdatePill.BackColor = Color.LightSkyBlue;
+            btUpdatePill.Font = new Font("Trebuchet MS", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btUpdatePill.Location = new Point(441, 507);
+            btUpdatePill.Name = "btUpdatePill";
+            btUpdatePill.Size = new Size(600, 60);
+            btUpdatePill.TabIndex = 20;
+            btUpdatePill.Text = "Dori yangilash";
+            btUpdatePill.UseVisualStyleBackColor = false;
+            // 
             // SalesmanForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightCyan;
             ClientSize = new Size(1482, 903);
+            Controls.Add(btUpdatePill);
             Controls.Add(btAddPill);
             Controls.Add(btSettings);
             Controls.Add(btExit);
@@ -114,5 +127,6 @@
         private Button btExit;
         private Button btDeletePill;
         private Button btSellPill;
+        private Button btUpdatePill;
     }
 }
