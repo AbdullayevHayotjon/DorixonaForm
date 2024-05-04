@@ -46,6 +46,7 @@
             btAddPill.TabIndex = 19;
             btAddPill.Text = "Dori qo'shish";
             btAddPill.UseVisualStyleBackColor = false;
+            btAddPill.Click += btAddPill_Click;
             // 
             // btSettings
             // 

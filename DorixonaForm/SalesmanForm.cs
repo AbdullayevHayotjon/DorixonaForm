@@ -24,5 +24,10 @@ namespace DorixonaForm
             loginForm.StartPosition = FormStartPosition.CenterScreen;
             loginForm.Show();
         }
+
+        private void btAddPill_Click(object sender, EventArgs e)
+        {
+          
+        }
     }
 }
