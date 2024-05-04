@@ -49,52 +49,66 @@ namespace DorixonaForm
 
         private void btNewLogPass_Click(object sender, EventArgs e)
         {
-            if (txSmsPassword.Text == SmsPassword.ToString())
+            if (txPhoneNumber.Text.Length > 0)
             {
-                int sanoq = 0;
-                foreach (Employe employe in functions.employeList)
+                if (txSmsPassword.Text == SmsPassword.ToString())
                 {
-                    if (employe.Login == txNewLogin.Text)
-                    {
-                        sanoq = 1;
-                    }
-                }
-                if (sanoq == 0)
-                {
-                    StreamWriter streamWriter = new StreamWriter(functions.EmployesListPath);
-                    int i = 1;
+                    int sanoq = 0;
                     foreach (Employe employe in functions.employeList)
                     {
-                        if (employe.PhoneNumber == txPhoneNumber.Text)
+                        if (employe.Login == txNewLogin.Text)
                         {
-                            sanoq = 2;
-                            employe.Login = txNewLogin.Text;
-                            employe.Password = txNewPassword.Text;
+                            sanoq = 1;
                         }
-                        streamWriter.WriteLine(i++.ToString() + "," + employe.FIO + "," + employe.Login + "," + employe.Password + "," + employe.PhoneNumber + "," + employe.EmployeType);
                     }
-                    streamWriter.Close();
-                    if (sanoq == 2)
+                    if (txNewLogin.Text.Length > 0 || txNewPassword.Text.Length > 0)
                     {
-                        MessageBox.Show($"Login va parol o'zgartirildi", "Muvaffaqqiyatli!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Hide();
-                        LoginForm loginForm = new LoginForm();
-                        loginForm.StartPosition = FormStartPosition.CenterScreen;
-                        loginForm.Show();
+                        if (sanoq == 0)
+                        {
+                            StreamWriter streamWriter = new StreamWriter(functions.EmployesListPath);
+                            int i = 1;
+                            foreach (Employe employe in functions.employeList)
+                            {
+                                if (employe.PhoneNumber == txPhoneNumber.Text)
+                                {
+                                    sanoq = 2;
+                                    employe.Login = txNewLogin.Text;
+                                    employe.Password = txNewPassword.Text;
+                                }
+                                streamWriter.WriteLine(i++.ToString() + "," + employe.FIO + "," + employe.Login + "," + employe.Password + "," + employe.PhoneNumber + "," + employe.EmployeType);
+                            }
+                            streamWriter.Close();
+                            if (sanoq == 2)
+                            {
+                                MessageBox.Show($"Login va parol o'zgartirildi", "Muvaffaqqiyatli!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Hide();
+                                LoginForm loginForm = new LoginForm();
+                                loginForm.StartPosition = FormStartPosition.CenterScreen;
+                                loginForm.Show();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Telefon raqamingiz noto'g'ri", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Bunday login oldindan mavjud, Iltimos boshqa kiriting", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Telefon raqamingiz noto'g'ri", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Bo'sh qiymat berish mumkin emas", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Bunday login oldindan mavjud, Iltimos boshqa kiriting", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Tasdiqlash kodi noto'g'ri", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Tasdiqlash kodi noto'g'ri", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Telefon raqamingizni kiritmadingiz", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
