@@ -34,6 +34,7 @@
             btDeletePill = new Button();
             btSellPill = new Button();
             btUpdatePill = new Button();
+            btPillList = new Button();
             SuspendLayout();
             // 
             // btAddPill
@@ -52,7 +53,7 @@
             // 
             btSettings.BackColor = Color.LightSkyBlue;
             btSettings.Font = new Font("Trebuchet MS", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btSettings.Location = new Point(441, 584);
+            btSettings.Location = new Point(441, 659);
             btSettings.Name = "btSettings";
             btSettings.Size = new Size(600, 60);
             btSettings.TabIndex = 18;
@@ -64,7 +65,7 @@
             // 
             btExit.BackColor = Color.LightSkyBlue;
             btExit.Font = new Font("Trebuchet MS", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btExit.Location = new Point(441, 664);
+            btExit.Location = new Point(441, 737);
             btExit.Name = "btExit";
             btExit.Size = new Size(600, 60);
             btExit.TabIndex = 17;
@@ -99,12 +100,24 @@
             // 
             btUpdatePill.BackColor = Color.LightSkyBlue;
             btUpdatePill.Font = new Font("Trebuchet MS", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btUpdatePill.Location = new Point(441, 507);
+            btUpdatePill.Location = new Point(441, 502);
             btUpdatePill.Name = "btUpdatePill";
             btUpdatePill.Size = new Size(600, 60);
             btUpdatePill.TabIndex = 20;
             btUpdatePill.Text = "Dori yangilash";
             btUpdatePill.UseVisualStyleBackColor = false;
+            // 
+            // btPillList
+            // 
+            btPillList.BackColor = Color.LightSkyBlue;
+            btPillList.Font = new Font("Trebuchet MS", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btPillList.Location = new Point(441, 581);
+            btPillList.Name = "btPillList";
+            btPillList.Size = new Size(600, 60);
+            btPillList.TabIndex = 21;
+            btPillList.Text = "Dorilar Royxati";
+            btPillList.UseVisualStyleBackColor = false;
+            btPillList.Click += btPillList_Click;
             // 
             // SalesmanForm
             // 
@@ -112,6 +125,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightCyan;
             ClientSize = new Size(1482, 903);
+            Controls.Add(btPillList);
             Controls.Add(btUpdatePill);
             Controls.Add(btAddPill);
             Controls.Add(btSettings);
@@ -131,5 +145,6 @@
         private Button btDeletePill;
         private Button btSellPill;
         private Button btUpdatePill;
+        private Button btPillList;
     }
 }

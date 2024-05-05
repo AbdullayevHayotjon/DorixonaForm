@@ -28,7 +28,7 @@ namespace DorixonaForm
             string path = @"C:\DorixonaForm\DorixonaForm\.txt files\AllPillList.txt";
             string[] Id = File.ReadAllLines(path);
             string ReadPath = File.ReadAllText(path);
-            if(txName.Text.Length > 0 && txPrice.Text.Length>0 && txQuantity.Text.Length > 0)
+            if (txName.Text.Length > 0 && txPrice.Text.Length > 0 && txQuantity.Text.Length > 0)
             {
                 if (ReadPath.Contains(txName.Text))
                 {
@@ -36,11 +36,11 @@ namespace DorixonaForm
                 }
                 else
                 {
-                File.AppendAllText(path,Id.Length.ToString()
-                                               +","+txName.Text
-                                               +","+txPrice.Text
-                                               +","+txQuantity.Text
-                                               +"\n");
+                    File.AppendAllText(path, Id.Length.ToString()
+                                                   + "," + txName.Text
+                                                   + "," + txPrice.Text
+                                                   + "," + txQuantity.Text
+                                                   + "\n");
                     MessageBox.Show("Dori muvaffaqiyatli qoshildi", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
@@ -49,6 +49,13 @@ namespace DorixonaForm
             {
                 MessageBox.Show("Malumotlarni toliq kiriting!", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btOrqaga_Click(object sender, EventArgs e)
+        {
+            SalesmanForm salesmanForm = new SalesmanForm();
+            salesmanForm.Show();
+            this.Hide();
         }
     }
 }

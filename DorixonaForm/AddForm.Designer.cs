@@ -35,6 +35,7 @@
             txPrice = new TextBox();
             txQuantity = new TextBox();
             btAdd = new Button();
+            btOrqaga = new Button();
             SuspendLayout();
             // 
             // lbName
@@ -101,13 +102,25 @@
             // 
             btAdd.BackColor = Color.LightSkyBlue;
             btAdd.Font = new Font("Trebuchet MS", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btAdd.Location = new Point(279, 432);
+            btAdd.Location = new Point(491, 443);
             btAdd.Name = "btAdd";
-            btAdd.Size = new Size(402, 60);
+            btAdd.Size = new Size(314, 60);
             btAdd.TabIndex = 19;
             btAdd.Text = "Add";
             btAdd.UseVisualStyleBackColor = false;
             btAdd.Click += btAdd_Click;
+            // 
+            // btOrqaga
+            // 
+            btOrqaga.BackColor = Color.LightSkyBlue;
+            btOrqaga.Font = new Font("Trebuchet MS", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btOrqaga.Location = new Point(98, 443);
+            btOrqaga.Name = "btOrqaga";
+            btOrqaga.Size = new Size(270, 60);
+            btOrqaga.TabIndex = 20;
+            btOrqaga.Text = "Orqaga";
+            btOrqaga.UseVisualStyleBackColor = false;
+            btOrqaga.Click += btOrqaga_Click;
             // 
             // AddForm
             // 
@@ -115,6 +128,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightCyan;
             ClientSize = new Size(951, 573);
+            Controls.Add(btOrqaga);
             Controls.Add(btAdd);
             Controls.Add(txQuantity);
             Controls.Add(txName);
@@ -138,5 +152,6 @@
         private TextBox txPrice;
         private TextBox txQuantity;
         private Button btAdd;
+        private Button btOrqaga;
     }
 }

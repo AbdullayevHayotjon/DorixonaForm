@@ -41,5 +41,12 @@ namespace DorixonaForm
         {
 
         }
+
+        private void btPillList_Click(object sender, EventArgs e)
+        {
+            PillListForm pillForm = new PillListForm();
+            pillForm.Show();
+            this.Hide();
+        }
     }
 }
