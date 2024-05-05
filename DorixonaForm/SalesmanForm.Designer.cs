@@ -58,6 +58,7 @@
             btSettings.TabIndex = 18;
             btSettings.Text = "Sozlamalar";
             btSettings.UseVisualStyleBackColor = false;
+            btSettings.Click += btSettings_Click;
             // 
             // btExit
             // 
@@ -81,6 +82,7 @@
             btDeletePill.TabIndex = 16;
             btDeletePill.Text = "Dori o'chirish";
             btDeletePill.UseVisualStyleBackColor = false;
+            btDeletePill.Click += btDeletePill_Click;
             // 
             // btSellPill
             // 

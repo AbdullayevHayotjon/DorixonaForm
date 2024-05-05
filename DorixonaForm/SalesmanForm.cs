@@ -27,7 +27,19 @@ namespace DorixonaForm
 
         private void btAddPill_Click(object sender, EventArgs e)
         {
-          
+            AddForm addForm = new AddForm();
+            addForm.Show();
+            this.Hide();
+        }
+
+        private void btSettings_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btDeletePill_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

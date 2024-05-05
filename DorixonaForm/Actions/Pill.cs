@@ -8,6 +8,9 @@ namespace DorixonaForm.Actions
 {
     public class Pill
     {
-        public int Id {  get; set; }    
+        public int Id {  get; set; }   
+        public string Name { get; set; }
+        public string price {  get; set; }
+        public string quantity { get; set; }
     }
 }
