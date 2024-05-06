@@ -52,7 +52,7 @@
             btOrqaga.Name = "btOrqaga";
             btOrqaga.Size = new Size(270, 60);
             btOrqaga.TabIndex = 21;
-            btOrqaga.Text = "Orqaga";
+            btOrqaga.Text = "Back";
             btOrqaga.UseVisualStyleBackColor = false;
             btOrqaga.Click += btOrqaga_Click;
             // 

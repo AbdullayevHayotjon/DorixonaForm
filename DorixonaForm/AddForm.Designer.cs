@@ -102,7 +102,7 @@
             // 
             btAdd.BackColor = Color.LightSkyBlue;
             btAdd.Font = new Font("Trebuchet MS", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btAdd.Location = new Point(491, 443);
+            btAdd.Location = new Point(313, 439);
             btAdd.Name = "btAdd";
             btAdd.Size = new Size(314, 60);
             btAdd.TabIndex = 19;
@@ -113,12 +113,12 @@
             // btOrqaga
             // 
             btOrqaga.BackColor = Color.LightSkyBlue;
-            btOrqaga.Font = new Font("Trebuchet MS", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btOrqaga.Location = new Point(98, 443);
+            btOrqaga.Font = new Font("Trebuchet MS", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btOrqaga.Location = new Point(1, 1);
             btOrqaga.Name = "btOrqaga";
-            btOrqaga.Size = new Size(270, 60);
+            btOrqaga.Size = new Size(67, 32);
             btOrqaga.TabIndex = 20;
-            btOrqaga.Text = "Orqaga";
+            btOrqaga.Text = "Back";
             btOrqaga.UseVisualStyleBackColor = false;
             btOrqaga.Click += btOrqaga_Click;
             // 
