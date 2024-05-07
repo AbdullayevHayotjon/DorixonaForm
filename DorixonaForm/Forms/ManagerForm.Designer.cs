@@ -45,6 +45,7 @@
             btReports.TabIndex = 10;
             btReports.Text = "Hisobotlar";
             btReports.UseVisualStyleBackColor = false;
+            btReports.Click += btReports_Click;
             // 
             // btDeleteSalesman
             // 
@@ -56,6 +57,7 @@
             btDeleteSalesman.TabIndex = 11;
             btDeleteSalesman.Text = "Sotuvchi o'chirish";
             btDeleteSalesman.UseVisualStyleBackColor = false;
+            btDeleteSalesman.Click += btDeleteSalesman_Click;
             // 
             // btSettings
             // 
@@ -67,6 +69,7 @@
             btSettings.TabIndex = 13;
             btSettings.Text = "Sozlamalar";
             btSettings.UseVisualStyleBackColor = false;
+            btSettings.Click += btSettings_Click;
             // 
             // btAddSalesman
             // 
@@ -78,6 +81,7 @@
             btAddSalesman.TabIndex = 14;
             btAddSalesman.Text = "Sotuvchi qo'shish";
             btAddSalesman.UseVisualStyleBackColor = false;
+            btAddSalesman.Click += btAddSalesman_Click;
             // 
             // btExit
             // 
@@ -104,6 +108,7 @@
             Controls.Add(btReports);
             Name = "ManagerForm";
             Text = "ManagerForm";
+            Load += ManagerForm_Load;
             ResumeLayout(false);
         }
 

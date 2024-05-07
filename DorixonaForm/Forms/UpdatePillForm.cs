@@ -10,19 +10,18 @@ using System.Windows.Forms;
 
 namespace DorixonaForm.Forms
 {
-    public partial class ManagerForm : Form
+    public partial class UpdatePillForm : Form
     {
-        public ManagerForm()
+        public string NewLogin { get; set; }
+        public UpdatePillForm(string login)
         {
+            NewLogin = login;
             InitializeComponent();
         }
 
-        private void btExit_Click(object sender, EventArgs e)
+        private void UpdatePillForm_Load(object sender, EventArgs e)
         {
-            this.Hide();
-            LoginForm loginForm = new LoginForm();
-            loginForm.StartPosition = FormStartPosition.CenterScreen;
-            loginForm.Show();
+
         }
     }
 }

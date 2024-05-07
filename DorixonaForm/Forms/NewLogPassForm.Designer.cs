@@ -143,7 +143,6 @@
             txNewPassword.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
             txNewPassword.Location = new Point(780, 432);
             txNewPassword.Name = "txNewPassword";
-            txNewPassword.PasswordChar = '*';
             txNewPassword.Size = new Size(314, 48);
             txNewPassword.TabIndex = 23;
             // 

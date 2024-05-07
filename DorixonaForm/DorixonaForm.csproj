@@ -9,8 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include=".txt files\AllPillList.txt" />
+    <Content Include=".txt files\PillesList.txt" />
     <Content Include=".txt files\EmployesList.txt" />
+    <Content Include=".txt files\SellingPillesList.txt" />
   </ItemGroup>
 
   <ItemGroup>

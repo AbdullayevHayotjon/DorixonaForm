@@ -7,8 +7,10 @@ namespace DorixonaForm
     public partial class LoginForm : Form
     {
         Functions functions = new Functions();
-        public LoginForm()
+        public string NewLogin {  get; set; }
+        public LoginForm(string login)
         {
+            NewLogin = login;
             InitializeComponent();
         }
 
@@ -23,7 +25,7 @@ namespace DorixonaForm
                     if(employe.EmployeType == EmployeType.Manager.ToString())
                     {
                         this.Hide();
-                        ManagerForm manager = new ManagerForm();
+                        ManagerForm manager = new ManagerForm(txLogin.Text);
                         manager.StartPosition = FormStartPosition.CenterScreen;
                         manager.Show();
                         break;
@@ -31,7 +33,7 @@ namespace DorixonaForm
                     else
                     {
                         this.Hide();
-                        SalesmanForm salesmanForm = new SalesmanForm();
+                        SalesmanForm salesmanForm = new SalesmanForm(txLogin.Text);
                         salesmanForm.StartPosition = FormStartPosition.CenterScreen;
                         salesmanForm.Show();
                         break;
@@ -47,7 +49,7 @@ namespace DorixonaForm
         private void LkRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            NewLogPassForm newLogPassForm = new NewLogPassForm();
+            NewLogPassForm newLogPassForm = new NewLogPassForm(NewLogin);
             newLogPassForm.StartPosition = FormStartPosition.CenterScreen;
             newLogPassForm.Show();
         }

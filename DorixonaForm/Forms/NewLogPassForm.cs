@@ -16,8 +16,10 @@ namespace DorixonaForm
         Functions functions = new Functions();
         public Random random = new Random();
         public int SmsPassword { get; set; }
-        public NewLogPassForm()
+        public string NewLogin { get; set; }
+        public NewLogPassForm(string login)
         {
+            NewLogin = login;
             InitializeComponent();
             SmsPassword = random.Next(10000, 99999);
         }
@@ -25,7 +27,7 @@ namespace DorixonaForm
         private void btBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            LoginForm loginForm = new LoginForm();
+            LoginForm loginForm = new LoginForm(NewLogin);
             loginForm.StartPosition = FormStartPosition.CenterScreen;
             loginForm.Show();
         }
@@ -82,7 +84,7 @@ namespace DorixonaForm
                             {
                                 MessageBox.Show($"Login va parol o'zgartirildi", "Muvaffaqqiyatli!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Hide();
-                                LoginForm loginForm = new LoginForm();
+                                LoginForm loginForm = new LoginForm(NewLogin);
                                 loginForm.StartPosition = FormStartPosition.CenterScreen;
                                 loginForm.Show();
                             }
