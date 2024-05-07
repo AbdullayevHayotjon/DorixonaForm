@@ -1,7 +1,7 @@
 1,Deklofenak,25,3200
 2,Izofluran,30,6500
 3,Tramadol,35,2300
-4,Paratsetamol,40,5700
+4,Paratsetamol,35,5700
 5,Diklofenak,45,4500
 6,Tefestrol,50,2000
 7,Kukumazim,55,3000
@@ -36,5 +36,4 @@
 36,Diazepam,200,10000
 37,Alprazolam,205,7000
 38,Venlafaksin,210,5000
-39,Trimol,20,7400
-40,Taylol Hot,23,4600
+39,Taylol Hot,50,10200
