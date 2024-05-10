@@ -29,12 +29,8 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            btAddPill = new Button();
-            btSettings = new Button();
             btExit = new Button();
-            btDeletePill = new Button();
             btSellPill = new Button();
-            btUpdatePill = new Button();
             btSearch = new Button();
             label1 = new Label();
             txPillName = new TextBox();
@@ -42,46 +38,33 @@
             idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             nomiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             soniDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            Muddati = new DataGridViewTextBoxColumn();
             narxiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            pillBindingSource2 = new BindingSource(components);
             pillBindingSource1 = new BindingSource(components);
             pillBindingSource = new BindingSource(components);
             txPillCount = new TextBox();
             lbPillCount = new Label();
             btAddBox = new Button();
+            lbFIO = new Label();
+            lnklSettings = new LinkLabel();
+            lbPillsList = new Label();
+            lbPillName = new Label();
+            panel1 = new Panel();
+            button1 = new Button();
+            QoshilganSana = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dGWPills).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pillBindingSource2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pillBindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pillBindingSource).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // btAddPill
-            // 
-            btAddPill.BackColor = Color.LightSkyBlue;
-            btAddPill.Font = new Font("Trebuchet MS", 13.8F);
-            btAddPill.Location = new Point(23, 787);
-            btAddPill.Name = "btAddPill";
-            btAddPill.Size = new Size(160, 45);
-            btAddPill.TabIndex = 19;
-            btAddPill.Text = "Dori qo'shish";
-            btAddPill.UseVisualStyleBackColor = false;
-            btAddPill.Click += btAddPill_Click;
-            // 
-            // btSettings
-            // 
-            btSettings.BackColor = Color.LightSkyBlue;
-            btSettings.Font = new Font("Trebuchet MS", 18F);
-            btSettings.Location = new Point(1235, 28);
-            btSettings.Name = "btSettings";
-            btSettings.Size = new Size(213, 50);
-            btSettings.TabIndex = 18;
-            btSettings.Text = "Sozlamalar";
-            btSettings.UseVisualStyleBackColor = false;
-            btSettings.Click += btChangePassword_Click;
             // 
             // btExit
             // 
-            btExit.BackColor = Color.LightSkyBlue;
+            btExit.BackColor = Color.Silver;
             btExit.Font = new Font("Trebuchet MS", 18F);
-            btExit.Location = new Point(1284, 787);
+            btExit.Location = new Point(664, 815);
             btExit.Name = "btExit";
             btExit.Size = new Size(164, 50);
             btExit.TabIndex = 17;
@@ -89,49 +72,25 @@
             btExit.UseVisualStyleBackColor = false;
             btExit.Click += btExit_Click;
             // 
-            // btDeletePill
-            // 
-            btDeletePill.BackColor = Color.LightSkyBlue;
-            btDeletePill.Font = new Font("Trebuchet MS", 13.8F);
-            btDeletePill.Location = new Point(223, 787);
-            btDeletePill.Name = "btDeletePill";
-            btDeletePill.Size = new Size(172, 45);
-            btDeletePill.TabIndex = 16;
-            btDeletePill.Text = "Dori o'chirish";
-            btDeletePill.UseVisualStyleBackColor = false;
-            btDeletePill.Click += btDeletePill_Click;
-            // 
             // btSellPill
             // 
             btSellPill.BackColor = Color.LightSkyBlue;
-            btSellPill.Font = new Font("Trebuchet MS", 18F);
-            btSellPill.Location = new Point(683, 438);
+            btSellPill.Font = new Font("Trebuchet MS", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btSellPill.Location = new Point(49, 411);
             btSellPill.Name = "btSellPill";
-            btSellPill.Size = new Size(765, 50);
+            btSellPill.Size = new Size(779, 54);
             btSellPill.TabIndex = 15;
             btSellPill.Text = "Tasdiqlash";
             btSellPill.UseVisualStyleBackColor = false;
             btSellPill.Click += btSellPill_Click;
             // 
-            // btUpdatePill
-            // 
-            btUpdatePill.BackColor = Color.LightSkyBlue;
-            btUpdatePill.Font = new Font("Trebuchet MS", 13.8F);
-            btUpdatePill.Location = new Point(436, 787);
-            btUpdatePill.Name = "btUpdatePill";
-            btUpdatePill.Size = new Size(192, 45);
-            btUpdatePill.TabIndex = 20;
-            btUpdatePill.Text = "Dori yangilash";
-            btUpdatePill.UseVisualStyleBackColor = false;
-            btUpdatePill.Click += btUpdatePill_Click;
-            // 
             // btSearch
             // 
             btSearch.BackColor = Color.LightSkyBlue;
             btSearch.Font = new Font("Trebuchet MS", 18F);
-            btSearch.Location = new Point(951, 284);
+            btSearch.Location = new Point(686, 258);
             btSearch.Name = "btSearch";
-            btSearch.Size = new Size(142, 50);
+            btSearch.Size = new Size(142, 47);
             btSearch.TabIndex = 21;
             btSearch.Text = "Qidirish";
             btSearch.UseVisualStyleBackColor = false;
@@ -149,7 +108,7 @@
             // 
             txPillName.BackColor = Color.FromArgb(255, 255, 192);
             txPillName.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txPillName.Location = new Point(683, 286);
+            txPillName.Location = new Point(412, 256);
             txPillName.Name = "txPillName";
             txPillName.Size = new Size(243, 48);
             txPillName.TabIndex = 23;
@@ -158,13 +117,12 @@
             // 
             dGWPills.AutoGenerateColumns = false;
             dGWPills.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dGWPills.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, nomiDataGridViewTextBoxColumn, soniDataGridViewTextBoxColumn, narxiDataGridViewTextBoxColumn });
-            dGWPills.DataSource = pillBindingSource1;
-            dGWPills.Location = new Point(23, 43);
+            dGWPills.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, nomiDataGridViewTextBoxColumn, soniDataGridViewTextBoxColumn, Muddati, narxiDataGridViewTextBoxColumn, QoshilganSana });
+            dGWPills.DataSource = pillBindingSource2;
+            dGWPills.Location = new Point(999, 100);
             dGWPills.Name = "dGWPills";
-            dGWPills.ReadOnly = true;
             dGWPills.RowHeadersWidth = 80;
-            dGWPills.Size = new Size(605, 725);
+            dGWPills.Size = new Size(832, 913);
             dGWPills.TabIndex = 24;
             dGWPills.CellContentClick += dGWPills_CellContentClick;
             // 
@@ -174,7 +132,6 @@
             idDataGridViewTextBoxColumn.HeaderText = "Id";
             idDataGridViewTextBoxColumn.MinimumWidth = 6;
             idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            idDataGridViewTextBoxColumn.ReadOnly = true;
             idDataGridViewTextBoxColumn.Width = 125;
             // 
             // nomiDataGridViewTextBoxColumn
@@ -183,7 +140,6 @@
             nomiDataGridViewTextBoxColumn.HeaderText = "Nomi";
             nomiDataGridViewTextBoxColumn.MinimumWidth = 6;
             nomiDataGridViewTextBoxColumn.Name = "nomiDataGridViewTextBoxColumn";
-            nomiDataGridViewTextBoxColumn.ReadOnly = true;
             nomiDataGridViewTextBoxColumn.Width = 125;
             // 
             // soniDataGridViewTextBoxColumn
@@ -192,8 +148,15 @@
             soniDataGridViewTextBoxColumn.HeaderText = "Soni";
             soniDataGridViewTextBoxColumn.MinimumWidth = 6;
             soniDataGridViewTextBoxColumn.Name = "soniDataGridViewTextBoxColumn";
-            soniDataGridViewTextBoxColumn.ReadOnly = true;
             soniDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // Muddati
+            // 
+            Muddati.DataPropertyName = "Muddati";
+            Muddati.HeaderText = "Muddati";
+            Muddati.MinimumWidth = 6;
+            Muddati.Name = "Muddati";
+            Muddati.Width = 125;
             // 
             // narxiDataGridViewTextBoxColumn
             // 
@@ -201,8 +164,11 @@
             narxiDataGridViewTextBoxColumn.HeaderText = "Narxi";
             narxiDataGridViewTextBoxColumn.MinimumWidth = 6;
             narxiDataGridViewTextBoxColumn.Name = "narxiDataGridViewTextBoxColumn";
-            narxiDataGridViewTextBoxColumn.ReadOnly = true;
             narxiDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // pillBindingSource2
+            // 
+            pillBindingSource2.DataSource = typeof(Actions.Pill);
             // 
             // pillBindingSource1
             // 
@@ -216,16 +182,16 @@
             // 
             txPillCount.BackColor = Color.FromArgb(255, 255, 192);
             txPillCount.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txPillCount.Location = new Point(1025, 359);
+            txPillCount.Location = new Point(412, 333);
             txPillCount.Name = "txPillCount";
-            txPillCount.Size = new Size(131, 48);
+            txPillCount.Size = new Size(117, 48);
             txPillCount.TabIndex = 25;
             // 
             // lbPillCount
             // 
             lbPillCount.AutoSize = true;
             lbPillCount.Font = new Font("Trebuchet MS", 22.2F);
-            lbPillCount.Location = new Point(674, 357);
+            lbPillCount.Location = new Point(49, 331);
             lbPillCount.Name = "lbPillCount";
             lbPillCount.Size = new Size(341, 46);
             lbPillCount.TabIndex = 26;
@@ -233,9 +199,9 @@
             // 
             // btAddBox
             // 
-            btAddBox.BackColor = Color.LightSkyBlue;
+            btAddBox.BackColor = Color.FromArgb(128, 255, 128);
             btAddBox.Font = new Font("Trebuchet MS", 18F);
-            btAddBox.Location = new Point(1179, 357);
+            btAddBox.Location = new Point(559, 331);
             btAddBox.Name = "btAddBox";
             btAddBox.Size = new Size(269, 50);
             btAddBox.TabIndex = 27;
@@ -243,55 +209,135 @@
             btAddBox.UseVisualStyleBackColor = false;
             btAddBox.Click += btAddBox_Click_1;
             // 
+            // lbFIO
+            // 
+            lbFIO.AutoSize = true;
+            lbFIO.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            lbFIO.Location = new Point(12, 9);
+            lbFIO.Name = "lbFIO";
+            lbFIO.Size = new Size(61, 38);
+            lbFIO.TabIndex = 28;
+            lbFIO.Text = "FIO";
+            // 
+            // lnklSettings
+            // 
+            lnklSettings.AutoSize = true;
+            lnklSettings.Font = new Font("Segoe UI", 14F);
+            lnklSettings.Location = new Point(12, 47);
+            lnklSettings.Name = "lnklSettings";
+            lnklSettings.Size = new Size(129, 32);
+            lnklSettings.TabIndex = 29;
+            lnklSettings.TabStop = true;
+            lnklSettings.Text = "Sozlamalar";
+            lnklSettings.LinkClicked += lnklSettings_LinkClicked;
+            // 
+            // lbPillsList
+            // 
+            lbPillsList.AutoSize = true;
+            lbPillsList.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            lbPillsList.Location = new Point(1313, 47);
+            lbPillsList.Name = "lbPillsList";
+            lbPillsList.Size = new Size(218, 38);
+            lbPillsList.TabIndex = 30;
+            lbPillsList.Text = "Dorilar ro'yxati";
+            // 
+            // lbPillName
+            // 
+            lbPillName.AutoSize = true;
+            lbPillName.Font = new Font("Trebuchet MS", 22.2F);
+            lbPillName.Location = new Point(49, 256);
+            lbPillName.Name = "lbPillName";
+            lbPillName.Size = new Size(357, 46);
+            lbPillName.TabIndex = 31;
+            lbPillName.Text = "Dori nomini kiriting:";
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.LightCyan;
+            panel1.Controls.Add(lbPillName);
+            panel1.Controls.Add(btSellPill);
+            panel1.Controls.Add(btSearch);
+            panel1.Controls.Add(txPillName);
+            panel1.Controls.Add(txPillCount);
+            panel1.Controls.Add(btAddBox);
+            panel1.Controls.Add(lbPillCount);
+            panel1.Controls.Add(btExit);
+            panel1.Location = new Point(57, 100);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(876, 913);
+            panel1.TabIndex = 32;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(255, 255, 128);
+            button1.Font = new Font("Trebuchet MS", 17F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            button1.Location = new Point(999, 1032);
+            button1.Name = "button1";
+            button1.Size = new Size(832, 54);
+            button1.TabIndex = 32;
+            button1.Text = "Dorilar ro'yxatiga o'zgartirish kiritish";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // QoshilganSana
+            // 
+            QoshilganSana.DataPropertyName = "QoshilganSana";
+            QoshilganSana.HeaderText = "QoshilganSana";
+            QoshilganSana.MinimumWidth = 6;
+            QoshilganSana.Name = "QoshilganSana";
+            QoshilganSana.Width = 125;
+            // 
             // SalesmanForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightCyan;
-            ClientSize = new Size(1482, 903);
-            Controls.Add(btAddBox);
-            Controls.Add(lbPillCount);
-            Controls.Add(txPillCount);
+            BackColor = Color.LightSteelBlue;
+            ClientSize = new Size(1917, 1158);
+            Controls.Add(button1);
+            Controls.Add(panel1);
+            Controls.Add(lbPillsList);
+            Controls.Add(lnklSettings);
+            Controls.Add(lbFIO);
             Controls.Add(dGWPills);
-            Controls.Add(txPillName);
             Controls.Add(label1);
-            Controls.Add(btSearch);
-            Controls.Add(btUpdatePill);
-            Controls.Add(btAddPill);
-            Controls.Add(btSettings);
-            Controls.Add(btExit);
-            Controls.Add(btDeletePill);
-            Controls.Add(btSellPill);
             Name = "SalesmanForm";
             Text = "SalesmanForm";
             Load += SalesmanForm_Load;
             ((System.ComponentModel.ISupportInitialize)dGWPills).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pillBindingSource2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pillBindingSource1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pillBindingSource).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Button btAddPill;
         private Button btSettings;
         private Button btExit;
-        private Button btDeletePill;
         private Button btSellPill;
-        private Button btUpdatePill;
         private Button btSearch;
         private Label label1;
         private TextBox txPillName;
         private DataGridView dGWPills;
-        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn nomiDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn soniDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn narxiDataGridViewTextBoxColumn;
         private BindingSource pillBindingSource1;
         private BindingSource pillBindingSource;
         private TextBox txPillCount;
         private Label lbPillCount;
         private Button btAddBox;
+        private BindingSource pillBindingSource2;
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn nomiDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn soniDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn Muddati;
+        private DataGridViewTextBoxColumn narxiDataGridViewTextBoxColumn;
+        private Label lbFIO;
+        private LinkLabel lnklSettings;
+        private Label lbPillsList;
+        private Label lbPillName;
+        private Panel panel1;
+        private Button button1;
+        private DataGridViewTextBoxColumn QoshilganSana;
     }
 }

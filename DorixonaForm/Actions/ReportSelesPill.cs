@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace DorixonaForm.Actions
 {
-    public class Pill
+    public class ReportSelesPill
     {
         public int Id { get; set; }
+        public string FIO { get; set; }
         public string Nomi { get; set; }
         public int Soni { get; set; }
-        public int Muddati { get; set; }
+        public string SotilganVaqti { get; set; }
         public int Narxi { get; set; }
-        public string QoshilganSana { get; set; }
     }
 }

@@ -27,7 +27,7 @@ namespace DorixonaForm
         private void btBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            LoginForm loginForm = new LoginForm(NewLogin);
+            LoginForm loginForm = new LoginForm();
             loginForm.StartPosition = FormStartPosition.CenterScreen;
             loginForm.Show();
         }
@@ -39,8 +39,9 @@ namespace DorixonaForm
                 if (employeInformation.PhoneNumber == txPhoneNumber.Text)
                 {
                     sanoq = 1;
-                    Thread.Sleep(1000);
-                    MessageBox.Show($"Ushbu kodni hech kimga yubormang: {SmsPassword}", "dori.uz", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Thread.Sleep(2000);
+                    MessageBox.Show($"Ushbu kodni hech kimga yubormang: {SmsPassword}\nSizning loginingiz: {employeInformation.Login}", "dori.uz", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txPhoneNumber.ReadOnly = true;
                 }
             }
             if (sanoq == 0)
@@ -51,56 +52,53 @@ namespace DorixonaForm
 
         private void btNewLogPass_Click(object sender, EventArgs e)
         {
-            if (txPhoneNumber.Text.Length > 0)
+            if (functions.CheckNumber(txPhoneNumber.Text) && txPhoneNumber.Text.Length == 9)
             {
                 if (txSmsPassword.Text == SmsPassword.ToString())
                 {
-                    int sanoq = 0;
-                    foreach (Employe employe in functions.employeList)
+                    if (txNewPassword.Text.Length >= 4)
                     {
-                        if (employe.Login == txNewLogin.Text)
+                        if (functions.CheckProbel(txNewPassword.Text))
                         {
-                            sanoq = 1;
-                        }
-                    }
-                    if (txNewLogin.Text.Length > 0 || txNewPassword.Text.Length > 0)
-                    {
-                        if (sanoq == 0)
-                        {
+                            int sanoq = 0;
                             StreamWriter streamWriter = new StreamWriter(functions.EmployesListPath);
                             int i = 1;
                             foreach (Employe employe in functions.employeList)
                             {
                                 if (employe.PhoneNumber == txPhoneNumber.Text)
                                 {
-                                    sanoq = 2;
-                                    employe.Login = txNewLogin.Text;
+                                    StreamWriter streamWriter1 = new StreamWriter(functions.AllInformationsPath);
+                                    string Password = employe.Password;
+                                    int j = 1;
+                                    sanoq = 1;
                                     employe.Password = txNewPassword.Text;
+                                    foreach (AllInformations allInformations in functions.allInformations)
+                                    {
+                                        streamWriter1.WriteLine((j++) + "," + allInformations.FIO + "," + allInformations.ProcessType + "," + allInformations.Information + "," + allInformations.ProcessTime);
+                                    }
+                                    streamWriter1.WriteLine(j + "," + employe.FIO + "," + InformationType.ChangePassword + "," + $"Parol {Password} dan {employe.Password} ga o'zgartirildi," + DateTime.Now.ToString());
+                                    streamWriter1.Close();
                                 }
-                                streamWriter.WriteLine(i++.ToString() + "," + employe.FIO + "," + employe.Login + "," + employe.Password + "," + employe.PhoneNumber + "," + employe.EmployeType);
+                                streamWriter.WriteLine((i++) + "," + employe.FIO + "," + employe.Login + "," + employe.Password + "," + employe.PhoneNumber + "," + employe.EmployeType);
                             }
                             streamWriter.Close();
-                            if (sanoq == 2)
+                            if (sanoq == 1)
                             {
-                                MessageBox.Show($"Login va parol o'zgartirildi", "Muvaffaqqiyatli!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show($"Parol o'zgartirildi", "Muvaffaqqiyatli!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Hide();
-                                LoginForm loginForm = new LoginForm(NewLogin);
+                                LoginForm loginForm = new LoginForm();
                                 loginForm.StartPosition = FormStartPosition.CenterScreen;
                                 loginForm.Show();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Telefon raqamingiz noto'g'ri", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Bunday login oldindan mavjud, Iltimos boshqa kiriting", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Bunday qiymat berish mumkin emas", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Bo'sh qiymat berish mumkin emas", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Parol kamida 4 ta belgidan iborat bo'lishi lozim", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
@@ -110,7 +108,7 @@ namespace DorixonaForm
             }
             else
             {
-                MessageBox.Show("Telefon raqamingizni kiritmadingiz", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Telefon raqam bunday bo'lishi mumkin emas", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

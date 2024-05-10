@@ -36,19 +36,19 @@
             btBack = new Button();
             lb998 = new Label();
             btNewLogPass = new Button();
-            txNewLogin = new TextBox();
             txNewPassword = new TextBox();
             lbNewPassword = new Label();
-            lbNewLogin = new Label();
+            panel1 = new Panel();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // txPhoneNumber
             // 
             txPhoneNumber.BackColor = Color.FromArgb(255, 255, 192);
             txPhoneNumber.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txPhoneNumber.Location = new Point(929, 227);
+            txPhoneNumber.Location = new Point(686, 191);
             txPhoneNumber.Name = "txPhoneNumber";
-            txPhoneNumber.Size = new Size(165, 48);
+            txPhoneNumber.Size = new Size(256, 48);
             txPhoneNumber.TabIndex = 17;
             txPhoneNumber.Tag = "";
             // 
@@ -56,9 +56,9 @@
             // 
             txSmsPassword.BackColor = Color.FromArgb(255, 255, 192);
             txSmsPassword.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txSmsPassword.Location = new Point(672, 296);
+            txSmsPassword.Location = new Point(452, 274);
             txSmsPassword.Name = "txSmsPassword";
-            txSmsPassword.Size = new Size(204, 48);
+            txSmsPassword.Size = new Size(200, 48);
             txSmsPassword.TabIndex = 16;
             txSmsPassword.Tag = "";
             // 
@@ -66,7 +66,7 @@
             // 
             lbSmsPassword.AutoSize = true;
             lbSmsPassword.Font = new Font("Trebuchet MS", 22.2F);
-            lbSmsPassword.Location = new Point(335, 294);
+            lbSmsPassword.Location = new Point(83, 272);
             lbSmsPassword.Name = "lbSmsPassword";
             lbSmsPassword.Size = new Size(331, 46);
             lbSmsPassword.TabIndex = 14;
@@ -76,7 +76,7 @@
             // 
             lbPhoneNumber.AutoSize = true;
             lbPhoneNumber.Font = new Font("Trebuchet MS", 22.2F);
-            lbPhoneNumber.Location = new Point(335, 227);
+            lbPhoneNumber.Location = new Point(83, 193);
             lbPhoneNumber.Name = "lbPhoneNumber";
             lbPhoneNumber.Size = new Size(511, 46);
             lbPhoneNumber.TabIndex = 13;
@@ -86,11 +86,11 @@
             // 
             txConfirmation.BackColor = Color.LightSkyBlue;
             txConfirmation.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            txConfirmation.Location = new Point(903, 293);
+            txConfirmation.Location = new Point(686, 274);
             txConfirmation.Name = "txConfirmation";
-            txConfirmation.Size = new Size(191, 53);
+            txConfirmation.Size = new Size(256, 53);
             txConfirmation.TabIndex = 18;
-            txConfirmation.Text = "Tasdiqlash";
+            txConfirmation.Text = "Kod olish";
             txConfirmation.UseVisualStyleBackColor = false;
             txConfirmation.Click += txConfirmation_Click;
             // 
@@ -98,7 +98,7 @@
             // 
             btBack.BackColor = Color.Silver;
             btBack.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btBack.Location = new Point(845, 595);
+            btBack.Location = new Point(693, 746);
             btBack.Name = "btBack";
             btBack.Size = new Size(249, 53);
             btBack.TabIndex = 19;
@@ -110,7 +110,7 @@
             // 
             lb998.AutoSize = true;
             lb998.Font = new Font("Calibri Light", 22.2F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            lb998.Location = new Point(833, 228);
+            lb998.Location = new Point(585, 194);
             lb998.Name = "lb998";
             lb998.Size = new Size(95, 45);
             lb998.TabIndex = 20;
@@ -118,76 +118,65 @@
             // 
             // btNewLogPass
             // 
-            btNewLogPass.BackColor = Color.LightSkyBlue;
+            btNewLogPass.BackColor = Color.FromArgb(128, 255, 128);
             btNewLogPass.Font = new Font("Trebuchet MS", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btNewLogPass.Location = new Point(335, 508);
+            btNewLogPass.Location = new Point(83, 452);
             btNewLogPass.Name = "btNewLogPass";
-            btNewLogPass.Size = new Size(759, 60);
+            btNewLogPass.Size = new Size(859, 60);
             btNewLogPass.TabIndex = 15;
-            btNewLogPass.Text = "Tiklash";
+            btNewLogPass.Text = "Saqlash";
             btNewLogPass.UseVisualStyleBackColor = false;
             btNewLogPass.Click += btNewLogPass_Click;
-            // 
-            // txNewLogin
-            // 
-            txNewLogin.BackColor = Color.FromArgb(255, 255, 192);
-            txNewLogin.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txNewLogin.Location = new Point(780, 365);
-            txNewLogin.Name = "txNewLogin";
-            txNewLogin.Size = new Size(314, 48);
-            txNewLogin.TabIndex = 24;
             // 
             // txNewPassword
             // 
             txNewPassword.BackColor = Color.FromArgb(255, 255, 192);
             txNewPassword.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txNewPassword.Location = new Point(780, 432);
+            txNewPassword.Location = new Point(452, 363);
             txNewPassword.Name = "txNewPassword";
-            txNewPassword.Size = new Size(314, 48);
+            txNewPassword.Size = new Size(490, 48);
             txNewPassword.TabIndex = 23;
             // 
             // lbNewPassword
             // 
             lbNewPassword.AutoSize = true;
             lbNewPassword.Font = new Font("Trebuchet MS", 22.2F);
-            lbNewPassword.Location = new Point(335, 430);
+            lbNewPassword.Location = new Point(83, 361);
             lbNewPassword.Name = "lbNewPassword";
-            lbNewPassword.Size = new Size(458, 46);
+            lbNewPassword.Size = new Size(363, 46);
             lbNewPassword.TabIndex = 22;
-            lbNewPassword.Text = "Yangi parolingizni kiriting:";
+            lbNewPassword.Text = "Yangi parol yarating:";
             // 
-            // lbNewLogin
+            // panel1
             // 
-            lbNewLogin.AutoSize = true;
-            lbNewLogin.Font = new Font("Trebuchet MS", 22.2F);
-            lbNewLogin.Location = new Point(335, 363);
-            lbNewLogin.Name = "lbNewLogin";
-            lbNewLogin.Size = new Size(454, 46);
-            lbNewLogin.TabIndex = 21;
-            lbNewLogin.Text = "Yangi loginingizni kiriting:";
+            panel1.BackColor = Color.LightCyan;
+            panel1.Controls.Add(btNewLogPass);
+            panel1.Controls.Add(txNewPassword);
+            panel1.Controls.Add(lbPhoneNumber);
+            panel1.Controls.Add(lbNewPassword);
+            panel1.Controls.Add(lbSmsPassword);
+            panel1.Controls.Add(lb998);
+            panel1.Controls.Add(txSmsPassword);
+            panel1.Controls.Add(btBack);
+            panel1.Controls.Add(txPhoneNumber);
+            panel1.Controls.Add(txConfirmation);
+            panel1.Location = new Point(467, 147);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1016, 862);
+            panel1.TabIndex = 24;
             // 
             // NewLogPassForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightCyan;
-            ClientSize = new Size(1482, 903);
-            Controls.Add(txNewLogin);
-            Controls.Add(txNewPassword);
-            Controls.Add(lbNewPassword);
-            Controls.Add(lbNewLogin);
-            Controls.Add(lb998);
-            Controls.Add(btBack);
-            Controls.Add(txConfirmation);
-            Controls.Add(txPhoneNumber);
-            Controls.Add(txSmsPassword);
-            Controls.Add(btNewLogPass);
-            Controls.Add(lbSmsPassword);
-            Controls.Add(lbPhoneNumber);
+            BackColor = Color.LightSteelBlue;
+            ClientSize = new Size(1917, 1158);
+            Controls.Add(panel1);
             Name = "NewLogPassForm";
             Text = "NewLogPassForm";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -199,9 +188,8 @@
         private Button btBack;
         private Label lb998;
         private Button btNewLogPass;
-        private TextBox txNewLogin;
         private TextBox txNewPassword;
         private Label lbNewPassword;
-        private Label lbNewLogin;
+        private Panel panel1;
     }
 }

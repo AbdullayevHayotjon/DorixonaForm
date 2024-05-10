@@ -7,11 +7,11 @@ namespace DorixonaForm
     public partial class LoginForm : Form
     {
         Functions functions = new Functions();
-        public string NewLogin {  get; set; }
-        public LoginForm(string login)
+        public string NewLogin { get; set; }
+        public LoginForm()
         {
-            NewLogin = login;
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void btEnter_Click(object sender, EventArgs e)
@@ -22,7 +22,15 @@ namespace DorixonaForm
                 if (employe.Login == txLogin.Text && employe.Password == txPassword.Text)
                 {
                     sanoq = 1;
-                    if(employe.EmployeType == EmployeType.Manager.ToString())
+                    StreamWriter streamWriter1 = new StreamWriter(functions.AllInformationsPath);
+                    int j = 1;
+                    foreach (AllInformations allInformations in functions.allInformations)
+                    {
+                        streamWriter1.WriteLine((j++) + "," + allInformations.FIO + "," + allInformations.ProcessType + "," + allInformations.Information + "," + allInformations.ProcessTime);
+                    }
+                    streamWriter1.WriteLine(j + "," + employe.FIO + "," + InformationType.EmployeEnter + "," + "Profilga kirdi" + "," + DateTime.Now.ToString());
+                    streamWriter1.Close();
+                    if (employe.EmployeType == EmployeType.Manager.ToString())
                     {
                         this.Hide();
                         ManagerForm manager = new ManagerForm(txLogin.Text);
@@ -55,6 +63,11 @@ namespace DorixonaForm
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginForm_Load_1(object sender, EventArgs e)
         {
 
         }

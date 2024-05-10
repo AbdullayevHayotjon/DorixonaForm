@@ -8,6 +8,7 @@ namespace DorixonaForm.Actions
 {
     public interface IAction
     {
-
+        public bool CheckProbel(string str);
+        public bool CheckNumber(string str);
     }
 }
