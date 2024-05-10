@@ -1,3 +1,4 @@
 1,Taylol Hot,3,30600
 2,Paratsetamol,3,17100
 3,Jami,6,47700
+1,Jami,0,0

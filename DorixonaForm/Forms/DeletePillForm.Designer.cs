@@ -54,6 +54,7 @@
             txDeletePillName.Name = "txDeletePillName";
             txDeletePillName.Size = new Size(314, 48);
             txDeletePillName.TabIndex = 52;
+            txDeletePillName.TextChanged += txDeletePillName_TextChanged;
             // 
             // lbDeletePillName
             // 

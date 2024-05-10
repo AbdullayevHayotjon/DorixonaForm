@@ -1,39 +1,38 @@
 1,Deklofenak,25,3200
-2,Izofluran,30,6500
-3,Tramadol,35,2300
-4,Paratsetamol,35,5700
-5,Diklofenak,45,4500
-6,Tefestrol,50,2000
-7,Kukumazim,55,3000
-8,Kardioleks,60,4000
-9,Xolosas,65,81000
-10,Permetrin,70,80000
-11,Etanol,75,75000
-12,Asiklovir,80,73000
-13,Levofloksatsin,85,72000
-14,Siprofloksatsin,90,70000
-15,Ofloksatsin,95,53000
-16,Nitroksolin,100,51000
-17,Tetratsiklin,105,48000
-18,Sefazolin,110,43000
-19,Sefepim,115,44000
-20,Amikatsin,120,36000
-21,Natriy tiosulfati,125,24000
-22,Kalsiy glyukonat,130,23000
-23,Kalsiy xlorid,135,37000
-24,Tioktat kislotasi,140,34000
-25,Natriy gidrokarbonat,145,32000
-26,Natriy xlorid,150,46000
-27,Gidrokortizon,155,45000
-28,Kaliy xlorid,160,12500
-29,Magniy sulfati,165,32000
-30,Risperidon,170,17000
-31,Tioridazin,175,20000
-32,Sulpirid,180,40000
-33,Kvetiapin,185,30000
-34,Olanzapin,190,15000
-35,Tiaprid,195,12000
-36,Diazepam,200,10000
-37,Alprazolam,205,7000
-38,Venlafaksin,210,5000
-39,Taylol Hot,50,10200
+2,Tramadol,35,2300
+3,Paratsetamol,35,5700
+4,Diklofenak,45,4500
+5,Tefestrol,50,2000
+6,Kukumazim,55,3000
+7,Kardioleks,60,4000
+8,Xolosas,65,81000
+9,Permetrin,70,80000
+10,Etanol,75,75000
+11,Asiklovir,80,73000
+12,Levofloksatsin,85,72000
+13,Siprofloksatsin,90,70000
+14,Ofloksatsin,95,53000
+15,Nitroksolin,100,51000
+16,Tetratsiklin,105,48000
+17,Sefazolin,110,43000
+18,Sefepim,115,44000
+19,Amikatsin,120,36000
+20,Natriy tiosulfati,125,24000
+21,Kalsiy glyukonat,130,23000
+22,Kalsiy xlorid,135,37000
+23,Tioktat kislotasi,140,34000
+24,Natriy gidrokarbonat,145,32000
+25,Natriy xlorid,150,46000
+26,Gidrokortizon,155,45000
+27,Kaliy xlorid,160,12500
+28,Magniy sulfati,165,32000
+29,Risperidon,170,17000
+30,Tioridazin,175,20000
+31,Sulpirid,180,40000
+32,Kvetiapin,185,30000
+33,Olanzapin,190,15000
+34,Tiaprid,195,12000
+35,Diazepam,200,10000
+36,Alprazolam,205,7000
+37,Venlafaksin,210,5000
+38,Taylol Hot,50,10200

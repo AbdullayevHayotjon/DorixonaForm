@@ -36,30 +36,35 @@ namespace DorixonaForm.Forms
 
         private void btDeletePill_Click(object sender, EventArgs e)
         {
-            int sanoq = 0, i = 1;
+            int sonoq = 0, i = 1;
             StreamWriter streamWriter = new StreamWriter(functions.PillsListPath);
             foreach (Pill pill in functions.pillsList)
             {
-                if(txDeletePillName.Text.ToLower() == pill.Nomi.ToLower())
+                if (txDeletePillName.Text.ToLower() == pill.Nomi.ToLower())
                 {
-                    sanoq = 1;
+                    sonoq = 1;
                     continue;
                 }
                 streamWriter.WriteLine((i++) + "," + pill.Nomi + "," + pill.Soni + "," + pill.Narxi);
             }
-            streamWriter.Close();
-            if (sanoq == 1)
+                streamWriter.Close();
+            if(sonoq == 1)
             {
-                MessageBox.Show($"Dori o'chirildi", "Ma'lumot", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Dori o'chrildi","Ma'lumot",MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Hide();
                 SalesmanForm salesmanForm = new SalesmanForm(NewLogin);
-                salesmanForm.StartPosition = FormStartPosition.CenterScreen;
+                salesmanForm.StartPosition=FormStartPosition.CenterScreen;
                 salesmanForm.Show();
             }
             else
             {
-                MessageBox.Show("Bu dori mavjud emas", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine(MessageBox.Show("Bu dori Mavjud emas", "xatolik", MessageBoxButtons.OK, MessageBoxIcon.Error));
             }
+        }
+
+        private void txDeletePillName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
