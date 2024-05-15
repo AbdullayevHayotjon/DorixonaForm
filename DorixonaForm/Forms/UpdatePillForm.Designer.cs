@@ -43,13 +43,19 @@
             btBack = new Button();
             lbFIO = new Label();
             dataGridView1 = new DataGridView();
-            pillBindingSource = new BindingSource(components);
             idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             nomiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             soniDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             muddatiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             narxiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             qoshilganSanaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            pillBindingSource = new BindingSource(components);
+            lbPillName = new Label();
+            btSearch = new Button();
+            txPillName = new TextBox();
+            txId = new TextBox();
+            label2 = new Label();
+            btPlacement = new Button();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pillBindingSource).BeginInit();
@@ -59,7 +65,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Trebuchet MS", 24F);
-            label3.Location = new Point(303, 21);
+            label3.Location = new Point(179, 43);
             label3.Name = "label3";
             label3.Size = new Size(272, 49);
             label3.TabIndex = 60;
@@ -78,16 +84,16 @@
             panel2.Controls.Add(txUpdatePillCount);
             panel2.Controls.Add(lbUpdatePillCount);
             panel2.Controls.Add(lbUpdatePillName);
-            panel2.Location = new Point(990, 147);
+            panel2.Location = new Point(1166, 268);
             panel2.Name = "panel2";
-            panel2.Size = new Size(857, 743);
+            panel2.Size = new Size(634, 622);
             panel2.TabIndex = 59;
             // 
             // txUpdatePillLifeTime
             // 
             txUpdatePillLifeTime.BackColor = Color.FromArgb(255, 255, 192);
             txUpdatePillLifeTime.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txUpdatePillLifeTime.Location = new Point(551, 356);
+            txUpdatePillLifeTime.Location = new Point(331, 305);
             txUpdatePillLifeTime.Name = "txUpdatePillLifeTime";
             txUpdatePillLifeTime.Size = new Size(258, 48);
             txUpdatePillLifeTime.TabIndex = 67;
@@ -96,19 +102,19 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Trebuchet MS", 22.2F);
-            label1.Location = new Point(34, 354);
+            label1.Location = new Point(36, 303);
             label1.Name = "label1";
-            label1.Size = new Size(511, 46);
+            label1.Size = new Size(251, 46);
             label1.TabIndex = 66;
-            label1.Text = "Dori yangi muddatini kiriting:";
+            label1.Text = "Dori muddati:";
             // 
             // btUpdatePill
             // 
             btUpdatePill.BackColor = Color.FromArgb(255, 255, 128);
             btUpdatePill.Font = new Font("Trebuchet MS", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btUpdatePill.Location = new Point(33, 621);
+            btUpdatePill.Location = new Point(34, 515);
             btUpdatePill.Name = "btUpdatePill";
-            btUpdatePill.Size = new Size(776, 60);
+            btUpdatePill.Size = new Size(555, 60);
             btUpdatePill.TabIndex = 65;
             btUpdatePill.Text = "Yangilash";
             btUpdatePill.UseVisualStyleBackColor = false;
@@ -118,7 +124,7 @@
             // 
             txUpdatePillPrice.BackColor = Color.FromArgb(255, 255, 192);
             txUpdatePillPrice.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txUpdatePillPrice.Location = new Point(551, 425);
+            txUpdatePillPrice.Location = new Point(330, 374);
             txUpdatePillPrice.Name = "txUpdatePillPrice";
             txUpdatePillPrice.Size = new Size(259, 48);
             txUpdatePillPrice.TabIndex = 64;
@@ -127,17 +133,17 @@
             // 
             lbUpdatePillPrice.AutoSize = true;
             lbUpdatePillPrice.Font = new Font("Trebuchet MS", 22.2F);
-            lbUpdatePillPrice.Location = new Point(34, 423);
+            lbUpdatePillPrice.Location = new Point(36, 372);
             lbUpdatePillPrice.Name = "lbUpdatePillPrice";
-            lbUpdatePillPrice.Size = new Size(456, 46);
+            lbUpdatePillPrice.Size = new Size(196, 46);
             lbUpdatePillPrice.TabIndex = 63;
-            lbUpdatePillPrice.Text = "Dori yangi narxini kiriting:";
+            lbUpdatePillPrice.Text = "Dori narxi:";
             // 
             // txUpdatePillName
             // 
             txUpdatePillName.BackColor = Color.FromArgb(255, 255, 192);
             txUpdatePillName.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txUpdatePillName.Location = new Point(551, 220);
+            txUpdatePillName.Location = new Point(330, 169);
             txUpdatePillName.Name = "txUpdatePillName";
             txUpdatePillName.Size = new Size(259, 48);
             txUpdatePillName.TabIndex = 62;
@@ -146,7 +152,7 @@
             // 
             txUpdatePillCount.BackColor = Color.FromArgb(255, 255, 192);
             txUpdatePillCount.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txUpdatePillCount.Location = new Point(551, 290);
+            txUpdatePillCount.Location = new Point(331, 239);
             txUpdatePillCount.Name = "txUpdatePillCount";
             txUpdatePillCount.Size = new Size(259, 48);
             txUpdatePillCount.TabIndex = 61;
@@ -155,27 +161,27 @@
             // 
             lbUpdatePillCount.AutoSize = true;
             lbUpdatePillCount.Font = new Font("Trebuchet MS", 22.2F);
-            lbUpdatePillCount.Location = new Point(34, 288);
+            lbUpdatePillCount.Location = new Point(36, 237);
             lbUpdatePillCount.Name = "lbUpdatePillCount";
-            lbUpdatePillCount.Size = new Size(439, 46);
+            lbUpdatePillCount.Size = new Size(179, 46);
             lbUpdatePillCount.TabIndex = 60;
-            lbUpdatePillCount.Text = "Dori yangi sonini kiriting:";
+            lbUpdatePillCount.Text = "Dori soni:";
             // 
             // lbUpdatePillName
             // 
             lbUpdatePillName.AutoSize = true;
             lbUpdatePillName.Font = new Font("Trebuchet MS", 22.2F);
-            lbUpdatePillName.Location = new Point(34, 218);
+            lbUpdatePillName.Location = new Point(36, 167);
             lbUpdatePillName.Name = "lbUpdatePillName";
-            lbUpdatePillName.Size = new Size(357, 46);
+            lbUpdatePillName.Size = new Size(195, 46);
             lbUpdatePillName.TabIndex = 59;
-            lbUpdatePillName.Text = "Dori nomini kiriting:";
+            lbUpdatePillName.Text = "Dori nomi:";
             // 
             // btBack
             // 
             btBack.BackColor = Color.Silver;
             btBack.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btBack.Location = new Point(1598, 925);
+            btBack.Location = new Point(1551, 917);
             btBack.Name = "btBack";
             btBack.Size = new Size(249, 53);
             btBack.TabIndex = 61;
@@ -204,10 +210,6 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(803, 743);
             dataGridView1.TabIndex = 63;
-            // 
-            // pillBindingSource
-            // 
-            pillBindingSource.DataSource = typeof(Actions.Pill);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -257,14 +259,86 @@
             qoshilganSanaDataGridViewTextBoxColumn.Name = "qoshilganSanaDataGridViewTextBoxColumn";
             qoshilganSanaDataGridViewTextBoxColumn.Width = 125;
             // 
+            // pillBindingSource
+            // 
+            pillBindingSource.DataSource = typeof(Actions.Pill);
+            // 
+            // lbPillName
+            // 
+            lbPillName.AutoSize = true;
+            lbPillName.Font = new Font("Trebuchet MS", 22.2F);
+            lbPillName.Location = new Point(1075, 51);
+            lbPillName.Name = "lbPillName";
+            lbPillName.Size = new Size(357, 46);
+            lbPillName.TabIndex = 70;
+            lbPillName.Text = "Dori nomini kiriting:";
+            // 
+            // btSearch
+            // 
+            btSearch.BackColor = Color.LightSkyBlue;
+            btSearch.Font = new Font("Trebuchet MS", 18F);
+            btSearch.Location = new Point(1712, 53);
+            btSearch.Name = "btSearch";
+            btSearch.Size = new Size(142, 47);
+            btSearch.TabIndex = 68;
+            btSearch.Text = "Qidirish";
+            btSearch.UseVisualStyleBackColor = false;
+            btSearch.Click += btSearch_Click;
+            // 
+            // txPillName
+            // 
+            txPillName.BackColor = Color.FromArgb(255, 255, 192);
+            txPillName.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
+            txPillName.Location = new Point(1438, 51);
+            txPillName.Name = "txPillName";
+            txPillName.Size = new Size(243, 48);
+            txPillName.TabIndex = 69;
+            // 
+            // txId
+            // 
+            txId.BackColor = Color.FromArgb(255, 255, 192);
+            txId.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
+            txId.Location = new Point(1438, 135);
+            txId.Name = "txId";
+            txId.Size = new Size(243, 48);
+            txId.TabIndex = 72;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Trebuchet MS", 22.2F);
+            label2.Location = new Point(1075, 137);
+            label2.Name = "label2";
+            label2.Size = new Size(343, 46);
+            label2.TabIndex = 71;
+            label2.Text = "Dori Id sini kiriting:";
+            // 
+            // btPlacement
+            // 
+            btPlacement.BackColor = Color.LightSkyBlue;
+            btPlacement.Font = new Font("Trebuchet MS", 18F);
+            btPlacement.Location = new Point(1712, 135);
+            btPlacement.Name = "btPlacement";
+            btPlacement.Size = new Size(142, 47);
+            btPlacement.TabIndex = 73;
+            btPlacement.Text = "Joylash";
+            btPlacement.UseVisualStyleBackColor = false;
+            btPlacement.Click += btPlacement_Click;
+            // 
             // UpdatePillForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(1917, 1033);
+            Controls.Add(btPlacement);
+            Controls.Add(txId);
+            Controls.Add(label2);
+            Controls.Add(lbPillName);
             Controls.Add(dataGridView1);
+            Controls.Add(btSearch);
             Controls.Add(lbFIO);
+            Controls.Add(txPillName);
             Controls.Add(btBack);
             Controls.Add(panel2);
             Name = "UpdatePillForm";
@@ -301,5 +375,11 @@
         private DataGridViewTextBoxColumn narxiDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn qoshilganSanaDataGridViewTextBoxColumn;
         private BindingSource pillBindingSource;
+        private Label lbPillName;
+        private Button btSearch;
+        private TextBox txPillName;
+        private TextBox txId;
+        private Label label2;
+        private Button btPlacement;
     }
 }
