@@ -80,7 +80,7 @@
             dGVInformations.Location = new Point(104, 115);
             dGVInformations.Name = "dGVInformations";
             dGVInformations.RowHeadersWidth = 100;
-            dGVInformations.Size = new Size(853, 733);
+            dGVInformations.Size = new Size(853, 628);
             dGVInformations.TabIndex = 0;
             // 
             // idDataGridViewTextBoxColumn
@@ -143,7 +143,7 @@
             // 
             btBack.BackColor = Color.Silver;
             btBack.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btBack.Location = new Point(1614, 1012);
+            btBack.Location = new Point(1614, 900);
             btBack.Name = "btBack";
             btBack.Size = new Size(249, 53);
             btBack.TabIndex = 41;
@@ -376,7 +376,7 @@
             panel1.Controls.Add(label1);
             panel1.Controls.Add(lbAllPillCount);
             panel1.Controls.Add(lbAllPillPrice);
-            panel1.Location = new Point(104, 914);
+            panel1.Location = new Point(104, 802);
             panel1.Name = "panel1";
             panel1.Size = new Size(853, 151);
             panel1.TabIndex = 68;
@@ -418,7 +418,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(1917, 1158);
+            ClientSize = new Size(1917, 1033);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);

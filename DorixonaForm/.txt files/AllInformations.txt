@@ -1,1 +1,12 @@
-1,Orazbayev Merxat,EmployeEnter,Profilga kirdi,10.05.2024 21:06:28
+1,Orazbayev Merxat,EmployeEnter,Profilga kirdi,15.05.2024 20:48:50
+2,Orazbayev Merxat,AddPill,|Nomi: Tramadol|Soni: 34|Muddati: 35|Narxi: 12000|,15.05.2024 20:50:13
+3,Orazbayev Merxat,EmployeEnter,Profilga kirdi,15.05.2024 21:28:58
+4,Orazbayev Merxat,EmployeEnter,Profilga kirdi,15.05.2024 21:33:21
+5,Orazbayev Merxat,EmployeEnter,Profilga kirdi,15.05.2024 21:35:33
+6,Orazbayev Merxat,AddPill,|Nomi: Trimol|Soni: 23|Muddati: 867|Narxi: 3000|,15.05.2024 21:36:32
+7,Orazbayev Merxat,AddPill,|Nomi: Trimol|Soni: 43|Muddati: 50|Narxi: 3200|,15.05.2024 21:37:04
+8,Orazbayev Merxat,EmployeEnter,Profilga kirdi,15.05.2024 21:40:31
+9,Orazbayev Merxat,EmployeEnter,Profilga kirdi,15.05.2024 21:41:09
+10,Orazbayev Merxat,EmployeEnter,Profilga kirdi,15.05.2024 21:57:48
+31,Orazbayev Merxat,AddPill,|Nomi: trimol|Soni: 23|Muddati: 867|Narxi: 3000|,15.05.2024 21:58:08
+31,Orazbayev Merxat,AddPill,|Nomi: Trimol|Soni: 45|Muddati: 500|Narxi: 3200|,15.05.2024 21:59:23

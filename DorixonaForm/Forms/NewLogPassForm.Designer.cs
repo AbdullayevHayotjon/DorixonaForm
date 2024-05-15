@@ -160,7 +160,7 @@
             panel1.Controls.Add(btBack);
             panel1.Controls.Add(txPhoneNumber);
             panel1.Controls.Add(txConfirmation);
-            panel1.Location = new Point(467, 147);
+            panel1.Location = new Point(464, 83);
             panel1.Name = "panel1";
             panel1.Size = new Size(1016, 862);
             panel1.TabIndex = 24;
@@ -170,7 +170,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(1917, 1158);
+            ClientSize = new Size(1917, 1033);
             Controls.Add(panel1);
             Name = "NewLogPassForm";
             Text = "NewLogPassForm";

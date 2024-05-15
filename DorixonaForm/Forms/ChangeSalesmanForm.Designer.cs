@@ -72,7 +72,7 @@
             // 
             btBack.BackColor = Color.Silver;
             btBack.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btBack.Location = new Point(1549, 917);
+            btBack.Location = new Point(1549, 872);
             btBack.Name = "btBack";
             btBack.Size = new Size(249, 53);
             btBack.TabIndex = 31;
@@ -301,7 +301,7 @@
             panel1.Controls.Add(txAddFIO);
             panel1.Controls.Add(txAddPassword);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(111, 155);
+            panel1.Location = new Point(112, 110);
             panel1.Name = "panel1";
             panel1.Size = new Size(787, 815);
             panel1.TabIndex = 51;
@@ -316,7 +316,7 @@
             panel2.Controls.Add(txDeleteSmsPassword);
             panel2.Controls.Add(txSendPassword);
             panel2.Controls.Add(txDeletePhoneNumber);
-            panel2.Location = new Point(1015, 155);
+            panel2.Location = new Point(1015, 110);
             panel2.Name = "panel2";
             panel2.Size = new Size(783, 661);
             panel2.TabIndex = 52;
@@ -325,7 +325,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Trebuchet MS", 24F);
-            label5.Location = new Point(350, 91);
+            label5.Location = new Point(348, 58);
             label5.Name = "label5";
             label5.Size = new Size(321, 49);
             label5.TabIndex = 58;
@@ -335,7 +335,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Trebuchet MS", 24F);
-            label6.Location = new Point(1245, 91);
+            label6.Location = new Point(1244, 58);
             label6.Name = "label6";
             label6.Size = new Size(330, 49);
             label6.TabIndex = 59;
@@ -346,7 +346,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(1917, 1158);
+            ClientSize = new Size(1917, 1033);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(panel2);

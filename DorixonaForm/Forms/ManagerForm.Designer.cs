@@ -60,7 +60,7 @@
             // 
             btReports.BackColor = Color.LightSkyBlue;
             btReports.Font = new Font("Trebuchet MS", 17F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btReports.Location = new Point(159, 977);
+            btReports.Location = new Point(159, 820);
             btReports.Name = "btReports";
             btReports.Size = new Size(728, 54);
             btReports.TabIndex = 10;
@@ -74,10 +74,10 @@
             dGVEmploye.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dGVEmploye.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, fIODataGridViewTextBoxColumn, loginDataGridViewTextBoxColumn, passwordDataGridViewTextBoxColumn, phoneNumberDataGridViewTextBoxColumn });
             dGVEmploye.DataSource = employeBindingSource;
-            dGVEmploye.Location = new Point(1068, 173);
+            dGVEmploye.Location = new Point(1068, 143);
             dGVEmploye.Name = "dGVEmploye";
             dGVEmploye.RowHeadersWidth = 51;
-            dGVEmploye.Size = new Size(679, 783);
+            dGVEmploye.Size = new Size(679, 651);
             dGVEmploye.TabIndex = 19;
             // 
             // idDataGridViewTextBoxColumn
@@ -151,7 +151,7 @@
             // 
             lbPillsList.AutoSize = true;
             lbPillsList.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            lbPillsList.Location = new Point(1270, 123);
+            lbPillsList.Location = new Point(1273, 102);
             lbPillsList.Name = "lbPillsList";
             lbPillsList.Size = new Size(276, 38);
             lbPillsList.TabIndex = 31;
@@ -161,7 +161,7 @@
             // 
             button1.BackColor = Color.FromArgb(255, 192, 128);
             button1.Font = new Font("Trebuchet MS", 17F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button1.Location = new Point(1068, 977);
+            button1.Location = new Point(1068, 820);
             button1.Name = "button1";
             button1.Size = new Size(679, 54);
             button1.TabIndex = 33;
@@ -178,7 +178,7 @@
             dGVInformations.Location = new Point(159, 173);
             dGVInformations.Name = "dGVInformations";
             dGVInformations.RowHeadersWidth = 100;
-            dGVInformations.Size = new Size(728, 783);
+            dGVInformations.Size = new Size(728, 621);
             dGVInformations.TabIndex = 34;
             // 
             // idDataGridViewTextBoxColumn1
@@ -229,7 +229,7 @@
             // 
             button2.BackColor = Color.Silver;
             button2.Font = new Font("Trebuchet MS", 18F);
-            button2.Location = new Point(1583, 1051);
+            button2.Location = new Point(1583, 897);
             button2.Name = "button2";
             button2.Size = new Size(164, 50);
             button2.TabIndex = 35;
@@ -241,7 +241,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label1.Location = new Point(332, 123);
+            label1.Location = new Point(333, 102);
             label1.Name = "label1";
             label1.Size = new Size(383, 38);
             label1.TabIndex = 36;
@@ -252,7 +252,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightCyan;
-            ClientSize = new Size(1917, 1158);
+            ClientSize = new Size(1917, 1033);
             Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(dGVInformations);

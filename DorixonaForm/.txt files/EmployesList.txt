@@ -1,4 +1,4 @@
 1,Abdullayev Hayot,Hayot,3003,937813003,Manager
-2,Orazbayev Merxat,Merxat,0403,942554450,Salesman
-3,Muqimov Quvonch,Quvonch,6603,908896603,Salesman
-4,Kobulov G'aybullo,Gaybullo,2711,931495412,Salesman
+2,Istamov Mirjahon,Mirjahon,2004,912527074,Manager
+3,Orazbayev Merxat,Merxat,0403,970862307,Salesman
+4,Muqimov Quvonch,Quvonch,6603,908896603,Salesman

@@ -56,7 +56,7 @@
             // 
             btBack.BackColor = Color.Silver;
             btBack.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btBack.Location = new Point(1618, 1029);
+            btBack.Location = new Point(1615, 927);
             btBack.Name = "btBack";
             btBack.Size = new Size(249, 53);
             btBack.TabIndex = 41;
@@ -227,9 +227,9 @@
             panel1.Controls.Add(txOldPassword);
             panel1.Controls.Add(lbNewPassword2);
             panel1.Controls.Add(txNewPassword2);
-            panel1.Location = new Point(39, 153);
+            panel1.Location = new Point(42, 102);
             panel1.Name = "panel1";
-            panel1.Size = new Size(794, 840);
+            panel1.Size = new Size(794, 794);
             panel1.TabIndex = 65;
             // 
             // panel2
@@ -242,16 +242,16 @@
             panel2.Controls.Add(lb998);
             panel2.Controls.Add(txNewPhoneNumber);
             panel2.Controls.Add(txSendPassword);
-            panel2.Location = new Point(877, 153);
+            panel2.Location = new Point(874, 102);
             panel2.Name = "panel2";
-            panel2.Size = new Size(990, 840);
+            panel2.Size = new Size(990, 794);
             panel2.TabIndex = 66;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Trebuchet MS", 24F);
-            label1.Location = new Point(269, 88);
+            label1.Location = new Point(269, 50);
             label1.Name = "label1";
             label1.Size = new Size(352, 49);
             label1.TabIndex = 56;
@@ -261,7 +261,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Trebuchet MS", 24F);
-            label2.Location = new Point(1122, 88);
+            label2.Location = new Point(1120, 50);
             label2.Name = "label2";
             label2.Size = new Size(519, 49);
             label2.TabIndex = 57;
@@ -272,7 +272,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(1917, 1158);
+            ClientSize = new Size(1917, 1033);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(panel2);

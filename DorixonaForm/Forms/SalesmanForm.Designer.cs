@@ -40,6 +40,7 @@
             soniDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             Muddati = new DataGridViewTextBoxColumn();
             narxiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            QoshilganSana = new DataGridViewTextBoxColumn();
             pillBindingSource2 = new BindingSource(components);
             pillBindingSource1 = new BindingSource(components);
             pillBindingSource = new BindingSource(components);
@@ -51,8 +52,9 @@
             lbPillsList = new Label();
             lbPillName = new Label();
             panel1 = new Panel();
-            button1 = new Button();
-            QoshilganSana = new DataGridViewTextBoxColumn();
+            btAddPill = new Button();
+            btUpdatePill = new Button();
+            btDeletePill = new Button();
             ((System.ComponentModel.ISupportInitialize)dGWPills).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pillBindingSource2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pillBindingSource1).BeginInit();
@@ -64,7 +66,7 @@
             // 
             btExit.BackColor = Color.Silver;
             btExit.Font = new Font("Trebuchet MS", 18F);
-            btExit.Location = new Point(664, 815);
+            btExit.Location = new Point(664, 694);
             btExit.Name = "btExit";
             btExit.Size = new Size(164, 50);
             btExit.TabIndex = 17;
@@ -122,7 +124,7 @@
             dGWPills.Location = new Point(999, 100);
             dGWPills.Name = "dGWPills";
             dGWPills.RowHeadersWidth = 80;
-            dGWPills.Size = new Size(832, 913);
+            dGWPills.Size = new Size(832, 793);
             dGWPills.TabIndex = 24;
             dGWPills.CellContentClick += dGWPills_CellContentClick;
             // 
@@ -165,6 +167,14 @@
             narxiDataGridViewTextBoxColumn.MinimumWidth = 6;
             narxiDataGridViewTextBoxColumn.Name = "narxiDataGridViewTextBoxColumn";
             narxiDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // QoshilganSana
+            // 
+            QoshilganSana.DataPropertyName = "QoshilganSana";
+            QoshilganSana.HeaderText = "QoshilganSana";
+            QoshilganSana.MinimumWidth = 6;
+            QoshilganSana.Name = "QoshilganSana";
+            QoshilganSana.Width = 125;
             // 
             // pillBindingSource2
             // 
@@ -264,36 +274,55 @@
             panel1.Controls.Add(btExit);
             panel1.Location = new Point(57, 100);
             panel1.Name = "panel1";
-            panel1.Size = new Size(876, 913);
+            panel1.Size = new Size(876, 793);
             panel1.TabIndex = 32;
+            panel1.Paint += panel1_Paint;
             // 
-            // button1
+            // btAddPill
             // 
-            button1.BackColor = Color.FromArgb(255, 255, 128);
-            button1.Font = new Font("Trebuchet MS", 17F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button1.Location = new Point(999, 1032);
-            button1.Name = "button1";
-            button1.Size = new Size(832, 54);
-            button1.TabIndex = 32;
-            button1.Text = "Dorilar ro'yxatiga o'zgartirish kiritish";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            btAddPill.BackColor = Color.FromArgb(128, 255, 128);
+            btAddPill.Font = new Font("Trebuchet MS", 17F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btAddPill.Location = new Point(999, 915);
+            btAddPill.Name = "btAddPill";
+            btAddPill.Size = new Size(232, 50);
+            btAddPill.TabIndex = 32;
+            btAddPill.Text = "Dori qo'shish";
+            btAddPill.UseVisualStyleBackColor = false;
+            btAddPill.Click += button1_Click;
             // 
-            // QoshilganSana
+            // btUpdatePill
             // 
-            QoshilganSana.DataPropertyName = "QoshilganSana";
-            QoshilganSana.HeaderText = "QoshilganSana";
-            QoshilganSana.MinimumWidth = 6;
-            QoshilganSana.Name = "QoshilganSana";
-            QoshilganSana.Width = 125;
+            btUpdatePill.BackColor = Color.FromArgb(255, 255, 128);
+            btUpdatePill.Font = new Font("Trebuchet MS", 17F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btUpdatePill.Location = new Point(1299, 915);
+            btUpdatePill.Name = "btUpdatePill";
+            btUpdatePill.Size = new Size(232, 50);
+            btUpdatePill.TabIndex = 33;
+            btUpdatePill.Text = "Dori yangilash";
+            btUpdatePill.UseVisualStyleBackColor = false;
+            btUpdatePill.Click += btUpdatePill_Click_1;
+            // 
+            // btDeletePill
+            // 
+            btDeletePill.BackColor = Color.FromArgb(255, 128, 128);
+            btDeletePill.Font = new Font("Trebuchet MS", 17F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btDeletePill.Location = new Point(1599, 915);
+            btDeletePill.Name = "btDeletePill";
+            btDeletePill.Size = new Size(232, 50);
+            btDeletePill.TabIndex = 34;
+            btDeletePill.Text = "Dori o'chirish";
+            btDeletePill.UseVisualStyleBackColor = false;
+            btDeletePill.Click += btDeletePill_Click_1;
             // 
             // SalesmanForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(1917, 1158);
-            Controls.Add(button1);
+            ClientSize = new Size(1917, 1033);
+            Controls.Add(btDeletePill);
+            Controls.Add(btUpdatePill);
+            Controls.Add(btAddPill);
             Controls.Add(panel1);
             Controls.Add(lbPillsList);
             Controls.Add(lnklSettings);
@@ -337,7 +366,9 @@
         private Label lbPillsList;
         private Label lbPillName;
         private Panel panel1;
-        private Button button1;
+        private Button btAddPill;
         private DataGridViewTextBoxColumn QoshilganSana;
+        private Button btUpdatePill;
+        private Button btDeletePill;
     }
 }

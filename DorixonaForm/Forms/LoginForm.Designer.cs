@@ -109,7 +109,7 @@
             panel1.Controls.Add(btEnter);
             panel1.Controls.Add(txPassword);
             panel1.Controls.Add(lbPassword);
-            panel1.Location = new Point(629, 178);
+            panel1.Location = new Point(643, 114);
             panel1.Name = "panel1";
             panel1.Size = new Size(640, 800);
             panel1.TabIndex = 13;
@@ -120,7 +120,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1917, 1158);
+            ClientSize = new Size(1917, 1033);
             Controls.Add(panel1);
             Name = "LoginForm";
             Text = "LoginForm";

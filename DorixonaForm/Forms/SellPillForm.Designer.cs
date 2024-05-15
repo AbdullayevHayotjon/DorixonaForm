@@ -127,7 +127,7 @@
             panel1.Controls.Add(dGWSellPill);
             panel1.Controls.Add(btBack);
             panel1.Controls.Add(btConfirmation);
-            panel1.Location = new Point(619, 144);
+            panel1.Location = new Point(621, 91);
             panel1.Name = "panel1";
             panel1.Size = new Size(716, 832);
             panel1.TabIndex = 43;
@@ -149,7 +149,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(1917, 1158);
+            ClientSize = new Size(1917, 1033);
             Controls.Add(lbFIO);
             Controls.Add(panel1);
             Name = "SellPillForm";

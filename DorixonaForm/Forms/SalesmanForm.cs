@@ -21,7 +21,7 @@ namespace DorixonaForm
         {
             NewLogin = login;
             InitializeComponent();
-            
+
             dGWPills.DataSource = functions.pillsList;
             foreach (Employe employe1 in functions.employeList)
             {
@@ -178,9 +178,34 @@ namespace DorixonaForm
             StreamWriter streamWriter = new StreamWriter(functions.SellingPillesListPath);
             streamWriter.Close();
             this.Hide();
-            ChangePillForm addPillForm = new ChangePillForm(NewLogin);
+            AddPillForm addPillForm = new AddPillForm(NewLogin);
             addPillForm.StartPosition = FormStartPosition.CenterScreen;
             addPillForm.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btUpdatePill_Click_1(object sender, EventArgs e)
+        {
+            StreamWriter streamWriter = new StreamWriter(functions.SellingPillesListPath);
+            streamWriter.Close();
+            this.Hide();
+            UpdatePillForm updatePillForm = new UpdatePillForm(NewLogin);
+            updatePillForm.StartPosition = FormStartPosition.CenterScreen;
+            updatePillForm.Show();
+        }
+
+        private void btDeletePill_Click_1(object sender, EventArgs e)
+        {
+            StreamWriter streamWriter = new StreamWriter(functions.SellingPillesListPath);
+            streamWriter.Close();
+            this.Hide();
+            DeletePillForm deletePillForm = new DeletePillForm(NewLogin);
+            deletePillForm.StartPosition = FormStartPosition.CenterScreen;
+            deletePillForm.Show();
         }
     }
 }

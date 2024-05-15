@@ -52,7 +52,7 @@ namespace DorixonaForm.Forms
                 {
                     continue;
                 }
-                streamWriter.WriteLine((i++) + "," + pill.Nomi + "," + pill.Soni + "," + pill.Muddati + "," + pill.Narxi);
+                streamWriter.WriteLine((i++) + "," + pill.Nomi + "," + pill.Soni + "," + pill.Muddati + "," + pill.Narxi + "," + pill.QoshilganSana);
             }
             streamWriter.Close();
             StreamWriter streamWriter1 = new StreamWriter(functions.AllInformationsPath);

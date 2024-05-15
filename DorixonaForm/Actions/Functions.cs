@@ -54,18 +54,6 @@ namespace DorixonaForm.Actions
                 string[] ReportSelesPillsLine = ReportSelesPills[i].Split(",");
                 reportSelesPills.Add(new ReportSelesPill() { Id = int.Parse(ReportSelesPillsLine[0]), FIO = ReportSelesPillsLine[1], Nomi = ReportSelesPillsLine[2], Soni = int.Parse(ReportSelesPillsLine[3]), SotilganVaqti = ReportSelesPillsLine[4], Narxi = int.Parse(ReportSelesPillsLine[5]) });
             }
-            StreamWriter streamWriter = new StreamWriter(PillsListPath);
-            int k = 1;
-            foreach (Pill pill in pillsList)
-            {
-                if ((DateTime.Now - DateTime.Parse(pill.QoshilganSana)).Days > pill.Muddati)
-                {
-                    continue;
-                }
-                pill.Muddati = pill.Muddati - (DateTime.Now - DateTime.Parse(pill.QoshilganSana)).Days;
-                streamWriter.WriteLine((k++) + "," + pill.Nomi + "," + pill.Soni + "," + pill.Muddati + "," + pill.Narxi + "," + pill.QoshilganSana);
-            }
-            streamWriter.Close();
         }
         public bool CheckProbel(string str)
         {

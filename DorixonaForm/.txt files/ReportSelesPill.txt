@@ -1,0 +1,12 @@
+1,Orazbayev Merxat,Trimol,3,04.05.2024 21:52:26,9000
+2,Orazbayev Merxat,Paratsetamol,8,06.05.2024 21:52:26,45600
+3,Orazbayev Merxat,Trimol,4,10.05.2024 22:24:01,12000
+4,Orazbayev Merxat,Paratsetamol,5,10.05.2024 22:24:01,28500
+5,Orazbayev Merxat,Tramadol,6,10.05.2024 22:24:01,13800
+6,Muqimov Quvonch,Diklofenak,7,10.05.2024 22:25:12,31500
+7,Muqimov Quvonch,Kukumazim,6,10.05.2024 22:25:12,18000
+8,Muqimov Quvonch,Etanol,10,10.05.2024 22:25:12,750000
+9,Orazbayev Merxat,Trimol,15,11.05.2024 20:57:44,45000
+10,Orazbayev Merxat,Tramadol,10,11.05.2024 20:57:44,23000
+11,Orazbayev Merxat,Tefestrol,10,13.05.2024 8:25:56,20000
+12,Orazbayev Merxat,Tefestrol,10,13.05.2024 8:49:24,20000
