@@ -40,7 +40,6 @@
             lbFIO = new Label();
             lnklSettings = new LinkLabel();
             lbPillsList = new Label();
-            button1 = new Button();
             dGVInformations = new DataGridView();
             idDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             fIODataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
@@ -50,6 +49,9 @@
             allInformationsBindingSource = new BindingSource(components);
             button2 = new Button();
             label1 = new Label();
+            btDeleteSalesman = new Button();
+            btUpdateSalesman = new Button();
+            btAddSalesman = new Button();
             ((System.ComponentModel.ISupportInitialize)dGVEmploye).BeginInit();
             ((System.ComponentModel.ISupportInitialize)employeBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dGVInformations).BeginInit();
@@ -60,7 +62,7 @@
             // 
             btReports.BackColor = Color.LightSkyBlue;
             btReports.Font = new Font("Trebuchet MS", 17F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btReports.Location = new Point(159, 820);
+            btReports.Location = new Point(159, 864);
             btReports.Name = "btReports";
             btReports.Size = new Size(728, 54);
             btReports.TabIndex = 10;
@@ -77,7 +79,7 @@
             dGVEmploye.Location = new Point(1068, 143);
             dGVEmploye.Name = "dGVEmploye";
             dGVEmploye.RowHeadersWidth = 51;
-            dGVEmploye.Size = new Size(679, 651);
+            dGVEmploye.Size = new Size(679, 701);
             dGVEmploye.TabIndex = 19;
             // 
             // idDataGridViewTextBoxColumn
@@ -151,23 +153,11 @@
             // 
             lbPillsList.AutoSize = true;
             lbPillsList.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            lbPillsList.Location = new Point(1273, 102);
+            lbPillsList.Location = new Point(1272, 92);
             lbPillsList.Name = "lbPillsList";
             lbPillsList.Size = new Size(276, 38);
             lbPillsList.TabIndex = 31;
             lbPillsList.Text = "Sotuvchilar ro'yxati";
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(255, 192, 128);
-            button1.Font = new Font("Trebuchet MS", 17F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button1.Location = new Point(1068, 820);
-            button1.Name = "button1";
-            button1.Size = new Size(679, 54);
-            button1.TabIndex = 33;
-            button1.Text = "Sotuvchilar ro'yxatiga o'zgartirish kiritish";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
             // 
             // dGVInformations
             // 
@@ -175,10 +165,10 @@
             dGVInformations.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dGVInformations.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn1, fIODataGridViewTextBoxColumn1, processTypeDataGridViewTextBoxColumn, informationDataGridViewTextBoxColumn, processTimeDataGridViewTextBoxColumn });
             dGVInformations.DataSource = allInformationsBindingSource;
-            dGVInformations.Location = new Point(159, 173);
+            dGVInformations.Location = new Point(159, 143);
             dGVInformations.Name = "dGVInformations";
             dGVInformations.RowHeadersWidth = 100;
-            dGVInformations.Size = new Size(728, 621);
+            dGVInformations.Size = new Size(728, 701);
             dGVInformations.TabIndex = 34;
             // 
             // idDataGridViewTextBoxColumn1
@@ -229,7 +219,7 @@
             // 
             button2.BackColor = Color.Silver;
             button2.Font = new Font("Trebuchet MS", 18F);
-            button2.Location = new Point(1583, 897);
+            button2.Location = new Point(1741, 12);
             button2.Name = "button2";
             button2.Size = new Size(164, 50);
             button2.TabIndex = 35;
@@ -241,11 +231,47 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label1.Location = new Point(333, 102);
+            label1.Location = new Point(333, 92);
             label1.Name = "label1";
             label1.Size = new Size(383, 38);
             label1.TabIndex = 36;
             label1.Text = "Umumiy jarayonlar ro'yxati";
+            // 
+            // btDeleteSalesman
+            // 
+            btDeleteSalesman.BackColor = Color.FromArgb(255, 128, 128);
+            btDeleteSalesman.Font = new Font("Trebuchet MS", 13.8F);
+            btDeleteSalesman.Location = new Point(1540, 864);
+            btDeleteSalesman.Name = "btDeleteSalesman";
+            btDeleteSalesman.Size = new Size(207, 44);
+            btDeleteSalesman.TabIndex = 39;
+            btDeleteSalesman.Text = "Sotuvchi o'chirish";
+            btDeleteSalesman.UseVisualStyleBackColor = false;
+            btDeleteSalesman.Click += btDeleteSalesman_Click_1;
+            // 
+            // btUpdateSalesman
+            // 
+            btUpdateSalesman.BackColor = Color.FromArgb(255, 255, 128);
+            btUpdateSalesman.Font = new Font("Trebuchet MS", 13.8F);
+            btUpdateSalesman.Location = new Point(1294, 864);
+            btUpdateSalesman.Name = "btUpdateSalesman";
+            btUpdateSalesman.Size = new Size(225, 44);
+            btUpdateSalesman.TabIndex = 38;
+            btUpdateSalesman.Text = "Sotuvchi yangilash";
+            btUpdateSalesman.UseVisualStyleBackColor = false;
+            btUpdateSalesman.Click += btUpdateSalesman_Click;
+            // 
+            // btAddSalesman
+            // 
+            btAddSalesman.BackColor = Color.FromArgb(128, 255, 128);
+            btAddSalesman.Font = new Font("Trebuchet MS", 13.8F);
+            btAddSalesman.Location = new Point(1068, 864);
+            btAddSalesman.Name = "btAddSalesman";
+            btAddSalesman.Size = new Size(207, 44);
+            btAddSalesman.TabIndex = 37;
+            btAddSalesman.Text = "Sotuvchi qo'shish";
+            btAddSalesman.UseVisualStyleBackColor = false;
+            btAddSalesman.Click += btAddSalesman_Click_1;
             // 
             // ManagerForm
             // 
@@ -253,10 +279,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightCyan;
             ClientSize = new Size(1917, 1033);
+            Controls.Add(btDeleteSalesman);
+            Controls.Add(btUpdateSalesman);
+            Controls.Add(btAddSalesman);
             Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(dGVInformations);
-            Controls.Add(button1);
             Controls.Add(lbPillsList);
             Controls.Add(lnklSettings);
             Controls.Add(lbFIO);
@@ -286,7 +314,6 @@
         private Label lbFIO;
         private LinkLabel lnklSettings;
         private Label lbPillsList;
-        private Button button1;
         private DataGridView dGVInformations;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn fIODataGridViewTextBoxColumn1;
@@ -296,5 +323,8 @@
         private BindingSource allInformationsBindingSource;
         private Button button2;
         private Label label1;
+        private Button btDeleteSalesman;
+        private Button btUpdateSalesman;
+        private Button btAddSalesman;
     }
 }

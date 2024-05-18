@@ -1,0 +1,258 @@
+﻿namespace DorixonaForm.Forms
+{
+    partial class AddSalesmanForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            label5 = new Label();
+            panel1 = new Panel();
+            txAddLogin = new TextBox();
+            lbPhoneNumber = new Label();
+            lbSmsPassword = new Label();
+            txAddSmsPassword = new TextBox();
+            txAddPhoneNumber = new TextBox();
+            txConfirmation = new Button();
+            lb998 = new Label();
+            lbNewLogin = new Label();
+            lbNewPassword = new Label();
+            btSaveNewLogPass = new Button();
+            txAddFIO = new TextBox();
+            txAddPassword = new TextBox();
+            label1 = new Label();
+            lbFIO = new Label();
+            panel1.SuspendLayout();
+            SuspendLayout();
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Trebuchet MS", 24F);
+            label5.Location = new Point(801, 83);
+            label5.Name = "label5";
+            label5.Size = new Size(321, 49);
+            label5.TabIndex = 60;
+            label5.Text = "Sotuvchi qo'shish";
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.LightCyan;
+            panel1.Controls.Add(txAddLogin);
+            panel1.Controls.Add(lbPhoneNumber);
+            panel1.Controls.Add(lbSmsPassword);
+            panel1.Controls.Add(txAddSmsPassword);
+            panel1.Controls.Add(txAddPhoneNumber);
+            panel1.Controls.Add(txConfirmation);
+            panel1.Controls.Add(lb998);
+            panel1.Controls.Add(lbNewLogin);
+            panel1.Controls.Add(lbNewPassword);
+            panel1.Controls.Add(btSaveNewLogPass);
+            panel1.Controls.Add(txAddFIO);
+            panel1.Controls.Add(txAddPassword);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(565, 135);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(787, 815);
+            panel1.TabIndex = 59;
+            // 
+            // txAddLogin
+            // 
+            txAddLogin.BackColor = Color.FromArgb(255, 255, 192);
+            txAddLogin.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
+            txAddLogin.Location = new Point(316, 307);
+            txAddLogin.Name = "txAddLogin";
+            txAddLogin.Size = new Size(438, 48);
+            txAddLogin.TabIndex = 35;
+            // 
+            // lbPhoneNumber
+            // 
+            lbPhoneNumber.AutoSize = true;
+            lbPhoneNumber.Font = new Font("Trebuchet MS", 22.2F);
+            lbPhoneNumber.Location = new Point(41, 114);
+            lbPhoneNumber.Name = "lbPhoneNumber";
+            lbPhoneNumber.Size = new Size(270, 46);
+            lbPhoneNumber.TabIndex = 25;
+            lbPhoneNumber.Text = "Telefon raqam:";
+            // 
+            // lbSmsPassword
+            // 
+            lbSmsPassword.AutoSize = true;
+            lbSmsPassword.Font = new Font("Trebuchet MS", 22.2F);
+            lbSmsPassword.Location = new Point(41, 178);
+            lbSmsPassword.Name = "lbSmsPassword";
+            lbSmsPassword.Size = new Size(331, 46);
+            lbSmsPassword.TabIndex = 26;
+            lbSmsPassword.Text = "Sms kodni kiriting:";
+            // 
+            // txAddSmsPassword
+            // 
+            txAddSmsPassword.BackColor = Color.FromArgb(255, 255, 192);
+            txAddSmsPassword.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
+            txAddSmsPassword.Location = new Point(378, 180);
+            txAddSmsPassword.Name = "txAddSmsPassword";
+            txAddSmsPassword.Size = new Size(158, 48);
+            txAddSmsPassword.TabIndex = 28;
+            txAddSmsPassword.Tag = "";
+            // 
+            // txAddPhoneNumber
+            // 
+            txAddPhoneNumber.BackColor = Color.FromArgb(255, 255, 192);
+            txAddPhoneNumber.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
+            txAddPhoneNumber.Location = new Point(435, 116);
+            txAddPhoneNumber.Name = "txAddPhoneNumber";
+            txAddPhoneNumber.Size = new Size(319, 48);
+            txAddPhoneNumber.TabIndex = 29;
+            txAddPhoneNumber.Tag = "";
+            // 
+            // txConfirmation
+            // 
+            txConfirmation.BackColor = Color.LightSkyBlue;
+            txConfirmation.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            txConfirmation.Location = new Point(552, 177);
+            txConfirmation.Name = "txConfirmation";
+            txConfirmation.Size = new Size(202, 53);
+            txConfirmation.TabIndex = 30;
+            txConfirmation.Text = "Kod yuborish";
+            txConfirmation.UseVisualStyleBackColor = false;
+            txConfirmation.Click += txConfirmation_Click;
+            // 
+            // lb998
+            // 
+            lb998.AutoSize = true;
+            lb998.Font = new Font("Calibri Light", 22.2F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            lb998.Location = new Point(334, 115);
+            lb998.Name = "lb998";
+            lb998.Size = new Size(95, 45);
+            lb998.TabIndex = 32;
+            lb998.Text = "+998";
+            // 
+            // lbNewLogin
+            // 
+            lbNewLogin.AutoSize = true;
+            lbNewLogin.Font = new Font("Trebuchet MS", 22.2F);
+            lbNewLogin.Location = new Point(41, 240);
+            lbNewLogin.Name = "lbNewLogin";
+            lbNewLogin.Size = new Size(88, 46);
+            lbNewLogin.TabIndex = 33;
+            lbNewLogin.Text = "FIO:";
+            // 
+            // lbNewPassword
+            // 
+            lbNewPassword.AutoSize = true;
+            lbNewPassword.Font = new Font("Trebuchet MS", 22.2F);
+            lbNewPassword.Location = new Point(41, 305);
+            lbNewPassword.Name = "lbNewPassword";
+            lbNewPassword.Size = new Size(269, 46);
+            lbNewPassword.TabIndex = 34;
+            lbNewPassword.Text = "Login yarating:";
+            // 
+            // btSaveNewLogPass
+            // 
+            btSaveNewLogPass.BackColor = Color.LightSkyBlue;
+            btSaveNewLogPass.Font = new Font("Trebuchet MS", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btSaveNewLogPass.Location = new Point(41, 656);
+            btSaveNewLogPass.Name = "btSaveNewLogPass";
+            btSaveNewLogPass.Size = new Size(713, 60);
+            btSaveNewLogPass.TabIndex = 39;
+            btSaveNewLogPass.Text = "Saqlash";
+            btSaveNewLogPass.UseVisualStyleBackColor = false;
+            btSaveNewLogPass.Click += btSaveNewLogPass_Click;
+            // 
+            // txAddFIO
+            // 
+            txAddFIO.BackColor = Color.FromArgb(255, 255, 192);
+            txAddFIO.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
+            txAddFIO.Location = new Point(135, 242);
+            txAddFIO.Name = "txAddFIO";
+            txAddFIO.Size = new Size(619, 48);
+            txAddFIO.TabIndex = 36;
+            // 
+            // txAddPassword
+            // 
+            txAddPassword.BackColor = Color.FromArgb(255, 255, 192);
+            txAddPassword.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
+            txAddPassword.Location = new Point(316, 372);
+            txAddPassword.Name = "txAddPassword";
+            txAddPassword.Size = new Size(438, 48);
+            txAddPassword.TabIndex = 38;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Trebuchet MS", 22.2F);
+            label1.Location = new Point(41, 370);
+            label1.Name = "label1";
+            label1.Size = new Size(263, 46);
+            label1.TabIndex = 37;
+            label1.Text = "Parol yarating:";
+            // 
+            // lbFIO
+            // 
+            lbFIO.AutoSize = true;
+            lbFIO.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            lbFIO.Location = new Point(12, 9);
+            lbFIO.Name = "lbFIO";
+            lbFIO.Size = new Size(61, 38);
+            lbFIO.TabIndex = 51;
+            lbFIO.Text = "FIO";
+            // 
+            // AddSalesmanForm
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightSteelBlue;
+            ClientSize = new Size(1917, 1033);
+            Controls.Add(lbFIO);
+            Controls.Add(label5);
+            Controls.Add(panel1);
+            Name = "AddSalesmanForm";
+            Text = "AddSalesmanForm";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private Label label5;
+        private Panel panel1;
+        private TextBox txAddLogin;
+        private Label lbPhoneNumber;
+        private Label lbSmsPassword;
+        private TextBox txAddSmsPassword;
+        private TextBox txAddPhoneNumber;
+        private Button txConfirmation;
+        private Label lb998;
+        private Label lbNewLogin;
+        private Label lbNewPassword;
+        private Button btSaveNewLogPass;
+        private TextBox txAddFIO;
+        private TextBox txAddPassword;
+        private Label label1;
+        private Label lbFIO;
+    }
+}

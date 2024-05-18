@@ -93,10 +93,7 @@ namespace DorixonaForm.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            ChangeSalesmanForm addSalesmanForm = new ChangeSalesmanForm(NewLogin);
-            addSalesmanForm.StartPosition = FormStartPosition.CenterScreen;
-            addSalesmanForm.Show();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -120,6 +117,21 @@ namespace DorixonaForm.Forms
             LoginForm loginForm = new LoginForm();
             loginForm.StartPosition = FormStartPosition.CenterScreen;
             loginForm.Show();
+        }
+
+        private void btUpdateSalesman_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btAddSalesman_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btDeleteSalesman_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

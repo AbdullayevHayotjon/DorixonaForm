@@ -1,4 +1,3 @@
-1,Abdullayev Hayot,Hayot,3003,937813003,Manager
-2,Istamov Mirjahon,Mirjahon,2004,912527074,Manager
-3,Orazbayev Merxat,Merxat,0403,970862307,Salesman
-4,Muqimov Quvonch,Quvonch,6603,908896603,Salesman
+1,Abdullayev Hayot,Hayot,2004,937813003,Manager
+2,Istamov Mirjahon,Mirjahon,7074,912527074,Salesman
+3,Eshonqulov Oybek,Oybek,2309,947022309,Salesman

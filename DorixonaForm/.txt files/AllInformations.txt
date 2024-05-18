@@ -1,6 +1,10 @@
-1,Orazbayev Merxat,EmployeEnter,Profilga kirdi,15.05.2024 23:58:24
-2,Orazbayev Merxat,EmployeEnter,Profilga kirdi,16.05.2024 0:00:15
-3,Orazbayev Merxat,DeletePill, nomli dori o'chirildi,16.05.2024 0:02:13
-4,Orazbayev Merxat,EmployeEnter,Profilga kirdi,16.05.2024 0:04:09
-5,Orazbayev Merxat,DeletePill, nomli dori o'chirildi,16.05.2024 0:04:16
-6,Orazbayev Merxat,DeletePill, nomli dori o'chirildi,16.05.2024 0:04:45
+1,Istamov Mirjahon,EmployeEnter,Profilga kirdi,17.05.2024 20:04:58
+2,Istamov Mirjahon,EmployeEnter,Profilga kirdi,17.05.2024 20:06:36
+3,Istamov Mirjahon,EmployeEnter,Profilga kirdi,17.05.2024 20:07:59
+4,Istamov Mirjahon,EmployeEnter,Profilga kirdi,17.05.2024 20:09:45
+5,Istamov Mirjahon,EmployeEnter,Profilga kirdi,17.05.2024 20:11:05
+6,Istamov Mirjahon,EmployeEnter,Profilga kirdi,17.05.2024 20:51:30
+7,Istamov Mirjahon,EmployeEnter,Profilga kirdi,18.05.2024 14:41:09
+8,Istamov Mirjahon,EmployeEnter,Profilga kirdi,18.05.2024 14:42:15
+9,Istamov Mirjahon,EmployeEnter,Profilga kirdi,18.05.2024 20:46:06
+10,Istamov Mirjahon,UpdatePill,|Nomi: Trimol|Soni: 30|Muddati: 400|Narxi: 4200|,18.05.2024 20:46:51

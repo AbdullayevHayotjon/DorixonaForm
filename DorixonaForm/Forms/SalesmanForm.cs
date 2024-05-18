@@ -207,5 +207,20 @@ namespace DorixonaForm
             deletePillForm.StartPosition = FormStartPosition.CenterScreen;
             deletePillForm.Show();
         }
+
+        private void lkSalesmanReports_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            StreamWriter streamWriter = new StreamWriter(functions.SellingPillesListPath);
+            streamWriter.Close();
+            this.Hide();
+            SalesmanReportsForm salesmanReportsForm = new SalesmanReportsForm(NewLogin);
+            salesmanReportsForm.StartPosition = FormStartPosition.CenterScreen;
+            salesmanReportsForm.Show();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
