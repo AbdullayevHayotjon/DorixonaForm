@@ -41,14 +41,7 @@
             lbUpdatePillCount = new Label();
             lbUpdatePillName = new Label();
             btBack = new Button();
-            lbFIO = new Label();
             dataGridView1 = new DataGridView();
-            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            nomiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            soniDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            muddatiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            narxiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            qoshilganSanaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             pillBindingSource = new BindingSource(components);
             btSearch = new Button();
             txPillName = new TextBox();
@@ -194,79 +187,16 @@
             btBack.UseVisualStyleBackColor = false;
             btBack.Click += btBack_Click;
             // 
-            // lbFIO
-            // 
-            lbFIO.AutoSize = true;
-            lbFIO.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            lbFIO.Location = new Point(12, 9);
-            lbFIO.Name = "lbFIO";
-            lbFIO.Size = new Size(61, 38);
-            lbFIO.TabIndex = 62;
-            lbFIO.Text = "FIO";
-            // 
             // dataGridView1
             // 
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, nomiDataGridViewTextBoxColumn, soniDataGridViewTextBoxColumn, muddatiDataGridViewTextBoxColumn, narxiDataGridViewTextBoxColumn, qoshilganSanaDataGridViewTextBoxColumn });
             dataGridView1.DataSource = pillBindingSource;
             dataGridView1.Location = new Point(91, 147);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(803, 743);
             dataGridView1.TabIndex = 63;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            idDataGridViewTextBoxColumn.HeaderText = "Id";
-            idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            idDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nomiDataGridViewTextBoxColumn
-            // 
-            nomiDataGridViewTextBoxColumn.DataPropertyName = "Nomi";
-            nomiDataGridViewTextBoxColumn.HeaderText = "Nomi";
-            nomiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            nomiDataGridViewTextBoxColumn.Name = "nomiDataGridViewTextBoxColumn";
-            nomiDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // soniDataGridViewTextBoxColumn
-            // 
-            soniDataGridViewTextBoxColumn.DataPropertyName = "Soni";
-            soniDataGridViewTextBoxColumn.HeaderText = "Soni";
-            soniDataGridViewTextBoxColumn.MinimumWidth = 6;
-            soniDataGridViewTextBoxColumn.Name = "soniDataGridViewTextBoxColumn";
-            soniDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // muddatiDataGridViewTextBoxColumn
-            // 
-            muddatiDataGridViewTextBoxColumn.DataPropertyName = "Muddati";
-            muddatiDataGridViewTextBoxColumn.HeaderText = "Muddati";
-            muddatiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            muddatiDataGridViewTextBoxColumn.Name = "muddatiDataGridViewTextBoxColumn";
-            muddatiDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // narxiDataGridViewTextBoxColumn
-            // 
-            narxiDataGridViewTextBoxColumn.DataPropertyName = "Narxi";
-            narxiDataGridViewTextBoxColumn.HeaderText = "Narxi";
-            narxiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            narxiDataGridViewTextBoxColumn.Name = "narxiDataGridViewTextBoxColumn";
-            narxiDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // qoshilganSanaDataGridViewTextBoxColumn
-            // 
-            qoshilganSanaDataGridViewTextBoxColumn.DataPropertyName = "QoshilganSana";
-            qoshilganSanaDataGridViewTextBoxColumn.HeaderText = "QoshilganSana";
-            qoshilganSanaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            qoshilganSanaDataGridViewTextBoxColumn.Name = "qoshilganSanaDataGridViewTextBoxColumn";
-            qoshilganSanaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // pillBindingSource
-            // 
-            pillBindingSource.DataSource = typeof(Actions.Pill);
             // 
             // btSearch
             // 
@@ -402,7 +332,6 @@
             Controls.Add(label2);
             Controls.Add(dataGridView1);
             Controls.Add(btSearch);
-            Controls.Add(lbFIO);
             Controls.Add(txPillName);
             Controls.Add(btBack);
             Controls.Add(panel2);
@@ -431,7 +360,6 @@
         private Label lbUpdatePillCount;
         private Label lbUpdatePillName;
         private Button btBack;
-        private Label lbFIO;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn nomiDataGridViewTextBoxColumn;

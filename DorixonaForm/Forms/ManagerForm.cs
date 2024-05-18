@@ -37,7 +37,6 @@ namespace DorixonaForm.Forms
                     lbFIO.Text = employe1.FIO;
                 }
             }
-            dGVInformations.DataSource = functions.allInformations;
         }
 
         private void btExit_Click(object sender, EventArgs e)

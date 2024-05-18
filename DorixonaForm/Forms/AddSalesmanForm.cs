@@ -134,5 +134,10 @@ namespace DorixonaForm.Forms
                 MessageBox.Show("Telefon raqam bunday bo'lishi mumkin emas", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void AddSalesmanForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

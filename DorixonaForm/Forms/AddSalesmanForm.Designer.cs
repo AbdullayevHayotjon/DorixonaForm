@@ -230,6 +230,7 @@
             Controls.Add(panel1);
             Name = "AddSalesmanForm";
             Text = "AddSalesmanForm";
+            Load += AddSalesmanForm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

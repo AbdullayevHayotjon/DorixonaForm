@@ -164,6 +164,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1016, 862);
             panel1.TabIndex = 24;
+            panel1.Paint += panel1_Paint;
             // 
             // NewLogPassForm
             // 

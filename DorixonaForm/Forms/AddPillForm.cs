@@ -19,13 +19,6 @@ namespace DorixonaForm.Forms
         {
             NewLogin = login;
             InitializeComponent();
-            foreach (Employe employe1 in functions.employeList)
-            {
-                if (employe1.Login == NewLogin)
-                {
-                    lbFIO.Text = employe1.FIO;
-                }
-            }
         }
 
         private void btAddPill_Click(object sender, EventArgs e)
@@ -105,6 +98,11 @@ namespace DorixonaForm.Forms
             SalesmanForm salesmanForm = new SalesmanForm(NewLogin);
             salesmanForm.StartPosition = FormStartPosition.CenterScreen;
             salesmanForm.Show();
+        }
+
+        private void AddPillForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

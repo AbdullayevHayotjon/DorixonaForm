@@ -21,13 +21,6 @@ namespace DorixonaForm.Forms
             NewLogin = login;
             InitializeComponent();
             dataGridView1.DataSource = functions.pillsList;
-            foreach (Employe employe1 in functions.employeList)
-            {
-                if (employe1.Login == NewLogin)
-                {
-                    lbFIO.Text = employe1.FIO;
-                }
-            }
         }
 
         private void btBack_Click(object sender, EventArgs e)

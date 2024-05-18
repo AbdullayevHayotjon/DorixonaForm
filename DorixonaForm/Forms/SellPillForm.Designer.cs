@@ -30,15 +30,10 @@
         {
             components = new System.ComponentModel.Container();
             dGWSellPill = new DataGridView();
-            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            nomiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            soniDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            narxiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             pillBindingSource = new BindingSource(components);
             btConfirmation = new Button();
             btBack = new Button();
             panel1 = new Panel();
-            lbFIO = new Label();
             ((System.ComponentModel.ISupportInitialize)dGWSellPill).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pillBindingSource).BeginInit();
             panel1.SuspendLayout();
@@ -48,7 +43,6 @@
             // 
             dGWSellPill.AutoGenerateColumns = false;
             dGWSellPill.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dGWSellPill.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, nomiDataGridViewTextBoxColumn, soniDataGridViewTextBoxColumn, narxiDataGridViewTextBoxColumn });
             dGWSellPill.DataSource = pillBindingSource;
             dGWSellPill.Location = new Point(58, 56);
             dGWSellPill.Name = "dGWSellPill";
@@ -56,46 +50,6 @@
             dGWSellPill.RowHeadersWidth = 100;
             dGWSellPill.Size = new Size(604, 547);
             dGWSellPill.TabIndex = 0;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            idDataGridViewTextBoxColumn.HeaderText = "Id";
-            idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            idDataGridViewTextBoxColumn.ReadOnly = true;
-            idDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nomiDataGridViewTextBoxColumn
-            // 
-            nomiDataGridViewTextBoxColumn.DataPropertyName = "Nomi";
-            nomiDataGridViewTextBoxColumn.HeaderText = "Nomi";
-            nomiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            nomiDataGridViewTextBoxColumn.Name = "nomiDataGridViewTextBoxColumn";
-            nomiDataGridViewTextBoxColumn.ReadOnly = true;
-            nomiDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // soniDataGridViewTextBoxColumn
-            // 
-            soniDataGridViewTextBoxColumn.DataPropertyName = "Soni";
-            soniDataGridViewTextBoxColumn.HeaderText = "Soni";
-            soniDataGridViewTextBoxColumn.MinimumWidth = 6;
-            soniDataGridViewTextBoxColumn.Name = "soniDataGridViewTextBoxColumn";
-            soniDataGridViewTextBoxColumn.ReadOnly = true;
-            soniDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // narxiDataGridViewTextBoxColumn
-            // 
-            narxiDataGridViewTextBoxColumn.DataPropertyName = "Narxi";
-            narxiDataGridViewTextBoxColumn.HeaderText = "Narxi";
-            narxiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            narxiDataGridViewTextBoxColumn.Name = "narxiDataGridViewTextBoxColumn";
-            narxiDataGridViewTextBoxColumn.ReadOnly = true;
-            narxiDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // pillBindingSource
-            // 
-            pillBindingSource.DataSource = typeof(Actions.Pill);
             // 
             // btConfirmation
             // 
@@ -133,24 +87,12 @@
             panel1.TabIndex = 43;
             panel1.Paint += panel1_Paint;
             // 
-            // lbFIO
-            // 
-            lbFIO.AutoSize = true;
-            lbFIO.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            lbFIO.Location = new Point(12, 9);
-            lbFIO.Name = "lbFIO";
-            lbFIO.Size = new Size(61, 38);
-            lbFIO.TabIndex = 44;
-            lbFIO.Text = "FIO";
-            lbFIO.Click += lbFIO_Click;
-            // 
             // SellPillForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(1917, 1033);
-            Controls.Add(lbFIO);
             Controls.Add(panel1);
             Name = "SellPillForm";
             Text = "SellPillForm";
@@ -159,7 +101,6 @@
             ((System.ComponentModel.ISupportInitialize)pillBindingSource).EndInit();
             panel1.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -173,6 +114,5 @@
         private DataGridViewTextBoxColumn soniDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn narxiDataGridViewTextBoxColumn;
         private Panel panel1;
-        private Label lbFIO;
     }
 }

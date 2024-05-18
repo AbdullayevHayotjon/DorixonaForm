@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DorixonaForm.Actions;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +13,20 @@ namespace DorixonaForm.Forms
 {
     public partial class UpdateBasketPillForm : Form
     {
-        public UpdateBasketPillForm()
+        Functions functions = new Functions();
+        public string NewLogin { get; set; }
+        public UpdateBasketPillForm(string login)
         {
+            NewLogin = login;
             InitializeComponent();
         }
 
         private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdateBasketPillForm_Load(object sender, EventArgs e)
         {
 
         }

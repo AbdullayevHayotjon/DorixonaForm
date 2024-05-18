@@ -39,7 +39,6 @@
             txAddPillPrice = new TextBox();
             txAddPillName = new TextBox();
             lbAddPillPrice = new Label();
-            lbFIO = new Label();
             btBack = new Button();
             btExit = new Button();
             button9 = new Button();
@@ -170,16 +169,6 @@
             lbAddPillPrice.TabIndex = 45;
             lbAddPillPrice.Text = "Dori narxini kiriting:";
             // 
-            // lbFIO
-            // 
-            lbFIO.AutoSize = true;
-            lbFIO.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            lbFIO.Location = new Point(12, 9);
-            lbFIO.Name = "lbFIO";
-            lbFIO.Size = new Size(61, 38);
-            lbFIO.TabIndex = 59;
-            lbFIO.Text = "FIO";
-            // 
             // btBack
             // 
             btBack.BackColor = Color.Silver;
@@ -302,10 +291,10 @@
             Controls.Add(dataGridView1);
             Controls.Add(btExit);
             Controls.Add(btBack);
-            Controls.Add(lbFIO);
             Controls.Add(panel1);
             Name = "AddPillForm";
             Text = "AddPillForm";
+            Load += AddPillForm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -326,7 +315,6 @@
         private TextBox txAddPillPrice;
         private TextBox txAddPillName;
         private Label lbAddPillPrice;
-        private Label lbFIO;
         private Button btBack;
         private Button btExit;
         private Button button9;

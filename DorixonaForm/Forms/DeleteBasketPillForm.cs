@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DorixonaForm.Actions;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +13,20 @@ namespace DorixonaForm.Forms
 {
     public partial class DeleteBasketPillForm : Form
     {
-        public DeleteBasketPillForm()
+        Functions functions = new Functions();
+        public string NewLogin { get; set; }
+        public DeleteBasketPillForm(string login)
         {
+            NewLogin = login;
             InitializeComponent();
         }
 
         private void btUpdatePill_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteBasketPillForm_Load(object sender, EventArgs e)
         {
 
         }

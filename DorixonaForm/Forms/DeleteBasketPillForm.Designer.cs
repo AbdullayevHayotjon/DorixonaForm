@@ -37,7 +37,6 @@
             label2 = new Label();
             dataGridView1 = new DataGridView();
             btSearch = new Button();
-            lbFIO = new Label();
             txPillName = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -137,16 +136,6 @@
             btSearch.Text = "Qidirish";
             btSearch.UseVisualStyleBackColor = false;
             // 
-            // lbFIO
-            // 
-            lbFIO.AutoSize = true;
-            lbFIO.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            lbFIO.Location = new Point(15, 33);
-            lbFIO.Name = "lbFIO";
-            lbFIO.Size = new Size(61, 38);
-            lbFIO.TabIndex = 106;
-            lbFIO.Text = "FIO";
-            // 
             // txPillName
             // 
             txPillName.BackColor = Color.FromArgb(255, 255, 192);
@@ -171,10 +160,10 @@
             Controls.Add(label2);
             Controls.Add(dataGridView1);
             Controls.Add(btSearch);
-            Controls.Add(lbFIO);
             Controls.Add(txPillName);
             Name = "DeleteBasketPillForm";
             Text = "DeleteBasketPillForm";
+            Load += DeleteBasketPillForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -191,7 +180,6 @@
         private Label label2;
         private DataGridView dataGridView1;
         private Button btSearch;
-        private Label lbFIO;
         private TextBox txPillName;
     }
 }
