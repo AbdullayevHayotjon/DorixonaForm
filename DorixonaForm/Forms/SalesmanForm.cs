@@ -74,10 +74,6 @@ namespace DorixonaForm
                     AllPrice += sellingPill.Narxi;
                 }
                 File.AppendAllText(functions.SellingPillesListPath, i + ",Jami," + AllCount + "," + AllPrice + "\n");
-                this.Hide();
-                SellPillForm sellPillForm = new SellPillForm(NewLogin);
-                sellPillForm.StartPosition = FormStartPosition.CenterScreen;
-                sellPillForm.Show();
             }
             else
             {

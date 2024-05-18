@@ -24,13 +24,6 @@ namespace DorixonaForm.Forms
             NewLogin = login;
             SmsPassword = random.Next(10000, 99999);
             InitializeComponent();
-            foreach (Employe employe1 in functions.employeList)
-            {
-                if (employe1.Login == NewLogin)
-                {
-                    lbFIO.Text = employe1.FIO;
-                }
-            }
         }
 
         private void txConfirmation_Click(object sender, EventArgs e)

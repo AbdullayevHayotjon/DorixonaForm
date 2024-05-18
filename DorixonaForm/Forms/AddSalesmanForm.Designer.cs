@@ -43,15 +43,18 @@
             txAddFIO = new TextBox();
             txAddPassword = new TextBox();
             label1 = new Label();
-            lbFIO = new Label();
+            dGVEmploye = new DataGridView();
+            btExit = new Button();
+            btBack = new Button();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dGVEmploye).BeginInit();
             SuspendLayout();
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Trebuchet MS", 24F);
-            label5.Location = new Point(801, 83);
+            label5.Location = new Point(1038, 41);
             label5.Name = "label5";
             label5.Size = new Size(321, 49);
             label5.TabIndex = 60;
@@ -73,7 +76,7 @@
             panel1.Controls.Add(txAddFIO);
             panel1.Controls.Add(txAddPassword);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(565, 135);
+            panel1.Location = new Point(802, 93);
             panel1.Name = "panel1";
             panel1.Size = new Size(787, 815);
             panel1.TabIndex = 59;
@@ -177,7 +180,7 @@
             btSaveNewLogPass.Name = "btSaveNewLogPass";
             btSaveNewLogPass.Size = new Size(713, 60);
             btSaveNewLogPass.TabIndex = 39;
-            btSaveNewLogPass.Text = "Saqlash";
+            btSaveNewLogPass.Text = "Qo'shish";
             btSaveNewLogPass.UseVisualStyleBackColor = false;
             btSaveNewLogPass.Click += btSaveNewLogPass_Click;
             // 
@@ -209,15 +212,36 @@
             label1.TabIndex = 37;
             label1.Text = "Parol yarating:";
             // 
-            // lbFIO
+            // dGVEmploye
             // 
-            lbFIO.AutoSize = true;
-            lbFIO.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            lbFIO.Location = new Point(12, 9);
-            lbFIO.Name = "lbFIO";
-            lbFIO.Size = new Size(61, 38);
-            lbFIO.TabIndex = 51;
-            lbFIO.Text = "FIO";
+            dGVEmploye.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dGVEmploye.Location = new Point(41, 106);
+            dGVEmploye.Name = "dGVEmploye";
+            dGVEmploye.RowHeadersWidth = 51;
+            dGVEmploye.Size = new Size(679, 701);
+            dGVEmploye.TabIndex = 61;
+            // 
+            // btExit
+            // 
+            btExit.BackColor = Color.Silver;
+            btExit.Font = new Font("Trebuchet MS", 14F);
+            btExit.Location = new Point(1754, 24);
+            btExit.Name = "btExit";
+            btExit.Size = new Size(124, 44);
+            btExit.TabIndex = 62;
+            btExit.Text = "Chiqish";
+            btExit.UseVisualStyleBackColor = false;
+            // 
+            // btBack
+            // 
+            btBack.BackColor = Color.Silver;
+            btBack.Font = new Font("Trebuchet MS", 14F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btBack.Location = new Point(1669, 916);
+            btBack.Name = "btBack";
+            btBack.Size = new Size(193, 44);
+            btBack.TabIndex = 63;
+            btBack.Text = "Orqaga qaytish";
+            btBack.UseVisualStyleBackColor = false;
             // 
             // AddSalesmanForm
             // 
@@ -225,7 +249,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(1917, 1033);
-            Controls.Add(lbFIO);
+            Controls.Add(btBack);
+            Controls.Add(btExit);
+            Controls.Add(dGVEmploye);
             Controls.Add(label5);
             Controls.Add(panel1);
             Name = "AddSalesmanForm";
@@ -233,6 +259,7 @@
             Load += AddSalesmanForm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dGVEmploye).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -254,6 +281,8 @@
         private TextBox txAddFIO;
         private TextBox txAddPassword;
         private Label label1;
-        private Label lbFIO;
+        private DataGridView dGVEmploye;
+        private Button btExit;
+        private Button btBack;
     }
 }
