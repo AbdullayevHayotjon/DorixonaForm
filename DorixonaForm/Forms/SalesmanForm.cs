@@ -55,8 +55,25 @@ namespace DorixonaForm
                 }
             }
             streamWriter1.Close();
-            StreamWriter streamWriter = new StreamWriter(functions.SellingPillesListPath);
+            foreach (SellingPill sellingPill in functions.sellingPillesList)
+            {
+                foreach (Pill pill in functions.pillsList)
+                {
+                    if (sellingPill.Id == pill.Id)
+                    {
+                        pill.Soni = pill.Soni + sellingPill.Soni;
+                        break;
+                    }
+                }
+            }
+            StreamWriter streamWriter = new StreamWriter(functions.PillsListPath);
+            foreach (Pill pill1 in functions.pillsList)
+            {
+                streamWriter.WriteLine(pill1.Id + "," + pill1.Nomi + "," + pill1.Soni + "," + pill1.Muddati + "," + pill1.Narxi + "," + pill1.QoshilganSana);
+            }
             streamWriter.Close();
+            StreamWriter streamWriter2 = new StreamWriter(functions.SellingPillesListPath);
+            streamWriter2.Close();
             this.Hide();
             LoginForm loginForm = new LoginForm();
             loginForm.StartPosition = FormStartPosition.CenterScreen;
@@ -67,9 +84,7 @@ namespace DorixonaForm
         {
             if (functions.sellingPillesList.Count > 0)
             {
-                MessageBox.Show("Dorilar sotildi", "Muvaffaqqiyatli", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 StreamWriter streamWriter1 = new StreamWriter(functions.PillsListPath);
-                List<Pill> pillList = new List<Pill>();
                 foreach (Pill pill in functions.pillsList)
                 {
                     if (pill.Soni == 0)
@@ -77,15 +92,15 @@ namespace DorixonaForm
                         continue;
                     }
                     streamWriter1.WriteLine(pill.Id + "," + pill.Nomi + "," + pill.Soni + "," + pill.Muddati + "," + pill.Narxi + "," + pill.QoshilganSana);
-                    pillList.Add(new Pill() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Muddati, QoshilganSana = pill.QoshilganSana });
                 }
                 streamWriter1.Close();
-                List<SellingPill> sellingPills = new List<SellingPill>();
+                MessageBox.Show("Dorilar sotildi", "Muvaffaqqiyatli", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 StreamWriter streamWriter = new StreamWriter(functions.SellingPillesListPath);
-                dataGridView1.DataSource = sellingPills;
-                dGWPills.DataSource = pillList;
-                lbAllPrice.Text = "0";
                 streamWriter.Close();
+                this.Hide();
+                SalesmanForm salesmanForm = new SalesmanForm(NewLogin);
+                salesmanForm.StartPosition = FormStartPosition.CenterScreen;
+                salesmanForm.Show();
             }
             else
             {
@@ -273,8 +288,25 @@ namespace DorixonaForm
 
         private void lnklSettings_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            StreamWriter streamWriter = new StreamWriter(functions.SellingPillesListPath);
+            foreach (SellingPill sellingPill in functions.sellingPillesList)
+            {
+                foreach (Pill pill in functions.pillsList)
+                {
+                    if (sellingPill.Id == pill.Id)
+                    {
+                        pill.Soni = pill.Soni + sellingPill.Soni;
+                        break;
+                    }
+                }
+            }
+            StreamWriter streamWriter = new StreamWriter(functions.PillsListPath);
+            foreach (Pill pill1 in functions.pillsList)
+            {
+                streamWriter.WriteLine(pill1.Id + "," + pill1.Nomi + "," + pill1.Soni + "," + pill1.Muddati + "," + pill1.Narxi + "," + pill1.QoshilganSana);
+            }
             streamWriter.Close();
+            StreamWriter streamWriter1 = new StreamWriter(functions.SellingPillesListPath);
+            streamWriter1.Close();
             this.Hide();
             SettingsForm settingsForm = new SettingsForm(NewLogin);
             settingsForm.StartPosition = FormStartPosition.CenterScreen;
@@ -318,8 +350,25 @@ namespace DorixonaForm
 
         private void lkSalesmanReports_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            StreamWriter streamWriter = new StreamWriter(functions.SellingPillesListPath);
+            foreach (SellingPill sellingPill in functions.sellingPillesList)
+            {
+                foreach (Pill pill in functions.pillsList)
+                {
+                    if (sellingPill.Id == pill.Id)
+                    {
+                        pill.Soni = pill.Soni + sellingPill.Soni;
+                        break;
+                    }
+                }
+            }
+            StreamWriter streamWriter = new StreamWriter(functions.PillsListPath);
+            foreach (Pill pill1 in functions.pillsList)
+            {
+                streamWriter.WriteLine(pill1.Id + "," + pill1.Nomi + "," + pill1.Soni + "," + pill1.Muddati + "," + pill1.Narxi + "," + pill1.QoshilganSana);
+            }
             streamWriter.Close();
+            StreamWriter streamWriter1 = new StreamWriter(functions.SellingPillesListPath);
+            streamWriter1.Close();
             this.Hide();
             SalesmanReportsForm salesmanReportsForm = new SalesmanReportsForm(NewLogin);
             salesmanReportsForm.StartPosition = FormStartPosition.CenterScreen;
@@ -348,7 +397,29 @@ namespace DorixonaForm
         }
         private void button4_Click(object sender, EventArgs e)
         {
-
+            foreach (SellingPill sellingPill in functions.sellingPillesList)
+            {
+                foreach (Pill pill in functions.pillsList)
+                {
+                    if (sellingPill.Id == pill.Id)
+                    {
+                        pill.Soni = pill.Soni + sellingPill.Soni;
+                        break;
+                    }
+                }
+            }
+            StreamWriter streamWriter = new StreamWriter(functions.PillsListPath);
+            foreach (Pill pill1 in functions.pillsList)
+            {
+                streamWriter.WriteLine(pill1.Id + "," + pill1.Nomi + "," + pill1.Soni + "," + pill1.Muddati + "," + pill1.Narxi + "," + pill1.QoshilganSana);
+            }
+            streamWriter.Close();
+            StreamWriter streamWriter1 = new StreamWriter(functions.SellingPillesListPath);
+            streamWriter1.Close();
+            this.Hide();
+            SalesmanForm salesmanForm = new SalesmanForm(NewLogin);
+            salesmanForm.StartPosition = FormStartPosition.CenterScreen;
+            salesmanForm.Show();
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -369,7 +440,7 @@ namespace DorixonaForm
                             Soni = int.Parse(PillInfo[2]),
                             Muddati = int.Parse(PillInfo[3]),
                             Narxi = int.Parse(PillInfo[4]),
-                            QoshilganSana = DateTime.Parse(PillInfo[5]),    
+                            QoshilganSana = DateTime.Parse(PillInfo[5]),
                         });
                     }
                     if (cbSort.Text == "Id")
@@ -515,23 +586,7 @@ namespace DorixonaForm
 
         private void btQaytarish_Click(object sender, EventArgs e)
         {
-            string PillPath = @"..\..\..\.txt files\PillesList.txt";
-            string[] PillAllLines = File.ReadAllLines(PillPath);
-            List<Pill> PillOld = new List<Pill>();
-            foreach (var PillAllLinesItem in PillAllLines)
-            {
-                string[] PillInfo = PillAllLinesItem.Split(',');
-                PillOld.Add(new Pill
-                {
-                    Id = int.Parse(PillInfo[0]),
-                    Nomi = PillInfo[1],
-                    Soni = int.Parse(PillInfo[2]),
-                    Muddati = int.Parse(PillInfo[3]),
-                    Narxi = int.Parse(PillInfo[4]),
-                    QoshilganSana = DateTime.Parse(PillInfo[5]),
-                });
-            }
-            dGWPills.DataSource = PillOld;
+            dGWPills.DataSource = functions.pillsList;
         }
     }
 }
