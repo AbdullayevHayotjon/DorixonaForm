@@ -19,6 +19,7 @@ namespace DorixonaForm.Forms
         {
             NewLogin = login;
             InitializeComponent();
+            dataGridView1.DataSource = functions.pillsList;
         }
 
         private void btAddPill_Click(object sender, EventArgs e)
@@ -98,6 +99,12 @@ namespace DorixonaForm.Forms
 
         private void AddPillForm_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+           
 
         }
     }
