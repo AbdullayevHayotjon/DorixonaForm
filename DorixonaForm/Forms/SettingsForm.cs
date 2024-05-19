@@ -24,13 +24,6 @@ namespace DorixonaForm.Forms
             NewLogin = login;
             SmsPassword = random.Next(10000, 99999);
             InitializeComponent();
-            foreach (Employe employe1 in functions.employeList)
-            {
-                if (employe1.Login == NewLogin)
-                {
-                    lbFIO.Text = employe1.FIO;
-                }
-            }
         }
         private void btChangePassword_Click(object sender, EventArgs e)
         {
@@ -287,6 +280,14 @@ namespace DorixonaForm.Forms
         private void SettingsForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.StartPosition = FormStartPosition.CenterScreen;
+            loginForm.Show();
         }
     }
 }

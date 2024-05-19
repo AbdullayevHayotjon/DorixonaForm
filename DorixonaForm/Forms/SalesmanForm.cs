@@ -23,6 +23,13 @@ namespace DorixonaForm
             InitializeComponent();
 
             dGWPills.DataSource = functions.pillsList;
+            dataGridView1.DataSource = functions.sellingPillesList;
+            int AllPrice = 0;
+            foreach (SellingPill sellingPill in functions.sellingPillesList)
+            {
+                AllPrice += sellingPill.Narxi;
+            }
+            lbAllPrice.Text = AllPrice.ToString();
             foreach (Employe employe1 in functions.employeList)
             {
                 if (employe1.Login == NewLogin)
@@ -58,26 +65,31 @@ namespace DorixonaForm
 
         private void btSellPill_Click(object sender, EventArgs e)
         {
-            int AllCount = 0, AllPrice = 0;
-            List<SellingPill> sellingPillesList = new List<SellingPill>();
-            string[] SellingPillesList = File.ReadAllLines(functions.SellingPillesListPath);
-            for (int i = 0; i < SellingPillesList.Length; i++)
+            if (functions.sellingPillesList.Count > 0)
             {
-                string[] SellingPillsListLine = SellingPillesList[i].Split(",");
-                sellingPillesList.Add(new SellingPill() { Id = int.Parse(SellingPillsListLine[0]), Nomi = SellingPillsListLine[1], Soni = int.Parse(SellingPillsListLine[2]), Narxi = int.Parse(SellingPillsListLine[3]) });
-            }
-            if (sellingPillesList.Count > 0)
-            {
-                foreach (SellingPill sellingPill in sellingPillesList)
+                MessageBox.Show("Dorilar sotildi", "Muvaffaqqiyatli", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                StreamWriter streamWriter1 = new StreamWriter(functions.PillsListPath);
+                List<Pill> pillList = new List<Pill>();
+                foreach(Pill pill in functions.pillsList)
                 {
-                    AllCount += sellingPill.Soni;
-                    AllPrice += sellingPill.Narxi;
+                    if(pill.Soni == 0)
+                    {
+                        continue;
+                    }
+                    streamWriter1.WriteLine(pill.Id + "," + pill.Nomi + "," + pill.Soni + "," + pill.Muddati + "," + pill.Narxi + "," + pill.QoshilganSana);
+                    pillList.Add(new Pill() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Muddati, QoshilganSana = pill.QoshilganSana });
                 }
-                File.AppendAllText(functions.SellingPillesListPath, i + ",Jami," + AllCount + "," + AllPrice + "\n");
+                streamWriter1.Close();
+                List<SellingPill> sellingPills = new List<SellingPill>();
+                StreamWriter streamWriter = new StreamWriter(functions.SellingPillesListPath);
+                dataGridView1.DataSource = sellingPills;
+                dGWPills.DataSource = pillList;
+                lbAllPrice.Text = "0";
+                streamWriter.Close();
             }
             else
             {
-                MessageBox.Show("Savat bo'sh", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Savat bo'sh", "Ma'lumot", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -113,49 +125,149 @@ namespace DorixonaForm
 
         private void btAddBox_Click(object sender, EventArgs e)
         {
-            List<Pill> pillList = new List<Pill>();
-            int i = 1;
-            foreach (Pill pill in functions.pillsList)
+            if (cbSearch.Text == "Nomi")
             {
-                if (pill.Nomi.ToLower().Contains(txPillName.Text.ToLower()))
+                List<Pill> pillList = new List<Pill>();
+                foreach (Pill pill in functions.pillsList)
                 {
-                    pillList.Add(new Pill() { Id = i++, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Narxi, QoshilganSana = pill.QoshilganSana });
+                    if (pill.Nomi.ToLower().Contains(txPillInformation.Text.ToLower()))
+                    {
+                        pillList.Add(new Pill() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Narxi, QoshilganSana = pill.QoshilganSana });
+                    }
                 }
+                dGWPills.DataSource = pillList;
             }
-            dGWPills.DataSource = pillList;
+            else if (cbSearch.Text == "Id")
+            {
+                List<Pill> pillList = new List<Pill>();
+                foreach (Pill pill in functions.pillsList)
+                {
+                    if (pill.Id.ToString().Contains(txPillInformation.Text))
+                    {
+                        pillList.Add(new Pill() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Narxi, QoshilganSana = pill.QoshilganSana });
+                    }
+                }
+                dGWPills.DataSource = pillList;
+            }
+            else if (cbSearch.Text == "Soni")
+            {
+                List<Pill> pillList = new List<Pill>();
+                foreach (Pill pill in functions.pillsList)
+                {
+                    if (pill.Soni.ToString().Contains(txPillInformation.Text))
+                    {
+                        pillList.Add(new Pill() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Narxi, QoshilganSana = pill.QoshilganSana });
+                    }
+                }
+                dGWPills.DataSource = pillList;
+            }
+            else if (cbSearch.Text == "Muddati")
+            {
+                List<Pill> pillList = new List<Pill>();
+                foreach (Pill pill in functions.pillsList)
+                {
+                    if (pill.Muddati.ToString().Contains(txPillInformation.Text))
+                    {
+                        pillList.Add(new Pill() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Narxi, QoshilganSana = pill.QoshilganSana });
+                    }
+                }
+                dGWPills.DataSource = pillList;
+            }
+            else if (cbSearch.Text == "Narxi")
+            {
+                List<Pill> pillList = new List<Pill>();
+                foreach (Pill pill in functions.pillsList)
+                {
+                    if (pill.Narxi.ToString().Contains(txPillInformation.Text))
+                    {
+                        pillList.Add(new Pill() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Narxi, QoshilganSana = pill.QoshilganSana });
+                    }
+                }
+                dGWPills.DataSource = pillList;
+            }
+            else if (cbSearch.Text == "Qo'shilgan Sana")
+            {
+                List<Pill> pillList = new List<Pill>();
+                foreach (Pill pill in functions.pillsList)
+                {
+                    if (pill.QoshilganSana.Contains(txPillInformation.Text))
+                    {
+                        pillList.Add(new Pill() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Narxi, QoshilganSana = pill.QoshilganSana });
+                    }
+                }
+                dGWPills.DataSource = pillList;
+            }
+            else
+            {
+                MessageBox.Show("Bo'limdan birini tanlang", "Ma'lumot", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
         private void btAddBox_Click_1(object sender, EventArgs e)
         {
-            int sanoq = 0;
-            foreach (Pill pill in functions.pillsList)
+            if (functions.CheckNumber(txId.Text))
             {
-                if (txPillName.Text.ToLower() == pill.Nomi.ToLower())
+                int sanoq = 0;
+                foreach (Pill pill in functions.pillsList)
                 {
-                    sanoq = 1;
-                    if (functions.CheckNumber(txPillCount.Text))
+                    if (pill.Id == int.Parse(txId.Text))
                     {
-                        if (pill.Soni - int.Parse(txPillCount.Text) >= 0)
+                        sanoq = 1;
+                        if (functions.CheckNumber(txPillCount.Text) && int.Parse(txPillCount.Text) != 0)
                         {
-                            File.AppendAllText(functions.SellingPillesListPath, (i++) + "," + pill.Nomi + "," + txPillCount.Text + "," + pill.Narxi * int.Parse(txPillCount.Text) + "\n");
-                            MessageBox.Show($"Savatga qo'shildi", "Ma'lumot", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            txPillName.Clear();
-                            txPillCount.Clear();
+                            sanoq = 2;
+                            if (int.Parse(txPillCount.Text) <= pill.Soni)
+                            {
+                                sanoq = 3;
+                                StreamWriter streamWriter = new StreamWriter(functions.SellingPillesListPath);
+                                foreach (SellingPill sellingPill in functions.sellingPillesList)
+                                {
+                                    if (sellingPill.Id == int.Parse(txId.Text))
+                                    {
+                                        sanoq = 4;
+                                        sellingPill.Soni = sellingPill.Soni + int.Parse(txPillCount.Text);
+                                    }
+                                    streamWriter.WriteLine(sellingPill.Id + "," + sellingPill.Nomi + "," + sellingPill.Soni + "," + sellingPill.Narxi);
+                                }
+                                if (sanoq == 3)
+                                {
+                                    streamWriter.WriteLine(pill.Id + "," + pill.Nomi + "," + txPillCount.Text + "," + pill.Narxi * int.Parse(txPillCount.Text));
+                                }
+                                streamWriter.Close();
+                                StreamWriter streamWriter1 = new StreamWriter(functions.PillsListPath);
+                                foreach (Pill pill1 in functions.pillsList)
+                                {
+                                    if (pill1.Id == int.Parse(txId.Text))
+                                    {
+                                        pill1.Soni = pill1.Soni - int.Parse(txPillCount.Text);
+                                    }
+                                    streamWriter1.WriteLine(pill1.Id + "," + pill1.Nomi + "," + pill1.Soni + "," + pill1.Muddati + "," + pill1.Narxi + "," + pill1.QoshilganSana);
+                                }
+                                streamWriter1.Close();
+                                this.Hide();
+                                SalesmanForm salesmanForm = new SalesmanForm(NewLogin);
+                                salesmanForm.StartPosition = FormStartPosition.CenterScreen;
+                                salesmanForm.Show();
+                            }
                         }
-                        else
-                        {
-                            MessageBox.Show("Dori soni yetmaydi", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                        break;
                     }
-                    else
-                    {
-                        MessageBox.Show("Dori sonini xato kiritdingiz", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    break;
+                }
+                if (sanoq == 0)
+                {
+                    MessageBox.Show("Bunday Id mavjud emas", "Ma'lumot", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (sanoq == 1)
+                {
+                    MessageBox.Show("Dori soni bunday bo'lishi mumkin emas", "Ma'lumot", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (sanoq == 2)
+                {
+                    MessageBox.Show("Dori soni yetmaydi", "Ma'lumot", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            if (sanoq == 0)
+            else
             {
-                MessageBox.Show("Dori nomini to'liq kiriting", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Bunday Id mavjud emas", "Ma'lumot", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -217,6 +329,27 @@ namespace DorixonaForm
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UpdateBasketPillForm updateBasketPillForm = new UpdateBasketPillForm(NewLogin);
+            updateBasketPillForm.StartPosition = FormStartPosition.CenterScreen;
+            updateBasketPillForm.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            DeleteBasketPillForm deleteBasketPillForm = new DeleteBasketPillForm(NewLogin);
+            deleteBasketPillForm.StartPosition = FormStartPosition.CenterScreen;
+            deleteBasketPillForm.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

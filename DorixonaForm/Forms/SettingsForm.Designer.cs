@@ -43,11 +43,11 @@
             txSmsPassword = new TextBox();
             lbSmsPassword = new Label();
             lbNewPhoneNumber = new Label();
-            lbFIO = new Label();
             panel1 = new Panel();
             panel2 = new Panel();
             label1 = new Label();
             label2 = new Label();
+            button1 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -207,16 +207,6 @@
             lbNewPhoneNumber.TabIndex = 56;
             lbNewPhoneNumber.Text = "Yangi telefon raqamingizni kiriting:";
             // 
-            // lbFIO
-            // 
-            lbFIO.AutoSize = true;
-            lbFIO.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            lbFIO.Location = new Point(12, 9);
-            lbFIO.Name = "lbFIO";
-            lbFIO.Size = new Size(61, 38);
-            lbFIO.TabIndex = 64;
-            lbFIO.Text = "FIO";
-            // 
             // panel1
             // 
             panel1.BackColor = Color.LightCyan;
@@ -267,17 +257,29 @@
             label2.TabIndex = 57;
             label2.Text = "Telefon raqamni o'zgartirish";
             // 
+            // button1
+            // 
+            button1.BackColor = Color.Silver;
+            button1.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            button1.Location = new Point(1712, 12);
+            button1.Name = "button1";
+            button1.Size = new Size(152, 53);
+            button1.TabIndex = 67;
+            button1.Text = "Chiqish";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // SettingsForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(1917, 1033);
+            Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Controls.Add(lbFIO);
             Controls.Add(btBack);
             Name = "SettingsForm";
             RightToLeft = RightToLeft.No;
@@ -307,10 +309,10 @@
         private TextBox txSmsPassword;
         private Label lbSmsPassword;
         private Label lbNewPhoneNumber;
-        private Label lbFIO;
         private Panel panel1;
         private Panel panel2;
         private Label label1;
         private Label label2;
+        private Button button1;
     }
 }

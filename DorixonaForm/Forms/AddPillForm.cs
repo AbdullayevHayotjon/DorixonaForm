@@ -66,10 +66,6 @@ namespace DorixonaForm.Forms
                             }
                             streamWriter1.Close();
                             MessageBox.Show($"Dori qo'shildi", "Muvaffaqqiyatli!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Hide();
-                            SalesmanForm salesmanForm = new SalesmanForm(NewLogin);
-                            salesmanForm.StartPosition = FormStartPosition.CenterScreen;
-                            salesmanForm.Show();
                         }
                         else
                         {

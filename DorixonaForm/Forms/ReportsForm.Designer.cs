@@ -51,6 +51,7 @@
             label8 = new Label();
             label9 = new Label();
             label6 = new Label();
+            comboBox2 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dGVInformations).BeginInit();
             ((System.ComponentModel.ISupportInitialize)reportSelesPillBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)allInformationsBindingSource).BeginInit();
@@ -273,12 +274,24 @@
             label6.TabIndex = 128;
             label6.Text = "Kun2:";
             // 
+            // comboBox2
+            // 
+            comboBox2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Sotuvchilar" });
+            comboBox2.Location = new Point(1329, 204);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(192, 49);
+            comboBox2.TabIndex = 134;
+            comboBox2.Text = "Dori";
+            // 
             // ReportsForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(1917, 1033);
+            Controls.Add(comboBox2);
             Controls.Add(panel2);
             Controls.Add(comboBox1);
             Controls.Add(cbSearch);
@@ -330,5 +343,6 @@
         private Label label8;
         private Label label9;
         private Label label6;
+        private ComboBox comboBox2;
     }
 }
