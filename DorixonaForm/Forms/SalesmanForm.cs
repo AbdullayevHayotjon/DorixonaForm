@@ -190,7 +190,7 @@ namespace DorixonaForm
                 List<Pill> pillList = new List<Pill>();
                 foreach (Pill pill in functions.pillsList)
                 {
-                    if (pill.QoshilganSana.Contains(txPillInformation.Text))
+                    if (pill.QoshilganSana.ToString().Contains(txPillInformation.Text))
                     {
                         pillList.Add(new Pill() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Narxi, QoshilganSana = pill.QoshilganSana });
                     }
@@ -346,12 +346,10 @@ namespace DorixonaForm
             deleteBasketPillForm.StartPosition = FormStartPosition.CenterScreen;
             deleteBasketPillForm.Show();
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
 
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             try
@@ -361,8 +359,6 @@ namespace DorixonaForm
                     string PillPath = @"..\..\..\.txt files\PillesList.txt";
                     string[] PillAllLines = File.ReadAllLines(PillPath);
                     List<Pill> PillOld = new List<Pill>();
-
-                    // Populate the list from the file
                     foreach (var PillAllLinesItem in PillAllLines)
                     {
                         string[] PillInfo = PillAllLinesItem.Split(',');
@@ -373,11 +369,9 @@ namespace DorixonaForm
                             Soni = int.Parse(PillInfo[2]),
                             Muddati = int.Parse(PillInfo[3]),
                             Narxi = int.Parse(PillInfo[4]),
-                            QoshilganSana = PillInfo[5]
+                            QoshilganSana = DateTime.Parse(PillInfo[5]),    
                         });
                     }
-
-                    // Sort based on the selected criteria
                     if (cbSort.Text == "Id")
                     {
                         PillOld.Sort((x, y) => x.Id.CompareTo(y.Id));
@@ -412,8 +406,10 @@ namespace DorixonaForm
                     {
                         PillOld.Sort((x, y) => x.Narxi.CompareTo(y.Narxi));
                     }
-
-                    // Set the sorted list as the DataGridView's data source
+                    else if (cbSort.Text == "Qo'shilgan sanasi")
+                    {
+                        PillOld.Sort((x, y) => x.QoshilganSana.CompareTo(y.QoshilganSana));
+                    }
                     dGWPills.DataSource = PillOld;
                 }
                 else
@@ -444,8 +440,6 @@ namespace DorixonaForm
                     string PillPath = @"..\..\..\.txt files\PillesList.txt";
                     string[] PillAllLines = File.ReadAllLines(PillPath);
                     List<Pill> PillOld = new List<Pill>();
-
-                    // Populate the list from the file
                     foreach (var PillAllLinesItem in PillAllLines)
                     {
                         string[] PillInfo = PillAllLinesItem.Split(',');
@@ -456,11 +450,9 @@ namespace DorixonaForm
                             Soni = int.Parse(PillInfo[2]),
                             Muddati = int.Parse(PillInfo[3]),
                             Narxi = int.Parse(PillInfo[4]),
-                            QoshilganSana = PillInfo[5]
+                            QoshilganSana = DateTime.Parse(PillInfo[5])
                         });
                     }
-
-                    // Sort based on the selected criteria
                     if (cbSort.Text == "Id")
                     {
                         PillOld.Sort((x, y) => y.Id.CompareTo(x.Id));
@@ -495,8 +487,11 @@ namespace DorixonaForm
                     {
                         PillOld.Sort((x, y) => y.Narxi.CompareTo(x.Narxi));
                     }
+                    else if (cbSort.Text == "Qo'shilgan sanasi")
+                    {
+                        PillOld.Sort((x, y) => y.QoshilganSana.CompareTo(x.QoshilganSana));
 
-                    // Set the sorted list as the DataGridView's data source
+                    }
                     dGWPills.DataSource = PillOld;
                 }
                 else
@@ -523,8 +518,6 @@ namespace DorixonaForm
             string PillPath = @"..\..\..\.txt files\PillesList.txt";
             string[] PillAllLines = File.ReadAllLines(PillPath);
             List<Pill> PillOld = new List<Pill>();
-
-            // Populate the list from the file
             foreach (var PillAllLinesItem in PillAllLines)
             {
                 string[] PillInfo = PillAllLinesItem.Split(',');
@@ -535,7 +528,7 @@ namespace DorixonaForm
                     Soni = int.Parse(PillInfo[2]),
                     Muddati = int.Parse(PillInfo[3]),
                     Narxi = int.Parse(PillInfo[4]),
-                    QoshilganSana = PillInfo[5]
+                    QoshilganSana = DateTime.Parse(PillInfo[5]),
                 });
             }
             dGWPills.DataSource = PillOld;

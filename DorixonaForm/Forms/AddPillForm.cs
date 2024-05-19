@@ -40,7 +40,7 @@ namespace DorixonaForm.Forms
                                 {
                                     sanoq = 1;
                                     pill.Soni = pill.Soni + int.Parse(txAddPillCount.Text);
-                                    pill.QoshilganSana = DateTime.Now.ToString();
+                                    pill.QoshilganSana = DateTime.Now;
                                 }
                                 streamWriter.WriteLine(pill.Id + "," + pill.Nomi + "," + pill.Soni + "," + pill.Muddati + "," + pill.Narxi + "," + pill.QoshilganSana);
                                 Id = pill.Id;

@@ -13,6 +13,6 @@ namespace DorixonaForm.Actions
         public int Soni { get; set; }
         public int Muddati { get; set; }
         public int Narxi { get; set; }
-        public string QoshilganSana { get; set; }
+        public DateTime QoshilganSana { get; set; }
     }
 }

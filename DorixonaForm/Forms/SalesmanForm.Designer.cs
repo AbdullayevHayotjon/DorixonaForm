@@ -35,12 +35,6 @@
             label1 = new Label();
             txPillInformation = new TextBox();
             dGWPills = new DataGridView();
-            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            nomiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            soniDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            Muddati = new DataGridViewTextBoxColumn();
-            narxiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            QoshilganSana = new DataGridViewTextBoxColumn();
             pillBindingSource2 = new BindingSource(components);
             pillBindingSource1 = new BindingSource(components);
             pillBindingSource = new BindingSource(components);
@@ -75,6 +69,12 @@
             btOsish = new Button();
             btKamayish = new Button();
             btQaytarish = new Button();
+            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            nomiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            soniDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            Muddati = new DataGridViewTextBoxColumn();
+            narxiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            QoshilganSana = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dGWPills).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pillBindingSource2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pillBindingSource1).BeginInit();
@@ -147,57 +147,9 @@
             dGWPills.Location = new Point(991, 241);
             dGWPills.Name = "dGWPills";
             dGWPills.RowHeadersWidth = 80;
-            dGWPills.Size = new Size(832, 668);
+            dGWPills.Size = new Size(913, 668);
             dGWPills.TabIndex = 24;
             dGWPills.CellContentClick += dGWPills_CellContentClick;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            idDataGridViewTextBoxColumn.HeaderText = "Id";
-            idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            idDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nomiDataGridViewTextBoxColumn
-            // 
-            nomiDataGridViewTextBoxColumn.DataPropertyName = "Nomi";
-            nomiDataGridViewTextBoxColumn.HeaderText = "Nomi";
-            nomiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            nomiDataGridViewTextBoxColumn.Name = "nomiDataGridViewTextBoxColumn";
-            nomiDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // soniDataGridViewTextBoxColumn
-            // 
-            soniDataGridViewTextBoxColumn.DataPropertyName = "Soni";
-            soniDataGridViewTextBoxColumn.HeaderText = "Soni";
-            soniDataGridViewTextBoxColumn.MinimumWidth = 6;
-            soniDataGridViewTextBoxColumn.Name = "soniDataGridViewTextBoxColumn";
-            soniDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // Muddati
-            // 
-            Muddati.DataPropertyName = "Muddati";
-            Muddati.HeaderText = "Muddati";
-            Muddati.MinimumWidth = 6;
-            Muddati.Name = "Muddati";
-            Muddati.Width = 125;
-            // 
-            // narxiDataGridViewTextBoxColumn
-            // 
-            narxiDataGridViewTextBoxColumn.DataPropertyName = "Narxi";
-            narxiDataGridViewTextBoxColumn.HeaderText = "Narxi";
-            narxiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            narxiDataGridViewTextBoxColumn.Name = "narxiDataGridViewTextBoxColumn";
-            narxiDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // QoshilganSana
-            // 
-            QoshilganSana.DataPropertyName = "QoshilganSana";
-            QoshilganSana.HeaderText = "QoshilganSana";
-            QoshilganSana.MinimumWidth = 6;
-            QoshilganSana.Name = "QoshilganSana";
-            QoshilganSana.Width = 125;
             // 
             // pillBindingSource2
             // 
@@ -437,6 +389,7 @@
             // 
             // cbSearch
             // 
+            cbSearch.DropDownStyle = ComboBoxStyle.DropDownList;
             cbSearch.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
             cbSearch.FormattingEnabled = true;
             cbSearch.Items.AddRange(new object[] { "Id", "Nomi", "Soni", "Muddati", "Narxi", "Qo'shilgan Sanasi" });
@@ -444,7 +397,6 @@
             cbSearch.Name = "cbSearch";
             cbSearch.Size = new Size(368, 49);
             cbSearch.TabIndex = 28;
-            cbSearch.Text = "Id";
             cbSearch.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // btAddPill
@@ -501,14 +453,14 @@
             // 
             // cbSort
             // 
+            cbSort.DropDownStyle = ComboBoxStyle.DropDownList;
             cbSort.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
             cbSort.FormattingEnabled = true;
-            cbSort.Items.AddRange(new object[] { "Id", "Nomi", "Soni", "Muddati", "Narxi" });
+            cbSort.Items.AddRange(new object[] { "Id", "Nomi", "Soni", "Muddati", "Narxi", "Qo'shilgan sanasi" });
             cbSort.Location = new Point(991, 185);
             cbSort.Name = "cbSort";
             cbSort.Size = new Size(371, 49);
             cbSort.TabIndex = 36;
-            cbSort.Text = "Id";
             // 
             // btOsish
             // 
@@ -545,6 +497,54 @@
             btQaytarish.Text = "Qaytarish";
             btQaytarish.UseVisualStyleBackColor = false;
             btQaytarish.Click += btQaytarish_Click;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            idDataGridViewTextBoxColumn.HeaderText = "Id";
+            idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nomiDataGridViewTextBoxColumn
+            // 
+            nomiDataGridViewTextBoxColumn.DataPropertyName = "Nomi";
+            nomiDataGridViewTextBoxColumn.HeaderText = "Nomi";
+            nomiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            nomiDataGridViewTextBoxColumn.Name = "nomiDataGridViewTextBoxColumn";
+            nomiDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // soniDataGridViewTextBoxColumn
+            // 
+            soniDataGridViewTextBoxColumn.DataPropertyName = "Soni";
+            soniDataGridViewTextBoxColumn.HeaderText = "Soni";
+            soniDataGridViewTextBoxColumn.MinimumWidth = 6;
+            soniDataGridViewTextBoxColumn.Name = "soniDataGridViewTextBoxColumn";
+            soniDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // Muddati
+            // 
+            Muddati.DataPropertyName = "Muddati";
+            Muddati.HeaderText = "Muddati";
+            Muddati.MinimumWidth = 6;
+            Muddati.Name = "Muddati";
+            Muddati.Width = 125;
+            // 
+            // narxiDataGridViewTextBoxColumn
+            // 
+            narxiDataGridViewTextBoxColumn.DataPropertyName = "Narxi";
+            narxiDataGridViewTextBoxColumn.HeaderText = "Narxi";
+            narxiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            narxiDataGridViewTextBoxColumn.Name = "narxiDataGridViewTextBoxColumn";
+            narxiDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // QoshilganSana
+            // 
+            QoshilganSana.DataPropertyName = "QoshilganSana";
+            QoshilganSana.HeaderText = "QoshilganSana        ";
+            QoshilganSana.MinimumWidth = 6;
+            QoshilganSana.Name = "QoshilganSana";
+            QoshilganSana.Width = 125;
             // 
             // SalesmanForm
             // 
@@ -600,17 +600,11 @@
         private Label lbPillCount;
         private Button btAddBox;
         private BindingSource pillBindingSource2;
-        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn nomiDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn soniDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn Muddati;
-        private DataGridViewTextBoxColumn narxiDataGridViewTextBoxColumn;
         private Label lbFIO;
         private LinkLabel lnklSettings;
         private Label lbPillsList;
         private Panel panel1;
         private Button btAddPill;
-        private DataGridViewTextBoxColumn QoshilganSana;
         private Button btUpdatePill;
         private Button btDeletePill;
         private LinkLabel lkSalesmanReports;
@@ -634,5 +628,11 @@
         private DataGridViewTextBoxColumn narxiDataGridViewTextBoxColumn1;
         private BindingSource sellingPillBindingSource;
         private Button button4;
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn nomiDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn soniDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn Muddati;
+        private DataGridViewTextBoxColumn narxiDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn QoshilganSana;
     }
 }

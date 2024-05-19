@@ -34,7 +34,7 @@ namespace DorixonaForm.Actions
             for (int i = 0; i < PillsList.Length; i++)
             {
                 string[] PillsListLine = PillsList[i].Split(",");
-                pillsList.Add(new Pill() { Id = int.Parse(PillsListLine[0]), Nomi = PillsListLine[1], Soni = int.Parse(PillsListLine[2]), Muddati = int.Parse(PillsListLine[3]), Narxi = int.Parse(PillsListLine[4]), QoshilganSana = PillsListLine[5] });
+                pillsList.Add(new Pill() { Id = int.Parse(PillsListLine[0]), Nomi = PillsListLine[1], Soni = int.Parse(PillsListLine[2]), Muddati = int.Parse(PillsListLine[3]), Narxi = int.Parse(PillsListLine[4]), QoshilganSana = DateTime.Parse(PillsListLine[5]) });
             }
             string[] SellingPillesList = File.ReadAllLines(SellingPillesListPath);
             for (int i = 0; i < SellingPillesList.Length; i++)
