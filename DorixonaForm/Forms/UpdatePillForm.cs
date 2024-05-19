@@ -20,7 +20,7 @@ namespace DorixonaForm.Forms
         {
             NewLogin = login;
             InitializeComponent();
-            dataGridView1.DataSource = functions.pillsList;
+            dbPills.DataSource = functions.pillsList;
         }
 
         private void btBack_Click(object sender, EventArgs e)
@@ -88,7 +88,7 @@ namespace DorixonaForm.Forms
                                     }
                                     streamWriter1.Close();
                                     MessageBox.Show($"Dori yangilandi", "Ma'lumot", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    dataGridView1.DataSource = pills;
+                                    dbPills.DataSource = pills;
                                     txUpdatePillName.Clear();
                                     txUpdatePillCount.Clear();
                                     txUpdatePillLifeTime.Clear();
@@ -132,15 +132,82 @@ namespace DorixonaForm.Forms
 
         private void btSearch_Click(object sender, EventArgs e)
         {
-            List<Pill> pillList = new List<Pill>();
-            foreach (Pill pill in functions.pillsList)
+            if (cbSearch.Text == "Nomi")
             {
-                if (pill.Nomi.ToLower().Contains(txPillName.Text.ToLower()))
+                List<Pill> pillList = new List<Pill>();
+                foreach (Pill pill in functions.pillsList)
                 {
-                    pillList.Add(new Pill() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Narxi, QoshilganSana = pill.QoshilganSana });
+                    if (pill.Nomi.ToLower().Contains(txPillInformation.Text.ToLower()))
+                    {
+                        pillList.Add(new Pill() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Narxi, QoshilganSana = pill.QoshilganSana });
+                    }
                 }
+                dbPills.DataSource = pillList;
             }
-            dataGridView1.DataSource = pillList;
+            else if (cbSearch.Text == "Id")
+            {
+                List<Pill> pillList = new List<Pill>();
+                foreach (Pill pill in functions.pillsList)
+                {
+                    if (pill.Id.ToString().Contains(txPillInformation.Text))
+                    {
+                        pillList.Add(new Pill() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Narxi, QoshilganSana = pill.QoshilganSana });
+                    }
+                }
+                dbPills.DataSource = pillList;
+            }
+            else if (cbSearch.Text == "Soni")
+            {
+                List<Pill> pillList = new List<Pill>();
+                foreach (Pill pill in functions.pillsList)
+                {
+                    if (pill.Soni.ToString().Contains(txPillInformation.Text))
+                    {
+                        pillList.Add(new Pill() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Narxi, QoshilganSana = pill.QoshilganSana });
+                    }
+                }
+                dbPills.DataSource = pillList;
+            }
+            else if (cbSearch.Text == "Muddati")
+            {
+                List<Pill> pillList = new List<Pill>();
+                foreach (Pill pill in functions.pillsList)
+                {
+                    if (pill.Muddati.ToString().Contains(txPillInformation.Text))
+                    {
+                        pillList.Add(new Pill() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Narxi, QoshilganSana = pill.QoshilganSana });
+                    }
+                }
+                dbPills.DataSource = pillList;
+            }
+            else if (cbSearch.Text == "Narxi")
+            {
+                List<Pill> pillList = new List<Pill>();
+                foreach (Pill pill in functions.pillsList)
+                {
+                    if (pill.Narxi.ToString().Contains(txPillInformation.Text))
+                    {
+                        pillList.Add(new Pill() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Narxi, QoshilganSana = pill.QoshilganSana });
+                    }
+                }
+                dbPills.DataSource = pillList;
+            }
+            else if (cbSearch.Text == "Qo'shilgan Sana")
+            {
+                List<Pill> pillList = new List<Pill>();
+                foreach (Pill pill in functions.pillsList)
+                {
+                    if (pill.QoshilganSana.ToString().Contains(txPillInformation.Text))
+                    {
+                        pillList.Add(new Pill() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Narxi, QoshilganSana = pill.QoshilganSana });
+                    }
+                }
+                dbPills.DataSource = pillList;
+            }
+            else
+            {
+                MessageBox.Show("Bo'limdan birini tanlang", "Ma'lumot", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btPlacement_Click(object sender, EventArgs e)
@@ -176,6 +243,199 @@ namespace DorixonaForm.Forms
             {
                 MessageBox.Show("Bunday Id topilmadi", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void txId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbSort.Text.Length > 0)
+                {
+                    string PillPath = @"..\..\..\.txt files\PillesList.txt";
+                    string[] PillAllLines = File.ReadAllLines(PillPath);
+                    List<Pill> PillOld = new List<Pill>();
+                    foreach (var PillAllLinesItem in PillAllLines)
+                    {
+                        string[] PillInfo = PillAllLinesItem.Split(',');
+                        PillOld.Add(new Pill
+                        {
+                            Id = int.Parse(PillInfo[0]),
+                            Nomi = PillInfo[1],
+                            Soni = int.Parse(PillInfo[2]),
+                            Muddati = int.Parse(PillInfo[3]),
+                            Narxi = int.Parse(PillInfo[4]),
+                            QoshilganSana = DateTime.Parse(PillInfo[5]),
+                        });
+                    }
+                    if (cbSort.Text == "Id")
+                    {
+                        PillOld.Sort((x, y) => x.Id.CompareTo(y.Id));
+                    }
+                    else if (cbSort.Text == "Nomi")
+                    {
+                        PillOld.Sort((x, y) =>
+                        {
+                            if (x.Nomi.StartsWith("a", StringComparison.OrdinalIgnoreCase) && !y.Nomi.StartsWith("a", StringComparison.OrdinalIgnoreCase))
+                            {
+                                return -1;
+                            }
+                            else if (!x.Nomi.StartsWith("a", StringComparison.OrdinalIgnoreCase) && y.Nomi.StartsWith("a", StringComparison.OrdinalIgnoreCase))
+                            {
+                                return 1;
+                            }
+                            else
+                            {
+                                return string.Compare(x.Nomi, y.Nomi, StringComparison.OrdinalIgnoreCase);
+                            }
+                        });
+                    }
+                    else if (cbSort.Text == "Soni")
+                    {
+                        PillOld.Sort((x, y) => x.Soni.CompareTo(y.Soni));
+                    }
+                    else if (cbSort.Text == "Muddati")
+                    {
+                        PillOld.Sort((x, y) => x.Muddati.CompareTo(y.Muddati));
+                    }
+                    else if (cbSort.Text == "Narxi")
+                    {
+                        PillOld.Sort((x, y) => x.Narxi.CompareTo(y.Narxi));
+                    }
+                    else if (cbSort.Text == "Qo'shilgan sanasi")
+                    {
+                        PillOld.Sort((x, y) => x.QoshilganSana.CompareTo(y.QoshilganSana));
+                    }
+                    dbPills.DataSource = PillOld;
+                }
+                else
+                {
+                    MessageBox.Show("Xatolik mavjud tekshirib qaytadan kiriting.");
+                }
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Noto'g'ri formatda qiymat kiritildi.");
+            }
+            catch (IOException ex)
+            {
+                MessageBox.Show("Faylda xatolik: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Xatolik: " + ex.Message);
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbSort.Text.Length > 0)
+                {
+                    string PillPath = @"..\..\..\.txt files\PillesList.txt";
+                    string[] PillAllLines = File.ReadAllLines(PillPath);
+                    List<Pill> PillOld = new List<Pill>();
+                    foreach (var PillAllLinesItem in PillAllLines)
+                    {
+                        string[] PillInfo = PillAllLinesItem.Split(',');
+                        PillOld.Add(new Pill
+                        {
+                            Id = int.Parse(PillInfo[0]),
+                            Nomi = PillInfo[1],
+                            Soni = int.Parse(PillInfo[2]),
+                            Muddati = int.Parse(PillInfo[3]),
+                            Narxi = int.Parse(PillInfo[4]),
+                            QoshilganSana = DateTime.Parse(PillInfo[5])
+                        });
+                    }
+                    if (cbSort.Text == "Id")
+                    {
+                        PillOld.Sort((x, y) => y.Id.CompareTo(x.Id));
+                    }
+                    else if (cbSort.Text == "Nomi")
+                    {
+                        PillOld.Sort((x, y) =>
+                        {
+                            if (y.Nomi.StartsWith("a", StringComparison.OrdinalIgnoreCase) && !x.Nomi.StartsWith("a", StringComparison.OrdinalIgnoreCase))
+                            {
+                                return -1;
+                            }
+                            else if (!y.Nomi.StartsWith("a", StringComparison.OrdinalIgnoreCase) && x.Nomi.StartsWith("a", StringComparison.OrdinalIgnoreCase))
+                            {
+                                return 1;
+                            }
+                            else
+                            {
+                                return string.Compare(y.Nomi, x.Nomi, StringComparison.OrdinalIgnoreCase);
+                            }
+                        });
+                    }
+                    else if (cbSort.Text == "Soni")
+                    {
+                        PillOld.Sort((x, y) => y.Soni.CompareTo(x.Soni));
+                    }
+                    else if (cbSort.Text == "Muddati")
+                    {
+                        PillOld.Sort((x, y) => y.Muddati.CompareTo(x.Muddati));
+                    }
+                    else if (cbSort.Text == "Narxi")
+                    {
+                        PillOld.Sort((x, y) => y.Narxi.CompareTo(x.Narxi));
+                    }
+                    else if (cbSort.Text == "Qo'shilgan sanasi")
+                    {
+                        PillOld.Sort((x, y) => y.QoshilganSana.CompareTo(x.QoshilganSana));
+                    }
+                    dbPills.DataSource = PillOld;
+                }
+                else
+                {
+                    MessageBox.Show("Xatolik mavjud tekshirib qaytadan kiriting.");
+                }
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Noto'g'ri formatda qiymat kiritildi.");
+            }
+            catch (IOException ex)
+            {
+                MessageBox.Show("Faylda xatolik: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Xatolik: " + ex.Message);
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            string PillPath = @"..\..\..\.txt files\PillesList.txt";
+            string[] PillAllLines = File.ReadAllLines(PillPath);
+            List<Pill> PillOld = new List<Pill>();
+            foreach (var PillAllLinesItem in PillAllLines)
+            {
+                string[] PillInfo = PillAllLinesItem.Split(',');
+                PillOld.Add(new Pill
+                {
+                    Id = int.Parse(PillInfo[0]),
+                    Nomi = PillInfo[1],
+                    Soni = int.Parse(PillInfo[2]),
+                    Muddati = int.Parse(PillInfo[3]),
+                    Narxi = int.Parse(PillInfo[4]),
+                    QoshilganSana = DateTime.Parse(PillInfo[5]),
+                });
+            }
+            dbPills.DataSource = PillOld;
         }
     }
 }

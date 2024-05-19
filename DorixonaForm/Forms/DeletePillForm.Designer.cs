@@ -45,18 +45,26 @@
             txId = new TextBox();
             label2 = new Label();
             btSearch = new Button();
-            txPillName = new TextBox();
-            dataGridView1 = new DataGridView();
+            txPillInformation = new TextBox();
             pillBindingSource = new BindingSource(components);
             button9 = new Button();
-            comboBox1 = new ComboBox();
+            cbSort = new ComboBox();
             btExit = new Button();
             cbSearch = new ComboBox();
             button7 = new Button();
             button3 = new Button();
+            dataGridViewPills = new DataGridView();
+            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            nomiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            soniDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            muddatiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            narxiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            qoshilganSanaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            pillBindingSource1 = new BindingSource(components);
             panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pillBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPills).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pillBindingSource1).BeginInit();
             SuspendLayout();
             // 
             // label4
@@ -82,9 +90,9 @@
             panel3.Controls.Add(lbUpdatePillName);
             panel3.Controls.Add(lbUpdatePillPrice);
             panel3.Controls.Add(txDeletePillName);
-            panel3.Location = new Point(1238, 329);
+            panel3.Location = new Point(39, 311);
             panel3.Name = "panel3";
-            panel3.Size = new Size(834, 577);
+            panel3.Size = new Size(834, 587);
             panel3.TabIndex = 60;
             // 
             // txDeletePillLifeTime
@@ -110,9 +118,9 @@
             // 
             btDeletePill.BackColor = Color.Tomato;
             btDeletePill.Font = new Font("Trebuchet MS", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btDeletePill.Location = new Point(70, 471);
+            btDeletePill.Location = new Point(116, 471);
             btDeletePill.Name = "btDeletePill";
-            btDeletePill.Size = new Size(699, 60);
+            btDeletePill.Size = new Size(623, 60);
             btDeletePill.TabIndex = 59;
             btDeletePill.Text = "O'chirish";
             btDeletePill.UseVisualStyleBackColor = false;
@@ -179,7 +187,7 @@
             // 
             btBack.BackColor = Color.Silver;
             btBack.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btBack.Location = new Point(1791, 926);
+            btBack.Location = new Point(1544, 918);
             btBack.Name = "btBack";
             btBack.Size = new Size(280, 53);
             btBack.TabIndex = 61;
@@ -191,7 +199,7 @@
             // 
             btPlacement.BackColor = Color.LightSkyBlue;
             btPlacement.Font = new Font("Trebuchet MS", 18F);
-            btPlacement.Location = new Point(1911, 259);
+            btPlacement.Location = new Point(713, 258);
             btPlacement.Name = "btPlacement";
             btPlacement.Size = new Size(160, 47);
             btPlacement.TabIndex = 79;
@@ -203,7 +211,7 @@
             // 
             txId.BackColor = Color.FromArgb(255, 255, 192);
             txId.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txId.Location = new Point(1603, 259);
+            txId.Location = new Point(388, 259);
             txId.Name = "txId";
             txId.Size = new Size(273, 48);
             txId.TabIndex = 78;
@@ -212,7 +220,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Trebuchet MS", 22.2F);
-            label2.Location = new Point(1195, 261);
+            label2.Location = new Point(39, 257);
             label2.Name = "label2";
             label2.Size = new Size(343, 46);
             label2.TabIndex = 77;
@@ -222,55 +230,45 @@
             // 
             btSearch.BackColor = Color.LightSkyBlue;
             btSearch.Font = new Font("Trebuchet MS", 18F);
-            btSearch.Location = new Point(1911, 177);
+            btSearch.Location = new Point(1664, 261);
             btSearch.Name = "btSearch";
-            btSearch.Size = new Size(160, 47);
+            btSearch.Size = new Size(160, 48);
             btSearch.TabIndex = 74;
             btSearch.Text = "Qidirish";
             btSearch.UseVisualStyleBackColor = false;
             btSearch.Click += btSearch_Click;
             // 
-            // txPillName
+            // txPillInformation
             // 
-            txPillName.BackColor = Color.FromArgb(255, 255, 192);
-            txPillName.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txPillName.Location = new Point(1603, 175);
-            txPillName.Name = "txPillName";
-            txPillName.Size = new Size(273, 48);
-            txPillName.TabIndex = 75;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.AutoGenerateColumns = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.DataSource = pillBindingSource;
-            dataGridView1.Location = new Point(188, 163);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(903, 743);
-            dataGridView1.TabIndex = 80;
+            txPillInformation.BackColor = Color.FromArgb(255, 255, 192);
+            txPillInformation.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
+            txPillInformation.Location = new Point(1341, 261);
+            txPillInformation.Name = "txPillInformation";
+            txPillInformation.Size = new Size(316, 48);
+            txPillInformation.TabIndex = 75;
             // 
             // button9
             // 
             button9.BackColor = Color.LightSkyBlue;
             button9.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button9.Location = new Point(854, 72);
+            button9.Location = new Point(1669, 315);
             button9.Name = "button9";
-            button9.Size = new Size(155, 41);
+            button9.Size = new Size(155, 48);
             button9.TabIndex = 89;
             button9.Text = "Qaytarish";
             button9.UseVisualStyleBackColor = false;
             button9.Click += button9_Click;
             // 
-            // comboBox1
+            // cbSort
             // 
-            comboBox1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "O'sish", "Kamayish" });
-            comboBox1.Location = new Point(52, 108);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(195, 49);
-            comboBox1.TabIndex = 82;
+            cbSort.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbSort.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            cbSort.FormattingEnabled = true;
+            cbSort.Items.AddRange(new object[] { "Id", "Nomi", "Soni", "Muddati", "Narxi", "Qo'shilgan Sanasi" });
+            cbSort.Location = new Point(917, 314);
+            cbSort.Name = "cbSort";
+            cbSort.Size = new Size(406, 49);
+            cbSort.TabIndex = 82;
             // 
             // btExit
             // 
@@ -285,36 +283,102 @@
             // 
             // cbSearch
             // 
+            cbSearch.DropDownStyle = ComboBoxStyle.DropDownList;
             cbSearch.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
             cbSearch.FormattingEnabled = true;
-            cbSearch.Items.AddRange(new object[] { "Nomi", "Id", "Soni", "Muddati", "Narxi" });
-            cbSearch.Location = new Point(1401, 175);
+            cbSearch.Items.AddRange(new object[] { "Id", "Nomi", "Soni", "Muddati", "Narxi", "Qo'shilgan Sanasi" });
+            cbSearch.Location = new Point(917, 259);
             cbSearch.Name = "cbSearch";
-            cbSearch.Size = new Size(195, 49);
+            cbSearch.Size = new Size(406, 49);
             cbSearch.TabIndex = 90;
-            cbSearch.Text = "Nomi";
             // 
             // button7
             // 
             button7.BackColor = Color.LightSkyBlue;
             button7.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button7.Location = new Point(404, 116);
+            button7.Location = new Point(1502, 315);
             button7.Name = "button7";
-            button7.Size = new Size(145, 41);
+            button7.Size = new Size(155, 48);
             button7.TabIndex = 92;
             button7.Text = "Kamayish";
             button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
             // 
             // button3
             // 
             button3.BackColor = Color.LightSkyBlue;
             button3.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button3.Location = new Point(270, 116);
+            button3.Location = new Point(1341, 315);
             button3.Name = "button3";
-            button3.Size = new Size(127, 41);
+            button3.Size = new Size(155, 48);
             button3.TabIndex = 91;
             button3.Text = "O'sish";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
+            // dataGridViewPills
+            // 
+            dataGridViewPills.AutoGenerateColumns = false;
+            dataGridViewPills.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewPills.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, nomiDataGridViewTextBoxColumn, soniDataGridViewTextBoxColumn, muddatiDataGridViewTextBoxColumn, narxiDataGridViewTextBoxColumn, qoshilganSanaDataGridViewTextBoxColumn });
+            dataGridViewPills.DataSource = pillBindingSource1;
+            dataGridViewPills.Location = new Point(917, 369);
+            dataGridViewPills.Name = "dataGridViewPills";
+            dataGridViewPills.RowHeadersWidth = 51;
+            dataGridViewPills.Size = new Size(907, 529);
+            dataGridViewPills.TabIndex = 93;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            idDataGridViewTextBoxColumn.HeaderText = "Id";
+            idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nomiDataGridViewTextBoxColumn
+            // 
+            nomiDataGridViewTextBoxColumn.DataPropertyName = "Nomi";
+            nomiDataGridViewTextBoxColumn.HeaderText = "Nomi";
+            nomiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            nomiDataGridViewTextBoxColumn.Name = "nomiDataGridViewTextBoxColumn";
+            nomiDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // soniDataGridViewTextBoxColumn
+            // 
+            soniDataGridViewTextBoxColumn.DataPropertyName = "Soni";
+            soniDataGridViewTextBoxColumn.HeaderText = "Soni";
+            soniDataGridViewTextBoxColumn.MinimumWidth = 6;
+            soniDataGridViewTextBoxColumn.Name = "soniDataGridViewTextBoxColumn";
+            soniDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // muddatiDataGridViewTextBoxColumn
+            // 
+            muddatiDataGridViewTextBoxColumn.DataPropertyName = "Muddati";
+            muddatiDataGridViewTextBoxColumn.HeaderText = "Muddati";
+            muddatiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            muddatiDataGridViewTextBoxColumn.Name = "muddatiDataGridViewTextBoxColumn";
+            muddatiDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // narxiDataGridViewTextBoxColumn
+            // 
+            narxiDataGridViewTextBoxColumn.DataPropertyName = "Narxi";
+            narxiDataGridViewTextBoxColumn.HeaderText = "Narxi";
+            narxiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            narxiDataGridViewTextBoxColumn.Name = "narxiDataGridViewTextBoxColumn";
+            narxiDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // qoshilganSanaDataGridViewTextBoxColumn
+            // 
+            qoshilganSanaDataGridViewTextBoxColumn.DataPropertyName = "QoshilganSana";
+            qoshilganSanaDataGridViewTextBoxColumn.HeaderText = "QoshilganSana";
+            qoshilganSanaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            qoshilganSanaDataGridViewTextBoxColumn.Name = "qoshilganSanaDataGridViewTextBoxColumn";
+            qoshilganSanaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // pillBindingSource1
+            // 
+            pillBindingSource1.DataSource = typeof(Actions.Pill);
             // 
             // DeletePillForm
             // 
@@ -322,18 +386,18 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(1924, 1033);
+            Controls.Add(dataGridViewPills);
             Controls.Add(button7);
             Controls.Add(button3);
             Controls.Add(cbSearch);
             Controls.Add(button9);
-            Controls.Add(comboBox1);
+            Controls.Add(cbSort);
             Controls.Add(btExit);
-            Controls.Add(dataGridView1);
             Controls.Add(btPlacement);
             Controls.Add(txId);
             Controls.Add(label2);
             Controls.Add(btSearch);
-            Controls.Add(txPillName);
+            Controls.Add(txPillInformation);
             Controls.Add(btBack);
             Controls.Add(panel3);
             Name = "DeletePillForm";
@@ -341,8 +405,9 @@
             Load += DeletePillForm_Load;
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pillBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPills).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pillBindingSource1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -365,8 +430,7 @@
         private TextBox txId;
         private Label label2;
         private Button btSearch;
-        private TextBox txPillName;
-        private DataGridView dataGridView1;
+        private TextBox txPillInformation;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn nomiDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn soniDataGridViewTextBoxColumn;
@@ -375,10 +439,12 @@
         private DataGridViewTextBoxColumn qoshilganSanaDataGridViewTextBoxColumn;
         private BindingSource pillBindingSource;
         private Button button9;
-        private ComboBox comboBox1;
+        private ComboBox cbSort;
         private Button btExit;
         private ComboBox cbSearch;
         private Button button7;
         private Button button3;
+        private DataGridView dataGridViewPills;
+        private BindingSource pillBindingSource1;
     }
 }
