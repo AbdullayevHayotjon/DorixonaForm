@@ -17,11 +17,11 @@ namespace DorixonaForm.Actions
         public List<Pill> pillsList = new List<Pill>();
         public List<AllInformations> allInformations = new List<AllInformations>();
         public List<ReportSelesPill> reportSelesPills = new List<ReportSelesPill>();
-        public string SellingPillesListPath = @"C:\DorixonaForm\DorixonaForm\.txt files\SellingPillesList.txt";
-        public string EmployesListPath = @"C:\DorixonaForm\DorixonaForm\.txt files\EmployesList.txt";
-        public string PillsListPath = @"C:\DorixonaForm\DorixonaForm\.txt files\PillesList.txt";
-        public string AllInformationsPath = @"C:\DorixonaForm\DorixonaForm\.txt files\AllInformations.txt";
-        public string ReportSelesPillsPath = @"C:\DorixonaForm\DorixonaForm\.txt files\ReportSelesPill.txt";
+        public string SellingPillesListPath = @"..\..\..\.txt files\SellingPillesList.txt";
+        public string EmployesListPath = @"..\..\..\.txt files\EmployesList.txt";
+        public string PillsListPath = @"..\..\..\.txt files\PillesList.txt";
+        public string AllInformationsPath = @"..\..\..\.txt files\AllInformations.txt";
+        public string ReportSelesPillsPath = @"..\..\..\.txt files\ReportSelesPill.txt";
         public Functions()
         {
             string[] EmployesList = File.ReadAllLines(EmployesListPath);
