@@ -20,7 +20,6 @@ namespace DorixonaForm.Forms
         {
             NewLogin = login;
             InitializeComponent();
-            dGVInformations.DataSource = functions.reportSelesPills;
             int AllPillCount = 0;
             int AllPillPrice = 0;
         }
