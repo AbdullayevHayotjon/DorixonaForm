@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            dGVInformations = new DataGridView();
             reportSelesPillBindingSource = new BindingSource(components);
             allInformationsBindingSource = new BindingSource(components);
             btBack = new Button();
@@ -52,31 +51,18 @@
             label9 = new Label();
             label6 = new Label();
             comboBox2 = new ComboBox();
-            ((System.ComponentModel.ISupportInitialize)dGVInformations).BeginInit();
             ((System.ComponentModel.ISupportInitialize)reportSelesPillBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)allInformationsBindingSource).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
-            // dGVInformations
-            // 
-            dGVInformations.AutoGenerateColumns = false;
-            dGVInformations.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dGVInformations.DataSource = reportSelesPillBindingSource;
-            dGVInformations.Location = new Point(104, 115);
-            dGVInformations.Name = "dGVInformations";
-            dGVInformations.RowHeadersWidth = 100;
-            dGVInformations.Size = new Size(853, 628);
-            dGVInformations.TabIndex = 0;
-            dGVInformations.CellContentClick += dGVInformations_CellContentClick;
-            // 
             // btBack
             // 
             btBack.BackColor = Color.Silver;
             btBack.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btBack.Location = new Point(1614, 900);
+            btBack.Location = new Point(1632, 828);
             btBack.Name = "btBack";
-            btBack.Size = new Size(249, 53);
+            btBack.Size = new Size(280, 53);
             btBack.TabIndex = 41;
             btBack.Text = "Orqaga qaytish";
             btBack.UseVisualStyleBackColor = false;
@@ -86,7 +72,7 @@
             // 
             lbFIO.AutoSize = true;
             lbFIO.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            lbFIO.Location = new Point(321, 58);
+            lbFIO.Location = new Point(1221, 77);
             lbFIO.Name = "lbFIO";
             lbFIO.Size = new Size(383, 38);
             lbFIO.TabIndex = 42;
@@ -96,31 +82,31 @@
             // 
             button2.BackColor = Color.Silver;
             button2.Font = new Font("Trebuchet MS", 18F);
-            button2.Location = new Point(1723, 12);
+            button2.Location = new Point(1938, 12);
             button2.Name = "button2";
-            button2.Size = new Size(164, 50);
+            button2.Size = new Size(184, 50);
             button2.TabIndex = 71;
             button2.Text = "Chiqish";
             button2.UseVisualStyleBackColor = false;
             // 
             // cbSearch
             // 
+            cbSearch.DropDownStyle = ComboBoxStyle.DropDownList;
             cbSearch.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
             cbSearch.FormattingEnabled = true;
             cbSearch.Items.AddRange(new object[] { "Nomi", "Id", "Soni", "Muddati", "Narxi" });
-            cbSearch.Location = new Point(1117, 133);
+            cbSearch.Location = new Point(1048, 148);
             cbSearch.Name = "cbSearch";
-            cbSearch.Size = new Size(174, 49);
+            cbSearch.Size = new Size(216, 49);
             cbSearch.TabIndex = 80;
-            cbSearch.Text = "Nomi";
             // 
             // btSearch
             // 
             btSearch.BackColor = Color.LightSkyBlue;
             btSearch.Font = new Font("Trebuchet MS", 18F);
-            btSearch.Location = new Point(1585, 137);
+            btSearch.Location = new Point(1574, 152);
             btSearch.Name = "btSearch";
-            btSearch.Size = new Size(142, 47);
+            btSearch.Size = new Size(160, 47);
             btSearch.TabIndex = 78;
             btSearch.Text = "Qidirish";
             btSearch.UseVisualStyleBackColor = false;
@@ -130,21 +116,21 @@
             // 
             txPillName.BackColor = Color.FromArgb(255, 255, 192);
             txPillName.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txPillName.Location = new Point(1311, 135);
+            txPillName.Location = new Point(1286, 149);
             txPillName.Name = "txPillName";
-            txPillName.Size = new Size(243, 48);
+            txPillName.Size = new Size(273, 48);
             txPillName.TabIndex = 79;
             // 
             // comboBox1
             // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Sotuvchilar" });
-            comboBox1.Location = new Point(1117, 204);
+            comboBox1.Location = new Point(1048, 219);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(192, 49);
+            comboBox1.Size = new Size(216, 49);
             comboBox1.TabIndex = 81;
-            comboBox1.Text = "Sotuvchilar";
             // 
             // panel2
             // 
@@ -160,9 +146,9 @@
             panel2.Controls.Add(label8);
             panel2.Controls.Add(label9);
             panel2.Controls.Add(label6);
-            panel2.Location = new Point(1117, 280);
+            panel2.Location = new Point(100, 152);
             panel2.Name = "panel2";
-            panel2.Size = new Size(706, 441);
+            panel2.Size = new Size(794, 571);
             panel2.TabIndex = 133;
             // 
             // label4
@@ -170,7 +156,7 @@
             label4.AutoSize = true;
             label4.BackColor = Color.FromArgb(255, 255, 192);
             label4.Font = new Font("Franklin Gothic Medium", 18F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            label4.Location = new Point(173, 350);
+            label4.Location = new Point(486, 387);
             label4.Name = "label4";
             label4.Size = new Size(97, 38);
             label4.TabIndex = 143;
@@ -180,7 +166,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Trebuchet MS", 22.2F);
-            label5.Location = new Point(66, 342);
+            label5.Location = new Point(177, 363);
             label5.Name = "label5";
             label5.Size = new Size(103, 46);
             label5.TabIndex = 142;
@@ -191,7 +177,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.FromArgb(255, 255, 192);
             label2.Font = new Font("Franklin Gothic Medium", 18F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            label2.Location = new Point(474, 319);
+            label2.Location = new Point(486, 453);
             label2.Name = "label2";
             label2.Size = new Size(97, 38);
             label2.TabIndex = 141;
@@ -201,7 +187,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Trebuchet MS", 22.2F);
-            label3.Location = new Point(360, 312);
+            label3.Location = new Point(177, 445);
             label3.Name = "label3";
             label3.Size = new Size(108, 46);
             label3.TabIndex = 140;
@@ -209,16 +195,16 @@
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(268, 122);
+            dateTimePicker1.Location = new Point(302, 122);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(250, 27);
+            dateTimePicker1.Size = new Size(281, 27);
             dateTimePicker1.TabIndex = 139;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Trebuchet MS", 22.2F);
-            label1.Location = new Point(157, 107);
+            label1.Location = new Point(177, 107);
             label1.Name = "label1";
             label1.Size = new Size(113, 46);
             label1.TabIndex = 138;
@@ -226,18 +212,18 @@
             // 
             // dateTimePicker2
             // 
-            dateTimePicker2.Location = new Point(268, 180);
+            dateTimePicker2.Location = new Point(302, 180);
             dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(250, 27);
+            dateTimePicker2.Size = new Size(281, 27);
             dateTimePicker2.TabIndex = 137;
             // 
             // button1
             // 
             button1.BackColor = Color.LightSkyBlue;
             button1.Font = new Font("Trebuchet MS", 18F);
-            button1.Location = new Point(66, 236);
+            button1.Location = new Point(177, 236);
             button1.Name = "button1";
-            button1.Size = new Size(626, 47);
+            button1.Size = new Size(406, 47);
             button1.TabIndex = 129;
             button1.Text = "Ma'lumot";
             button1.UseVisualStyleBackColor = false;
@@ -248,7 +234,7 @@
             label8.AutoSize = true;
             label8.BackColor = Color.FromArgb(255, 255, 192);
             label8.Font = new Font("Franklin Gothic Medium", 18F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            label8.Location = new Point(228, 294);
+            label8.Location = new Point(486, 308);
             label8.Name = "label8";
             label8.Size = new Size(97, 38);
             label8.TabIndex = 131;
@@ -258,7 +244,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Trebuchet MS", 22.2F);
-            label9.Location = new Point(66, 286);
+            label9.Location = new Point(177, 300);
             label9.Name = "label9";
             label9.Size = new Size(156, 46);
             label9.TabIndex = 130;
@@ -268,7 +254,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Trebuchet MS", 22.2F);
-            label6.Location = new Point(157, 165);
+            label6.Location = new Point(177, 165);
             label6.Name = "label6";
             label6.Size = new Size(113, 46);
             label6.TabIndex = 128;
@@ -276,21 +262,21 @@
             // 
             // comboBox2
             // 
+            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "Sotuvchilar" });
-            comboBox2.Location = new Point(1329, 204);
+            comboBox2.Location = new Point(1286, 219);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(192, 49);
+            comboBox2.Size = new Size(273, 49);
             comboBox2.TabIndex = 134;
-            comboBox2.Text = "Dori";
             // 
             // ReportsForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(1917, 1033);
+            ClientSize = new Size(1924, 1033);
             Controls.Add(comboBox2);
             Controls.Add(panel2);
             Controls.Add(comboBox1);
@@ -300,11 +286,9 @@
             Controls.Add(button2);
             Controls.Add(lbFIO);
             Controls.Add(btBack);
-            Controls.Add(dGVInformations);
             Name = "ReportsForm";
             Text = "ReportsForm";
             Load += ReportsForm_Load;
-            ((System.ComponentModel.ISupportInitialize)dGVInformations).EndInit();
             ((System.ComponentModel.ISupportInitialize)reportSelesPillBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)allInformationsBindingSource).EndInit();
             panel2.ResumeLayout(false);
@@ -314,8 +298,6 @@
         }
 
         #endregion
-
-        private DataGridView dGVInformations;
         private BindingSource allInformationsBindingSource;
         private Button btBack;
         private Label lbFIO;

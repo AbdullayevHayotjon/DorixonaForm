@@ -25,5 +25,13 @@ namespace DorixonaForm.Forms
         {
 
         }
+
+        private void btBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SalesmanForm salesmanForm = new SalesmanForm(NewLogin);
+            salesmanForm.StartPosition = FormStartPosition.CenterScreen;
+            salesmanForm.Show();
+        }
     }
 }

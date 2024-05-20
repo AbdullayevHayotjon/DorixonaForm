@@ -173,7 +173,7 @@ namespace DorixonaForm.Forms
                 {
                     if (functions.CheckNumber(txUpdatePillCount.Text))
                     {
-                        if (int.Parse(txUpdatePillCount.Text) < Count)
+                        if (true)
                         {
                             int Price = 0;
                             StreamWriter streamWriter = new StreamWriter(functions.PillsListPath);
@@ -222,6 +222,14 @@ namespace DorixonaForm.Forms
             {
                 MessageBox.Show("Bunday Id mavjud emas", "Ma'lumot", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void btBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SalesmanForm salesmanForm = new SalesmanForm(NewLogin);
+            salesmanForm.StartPosition = FormStartPosition.CenterScreen;
+            salesmanForm.Show();
         }
     }
 }

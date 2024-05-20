@@ -34,39 +34,50 @@ namespace DorixonaForm.Forms
                         {
                             int Id = 0;
                             int sanoq = 0;
-                            StreamWriter streamWriter = new StreamWriter(functions.PillsListPath);
+                            using (StreamWriter streamWriter = new StreamWriter(functions.PillsListPath))
+                            {
+                                foreach (Pill pill in functions.pillsList)
+                                {
+                                    if (txAddPillName.Text.ToLower() == pill.Nomi.ToLower() && int.Parse(txLifeTime.Text) == pill.Muddati && int.Parse(txAddPillPrice.Text) == pill.Narxi)
+                                    {
+                                        sanoq = 1;
+                                        pill.Soni = pill.Soni + int.Parse(txAddPillCount.Text);
+                                        pill.QoshilganSana = DateTime.Now;
+                                    }
+                                    streamWriter.WriteLine(pill.Id + "," + pill.Nomi + "," + pill.Soni + "," + pill.Muddati + "," + pill.Narxi + "," + pill.QoshilganSana);
+                                    Id = pill.Id;
+                                }
+                                if (sanoq == 0)
+                                {
+                                    streamWriter.WriteLine((Id + 1) + "," + txAddPillName.Text + "," + txAddPillCount.Text + "," + txLifeTime.Text + "," + txAddPillPrice.Text + "," + DateTime.Now.ToString());
+                                }
+                            }
+                            int Id1 = 0;
+                            using (StreamWriter streamWriter1 = new StreamWriter(functions.AllInformationsPath))
+                            {
+                                foreach (AllInformations allInformations in functions.allInformations)
+                                {
+                                    streamWriter1.WriteLine(allInformations.Id + "," + allInformations.FIO + "," + allInformations.ProcessType + "," + allInformations.Information + "," + allInformations.ProcessTime);
+                                    Id1 = Id;
+                                }
+                                foreach (Employe employe in functions.employeList)
+                                {
+                                    if (NewLogin == employe.Login)
+                                    {
+                                        streamWriter1.WriteLine((Id1 + 1) + "," + employe.FIO + "," + InformationType.AddPill + "," + $"|Nomi: {txAddPillName.Text}|Soni: {txAddPillCount.Text}|Muddati: {txLifeTime.Text}|Narxi: {txAddPillPrice.Text}|" + "," + DateTime.Now.ToString());
+                                    }
+                                }
+                            }
+                            MessageBox.Show($"Dori qo'shildi", "Muvaffaqqiyatli!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            List<Pill> pills = new List<Pill>();
                             foreach (Pill pill in functions.pillsList)
                             {
-                                if (txAddPillName.Text.ToLower() == pill.Nomi.ToLower() && int.Parse(txLifeTime.Text) == pill.Muddati && int.Parse(txAddPillPrice.Text) == pill.Narxi)
-                                {
-                                    sanoq = 1;
-                                    pill.Soni = pill.Soni + int.Parse(txAddPillCount.Text);
-                                    pill.QoshilganSana = DateTime.Now;
-                                }
-                                streamWriter.WriteLine(pill.Id + "," + pill.Nomi + "," + pill.Soni + "," + pill.Muddati + "," + pill.Narxi + "," + pill.QoshilganSana);
-                                Id = pill.Id;
+                                pills.Add(new Pill() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Narxi, QoshilganSana = pill.QoshilganSana });
                             }
-                            if (sanoq == 0)
-                            {
-                                streamWriter.WriteLine((Id + 1) + "," + txAddPillName.Text + "," + txAddPillCount.Text + "," + txLifeTime.Text + "," + txAddPillPrice.Text + "," + DateTime.Now.ToString());
-                            }
-                            streamWriter.Close();
-                            int Id1 = 0;
-                            StreamWriter streamWriter1 = new StreamWriter(functions.AllInformationsPath);
-                            foreach (AllInformations allInformations in functions.allInformations)
-                            {
-                                streamWriter1.WriteLine(allInformations.Id + "," + allInformations.FIO + "," + allInformations.ProcessType + "," + allInformations.Information + "," + allInformations.ProcessTime);
-                                Id1 = Id;
-                            }
-                            foreach (Employe employe in functions.employeList)
-                            {
-                                if (NewLogin == employe.Login)
-                                {
-                                    streamWriter1.WriteLine((Id1 + 1) + "," + employe.FIO + "," + InformationType.AddPill + "," + $"|Nomi: {txAddPillName.Text}|Soni: {txAddPillCount.Text}|Muddati: {txLifeTime.Text}|Narxi: {txAddPillPrice.Text}|" + "," + DateTime.Now.ToString());
-                                }
-                            }
-                            streamWriter1.Close();
-                            MessageBox.Show($"Dori qo'shildi", "Muvaffaqqiyatli!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Hide();
+                            AddPillForm addPillForm = new AddPillForm(NewLogin);
+                            addPillForm.StartPosition = FormStartPosition.CenterScreen;
+                            addPillForm.Show();
                         }
                         else
                         {

@@ -289,5 +289,10 @@ namespace DorixonaForm.Forms
             loginForm.StartPosition = FormStartPosition.CenterScreen;
             loginForm.Show();
         }
+
+        private void lb998_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

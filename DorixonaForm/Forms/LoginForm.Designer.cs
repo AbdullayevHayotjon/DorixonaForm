@@ -42,9 +42,9 @@
             // 
             LkUpdateLogPass.AutoSize = true;
             LkUpdateLogPass.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            LkUpdateLogPass.Location = new Point(145, 521);
+            LkUpdateLogPass.Location = new Point(163, 521);
             LkUpdateLogPass.Name = "LkUpdateLogPass";
-            LkUpdateLogPass.Size = new Size(350, 31);
+            LkUpdateLogPass.Size = new Size(356, 31);
             LkUpdateLogPass.TabIndex = 12;
             LkUpdateLogPass.TabStop = true;
             LkUpdateLogPass.Text = "Login yoki parol esdan chiqdimi?";
@@ -54,27 +54,28 @@
             // 
             txLogin.BackColor = Color.FromArgb(255, 255, 192);
             txLogin.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txLogin.Location = new Point(73, 229);
+            txLogin.Location = new Point(82, 229);
             txLogin.Name = "txLogin";
-            txLogin.Size = new Size(497, 48);
+            txLogin.Size = new Size(559, 48);
             txLogin.TabIndex = 11;
             // 
             // txPassword
             // 
             txPassword.BackColor = Color.FromArgb(255, 255, 192);
             txPassword.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txPassword.Location = new Point(73, 359);
+            txPassword.Location = new Point(82, 359);
             txPassword.Name = "txPassword";
-            txPassword.Size = new Size(497, 48);
+            txPassword.PasswordChar = '*';
+            txPassword.Size = new Size(559, 48);
             txPassword.TabIndex = 10;
             // 
             // btEnter
             // 
             btEnter.BackColor = Color.LightSkyBlue;
             btEnter.Font = new Font("Trebuchet MS", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btEnter.Location = new Point(73, 449);
+            btEnter.Location = new Point(82, 449);
             btEnter.Name = "btEnter";
-            btEnter.Size = new Size(497, 60);
+            btEnter.Size = new Size(559, 60);
             btEnter.TabIndex = 9;
             btEnter.Text = "Kirish";
             btEnter.UseVisualStyleBackColor = false;
@@ -84,7 +85,7 @@
             // 
             lbPassword.AutoSize = true;
             lbPassword.Font = new Font("Trebuchet MS", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            lbPassword.Location = new Point(73, 313);
+            lbPassword.Location = new Point(82, 313);
             lbPassword.Name = "lbPassword";
             lbPassword.Size = new Size(95, 43);
             lbPassword.TabIndex = 8;
@@ -94,7 +95,7 @@
             // 
             lbLogin.AutoSize = true;
             lbLogin.Font = new Font("Trebuchet MS", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            lbLogin.Location = new Point(73, 183);
+            lbLogin.Location = new Point(82, 183);
             lbLogin.Name = "lbLogin";
             lbLogin.Size = new Size(100, 43);
             lbLogin.TabIndex = 7;
@@ -109,18 +110,18 @@
             panel1.Controls.Add(btEnter);
             panel1.Controls.Add(txPassword);
             panel1.Controls.Add(lbPassword);
-            panel1.Location = new Point(643, 114);
+            panel1.Location = new Point(723, 114);
             panel1.Name = "panel1";
-            panel1.Size = new Size(640, 800);
+            panel1.Size = new Size(720, 800);
             panel1.TabIndex = 13;
             // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1917, 1033);
+            ClientSize = new Size(1924, 1033);
             Controls.Add(panel1);
             Name = "LoginForm";
             Text = "LoginForm";
