@@ -173,7 +173,7 @@ namespace DorixonaForm.Forms
                 {
                     if (functions.CheckNumber(txUpdatePillCount.Text))
                     {
-                        if (true)
+                        if (int.Parse(txUpdatePillCount.Text) < Count)
                         {
                             int Price = 0;
                             StreamWriter streamWriter = new StreamWriter(functions.PillsListPath);

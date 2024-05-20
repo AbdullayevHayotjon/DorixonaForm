@@ -12,3 +12,5 @@
 12,Orazbayev Merxat,Tefestrol,10,13.05.2024 8:49:24,20000
 13,Istamov Mirjahon,Trimol,5,16.05.2024 10:12:50,21000
 14,Istamov Mirjahon,Tramadol,7,16.05.2024 10:12:50,16100
+15,Orazbaev Merxat,Izoflurannn,2,21.05.2024 1:10:38,15000
+16,Orazbaev Merxat,Kukumazim,5,21.05.2024 1:10:38,15000

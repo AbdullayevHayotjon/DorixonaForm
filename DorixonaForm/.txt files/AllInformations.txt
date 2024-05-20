@@ -11,3 +11,19 @@
 11,Hafizov Sardorbek,EmployeEnter,Profilga kirdi,20.05.2024 23:14:36
 12,Hafizov Sardorbek,EmployeEnter,Profilga kirdi,20.05.2024 23:15:13
 13,Hafizov Sardorbek,EmployeEnter,Profilga kirdi,20.05.2024 23:22:11
+14,Orazbaev Merxat,EmployeEnter,Profilga kirdi,20.05.2024 23:31:30
+15,Orazbaev Merxat,AddPill,|Nomi: Izoflurannn|Soni: 40|Muddati: 55|Narxi: 7500|,20.05.2024 23:37:11
+16,Orazbaev Merxat,UpdatePill,|Nomi: Izoflurannn|Soni: 60|Muddati: 55|Narxi: 7500|,20.05.2024 23:37:44
+17,Orazbaev Merxat,DeletePill,Diklofenak nomli dori o'chirildi,20.05.2024 23:38:06
+18,Orazbaev Merxat,EmployeEnter,Profilga kirdi,20.05.2024 23:39:40
+19,Orazbaev Merxat,EmployeEnter,Profilga kirdi,21.05.2024 0:20:26
+20,Orazbaev Merxat,EmployeEnter,Profilga kirdi,21.05.2024 0:21:49
+21,Orazbaev Merxat,EmployeEnter,Profilga kirdi,21.05.2024 0:45:58
+22,Orazbaev Merxat,EmployeEnter,Profilga kirdi,21.05.2024 0:48:02
+23,Orazbaev Merxat,SalesPill,Id=1|Nomi=Izoflurannn|Soni=2|Narxi=15000,21.05.2024 0:48:16
+24,Orazbaev Merxat,SalesPill,Id=2|Nomi=Tefestrol|Soni=4|Narxi=8000,21.05.2024 0:48:16
+25,Orazbaev Merxat,EmployeEnter,Profilga kirdi,21.05.2024 1:06:21
+26,Orazbaev Merxat,EmployeEnter,Profilga kirdi,21.05.2024 1:10:21
+27,Orazbaev Merxat,SalesPill,Id=1|Nomi=Izoflurannn|Soni=2|Narxi=15000,21.05.2024 1:10:38
+28,Orazbaev Merxat,SalesPill,Id=3|Nomi=Kukumazim|Soni=5|Narxi=15000,21.05.2024 1:10:38
+29,Orazbaev Merxat,EmployeExit,Profildan chiqdi,21.05.2024 1:10:48

@@ -64,7 +64,7 @@ namespace DorixonaForm.Forms
                                 {
                                     if (NewLogin == employe.Login)
                                     {
-                                        streamWriter1.WriteLine((Id1 + 1) + "," + employe.FIO + "," + InformationType.AddPill + "," + $"|Nomi: {txAddPillName.Text}|Soni: {txAddPillCount.Text}|Muddati: {txLifeTime.Text}|Narxi: {txAddPillPrice.Text}|" + "," + DateTime.Now.ToString());
+                                        streamWriter1.WriteLine((Id1 + 1) + "," + employe.FIO + "," + InformationType.AddPill + "," + $"Nomi={txAddPillName.Text}|Soni={txAddPillCount.Text}|Muddati={txLifeTime.Text}|Narxi={txAddPillPrice.Text}" + "," + DateTime.Now.ToString());
                                     }
                                 }
                             }
