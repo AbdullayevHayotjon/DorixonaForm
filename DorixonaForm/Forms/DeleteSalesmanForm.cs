@@ -20,6 +20,17 @@ namespace DorixonaForm.Forms
         {
             NewLogin = login;
             InitializeComponent();
+            List<Employe> employes = new List<Employe>();
+            int i = 1;
+            foreach (Employe employe in functions.employeList)
+            {
+                if (employe.EmployeType == EmployeType.Manager.ToString())
+                {
+                    continue;
+                }
+                employes.Add(new Employe() { Id = i++, FIO = employe.FIO, Login = employe.Login, Password = employe.Password, PhoneNumber = employe.PhoneNumber });
+            }
+            dGVDeleteEmploye.DataSource = employes;
         }
 
         private void btDeleteSalesman_Click(object sender, EventArgs e)
@@ -76,10 +87,22 @@ namespace DorixonaForm.Forms
 
         private void txSendPassword_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void DeleteSalesmanForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btBack_Click(object sender, EventArgs e)
+        {
+            ManagerForm managerForm = new ManagerForm(NewLogin);
+            managerForm.Show();
+            this.Hide();
+        }
+
+        private void dGVEmploye_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

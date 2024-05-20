@@ -27,3 +27,13 @@
 27,Orazbaev Merxat,SalesPill,Id=1|Nomi=Izoflurannn|Soni=2|Narxi=15000,21.05.2024 1:10:38
 28,Orazbaev Merxat,SalesPill,Id=3|Nomi=Kukumazim|Soni=5|Narxi=15000,21.05.2024 1:10:38
 29,Orazbaev Merxat,EmployeExit,Profildan chiqdi,21.05.2024 1:10:48
+30,Abdullayev Hayot,EmployeEnter,Profilga kirdi,21.05.2024 1:27:04
+31,Abdullayev Hayot,EmployeExit,Profildan chiqdi,21.05.2024 1:27:08
+32,Abdullayev Hayot,EmployeEnter,Profilga kirdi,21.05.2024 1:39:06
+33,Abdullayev Hayot,EmployeEnter,Profilga kirdi,21.05.2024 1:40:39
+34,Abdullayev Hayot,EmployeEnter,Profilga kirdi,21.05.2024 1:46:29
+35,Abdullayev Hayot,EmployeEnter,Profilga kirdi,21.05.2024 1:52:25
+36,Abdullayev Hayot,EmployeEnter,Profilga kirdi,21.05.2024 1:53:31
+37,Abdullayev Hayot,EmployeExit,Profildan chiqdi,21.05.2024 1:54:47
+38,Abdullayev Hayot,EmployeEnter,Profilga kirdi,21.05.2024 1:57:33
+39,Abdullayev Hayot,EmployeExit,Profildan chiqdi,21.05.2024 1:58:12

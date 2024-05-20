@@ -120,17 +120,23 @@ namespace DorixonaForm.Forms
 
         private void btUpdateSalesman_Click(object sender, EventArgs e)
         {
-
+            UpdateSalesmanForm updateSalesmanForm=new UpdateSalesmanForm(NewLogin);
+            updateSalesmanForm.Show();
+            this.Hide();
         }
 
         private void btAddSalesman_Click_1(object sender, EventArgs e)
         {
-
+            AddSalesmanForm addSalesmanForm=new AddSalesmanForm(NewLogin);
+            addSalesmanForm.Show();
+            this.Hide();
         }
 
         private void btDeleteSalesman_Click_1(object sender, EventArgs e)
         {
-
+            DeleteSalesmanForm deleteSalesmanForm=new DeleteSalesmanForm(NewLogin);
+            deleteSalesmanForm.Show();
+            this.Hide();
         }
     }
 }

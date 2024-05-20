@@ -21,6 +21,17 @@ namespace DorixonaForm.Forms
         public AddSalesmanForm(string login)
         {
             InitializeComponent();
+            List<Employe> employes = new List<Employe>();
+            int i = 1;
+            foreach (Employe employe in functions.employeList)
+            {
+                if (employe.EmployeType == EmployeType.Manager.ToString())
+                {
+                    continue;
+                }
+                employes.Add(new Employe() { Id = i++, FIO = employe.FIO, Login = employe.Login, Password = employe.Password, PhoneNumber = employe.PhoneNumber });
+            }
+            dGVAddEmploye.DataSource = employes;
             NewLogin = login;
             SmsPassword = random.Next(10000, 99999);
             InitializeComponent();
@@ -129,6 +140,25 @@ namespace DorixonaForm.Forms
         }
 
         private void AddSalesmanForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Hide();
+        }
+
+        private void btBack_Click(object sender, EventArgs e)
+        {
+            ManagerForm managerForm = new ManagerForm(NewLogin);
+            managerForm.Show();
+            this.Hide();
+        }
+
+        private void dGVAddEmploye_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

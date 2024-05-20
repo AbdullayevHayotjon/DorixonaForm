@@ -43,22 +43,22 @@
             txAddFIO = new TextBox();
             txAddPassword = new TextBox();
             label1 = new Label();
-            dGVEmploye = new DataGridView();
+            dGVAddEmploye = new DataGridView();
             btExit = new Button();
             btBack = new Button();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dGVEmploye).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dGVAddEmploye).BeginInit();
             SuspendLayout();
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Trebuchet MS", 24F);
-            label5.Location = new Point(1038, 41);
+            label5.Location = new Point(190, 54);
             label5.Name = "label5";
-            label5.Size = new Size(321, 49);
+            label5.Size = new Size(359, 49);
             label5.TabIndex = 60;
-            label5.Text = "Sotuvchi qo'shish";
+            label5.Text = "Sotuvchilar royxati\r\n";
             // 
             // panel1
             // 
@@ -212,14 +212,15 @@
             label1.TabIndex = 37;
             label1.Text = "Parol yarating:";
             // 
-            // dGVEmploye
+            // dGVAddEmploye
             // 
-            dGVEmploye.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dGVEmploye.Location = new Point(41, 106);
-            dGVEmploye.Name = "dGVEmploye";
-            dGVEmploye.RowHeadersWidth = 51;
-            dGVEmploye.Size = new Size(679, 701);
-            dGVEmploye.TabIndex = 61;
+            dGVAddEmploye.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dGVAddEmploye.Location = new Point(41, 106);
+            dGVAddEmploye.Name = "dGVAddEmploye";
+            dGVAddEmploye.RowHeadersWidth = 51;
+            dGVAddEmploye.Size = new Size(679, 701);
+            dGVAddEmploye.TabIndex = 61;
+            dGVAddEmploye.CellContentClick += dGVAddEmploye_CellContentClick;
             // 
             // btExit
             // 
@@ -231,6 +232,7 @@
             btExit.TabIndex = 62;
             btExit.Text = "Chiqish";
             btExit.UseVisualStyleBackColor = false;
+            btExit.Click += btExit_Click;
             // 
             // btBack
             // 
@@ -242,6 +244,7 @@
             btBack.TabIndex = 63;
             btBack.Text = "Orqaga qaytish";
             btBack.UseVisualStyleBackColor = false;
+            btBack.Click += btBack_Click;
             // 
             // AddSalesmanForm
             // 
@@ -251,7 +254,7 @@
             ClientSize = new Size(1917, 1033);
             Controls.Add(btBack);
             Controls.Add(btExit);
-            Controls.Add(dGVEmploye);
+            Controls.Add(dGVAddEmploye);
             Controls.Add(label5);
             Controls.Add(panel1);
             Name = "AddSalesmanForm";
@@ -259,7 +262,7 @@
             Load += AddSalesmanForm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dGVEmploye).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dGVAddEmploye).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -281,7 +284,7 @@
         private TextBox txAddFIO;
         private TextBox txAddPassword;
         private Label label1;
-        private DataGridView dGVEmploye;
+        private DataGridView dGVAddEmploye;
         private Button btExit;
         private Button btBack;
     }
