@@ -105,16 +105,14 @@ namespace DorixonaForm
                     Id = allInformations.Id;
                 }
                 StreamWriter streamWriter2 = new StreamWriter(functions.ReportSelesPillsPath);
-                int Id1 = 0;
                 foreach (ReportSelesPill reportSelesPill in functions.reportSelesPills)
                 {
-                    streamWriter2.WriteLine(reportSelesPill.Id + "," + reportSelesPill.FIO + "," + reportSelesPill.Nomi + "," + reportSelesPill.Soni + "," + reportSelesPill.SotilganVaqti + "," + reportSelesPill.Narxi);
-                    Id1 = reportSelesPill.Id;
+                    streamWriter2.WriteLine(reportSelesPill.DoriId + "," + reportSelesPill.FIO + "," + reportSelesPill.Nomi + "," + reportSelesPill.Soni + "," + reportSelesPill.SotilganVaqti + "," + reportSelesPill.Narxi);
                 }
                 foreach (SellingPill sellingPill in functions.sellingPillesList)
                 {
-                    stream.WriteLine((Id++ + 1) + "," + FIO + "," + InformationType.SalesPill.ToString() + "," + $"Id={sellingPill.Id}|Nomi={sellingPill.Nomi}|Soni={sellingPill.Soni}|Narxi={sellingPill.Narxi}" + "," + DateTime.Now.ToString());
-                    streamWriter2.WriteLine((Id1++ + 1) + "," + FIO + "," + sellingPill.Nomi + "," + sellingPill.Soni + "," + DateTime.Now.ToString() + "," + sellingPill.Narxi);
+                    stream.WriteLine((Id + 1) + "," + FIO + "," + InformationType.SalesPill.ToString() + "," + $"Id={sellingPill.Id}|Nomi={sellingPill.Nomi}|Soni={sellingPill.Soni}|Narxi={sellingPill.Narxi}" + "," + DateTime.Now.ToString());
+                    streamWriter2.WriteLine(sellingPill.Id + "," + FIO + "," + sellingPill.Nomi + "," + sellingPill.Soni + "," + DateTime.Now.ToString() + "," + sellingPill.Narxi);
                 }
                 streamWriter2.Close();
                 stream.Close();

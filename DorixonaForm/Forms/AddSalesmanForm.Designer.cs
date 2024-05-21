@@ -30,11 +30,11 @@
         {
             label5 = new Label();
             panel1 = new Panel();
+            txPhoneNumber = new TextBox();
             txAddLogin = new TextBox();
             lbPhoneNumber = new Label();
             lbSmsPassword = new Label();
             txAddSmsPassword = new TextBox();
-            txAddPhoneNumber = new TextBox();
             txConfirmation = new Button();
             lb998 = new Label();
             lbNewLogin = new Label();
@@ -63,11 +63,11 @@
             // panel1
             // 
             panel1.BackColor = Color.LightCyan;
+            panel1.Controls.Add(txPhoneNumber);
             panel1.Controls.Add(txAddLogin);
             panel1.Controls.Add(lbPhoneNumber);
             panel1.Controls.Add(lbSmsPassword);
             panel1.Controls.Add(txAddSmsPassword);
-            panel1.Controls.Add(txAddPhoneNumber);
             panel1.Controls.Add(txConfirmation);
             panel1.Controls.Add(lb998);
             panel1.Controls.Add(lbNewLogin);
@@ -80,6 +80,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(787, 815);
             panel1.TabIndex = 59;
+            // 
+            // txPhoneNumber
+            // 
+            txPhoneNumber.BackColor = Color.FromArgb(255, 255, 192);
+            txPhoneNumber.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
+            txPhoneNumber.Location = new Point(435, 116);
+            txPhoneNumber.Name = "txPhoneNumber";
+            txPhoneNumber.Size = new Size(319, 48);
+            txPhoneNumber.TabIndex = 40;
+            txPhoneNumber.Tag = "";
             // 
             // txAddLogin
             // 
@@ -119,16 +129,6 @@
             txAddSmsPassword.Size = new Size(158, 48);
             txAddSmsPassword.TabIndex = 28;
             txAddSmsPassword.Tag = "";
-            // 
-            // txAddPhoneNumber
-            // 
-            txAddPhoneNumber.BackColor = Color.FromArgb(255, 255, 192);
-            txAddPhoneNumber.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txAddPhoneNumber.Location = new Point(435, 116);
-            txAddPhoneNumber.Name = "txAddPhoneNumber";
-            txAddPhoneNumber.Size = new Size(319, 48);
-            txAddPhoneNumber.TabIndex = 29;
-            txAddPhoneNumber.Tag = "";
             // 
             // txConfirmation
             // 
@@ -275,7 +275,6 @@
         private Label lbPhoneNumber;
         private Label lbSmsPassword;
         private TextBox txAddSmsPassword;
-        private TextBox txAddPhoneNumber;
         private Button txConfirmation;
         private Label lb998;
         private Label lbNewLogin;
@@ -287,5 +286,6 @@
         private DataGridView dGVAddEmploye;
         private Button btExit;
         private Button btBack;
+        private TextBox txPhoneNumber;
     }
 }

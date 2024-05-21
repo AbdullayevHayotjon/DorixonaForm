@@ -9,8 +9,9 @@ namespace DorixonaForm.Actions
     public class SalesmanReport
     {
         public int Id { get; set; }
-        public string ProcessType { get; set; }
-        public string Information { get; set; }
-        public string ProcessTime { get; set; }
+        public string Nomi { get; set; }
+        public int Soni { get; set; }
+        public string SotilganVaqti { get; set; }
+        public int Narxi { get; set; }
     }
 }

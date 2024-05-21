@@ -28,12 +28,11 @@ namespace DorixonaForm.Forms
                     FIO = employe.FIO;
                 }
             }
-            int i = 1;
-            foreach (AllInformations allInformations in functions.allInformations)
+            foreach (ReportSelesPill reportSelesPill in functions.reportSelesPills)
             {
-                if (FIO == allInformations.FIO)
+                if (FIO == reportSelesPill.FIO)
                 {
-                    salesmanReports.Add(new SalesmanReport() { Id = i++, ProcessType = allInformations.ProcessType, Information = allInformations.Information, ProcessTime = allInformations.ProcessTime });
+                    salesmanReports.Add(new SalesmanReport() { Id = reportSelesPill.DoriId, Nomi = reportSelesPill.Nomi, Soni = reportSelesPill.Soni, SotilganVaqti = reportSelesPill.SotilganVaqti, Narxi = reportSelesPill.Narxi});
                 }
             }
             dataGridView1.DataSource = salesmanReports;

@@ -39,10 +39,10 @@
             label8 = new Label();
             label9 = new Label();
             panel2 = new Panel();
+            label7 = new Label();
+            txId = new TextBox();
             label4 = new Label();
             label5 = new Label();
-            label2 = new Label();
-            label3 = new Label();
             dTKun1 = new DateTimePicker();
             label1 = new Label();
             dTKun2 = new DateTimePicker();
@@ -51,16 +51,23 @@
             button3 = new Button();
             comboBox3 = new ComboBox();
             dataGridView1 = new DataGridView();
-            txId = new TextBox();
-            label7 = new Label();
+            salesmanReportBindingSource3 = new BindingSource(components);
+            salesmanReportBindingSource2 = new BindingSource(components);
+            salesmanReportBindingSource1 = new BindingSource(components);
             salesmanReportBindingSource = new BindingSource(components);
-            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            processTypeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            informationDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            processTimeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            salesmanReportBindingSource4 = new BindingSource(components);
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            nomiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            soniDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            sotilganVaqtiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            narxiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource4).BeginInit();
             SuspendLayout();
             // 
             // cbSearch
@@ -168,8 +175,6 @@
             panel2.Controls.Add(txId);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(label5);
-            panel2.Controls.Add(label2);
-            panel2.Controls.Add(label3);
             panel2.Controls.Add(dTKun1);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(dTKun2);
@@ -181,6 +186,25 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(815, 565);
             panel2.TabIndex = 132;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Trebuchet MS", 22.2F);
+            label7.Location = new Point(259, 38);
+            label7.Name = "label7";
+            label7.Size = new Size(51, 46);
+            label7.TabIndex = 145;
+            label7.Text = "Id";
+            // 
+            // txId
+            // 
+            txId.BackColor = Color.FromArgb(255, 255, 192);
+            txId.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
+            txId.Location = new Point(316, 36);
+            txId.Name = "txId";
+            txId.Size = new Size(167, 48);
+            txId.TabIndex = 144;
             // 
             // label4
             // 
@@ -202,27 +226,6 @@
             label5.Size = new Size(103, 46);
             label5.TabIndex = 142;
             label5.Text = "Soni:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.FromArgb(255, 255, 192);
-            label2.Font = new Font("Franklin Gothic Medium", 18F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            label2.Location = new Point(374, 440);
-            label2.Name = "label2";
-            label2.Size = new Size(97, 38);
-            label2.TabIndex = 141;
-            label2.Text = "          ";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Trebuchet MS", 22.2F);
-            label3.Location = new Point(207, 432);
-            label3.Name = "label3";
-            label3.Size = new Size(108, 46);
-            label3.TabIndex = 140;
-            label3.Text = "Vaqt:";
             // 
             // dTKun1
             // 
@@ -297,69 +300,74 @@
             // 
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, processTypeDataGridViewTextBoxColumn, informationDataGridViewTextBoxColumn, processTimeDataGridViewTextBoxColumn });
-            dataGridView1.DataSource = salesmanReportBindingSource;
-            dataGridView1.Location = new Point(982, 167);
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, nomiDataGridViewTextBoxColumn, soniDataGridViewTextBoxColumn, sotilganVaqtiDataGridViewTextBoxColumn, narxiDataGridViewTextBoxColumn });
+            dataGridView1.DataSource = salesmanReportBindingSource4;
+            dataGridView1.Location = new Point(937, 167);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(555, 565);
+            dataGridView1.Size = new Size(681, 565);
             dataGridView1.TabIndex = 137;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // txId
+            // salesmanReportBindingSource3
             // 
-            txId.BackColor = Color.FromArgb(255, 255, 192);
-            txId.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txId.Location = new Point(316, 36);
-            txId.Name = "txId";
-            txId.Size = new Size(167, 48);
-            txId.TabIndex = 144;
+            salesmanReportBindingSource3.DataSource = typeof(Actions.SalesmanReport);
             // 
-            // label7
+            // salesmanReportBindingSource2
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Trebuchet MS", 22.2F);
-            label7.Location = new Point(259, 38);
-            label7.Name = "label7";
-            label7.Size = new Size(51, 46);
-            label7.TabIndex = 145;
-            label7.Text = "Id";
+            salesmanReportBindingSource2.DataSource = typeof(Actions.SalesmanReport);
+            // 
+            // salesmanReportBindingSource1
+            // 
+            salesmanReportBindingSource1.DataSource = typeof(Actions.SalesmanReport);
             // 
             // salesmanReportBindingSource
             // 
             salesmanReportBindingSource.DataSource = typeof(Actions.SalesmanReport);
             // 
-            // idDataGridViewTextBoxColumn
+            // salesmanReportBindingSource4
             // 
-            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            idDataGridViewTextBoxColumn.HeaderText = "Id";
-            idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            idDataGridViewTextBoxColumn.Width = 125;
+            salesmanReportBindingSource4.DataSource = typeof(Actions.SalesmanReport);
             // 
-            // processTypeDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn1
             // 
-            processTypeDataGridViewTextBoxColumn.DataPropertyName = "ProcessType";
-            processTypeDataGridViewTextBoxColumn.HeaderText = "ProcessType";
-            processTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            processTypeDataGridViewTextBoxColumn.Name = "processTypeDataGridViewTextBoxColumn";
-            processTypeDataGridViewTextBoxColumn.Width = 125;
+            dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            dataGridViewTextBoxColumn1.HeaderText = "Id";
+            dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.Width = 125;
             // 
-            // informationDataGridViewTextBoxColumn
+            // nomiDataGridViewTextBoxColumn
             // 
-            informationDataGridViewTextBoxColumn.DataPropertyName = "Information";
-            informationDataGridViewTextBoxColumn.HeaderText = "Information";
-            informationDataGridViewTextBoxColumn.MinimumWidth = 6;
-            informationDataGridViewTextBoxColumn.Name = "informationDataGridViewTextBoxColumn";
-            informationDataGridViewTextBoxColumn.Width = 125;
+            nomiDataGridViewTextBoxColumn.DataPropertyName = "Nomi";
+            nomiDataGridViewTextBoxColumn.HeaderText = "Nomi";
+            nomiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            nomiDataGridViewTextBoxColumn.Name = "nomiDataGridViewTextBoxColumn";
+            nomiDataGridViewTextBoxColumn.Width = 125;
             // 
-            // processTimeDataGridViewTextBoxColumn
+            // soniDataGridViewTextBoxColumn
             // 
-            processTimeDataGridViewTextBoxColumn.DataPropertyName = "ProcessTime";
-            processTimeDataGridViewTextBoxColumn.HeaderText = "ProcessTime";
-            processTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            processTimeDataGridViewTextBoxColumn.Name = "processTimeDataGridViewTextBoxColumn";
-            processTimeDataGridViewTextBoxColumn.Width = 125;
+            soniDataGridViewTextBoxColumn.DataPropertyName = "Soni";
+            soniDataGridViewTextBoxColumn.HeaderText = "Soni";
+            soniDataGridViewTextBoxColumn.MinimumWidth = 6;
+            soniDataGridViewTextBoxColumn.Name = "soniDataGridViewTextBoxColumn";
+            soniDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // sotilganVaqtiDataGridViewTextBoxColumn
+            // 
+            sotilganVaqtiDataGridViewTextBoxColumn.DataPropertyName = "SotilganVaqti";
+            sotilganVaqtiDataGridViewTextBoxColumn.HeaderText = "SotilganVaqti";
+            sotilganVaqtiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            sotilganVaqtiDataGridViewTextBoxColumn.Name = "sotilganVaqtiDataGridViewTextBoxColumn";
+            sotilganVaqtiDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // narxiDataGridViewTextBoxColumn
+            // 
+            narxiDataGridViewTextBoxColumn.DataPropertyName = "Narxi";
+            narxiDataGridViewTextBoxColumn.HeaderText = "Narxi";
+            narxiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            narxiDataGridViewTextBoxColumn.Name = "narxiDataGridViewTextBoxColumn";
+            narxiDataGridViewTextBoxColumn.Width = 125;
             // 
             // SalesmanReportsForm
             // 
@@ -384,7 +392,11 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource1).EndInit();
             ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource4).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -406,8 +418,6 @@
         private ComboBox comboBox3;
         private Label label4;
         private Label label5;
-        private Label label2;
-        private Label label3;
         private DateTimePicker dTKun1;
         private Label label1;
         private DateTimePicker dTKun2;
@@ -419,5 +429,15 @@
         private DataGridViewTextBoxColumn informationDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn processTimeDataGridViewTextBoxColumn;
         private BindingSource salesmanReportBindingSource;
+        private BindingSource salesmanReportBindingSource1;
+        private DataGridViewTextBoxColumn doriIdDataGridViewTextBoxColumn;
+        private BindingSource salesmanReportBindingSource2;
+        private BindingSource salesmanReportBindingSource3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn nomiDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn soniDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn sotilganVaqtiDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn narxiDataGridViewTextBoxColumn;
+        private BindingSource salesmanReportBindingSource4;
     }
 }

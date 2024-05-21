@@ -42,7 +42,7 @@ namespace DorixonaForm.Forms
             int sanoq = 0;
             foreach (Employe employeInformation in functions.employeList)
             {
-                if (employeInformation.PhoneNumber == txAddPhoneNumber.Text)
+                if (employeInformation.PhoneNumber == txPhoneNumber.Text)
                 {
                     sanoq = 1;
                     MessageBox.Show("Bu raqam oldindan mavjud", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -50,15 +50,22 @@ namespace DorixonaForm.Forms
             }
             if (sanoq == 0)
             {
-                Thread.Sleep(2000);
-                MessageBox.Show($"Tasdiqlash kodi: {SmsPassword}", "dori.uz", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txAddPhoneNumber.ReadOnly = true;
+                if (functions.CheckNumber(txPhoneNumber.Text) && txPhoneNumber.Text.Length == 9)
+                {
+                    Thread.Sleep(2000);
+                    MessageBox.Show($"Tasdiqlash kodi: {SmsPassword}", "dori.uz", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txPhoneNumber.ReadOnly = true;
+                }
+                else
+                {
+                    MessageBox.Show("Telefon raqam bunday bo'lishi mumkin emas", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
 
         private void btSaveNewLogPass_Click(object sender, EventArgs e)
         {
-            if (functions.CheckNumber(txAddPhoneNumber.Text) && txAddPhoneNumber.Text.Length == 9)
+            if (functions.CheckNumber(txPhoneNumber.Text) && txPhoneNumber.Text.Length == 9)
             {
                 if (txAddSmsPassword.Text == SmsPassword.ToString())
                 {
@@ -88,7 +95,7 @@ namespace DorixonaForm.Forms
                                     {
                                         streamWriter.WriteLine((i++) + "," + employe.FIO + "," + employe.Login + "," + employe.Password + "," + employe.PhoneNumber + "," + employe.EmployeType);
                                     }
-                                    streamWriter.WriteLine(i + "," + txAddFIO.Text + "," + txAddLogin.Text + "," + txAddPassword.Text + "," + txAddPhoneNumber.Text + "," + EmployeType.Salesman.ToString());
+                                    streamWriter.WriteLine(i + "," + txAddFIO.Text + "," + txAddLogin.Text + "," + txAddPassword.Text + "," + txPhoneNumber.Text + "," + EmployeType.Salesman.ToString());
                                     streamWriter.Close();
                                     MessageBox.Show($"Sotuvchi qo'shildi", "Muvaffaqqiyatli!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     StreamWriter streamWriter1 = new StreamWriter(functions.AllInformationsPath);
@@ -101,7 +108,7 @@ namespace DorixonaForm.Forms
                                     {
                                         if (NewLogin == employe.Login)
                                         {
-                                            streamWriter1.WriteLine(j + "," + employe.FIO + "," + InformationType.AddSalesman + "," + $"|FIO: {txAddFIO.Text}|Telefon raqami: {txAddPhoneNumber.Text}|" + "," + DateTime.Now.ToString());
+                                            streamWriter1.WriteLine(j + "," + employe.FIO + "," + InformationType.AddSalesman + "," + $"|FIO: {txAddFIO.Text}|Telefon raqami: {txPhoneNumber.Text}|" + "," + DateTime.Now.ToString());
                                         }
                                     }
                                     streamWriter1.Close();
