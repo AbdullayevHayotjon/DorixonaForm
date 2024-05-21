@@ -97,9 +97,9 @@
             // 
             btExit.BackColor = Color.Silver;
             btExit.Font = new Font("Trebuchet MS", 14F);
-            btExit.Location = new Point(1497, 47);
+            btExit.Location = new Point(1735, 47);
             btExit.Name = "btExit";
-            btExit.Size = new Size(124, 44);
+            btExit.Size = new Size(140, 44);
             btExit.TabIndex = 17;
             btExit.Text = "Chiqish";
             btExit.UseVisualStyleBackColor = false;
@@ -109,9 +109,9 @@
             // 
             btSellPill.BackColor = Color.LightSkyBlue;
             btSellPill.Font = new Font("Trebuchet MS", 16.8000011F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btSellPill.Location = new Point(564, 705);
+            btSellPill.Location = new Point(634, 705);
             btSellPill.Name = "btSellPill";
-            btSellPill.Size = new Size(232, 50);
+            btSellPill.Size = new Size(261, 50);
             btSellPill.TabIndex = 15;
             btSellPill.Text = "Sotish";
             btSellPill.UseVisualStyleBackColor = false;
@@ -121,9 +121,9 @@
             // 
             btSearch.BackColor = Color.LightSkyBlue;
             btSearch.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btSearch.Location = new Point(1483, 124);
+            btSearch.Location = new Point(1719, 124);
             btSearch.Name = "btSearch";
-            btSearch.Size = new Size(138, 49);
+            btSearch.Size = new Size(155, 49);
             btSearch.TabIndex = 21;
             btSearch.Text = "Qidirish";
             btSearch.UseVisualStyleBackColor = false;
@@ -141,9 +141,9 @@
             // 
             txPillInformation.BackColor = Color.FromArgb(255, 255, 192);
             txPillInformation.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txPillInformation.Location = new Point(1216, 124);
+            txPillInformation.Location = new Point(1419, 124);
             txPillInformation.Name = "txPillInformation";
-            txPillInformation.Size = new Size(262, 48);
+            txPillInformation.Size = new Size(294, 48);
             txPillInformation.TabIndex = 23;
             // 
             // dGWPills
@@ -152,10 +152,10 @@
             dGWPills.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dGWPills.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, muddatiDataGridViewTextBoxColumn, dataGridViewTextBoxColumn4, qoshilganSanaDataGridViewTextBoxColumn });
             dGWPills.DataSource = pillBindingSource6;
-            dGWPills.Location = new Point(881, 241);
+            dGWPills.Location = new Point(991, 241);
             dGWPills.Name = "dGWPills";
             dGWPills.RowHeadersWidth = 80;
-            dGWPills.Size = new Size(832, 668);
+            dGWPills.Size = new Size(883, 668);
             dGWPills.TabIndex = 24;
             dGWPills.CellContentClick += dGWPills_CellContentClick;
             // 
@@ -219,16 +219,16 @@
             // 
             txPillCount.BackColor = Color.FromArgb(255, 255, 192);
             txPillCount.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txPillCount.Location = new Point(379, 192);
+            txPillCount.Location = new Point(426, 192);
             txPillCount.Name = "txPillCount";
-            txPillCount.Size = new Size(117, 48);
+            txPillCount.Size = new Size(131, 48);
             txPillCount.TabIndex = 25;
             // 
             // lbPillCount
             // 
             lbPillCount.AutoSize = true;
             lbPillCount.Font = new Font("Trebuchet MS", 22.2F);
-            lbPillCount.Location = new Point(16, 190);
+            lbPillCount.Location = new Point(18, 190);
             lbPillCount.Name = "lbPillCount";
             lbPillCount.Size = new Size(341, 46);
             lbPillCount.TabIndex = 26;
@@ -238,9 +238,9 @@
             // 
             btAddBox.BackColor = Color.FromArgb(128, 255, 128);
             btAddBox.Font = new Font("Trebuchet MS", 18F);
-            btAddBox.Location = new Point(526, 190);
+            btAddBox.Location = new Point(592, 190);
             btAddBox.Name = "btAddBox";
-            btAddBox.Size = new Size(269, 50);
+            btAddBox.Size = new Size(303, 50);
             btAddBox.TabIndex = 27;
             btAddBox.Text = "Savatga qo'shish";
             btAddBox.UseVisualStyleBackColor = false;
@@ -250,7 +250,7 @@
             // 
             lbFIO.AutoSize = true;
             lbFIO.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            lbFIO.Location = new Point(12, 9);
+            lbFIO.Location = new Point(14, 9);
             lbFIO.Name = "lbFIO";
             lbFIO.Size = new Size(61, 38);
             lbFIO.TabIndex = 28;
@@ -260,9 +260,9 @@
             // 
             lnklSettings.AutoSize = true;
             lnklSettings.Font = new Font("Segoe UI", 14F);
-            lnklSettings.Location = new Point(12, 47);
+            lnklSettings.Location = new Point(14, 47);
             lnklSettings.Name = "lnklSettings";
-            lnklSettings.Size = new Size(129, 32);
+            lnklSettings.Size = new Size(133, 32);
             lnklSettings.TabIndex = 29;
             lnklSettings.TabStop = true;
             lnklSettings.Text = "Sozlamalar";
@@ -272,7 +272,7 @@
             // 
             lbPillsList.AutoSize = true;
             lbPillsList.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            lbPillsList.Location = new Point(495, 26);
+            lbPillsList.Location = new Point(557, 26);
             lbPillsList.Name = "lbPillsList";
             lbPillsList.Size = new Size(218, 38);
             lbPillsList.TabIndex = 30;
@@ -294,9 +294,9 @@
             panel1.Controls.Add(txPillCount);
             panel1.Controls.Add(btAddBox);
             panel1.Controls.Add(lbPillCount);
-            panel1.Location = new Point(12, 124);
+            panel1.Location = new Point(14, 124);
             panel1.Name = "panel1";
-            panel1.Size = new Size(851, 841);
+            panel1.Size = new Size(957, 841);
             panel1.TabIndex = 32;
             panel1.Paint += panel1_Paint;
             // 
@@ -304,9 +304,9 @@
             // 
             button4.BackColor = Color.LightSkyBlue;
             button4.Font = new Font("Trebuchet MS", 16.8000011F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button4.Location = new Point(564, 610);
+            button4.Location = new Point(634, 610);
             button4.Name = "button4";
-            button4.Size = new Size(232, 50);
+            button4.Size = new Size(261, 50);
             button4.TabIndex = 84;
             button4.Text = "Tozalash";
             button4.UseVisualStyleBackColor = false;
@@ -316,7 +316,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label4.Location = new Point(404, 267);
+            label4.Location = new Point(454, 267);
             label4.Name = "label4";
             label4.Size = new Size(90, 38);
             label4.TabIndex = 83;
@@ -328,7 +328,7 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7, dataGridViewTextBoxColumn8 });
             dataGridView1.DataSource = sellingPillBindingSource1;
-            dataGridView1.Location = new Point(148, 308);
+            dataGridView1.Location = new Point(166, 308);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
@@ -380,7 +380,7 @@
             lbAllPrice.AutoSize = true;
             lbAllPrice.BackColor = Color.FromArgb(255, 255, 192);
             lbAllPrice.Font = new Font("Franklin Gothic Medium", 18F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            lbAllPrice.Location = new Point(245, 622);
+            lbAllPrice.Location = new Point(276, 622);
             lbAllPrice.Name = "lbAllPrice";
             lbAllPrice.Size = new Size(97, 38);
             lbAllPrice.TabIndex = 81;
@@ -390,7 +390,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Trebuchet MS", 22.2F);
-            label3.Location = new Point(32, 614);
+            label3.Location = new Point(36, 614);
             label3.Name = "label3";
             label3.Size = new Size(207, 46);
             label3.TabIndex = 80;
@@ -400,9 +400,9 @@
             // 
             button1.BackColor = Color.FromArgb(255, 128, 128);
             button1.Font = new Font("Trebuchet MS", 17F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button1.Location = new Point(302, 705);
+            button1.Location = new Point(340, 705);
             button1.Name = "button1";
-            button1.Size = new Size(232, 50);
+            button1.Size = new Size(261, 50);
             button1.TabIndex = 79;
             button1.Text = "O'chirish";
             button1.UseVisualStyleBackColor = false;
@@ -412,9 +412,9 @@
             // 
             button2.BackColor = Color.FromArgb(255, 255, 128);
             button2.Font = new Font("Trebuchet MS", 17F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button2.Location = new Point(32, 705);
+            button2.Location = new Point(36, 705);
             button2.Name = "button2";
-            button2.Size = new Size(232, 50);
+            button2.Size = new Size(261, 50);
             button2.TabIndex = 78;
             button2.Text = "Yangilash";
             button2.UseVisualStyleBackColor = false;
@@ -424,16 +424,16 @@
             // 
             txId.BackColor = Color.FromArgb(255, 255, 192);
             txId.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txId.Location = new Point(379, 115);
+            txId.Location = new Point(426, 115);
             txId.Name = "txId";
-            txId.Size = new Size(117, 48);
+            txId.Size = new Size(131, 48);
             txId.TabIndex = 75;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Trebuchet MS", 22.2F);
-            label2.Location = new Point(16, 117);
+            label2.Location = new Point(18, 117);
             label2.Name = "label2";
             label2.Size = new Size(343, 46);
             label2.TabIndex = 74;
@@ -445,9 +445,9 @@
             cbSearch.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
             cbSearch.FormattingEnabled = true;
             cbSearch.Items.AddRange(new object[] { "Id", "Nomi", "Soni", "Muddati", "Narxi", "Qo'shilgan Sanasi" });
-            cbSearch.Location = new Point(881, 124);
+            cbSearch.Location = new Point(991, 124);
             cbSearch.Name = "cbSearch";
-            cbSearch.Size = new Size(328, 49);
+            cbSearch.Size = new Size(419, 49);
             cbSearch.TabIndex = 28;
             cbSearch.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
@@ -455,9 +455,9 @@
             // 
             btAddPill.BackColor = Color.FromArgb(128, 255, 128);
             btAddPill.Font = new Font("Trebuchet MS", 17F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btAddPill.Location = new Point(881, 915);
+            btAddPill.Location = new Point(991, 915);
             btAddPill.Name = "btAddPill";
-            btAddPill.Size = new Size(232, 50);
+            btAddPill.Size = new Size(261, 50);
             btAddPill.TabIndex = 32;
             btAddPill.Text = "Dori qo'shish";
             btAddPill.UseVisualStyleBackColor = false;
@@ -467,9 +467,9 @@
             // 
             btUpdatePill.BackColor = Color.FromArgb(255, 255, 128);
             btUpdatePill.Font = new Font("Trebuchet MS", 17F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btUpdatePill.Location = new Point(1139, 915);
+            btUpdatePill.Location = new Point(1281, 915);
             btUpdatePill.Name = "btUpdatePill";
-            btUpdatePill.Size = new Size(227, 50);
+            btUpdatePill.Size = new Size(255, 50);
             btUpdatePill.TabIndex = 33;
             btUpdatePill.Text = "Dori yangilash";
             btUpdatePill.UseVisualStyleBackColor = false;
@@ -479,9 +479,9 @@
             // 
             btDeletePill.BackColor = Color.FromArgb(255, 128, 128);
             btDeletePill.Font = new Font("Trebuchet MS", 17F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btDeletePill.Location = new Point(1388, 915);
+            btDeletePill.Location = new Point(1562, 915);
             btDeletePill.Name = "btDeletePill";
-            btDeletePill.Size = new Size(232, 50);
+            btDeletePill.Size = new Size(261, 50);
             btDeletePill.TabIndex = 34;
             btDeletePill.Text = "Dori o'chirish";
             btDeletePill.UseVisualStyleBackColor = false;
@@ -491,9 +491,9 @@
             // 
             lkSalesmanReports.AutoSize = true;
             lkSalesmanReports.Font = new Font("Segoe UI", 14F);
-            lkSalesmanReports.Location = new Point(12, 79);
+            lkSalesmanReports.Location = new Point(14, 79);
             lkSalesmanReports.Name = "lkSalesmanReports";
-            lkSalesmanReports.Size = new Size(150, 32);
+            lkSalesmanReports.Size = new Size(154, 32);
             lkSalesmanReports.TabIndex = 35;
             lkSalesmanReports.TabStop = true;
             lkSalesmanReports.Text = "Hisobotlarim";
@@ -505,18 +505,18 @@
             cbSort.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
             cbSort.FormattingEnabled = true;
             cbSort.Items.AddRange(new object[] { "Id", "Nomi", "Soni", "Muddati", "Narxi", "Qo'shilgan sanasi" });
-            cbSort.Location = new Point(881, 185);
+            cbSort.Location = new Point(991, 185);
             cbSort.Name = "cbSort";
-            cbSort.Size = new Size(330, 49);
+            cbSort.Size = new Size(422, 49);
             cbSort.TabIndex = 36;
             // 
             // btOsish
             // 
             btOsish.BackColor = Color.LightSkyBlue;
             btOsish.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btOsish.Location = new Point(1216, 179);
+            btOsish.Location = new Point(1419, 179);
             btOsish.Name = "btOsish";
-            btOsish.Size = new Size(127, 55);
+            btOsish.Size = new Size(143, 55);
             btOsish.TabIndex = 37;
             btOsish.Text = "O'sish";
             btOsish.UseVisualStyleBackColor = false;
@@ -526,9 +526,9 @@
             // 
             btKamayish.BackColor = Color.LightSkyBlue;
             btKamayish.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btKamayish.Location = new Point(1346, 179);
+            btKamayish.Location = new Point(1565, 179);
             btKamayish.Name = "btKamayish";
-            btKamayish.Size = new Size(129, 55);
+            btKamayish.Size = new Size(145, 55);
             btKamayish.TabIndex = 41;
             btKamayish.Text = "Kamayish";
             btKamayish.UseVisualStyleBackColor = false;
@@ -538,9 +538,9 @@
             // 
             btQaytarish.BackColor = Color.LightSkyBlue;
             btQaytarish.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btQaytarish.Location = new Point(1483, 179);
+            btQaytarish.Location = new Point(1719, 179);
             btQaytarish.Name = "btQaytarish";
-            btQaytarish.Size = new Size(138, 55);
+            btQaytarish.Size = new Size(155, 55);
             btQaytarish.TabIndex = 43;
             btQaytarish.Text = "Qaytarish";
             btQaytarish.UseVisualStyleBackColor = false;
@@ -552,10 +552,10 @@
             // 
             // SalesmanForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(1725, 1033);
+            ClientSize = new Size(1924, 1033);
             Controls.Add(btQaytarish);
             Controls.Add(btKamayish);
             Controls.Add(btOsish);

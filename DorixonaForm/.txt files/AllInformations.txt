@@ -64,3 +64,5 @@
 64,Abdullayev Hayot,EmployeEnter,Profilga kirdi,21.05.2024 13:33:46
 65,Abdullayev Hayot,EmployeEnter,Profilga kirdi,21.05.2024 13:34:24
 66,Abdullayev Hayot,EmployeEnter,Profilga kirdi,21.05.2024 13:34:53
+67,Hafizov Sardorbek,EmployeEnter,Profilga kirdi,21.05.2024 17:28:24
+68,Abdullayev Hayot,EmployeEnter,Profilga kirdi,21.05.2024 17:37:14
