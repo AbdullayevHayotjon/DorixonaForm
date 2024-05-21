@@ -16,6 +16,8 @@ namespace DorixonaForm.Forms
         Functions functions = new Functions();
         public string NewLogin { get; set; }
         public List<SalesmanReport> salesmanReports = new List<SalesmanReport>();
+        public int Price = 0;
+        public int Count = 0;
         public SalesmanReportsForm(string login)
         {
             NewLogin = login;
@@ -35,6 +37,8 @@ namespace DorixonaForm.Forms
                     salesmanReports.Add(new SalesmanReport() { Id = reportSelesPill.DoriId, Nomi = reportSelesPill.Nomi, Soni = reportSelesPill.Soni, SotilganVaqti = reportSelesPill.SotilganVaqti, Narxi = reportSelesPill.Narxi });
                 }
             }
+            lbPrice.Text = Price.ToString();
+            lbCount.Text = Count.ToString();
             dGWPills.DataSource = salesmanReports;
         }
 
@@ -180,7 +184,56 @@ namespace DorixonaForm.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            DateTime Kun1 = DateTime.Parse(dTKun1.Text).Date;
+            DateTime Kun2 = DateTime.Parse(dTKun2.Text).Date.AddHours(23).AddMinutes(59).AddSeconds(59);
+            List<SalesmanReport> list = new List<SalesmanReport>();
+            if (txId.Text.Length == 0)
+            {
+                foreach (SalesmanReport salesmanReport in salesmanReports)
+                {
+                    if (Kun1 <= DateTime.Parse(salesmanReport.SotilganVaqti) && DateTime.Parse(salesmanReport.SotilganVaqti) <= Kun2)
+                    {
+                        list.Add(new SalesmanReport() { Id = salesmanReport.Id, Nomi = salesmanReport.Nomi, Soni = salesmanReport.Soni, SotilganVaqti = salesmanReport.SotilganVaqti, Narxi = salesmanReport.Narxi });
+                        Price += salesmanReport.Narxi;
+                        Count += salesmanReport.Soni;
+                    }
+                }
+                lbPrice.Text = Price.ToString();
+                lbCount.Text = Count.ToString();
+                dGWPills.DataSource = list;
+            }
+            else if (functions.CheckNumber(txId.Text))
+            {
+                int sanoq = 0;
+                foreach (SalesmanReport salesmanReport in salesmanReports)
+                {
+                    if(salesmanReport.Id == int.Parse(txId.Text))
+                    {
+                        sanoq = 1;
+                        if (Kun1 <= DateTime.Parse(salesmanReport.SotilganVaqti) && DateTime.Parse(salesmanReport.SotilganVaqti) <= Kun2)
+                        {
+                            sanoq = 2;
+                            list.Add(new SalesmanReport() { Id = salesmanReport.Id, Nomi = salesmanReport.Nomi, Soni = salesmanReport.Soni, SotilganVaqti = salesmanReport.SotilganVaqti, Narxi = salesmanReport.Narxi });
+                            Price += salesmanReport.Narxi;
+                            Count += salesmanReport.Soni;
+                        }
+                    }
+                }
+                if(sanoq == 0)
+                {
+                    MessageBox.Show("Bunday Id mavjud emas", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    lbCount.Text = Count.ToString();
+                    lbPrice.Text = Price.ToString();
+                    dGWPills.DataSource = list;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Id bunday bo'lishi mumkin emas", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)

@@ -2,3 +2,5 @@
 3,Orazbaev Merxat,Kukumazim,5,21.05.2024 12:55:23,15000
 5,Orazbaev Merxat,Xolosas,6,21.05.2024 13:01:30,486000
 7,Orazbaev Merxat,Asiklovir,9,21.05.2024 13:01:30,657000
+1,Orazbaev Merxat,Izoflurannn,6,22.05.2024 0:35:39,45000
+2,Orazbaev Merxat,Tefestrol,6,22.05.2024 0:35:39,12000
