@@ -2,3 +2,4 @@
 2,Orazbaev Merxat,Merxat,0403,907357725,Salesman
 3,Muqimov Quvonch,Quvonch,6603,908896603,Salesman
 4,Hafizov Sardorbek,Sardor,1111,505514643,Salesman
+5,Hafizov Sanjarbek,Sanjarbek,2005,907308282,Salesman
