@@ -124,36 +124,10 @@ namespace DorixonaForm.Forms
                 }
                 streamWriter1.Close();
                 MessageBox.Show($"Muvaffaqqiyatli o'zgartirildi", "Ma'lumot", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                int sanoq1 = 0;
-                foreach (Employe employe in functions.employeList)
-                {
-                    if (employe.Login == NewLogin)
-                    {
-                        if (employe.EmployeType == EmployeType.Manager.ToString())
-                        {
-                            sanoq1 = 1;
-                        }
-                        else
-                        {
-                            sanoq1 = 2;
-                        }
-                        break;
-                    }
-                }
-                if (sanoq1 == 1)
-                {
-                    this.Hide();
-                    ManagerForm managerForm = new ManagerForm(NewLogin);
-                    managerForm.StartPosition = FormStartPosition.CenterScreen;
-                    managerForm.Show();
-                }
-                else
-                {
-                    this.Hide();
-                    SalesmanForm salesmanForm = new SalesmanForm(NewLogin);
-                    salesmanForm.StartPosition = FormStartPosition.CenterScreen;
-                    salesmanForm.Show();
-                }
+                txNewPassword.Clear();
+                txOldPassword.Clear();
+                txNewPassword2.Clear();
+
             }
             else if (sanoq == 5)
             {
@@ -235,36 +209,8 @@ namespace DorixonaForm.Forms
                     }
                     streamWriter1.Close();
                     MessageBox.Show($"Muvaffaqqiyatli o'zgartirildi", "Ma'lumot", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    int sanoq = 0;
-                    foreach (Employe employe in functions.employeList)
-                    {
-                        if (employe.Login == NewLogin)
-                        {
-                            if (employe.EmployeType == EmployeType.Manager.ToString())
-                            {
-                                sanoq = 1;
-                            }
-                            else
-                            {
-                                sanoq = 2;
-                            }
-                            break;
-                        }
-                    }
-                    if (sanoq == 1)
-                    {
-                        this.Hide();
-                        ManagerForm managerForm = new ManagerForm(NewLogin);
-                        managerForm.StartPosition = FormStartPosition.CenterScreen;
-                        managerForm.Show();
-                    }
-                    else
-                    {
-                        this.Hide();
-                        SalesmanForm salesmanForm = new SalesmanForm(NewLogin);
-                        salesmanForm.StartPosition = FormStartPosition.CenterScreen;
-                        salesmanForm.Show();
-                    }
+                    txNewPhoneNumber.Clear();
+                    txSmsPassword.Clear();
                 }
                 else
                 {

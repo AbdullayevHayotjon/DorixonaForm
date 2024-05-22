@@ -16,8 +16,6 @@ namespace DorixonaForm.Forms
         Functions functions = new Functions();
         public string NewLogin { get; set; }
         public List<SalesmanReport> salesmanReports = new List<SalesmanReport>();
-        public int Price = 0;
-        public int Count = 0;
         public SalesmanReportsForm(string login)
         {
             NewLogin = login;
@@ -37,8 +35,6 @@ namespace DorixonaForm.Forms
                     salesmanReports.Add(new SalesmanReport() { Id = reportSelesPill.DoriId, Nomi = reportSelesPill.Nomi, Soni = reportSelesPill.Soni, SotilganVaqti = reportSelesPill.SotilganVaqti, Narxi = reportSelesPill.Narxi });
                 }
             }
-            lbPrice.Text = Price.ToString();
-            lbCount.Text = Count.ToString();
             dGWPills.DataSource = salesmanReports;
         }
 
@@ -184,50 +180,66 @@ namespace DorixonaForm.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
+            int Price = 0;
+            int Count = 0;
             DateTime Kun1 = DateTime.Parse(dTKun1.Text).Date;
             DateTime Kun2 = DateTime.Parse(dTKun2.Text).Date.AddHours(23).AddMinutes(59).AddSeconds(59);
             List<SalesmanReport> list = new List<SalesmanReport>();
             if (txId.Text.Length == 0)
             {
-                foreach (SalesmanReport salesmanReport in salesmanReports)
+                if (Kun2 >= Kun1)
                 {
-                    if (Kun1 <= DateTime.Parse(salesmanReport.SotilganVaqti) && DateTime.Parse(salesmanReport.SotilganVaqti) <= Kun2)
+                    foreach (SalesmanReport salesmanReport in salesmanReports)
                     {
-                        list.Add(new SalesmanReport() { Id = salesmanReport.Id, Nomi = salesmanReport.Nomi, Soni = salesmanReport.Soni, SotilganVaqti = salesmanReport.SotilganVaqti, Narxi = salesmanReport.Narxi });
-                        Price += salesmanReport.Narxi;
-                        Count += salesmanReport.Soni;
-                    }
-                }
-                lbPrice.Text = Price.ToString();
-                lbCount.Text = Count.ToString();
-                dGWPills.DataSource = list;
-            }
-            else if (functions.CheckNumber(txId.Text))
-            {
-                int sanoq = 0;
-                foreach (SalesmanReport salesmanReport in salesmanReports)
-                {
-                    if(salesmanReport.Id == int.Parse(txId.Text))
-                    {
-                        sanoq = 1;
                         if (Kun1 <= DateTime.Parse(salesmanReport.SotilganVaqti) && DateTime.Parse(salesmanReport.SotilganVaqti) <= Kun2)
                         {
-                            sanoq = 2;
                             list.Add(new SalesmanReport() { Id = salesmanReport.Id, Nomi = salesmanReport.Nomi, Soni = salesmanReport.Soni, SotilganVaqti = salesmanReport.SotilganVaqti, Narxi = salesmanReport.Narxi });
                             Price += salesmanReport.Narxi;
                             Count += salesmanReport.Soni;
                         }
                     }
-                }
-                if(sanoq == 0)
-                {
-                    MessageBox.Show("Bunday Id mavjud emas", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    lbPrice.Text = Price.ToString();
+                    lbCount.Text = Count.ToString();
+                    dGWPills.DataSource = list;
                 }
                 else
                 {
-                    lbCount.Text = Count.ToString();
-                    lbPrice.Text = Price.ToString();
-                    dGWPills.DataSource = list;
+                    MessageBox.Show("Sanalar bunday bo'lishi mumkin emas", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else if (functions.CheckNumber(txId.Text))
+            {
+                if (Kun2 >= Kun1)
+                {
+                    int sanoq = 0;
+                    foreach (SalesmanReport salesmanReport in salesmanReports)
+                    {
+                        if (salesmanReport.Id == int.Parse(txId.Text))
+                        {
+                            sanoq = 1;
+                            if (Kun1 <= DateTime.Parse(salesmanReport.SotilganVaqti) && DateTime.Parse(salesmanReport.SotilganVaqti) <= Kun2)
+                            {
+                                sanoq = 2;
+                                list.Add(new SalesmanReport() { Id = salesmanReport.Id, Nomi = salesmanReport.Nomi, Soni = salesmanReport.Soni, SotilganVaqti = salesmanReport.SotilganVaqti, Narxi = salesmanReport.Narxi });
+                                Price += salesmanReport.Narxi;
+                                Count += salesmanReport.Soni;
+                            }
+                        }
+                    }
+                    if (sanoq == 0)
+                    {
+                        MessageBox.Show("Bunday Id mavjud emas", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        lbCount.Text = Count.ToString();
+                        lbPrice.Text = Price.ToString();
+                        dGWPills.DataSource = list;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Sanalar bunday bo'lishi mumkin emas", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
@@ -327,72 +339,60 @@ namespace DorixonaForm.Forms
         {
             if (cbSearch.Text == "Nomi")
             {
-                List<Pill> pillList = new List<Pill>();
-                foreach (Pill pill in functions.pillsList)
+                List<SalesmanReport> pillList = new List<SalesmanReport>();
+                foreach (SalesmanReport pill in salesmanReports)
                 {
                     if (pill.Nomi.ToLower().Contains(txPillInformation.Text.ToLower()))
                     {
-                        pillList.Add(new Pill() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Narxi, QoshilganSana = pill.QoshilganSana });
+                        pillList.Add(new SalesmanReport() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, SotilganVaqti = pill.SotilganVaqti, Narxi = pill.Narxi });
                     }
                 }
                 dGWPills.DataSource = pillList;
             }
             else if (cbSearch.Text == "Id")
             {
-                List<Pill> pillList = new List<Pill>();
-                foreach (Pill pill in functions.pillsList)
+                List<SalesmanReport> pillList = new List<SalesmanReport>();
+                foreach (SalesmanReport pill in salesmanReports)
                 {
                     if (pill.Id.ToString().Contains(txPillInformation.Text))
                     {
-                        pillList.Add(new Pill() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Narxi, QoshilganSana = pill.QoshilganSana });
+                        pillList.Add(new SalesmanReport() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, SotilganVaqti = pill.SotilganVaqti, Narxi = pill.Narxi });
                     }
                 }
                 dGWPills.DataSource = pillList;
             }
             else if (cbSearch.Text == "Soni")
             {
-                List<Pill> pillList = new List<Pill>();
-                foreach (Pill pill in functions.pillsList)
+                List<SalesmanReport> pillList = new List<SalesmanReport>();
+                foreach (SalesmanReport pill in salesmanReports)
                 {
                     if (pill.Soni.ToString().Contains(txPillInformation.Text))
                     {
-                        pillList.Add(new Pill() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Narxi, QoshilganSana = pill.QoshilganSana });
+                        pillList.Add(new SalesmanReport() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, SotilganVaqti = pill.SotilganVaqti, Narxi = pill.Narxi });
                     }
                 }
                 dGWPills.DataSource = pillList;
             }
-            else if (cbSearch.Text == "Muddati")
+            else if (cbSearch.Text == "Sotilgan vaqti")
             {
-                List<Pill> pillList = new List<Pill>();
-                foreach (Pill pill in functions.pillsList)
+                List<SalesmanReport> pillList = new List<SalesmanReport>();
+                foreach (SalesmanReport pill in salesmanReports)
                 {
-                    if (pill.Muddati.ToString().Contains(txPillInformation.Text))
+                    if (pill.SotilganVaqti.Contains(txPillInformation.Text))
                     {
-                        pillList.Add(new Pill() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Narxi, QoshilganSana = pill.QoshilganSana });
+                        pillList.Add(new SalesmanReport() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, SotilganVaqti = pill.SotilganVaqti, Narxi = pill.Narxi });
                     }
                 }
                 dGWPills.DataSource = pillList;
             }
             else if (cbSearch.Text == "Narxi")
             {
-                List<Pill> pillList = new List<Pill>();
-                foreach (Pill pill in functions.pillsList)
+                List<SalesmanReport> pillList = new List<SalesmanReport>();
+                foreach (SalesmanReport pill in salesmanReports)
                 {
                     if (pill.Narxi.ToString().Contains(txPillInformation.Text))
                     {
-                        pillList.Add(new Pill() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Narxi, QoshilganSana = pill.QoshilganSana });
-                    }
-                }
-                dGWPills.DataSource = pillList;
-            }
-            else if (cbSearch.Text == "Qo'shilgan Sana")
-            {
-                List<Pill> pillList = new List<Pill>();
-                foreach (Pill pill in functions.pillsList)
-                {
-                    if (pill.QoshilganSana.ToString().Contains(txPillInformation.Text))
-                    {
-                        pillList.Add(new Pill() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Narxi, QoshilganSana = pill.QoshilganSana });
+                        pillList.Add(new SalesmanReport() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, SotilganVaqti = pill.SotilganVaqti, Narxi = pill.Narxi });
                     }
                 }
                 dGWPills.DataSource = pillList;
@@ -401,6 +401,14 @@ namespace DorixonaForm.Forms
             {
                 MessageBox.Show("Bo'limdan birini tanlang", "Ma'lumot", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void btBack1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SalesmanReportsForm salesmanReportsForm = new SalesmanReportsForm(NewLogin);
+            salesmanReportsForm.StartPosition = FormStartPosition.CenterScreen;
+            salesmanReportsForm.Show();
         }
     }
 }

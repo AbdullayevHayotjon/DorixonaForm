@@ -86,3 +86,40 @@
 86,Orazbaev Merxat,EmployeEnter,Profilga kirdi,22.05.2024 0:57:48
 87,Orazbaev Merxat,EmployeEnter,Profilga kirdi,22.05.2024 1:00:36
 88,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 1:02:19
+89,Orazbaev Merxat,EmployeEnter,Profilga kirdi,22.05.2024 12:03:49
+90,Orazbaev Merxat,EmployeEnter,Profilga kirdi,22.05.2024 12:06:17
+91,Orazbaev Merxat,ChangePassword,Parol 0403 dan 0403 ga o'zgartirildi,22.05.2024 12:06:30
+92,Orazbaev Merxat,ChangePhoneNumber,907357725 dan 942554450 ga o'zgartirildi,22.05.2024 12:07:31
+93,Orazbaev Merxat,EmployeEnter,Profilga kirdi,22.05.2024 12:09:47
+94,Orazbaev Merxat,ChangePassword,Parol 0403 dan 0403 ga o'zgartirildi,22.05.2024 12:10:07
+95,Orazbaev Merxat,EmployeEnter,Profilga kirdi,22.05.2024 12:13:42
+96,Orazbaev Merxat,ChangePhoneNumber,942554450 dan 912527074 ga o'zgartirildi,22.05.2024 12:14:20
+97,Orazbaev Merxat,ChangePassword,Parol 0403 dan 0403 ga o'zgartirildi,22.05.2024 12:14:59
+98,Orazbaev Merxat,EmployeEnter,Profilga kirdi,22.05.2024 12:15:09
+99,Orazbaev Merxat,EmployeEnter,Profilga kirdi,22.05.2024 12:17:23
+100,Orazbaev Merxat,EmployeEnter,Profilga kirdi,22.05.2024 12:18:52
+101,Orazbaev Merxat,EmployeEnter,Profilga kirdi,22.05.2024 12:21:35
+102,Orazbaev Merxat,EmployeEnter,Profilga kirdi,22.05.2024 12:22:18
+103,Orazbaev Merxat,SalesPill,Id=1|Nomi=Izoflurannn|Soni=5|Narxi=37500,22.05.2024 12:25:40
+104,Orazbaev Merxat,SalesPill,Id=2|Nomi=Tefestrol|Soni=4|Narxi=8000,22.05.2024 12:25:40
+105,Orazbaev Merxat,SalesPill,Id=4|Nomi=Kardioleks|Soni=5|Narxi=20000,22.05.2024 12:25:40
+106,Orazbaev Merxat,AddPill,Nomi=Trimol|Soni=45|Muddati=300|Narxi=4000,22.05.2024 12:26:20
+107,Orazbaev Merxat,EmployeEnter,Profilga kirdi,22.05.2024 12:31:35
+108,Orazbaev Merxat,UpdatePill,|Nomi: Permetrin|Soni: 65|Muddati: 80|Narxi: 60000|,22.05.2024 12:34:34
+109,Orazbaev Merxat,EmployeEnter,Profilga kirdi,22.05.2024 12:35:44
+110,Orazbaev Merxat,DeletePill,Trimol nomli dori o'chirildi,22.05.2024 12:36:22
+111,Orazbaev Merxat,EmployeEnter,Profilga kirdi,22.05.2024 12:39:23
+112,Orazbaev Merxat,DeletePill, nomli dori o'chirildi,22.05.2024 12:39:34
+113,Orazbaev Merxat,EmployeEnter,Profilga kirdi,22.05.2024 12:49:59
+114,Orazbaev Merxat,EmployeEnter,Profilga kirdi,22.05.2024 12:52:58
+115,Orazbaev Merxat,EmployeExit,Profildan chiqdi,22.05.2024 12:54:05
+116,Muqimov Quvonch,EmployeEnter,Profilga kirdi,22.05.2024 12:54:14
+117,Muqimov Quvonch,SalesPill,Id=1|Nomi=Tefestrol|Soni=3|Narxi=6000,22.05.2024 12:54:50
+118,Muqimov Quvonch,SalesPill,Id=4|Nomi=Xolosas|Soni=9|Narxi=729000,22.05.2024 12:54:50
+119,Orazbaev Merxat,EmployeEnter,Profilga kirdi,22.05.2024 13:09:55
+120,Orazbaev Merxat,EmployeEnter,Profilga kirdi,22.05.2024 13:16:40
+121,Orazbaev Merxat,EmployeEnter,Profilga kirdi,22.05.2024 13:25:10
+122,Orazbaev Merxat,EmployeEnter,Profilga kirdi,22.05.2024 13:28:57
+123,Orazbaev Merxat,EmployeEnter,Profilga kirdi,22.05.2024 13:32:41
+124,Orazbaev Merxat,EmployeEnter,Profilga kirdi,22.05.2024 13:34:14
+125,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 13:37:47

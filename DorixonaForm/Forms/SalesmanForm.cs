@@ -221,7 +221,7 @@ namespace DorixonaForm
                 }
                 dGWPills.DataSource = pillList;
             }
-            else if (cbSearch.Text == "Qo'shilgan Sana")
+            else if (cbSearch.Text == "Qo'shilgan sanasi")
             {
                 List<Pill> pillList = new List<Pill>();
                 foreach (Pill pill in functions.pillsList)

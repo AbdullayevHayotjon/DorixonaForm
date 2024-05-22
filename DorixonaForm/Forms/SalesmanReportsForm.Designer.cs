@@ -51,25 +51,26 @@
             button3 = new Button();
             cbSort = new ComboBox();
             dGWPills = new DataGridView();
-            salesmanReportBindingSource4 = new BindingSource(components);
-            salesmanReportBindingSource3 = new BindingSource(components);
-            salesmanReportBindingSource2 = new BindingSource(components);
-            salesmanReportBindingSource1 = new BindingSource(components);
-            salesmanReportBindingSource = new BindingSource(components);
-            salesmanReportBindingSource5 = new BindingSource(components);
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
+            salesmanReportBindingSource5 = new BindingSource(components);
+            salesmanReportBindingSource4 = new BindingSource(components);
+            salesmanReportBindingSource3 = new BindingSource(components);
+            salesmanReportBindingSource2 = new BindingSource(components);
+            salesmanReportBindingSource1 = new BindingSource(components);
+            salesmanReportBindingSource = new BindingSource(components);
+            btBack1 = new Button();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dGWPills).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource5).BeginInit();
             SuspendLayout();
             // 
             // cbSearch
@@ -77,7 +78,7 @@
             cbSearch.DropDownStyle = ComboBoxStyle.DropDownList;
             cbSearch.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
             cbSearch.FormattingEnabled = true;
-            cbSearch.Items.AddRange(new object[] { "Nomi", "Id", "Soni", "Muddati", "Narxi" });
+            cbSearch.Items.AddRange(new object[] { "Nomi", "Id", "Soni", "Sotilgan vaqti", "Narxi" });
             cbSearch.Location = new Point(858, 167);
             cbSearch.Name = "cbSearch";
             cbSearch.Size = new Size(248, 49);
@@ -174,6 +175,7 @@
             // panel2
             // 
             panel2.BackColor = Color.LightCyan;
+            panel2.Controls.Add(btBack1);
             panel2.Controls.Add(label7);
             panel2.Controls.Add(txId);
             panel2.Controls.Add(lbCount);
@@ -314,10 +316,6 @@
             dGWPills.TabIndex = 137;
             dGWPills.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // salesmanReportBindingSource5
-            // 
-            salesmanReportBindingSource5.DataSource = typeof(Actions.SalesmanReport);
-            // 
             // dataGridViewTextBoxColumn2
             // 
             dataGridViewTextBoxColumn2.DataPropertyName = "Id";
@@ -358,6 +356,22 @@
             dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             dataGridViewTextBoxColumn6.Width = 125;
             // 
+            // salesmanReportBindingSource5
+            // 
+            salesmanReportBindingSource5.DataSource = typeof(Actions.SalesmanReport);
+            // 
+            // btBack1
+            // 
+            btBack1.BackColor = Color.LightSkyBlue;
+            btBack1.Font = new Font("Trebuchet MS", 18F);
+            btBack1.Location = new Point(523, 475);
+            btBack1.Name = "btBack1";
+            btBack1.Size = new Size(175, 47);
+            btBack1.TabIndex = 146;
+            btBack1.Text = "Qaytarish";
+            btBack1.UseVisualStyleBackColor = false;
+            btBack1.Click += btBack1_Click;
+            // 
             // SalesmanReportsForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -381,12 +395,12 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dGWPills).EndInit();
+            ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource5).EndInit();
             ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource4).EndInit();
             ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource3).EndInit();
             ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource2).EndInit();
             ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource1).EndInit();
             ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource).EndInit();
-            ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource5).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -435,5 +449,6 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private BindingSource salesmanReportBindingSource5;
+        private Button btBack1;
     }
 }

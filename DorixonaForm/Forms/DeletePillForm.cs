@@ -74,6 +74,7 @@ namespace DorixonaForm.Forms
                     streamWriter1.Close();
                     MessageBox.Show($"Dori o'chirildi", "Ma'lumot", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dataGridViewPills.DataSource = pills;
+                    txId.Clear();
                     txDeletePillName.Clear();
                     txDeletePillCount.Clear();
                     txDeletePillLifeTime.Clear();

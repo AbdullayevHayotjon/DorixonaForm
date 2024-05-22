@@ -115,23 +115,7 @@ namespace DorixonaForm.Forms
 
         private void button9_Click(object sender, EventArgs e)
         {
-            string PillPath = @"..\..\..\.txt files\PillesList.txt";
-            string[] PillAllLines = File.ReadAllLines(PillPath);
-            List<Pill> PillOld = new List<Pill>();
-            foreach (var PillAllLinesItem in PillAllLines)
-            {
-                string[] PillInfo = PillAllLinesItem.Split(',');
-                PillOld.Add(new Pill
-                {
-                    Id = int.Parse(PillInfo[0]),
-                    Nomi = PillInfo[1],
-                    Soni = int.Parse(PillInfo[2]),
-                    Muddati = int.Parse(PillInfo[3]),
-                    Narxi = int.Parse(PillInfo[4]),
-                    QoshilganSana = DateTime.Parse(PillInfo[5]),
-                });
-            }
-            dgPills.DataSource = PillOld;
+            dgPills.DataSource = functions.pillsList;
 
         }
 
@@ -359,7 +343,7 @@ namespace DorixonaForm.Forms
                 }
                 dgPills.DataSource = pillList;
             }
-            else if (cbSearch.Text == "Qo'shilgan Sana")
+            else if (cbSearch.Text == "Qo'shilgan sanasi")
             {
                 List<Pill> pillList = new List<Pill>();
                 foreach (Pill pill in functions.pillsList)
@@ -375,6 +359,14 @@ namespace DorixonaForm.Forms
             {
                 MessageBox.Show("Bo'limdan birini tanlang", "Ma'lumot", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.StartPosition = FormStartPosition.CenterScreen;
+            loginForm.Show();
         }
     }
 }

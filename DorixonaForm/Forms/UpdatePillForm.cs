@@ -192,7 +192,7 @@ namespace DorixonaForm.Forms
                 }
                 dbPills.DataSource = pillList;
             }
-            else if (cbSearch.Text == "Qo'shilgan Sana")
+            else if (cbSearch.Text == "Qo'shilgan sanasi")
             {
                 List<Pill> pillList = new List<Pill>();
                 foreach (Pill pill in functions.pillsList)
@@ -436,6 +436,14 @@ namespace DorixonaForm.Forms
                 });
             }
             dbPills.DataSource = PillOld;
+        }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.StartPosition = FormStartPosition.CenterScreen;
+            loginForm.Show();
         }
     }
 }

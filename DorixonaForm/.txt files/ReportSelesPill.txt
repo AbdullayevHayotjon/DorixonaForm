@@ -4,3 +4,8 @@
 7,Orazbaev Merxat,Asiklovir,9,21.05.2024 13:01:30,657000
 1,Orazbaev Merxat,Izoflurannn,6,22.05.2024 0:35:39,45000
 2,Orazbaev Merxat,Tefestrol,6,22.05.2024 0:35:39,12000
+1,Orazbaev Merxat,Izoflurannn,5,22.05.2024 12:25:40,37500
+2,Orazbaev Merxat,Tefestrol,4,22.05.2024 12:25:40,8000
+4,Orazbaev Merxat,Kardioleks,5,22.05.2024 12:25:40,20000
+1,Muqimov Quvonch,Tefestrol,3,22.05.2024 12:54:50,6000
+4,Muqimov Quvonch,Xolosas,9,22.05.2024 12:54:50,729000
