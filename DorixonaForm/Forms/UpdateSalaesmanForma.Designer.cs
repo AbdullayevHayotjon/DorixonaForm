@@ -30,6 +30,13 @@
         {
             components = new System.ComponentModel.Container();
             DGVupdate = new DataGridView();
+            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            fIODataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            loginDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            passwordDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            phoneNumberDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            employeTypeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            employeBindingSource = new BindingSource(components);
             panel1 = new Panel();
             button2 = new Button();
             txParol = new TextBox();
@@ -46,16 +53,12 @@
             Label = new Label();
             btExit = new Button();
             btBack = new Button();
-            employeBindingSource = new BindingSource(components);
-            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            fIODataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            loginDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            passwordDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            phoneNumberDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            employeTypeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            cbSearch = new ComboBox();
+            txPillInformation = new TextBox();
+            btSearch = new Button();
             ((System.ComponentModel.ISupportInitialize)DGVupdate).BeginInit();
-            panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)employeBindingSource).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // DGVupdate
@@ -70,6 +73,58 @@
             DGVupdate.Size = new Size(777, 764);
             DGVupdate.TabIndex = 0;
             DGVupdate.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            idDataGridViewTextBoxColumn.HeaderText = "Id";
+            idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // fIODataGridViewTextBoxColumn
+            // 
+            fIODataGridViewTextBoxColumn.DataPropertyName = "FIO";
+            fIODataGridViewTextBoxColumn.HeaderText = "FIO";
+            fIODataGridViewTextBoxColumn.MinimumWidth = 6;
+            fIODataGridViewTextBoxColumn.Name = "fIODataGridViewTextBoxColumn";
+            fIODataGridViewTextBoxColumn.Width = 125;
+            // 
+            // loginDataGridViewTextBoxColumn
+            // 
+            loginDataGridViewTextBoxColumn.DataPropertyName = "Login";
+            loginDataGridViewTextBoxColumn.HeaderText = "Login";
+            loginDataGridViewTextBoxColumn.MinimumWidth = 6;
+            loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
+            loginDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
+            passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
+            passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            passwordDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
+            phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            phoneNumberDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // employeTypeDataGridViewTextBoxColumn
+            // 
+            employeTypeDataGridViewTextBoxColumn.DataPropertyName = "EmployeType";
+            employeTypeDataGridViewTextBoxColumn.HeaderText = "EmployeType";
+            employeTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            employeTypeDataGridViewTextBoxColumn.Name = "employeTypeDataGridViewTextBoxColumn";
+            employeTypeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // employeBindingSource
+            // 
+            employeBindingSource.DataSource = typeof(Actions.Employe);
             // 
             // panel1
             // 
@@ -244,57 +299,37 @@
             btBack.UseVisualStyleBackColor = false;
             btBack.Click += btBack_Click;
             // 
-            // employeBindingSource
+            // cbSearch
             // 
-            employeBindingSource.DataSource = typeof(Actions.Employe);
+            cbSearch.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbSearch.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            cbSearch.FormattingEnabled = true;
+            cbSearch.Items.AddRange(new object[] { "Id", "FIO", "Login", "Password", "PhoneNumber", "EmployeType" });
+            cbSearch.Location = new Point(619, 28);
+            cbSearch.Name = "cbSearch";
+            cbSearch.Size = new Size(373, 49);
+            cbSearch.TabIndex = 66;
             // 
-            // idDataGridViewTextBoxColumn
+            // txPillInformation
             // 
-            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            idDataGridViewTextBoxColumn.HeaderText = "Id";
-            idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            idDataGridViewTextBoxColumn.Width = 125;
+            txPillInformation.BackColor = Color.FromArgb(255, 255, 192);
+            txPillInformation.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
+            txPillInformation.Location = new Point(999, 28);
+            txPillInformation.Name = "txPillInformation";
+            txPillInformation.Size = new Size(262, 48);
+            txPillInformation.TabIndex = 65;
             // 
-            // fIODataGridViewTextBoxColumn
+            // btSearch
             // 
-            fIODataGridViewTextBoxColumn.DataPropertyName = "FIO";
-            fIODataGridViewTextBoxColumn.HeaderText = "FIO";
-            fIODataGridViewTextBoxColumn.MinimumWidth = 6;
-            fIODataGridViewTextBoxColumn.Name = "fIODataGridViewTextBoxColumn";
-            fIODataGridViewTextBoxColumn.Width = 125;
-            // 
-            // loginDataGridViewTextBoxColumn
-            // 
-            loginDataGridViewTextBoxColumn.DataPropertyName = "Login";
-            loginDataGridViewTextBoxColumn.HeaderText = "Login";
-            loginDataGridViewTextBoxColumn.MinimumWidth = 6;
-            loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
-            loginDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
-            passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            passwordDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // phoneNumberDataGridViewTextBoxColumn
-            // 
-            phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
-            phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
-            phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
-            phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
-            phoneNumberDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // employeTypeDataGridViewTextBoxColumn
-            // 
-            employeTypeDataGridViewTextBoxColumn.DataPropertyName = "EmployeType";
-            employeTypeDataGridViewTextBoxColumn.HeaderText = "EmployeType";
-            employeTypeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            employeTypeDataGridViewTextBoxColumn.Name = "employeTypeDataGridViewTextBoxColumn";
-            employeTypeDataGridViewTextBoxColumn.Width = 125;
+            btSearch.BackColor = Color.LightSkyBlue;
+            btSearch.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btSearch.Location = new Point(1266, 28);
+            btSearch.Name = "btSearch";
+            btSearch.Size = new Size(138, 49);
+            btSearch.TabIndex = 64;
+            btSearch.Text = "Qidirish";
+            btSearch.UseVisualStyleBackColor = false;
+            btSearch.Click += btSearch_Click;
             // 
             // UpdateSalaesmanForma
             // 
@@ -302,6 +337,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(1599, 1033);
+            Controls.Add(cbSearch);
+            Controls.Add(txPillInformation);
+            Controls.Add(btSearch);
             Controls.Add(btBack);
             Controls.Add(btExit);
             Controls.Add(Label);
@@ -311,9 +349,9 @@
             Text = "UpdateSalaesmanForma";
             Load += UpdateSalaesmanForma_Load;
             ((System.ComponentModel.ISupportInitialize)DGVupdate).EndInit();
+            ((System.ComponentModel.ISupportInitialize)employeBindingSource).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)employeBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -344,5 +382,8 @@
         private DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn employeTypeDataGridViewTextBoxColumn;
         private BindingSource employeBindingSource;
+        private ComboBox cbSearch;
+        private TextBox txPillInformation;
+        private Button btSearch;
     }
 }

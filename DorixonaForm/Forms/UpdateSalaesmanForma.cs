@@ -87,16 +87,28 @@ namespace DorixonaForm.Forms
                     if (functions.CheckProbel(txLogin.Text))
                     {
                         int sanoq = 0;
+                        string Login = "";
                         foreach (Employe employe in functions.employeList)
                         {
-                            if (employe.Login == txLogin.Text)
+                            if (int.Parse(txId.Text) == employe.Id)
                             {
-                                sanoq = 1;
+                                Login = employe.Login;
+                                break;
+                            }
+                        }
+                        foreach (Employe employe in functions.employeList)
+                        {
+                            if (employe.Login != Login)
+                            {
+                                if (employe.Login == txLogin.Text)
+                                {
+                                    sanoq = 1;
+                                }
                             }
                         }
                         if (sanoq == 0)
                         {
-                            if(functions.CheckProbel(txParol.Text) && txParol.Text.Length >= 4)
+                            if (functions.CheckProbel(txParol.Text) && txParol.Text.Length >= 4)
                             {
                                 foreach (Employe employe in functions.employeList)
                                 {
@@ -113,8 +125,8 @@ namespace DorixonaForm.Forms
                                 StreamWriter streamWriter = new StreamWriter(functions.EmployesListPath);
                                 foreach (Employe employe in functions.employeList)
                                 {
-                                    streamWriter.WriteLine(employe.Id + "," + employe.FIO + "," + employe.Login + "," + employe.Password + "," + employe.PhoneNumber, employe.EmployeType);
-                                    employes.Add(new Employe() { Id = employe.Id, FIO = employe.FIO, Login = employe.Login, Password = employe.Password, EmployeType = employe.EmployeType });
+                                    streamWriter.WriteLine(employe.Id + "," + employe.FIO + "," + employe.Login + "," + employe.Password + "," + employe.PhoneNumber + "," + employe.EmployeType);
+                                    employes.Add(new Employe() { Id = employe.Id, FIO = employe.FIO, Login = employe.Login, Password = employe.Password, PhoneNumber = employe.PhoneNumber, EmployeType = employe.EmployeType });
                                 }
                                 streamWriter.Close();
                                 int Id = 0;
@@ -131,6 +143,7 @@ namespace DorixonaForm.Forms
                                 txTel.Clear();
                                 txLogin.Clear();
                                 txParol.Clear();
+                                txId.Clear();
                             }
                             else
                             {
@@ -161,7 +174,92 @@ namespace DorixonaForm.Forms
 
         private void UpdateSalaesmanForma_Load(object sender, EventArgs e)
         {
+//FIO
+//Id
+//Login
+//Password
+//PhoneNumber
+//EmployeType
+        }
 
+        private void btSearch_Click(object sender, EventArgs e)
+        {
+            if (cbSearch.Text == "FIO")
+            {
+                List<Employe> employeList = new List<Employe>();
+                foreach (Employe employe in functions.employeList)
+                {
+                    if (employe.FIO.ToLower().Contains(txPillInformation.Text.ToLower()))
+                    {
+                        employeList.Add(new Employe() { Id = employe.Id, FIO = employe.FIO, Login = employe.Login, Password = employe.Password, PhoneNumber = employe.PhoneNumber, EmployeType = employe.EmployeType});
+                    }
+                }
+                DGVupdate.DataSource = employeList;
+            }
+            else if (cbSearch.Text == "Id")
+            {
+                List<Employe> employeList = new List<Employe>();
+                foreach (Employe employe in functions.employeList)
+                {
+                    if (employe.Id.ToString().Contains(txPillInformation.Text))
+                    {
+                        employeList.Add(new Employe() { Id = employe.Id, FIO = employe.FIO, Login = employe.Login, Password = employe.Password, PhoneNumber = employe.PhoneNumber, EmployeType = employe.EmployeType });
+                    }
+                }
+                DGVupdate.DataSource = employeList;
+            }
+            else if (cbSearch.Text == "Login")
+            {
+                List<Employe> employeList = new List<Employe>();
+                foreach (Employe employe in functions.employeList)
+                {
+                    if (employe.Login.Contains(txPillInformation.Text))
+                    {
+                        employeList.Add(new Employe() { Id = employe.Id, FIO = employe.FIO, Login = employe.Login, Password = employe.Password, PhoneNumber = employe.PhoneNumber, EmployeType = employe.EmployeType });
+                    }
+                }
+                DGVupdate.DataSource = employeList;
+            }
+            else if (cbSearch.Text == "Password")
+            {
+                List<Employe> employeList = new List<Employe>();
+                foreach (Employe employe in functions.employeList)
+                {
+                    if (employe.Password.Contains(txPillInformation.Text))
+                    {
+                        employeList.Add(new Employe() { Id = employe.Id, FIO = employe.FIO, Login = employe.Login, Password = employe.Password, PhoneNumber = employe.PhoneNumber, EmployeType = employe.EmployeType });
+                    }
+                }
+                DGVupdate.DataSource = employeList;
+            }
+            else if (cbSearch.Text == "PhoneNumber")
+            {
+                List<Employe> employeList = new List<Employe>();
+                foreach (Employe employe in functions.employeList)
+                {
+                    if (employe.PhoneNumber.Contains(txPillInformation.Text))
+                    {
+                        employeList.Add(new Employe() { Id = employe.Id, FIO = employe.FIO, Login = employe.Login, Password = employe.Password, PhoneNumber = employe.PhoneNumber, EmployeType = employe.EmployeType });
+                    }
+                }
+                DGVupdate.DataSource = employeList;
+            }
+            else if (cbSearch.Text == "EmployeType")
+            {
+                List<Employe> employeList = new List<Employe>();
+                foreach (Employe employe in functions.employeList)
+                {
+                    if (employe.EmployeType.ToLower().Contains(txPillInformation.Text.ToLower()))
+                    {
+                        employeList.Add(new Employe() { Id = employe.Id, FIO = employe.FIO, Login = employe.Login, Password = employe.Password, PhoneNumber = employe.PhoneNumber, EmployeType = employe.EmployeType });
+                    }
+                }
+                DGVupdate.DataSource = employeList;
+            }
+            else
+            {
+                MessageBox.Show("Bo'limdan birini tanlang", "Ma'lumot", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

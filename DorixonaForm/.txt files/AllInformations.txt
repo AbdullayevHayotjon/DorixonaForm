@@ -151,14 +151,22 @@
 151,Hafizov Sardorbek,EmployeExit,Profildan chiqdi,22.05.2024 16:33:24
 152,Hafizov Sardorbek,EmployeEnter,Profilga kirdi,22.05.2024 16:37:21
 153,Hafizov Sardorbek,SalesPill,Id=1|Nomi=Tefestrol|Soni=10|Narxi=20000,22.05.2024 16:38:35
-153,Hafizov Sardorbek,SalesPill,Id=3|Nomi=Kardioleks|Soni=10|Narxi=40000,22.05.2024 16:38:35
-153,Hafizov Sardorbek,SalesPill,Id=2|Nomi=Kukumazim|Soni=10|Narxi=30000,22.05.2024 16:38:35
-153,Hafizov Sardorbek,SalesPill,Id=5|Nomi=Permetrin|Soni=10|Narxi=600000,22.05.2024 16:38:35
-153,Hafizov Sardorbek,SalesPill,Id=4|Nomi=Xolosas|Soni=10|Narxi=810000,22.05.2024 16:38:35
-153,Hafizov Sardorbek,SalesPill,Id=8|Nomi=Siprofloksatsin|Soni=20|Narxi=1400000,22.05.2024 16:38:35
-153,Hafizov Sardorbek,SalesPill,Id=6|Nomi=Asiklovir|Soni=5|Narxi=365000,22.05.2024 16:38:35
-153,Hafizov Sardorbek,SalesPill,Id=7|Nomi=Levofloksatsin|Soni=35|Narxi=2520000,22.05.2024 16:38:35
-153,Hafizov Sardorbek,SalesPill,Id=9|Nomi=Ofloksatsin|Soni=26|Narxi=1378000,22.05.2024 16:38:35
-153,Hafizov Sardorbek,SalesPill,Id=12|Nomi=Sefazolin|Soni=36|Narxi=1548000,22.05.2024 16:38:35
-153,Hafizov Sardorbek,SalesPill,Id=20|Nomi=Natriy xlorid|Soni=35|Narxi=1610000,22.05.2024 16:38:35
-153,Hafizov Sardorbek,SalesPill,Id=18|Nomi=Tioktat kislotasi|Soni=25|Narxi=850000,22.05.2024 16:38:35
+154,Hafizov Sardorbek,SalesPill,Id=3|Nomi=Kardioleks|Soni=10|Narxi=40000,22.05.2024 16:38:35
+155,Hafizov Sardorbek,SalesPill,Id=2|Nomi=Kukumazim|Soni=10|Narxi=30000,22.05.2024 16:38:35
+156,Hafizov Sardorbek,SalesPill,Id=5|Nomi=Permetrin|Soni=10|Narxi=600000,22.05.2024 16:38:35
+157,Hafizov Sardorbek,SalesPill,Id=4|Nomi=Xolosas|Soni=10|Narxi=810000,22.05.2024 16:38:35
+158,Hafizov Sardorbek,SalesPill,Id=8|Nomi=Siprofloksatsin|Soni=20|Narxi=1400000,22.05.2024 16:38:35
+159,Hafizov Sardorbek,SalesPill,Id=6|Nomi=Asiklovir|Soni=5|Narxi=365000,22.05.2024 16:38:35
+160,Hafizov Sardorbek,SalesPill,Id=7|Nomi=Levofloksatsin|Soni=35|Narxi=2520000,22.05.2024 16:38:35
+161,Hafizov Sardorbek,SalesPill,Id=9|Nomi=Ofloksatsin|Soni=26|Narxi=1378000,22.05.2024 16:38:35
+162,Hafizov Sardorbek,SalesPill,Id=12|Nomi=Sefazolin|Soni=36|Narxi=1548000,22.05.2024 16:38:35
+163,Hafizov Sardorbek,SalesPill,Id=20|Nomi=Natriy xlorid|Soni=35|Narxi=1610000,22.05.2024 16:38:35
+164,Hafizov Sardorbek,SalesPill,Id=18|Nomi=Tioktat kislotasi|Soni=25|Narxi=850000,22.05.2024 16:38:35
+165,Hafizov Sardorbek,EmployeEnter,Profilga kirdi,22.05.2024 16:43:00
+166,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 16:45:10
+167,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 16:46:58
+168,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 16:53:56
+169,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 17:08:07
+170,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 17:08:39
+171,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 17:12:21
+172,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 17:14:23
