@@ -173,3 +173,25 @@
 173,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 17:23:46
 174,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 17:26:18
 175,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 17:28:52
+176,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 17:39:39
+177,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 17:58:39
+178,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 17:59:24
+179,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 19:00:48
+180,Abdullayev Hayot,DeteleSalesman,|FIO: Orazbaev Merxat|Telefon raqami: 907357725|,22.05.2024 19:01:34
+181,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 19:02:13
+182,Abdullayev Hayot,AddSalesman,|FIO: Orazbaev Merxat|Telefon raqami: 907357725|,22.05.2024 19:02:55
+183,Abdullayev Hayot,DeteleSalesman,|FIO: Orazbaev Merxat|Telefon raqami: 907357725|,22.05.2024 19:03:40
+184,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 19:05:37
+185,Abdullayev Hayot,AddSalesman,|FIO: Orazbaev Merxat|Telefon raqami: 907357725|,22.05.2024 19:06:17
+186,Abdullayev Hayot,DeteleSalesman,|FIO: Orazbaev Merxat|Telefon raqami: 907357725|,22.05.2024 19:06:36
+187,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 19:07:01
+188,Abdullayev Hayot,AddSalesman,|FIO: Orazbaev Merxat|Telefon raqami: 907357725|,22.05.2024 19:10:26
+189,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 19:27:11
+190,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 19:33:15
+191,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 19:52:44
+192,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 19:55:19
+193,Abdullayev Hayot,DeteleSalesman,|FIO: Orazbaev Merxat|Telefon raqami: 907357725|,22.05.2024 19:55:39
+194,Abdullayev Hayot,AddSalesman,|FIO: Orazbaev Merxat|Telefon raqami: 907357725|,22.05.2024 19:56:32
+195,Abdullayev Hayot,DeteleSalesman,|FIO: Hafizov Sardorbek|Telefon raqami: 505514643|,22.05.2024 19:56:48
+196,Abdullayev Hayot,AddSalesman,|FIO: Hafizov Sardorbek|Telefon raqami: 505514643|,22.05.2024 19:57:56
+197,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 20:01:27

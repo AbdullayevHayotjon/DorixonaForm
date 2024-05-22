@@ -49,13 +49,11 @@
             txAddPassword = new TextBox();
             btAddSmsPassword = new Button();
             btSaqlash = new Button();
-            btOsish = new Button();
-            btKamayish = new Button();
-            btQaytarish = new Button();
-            cbSort = new ComboBox();
             cbSearch = new ComboBox();
             btSearch = new Button();
             txPillInformation = new TextBox();
+            btExit = new Button();
+            btBack = new Button();
             ((System.ComponentModel.ISupportInitialize)dGVAddEmploye).BeginInit();
             ((System.ComponentModel.ISupportInitialize)employeBindingSource).BeginInit();
             SuspendLayout();
@@ -66,7 +64,7 @@
             dGVAddEmploye.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dGVAddEmploye.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, fIODataGridViewTextBoxColumn, loginDataGridViewTextBoxColumn, passwordDataGridViewTextBoxColumn, phoneNumberDataGridViewTextBoxColumn, employeTypeDataGridViewTextBoxColumn });
             dGVAddEmploye.DataSource = employeBindingSource;
-            dGVAddEmploye.Location = new Point(648, 182);
+            dGVAddEmploye.Location = new Point(648, 247);
             dGVAddEmploye.Name = "dGVAddEmploye";
             dGVAddEmploye.RowHeadersWidth = 51;
             dGVAddEmploye.Size = new Size(805, 544);
@@ -128,7 +126,7 @@
             // 
             lbAddPhoneNumber.AutoSize = true;
             lbAddPhoneNumber.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            lbAddPhoneNumber.Location = new Point(11, 125);
+            lbAddPhoneNumber.Location = new Point(6, 119);
             lbAddPhoneNumber.Name = "lbAddPhoneNumber";
             lbAddPhoneNumber.Size = new Size(224, 41);
             lbAddPhoneNumber.TabIndex = 1;
@@ -177,6 +175,7 @@
             // 
             // txAddPhoneNumber
             // 
+            txAddPhoneNumber.BackColor = SystemColors.Info;
             txAddPhoneNumber.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
             txAddPhoneNumber.Location = new Point(222, 119);
             txAddPhoneNumber.Name = "txAddPhoneNumber";
@@ -185,6 +184,7 @@
             // 
             // txAddSmsPassword
             // 
+            txAddSmsPassword.BackColor = SystemColors.Info;
             txAddSmsPassword.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
             txAddSmsPassword.Location = new Point(222, 195);
             txAddSmsPassword.Name = "txAddSmsPassword";
@@ -193,6 +193,7 @@
             // 
             // txAddFIO
             // 
+            txAddFIO.BackColor = SystemColors.Info;
             txAddFIO.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
             txAddFIO.Location = new Point(222, 270);
             txAddFIO.Name = "txAddFIO";
@@ -201,6 +202,7 @@
             // 
             // txAddLogin
             // 
+            txAddLogin.BackColor = SystemColors.Info;
             txAddLogin.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
             txAddLogin.Location = new Point(222, 338);
             txAddLogin.Name = "txAddLogin";
@@ -209,6 +211,7 @@
             // 
             // txAddPassword
             // 
+            txAddPassword.BackColor = SystemColors.Info;
             txAddPassword.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
             txAddPassword.Location = new Point(222, 409);
             txAddPassword.Name = "txAddPassword";
@@ -217,79 +220,35 @@
             // 
             // btAddSmsPassword
             // 
+            btAddSmsPassword.BackColor = Color.LightSkyBlue;
             btAddSmsPassword.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
             btAddSmsPassword.Location = new Point(409, 195);
             btAddSmsPassword.Name = "btAddSmsPassword";
             btAddSmsPassword.Size = new Size(222, 47);
             btAddSmsPassword.TabIndex = 11;
             btAddSmsPassword.Text = "SMS ni jo'natish";
-            btAddSmsPassword.UseVisualStyleBackColor = true;
+            btAddSmsPassword.UseVisualStyleBackColor = false;
             btAddSmsPassword.Click += btAddSmsPassword_Click;
             // 
             // btSaqlash
             // 
+            btSaqlash.BackColor = Color.LightSkyBlue;
             btSaqlash.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
             btSaqlash.Location = new Point(11, 493);
             btSaqlash.Name = "btSaqlash";
             btSaqlash.Size = new Size(620, 54);
             btSaqlash.TabIndex = 12;
             btSaqlash.Text = "SAQLASH";
-            btSaqlash.UseVisualStyleBackColor = true;
+            btSaqlash.UseVisualStyleBackColor = false;
             btSaqlash.Click += btSaqlash_Click;
-            // 
-            // btOsish
-            // 
-            btOsish.BackColor = Color.LightSkyBlue;
-            btOsish.Font = new Font("Trebuchet MS", 18F);
-            btOsish.Location = new Point(922, 123);
-            btOsish.Name = "btOsish";
-            btOsish.Size = new Size(142, 49);
-            btOsish.TabIndex = 88;
-            btOsish.Text = "O'sish";
-            btOsish.UseVisualStyleBackColor = false;
-            btOsish.Click += btOsish_Click;
-            // 
-            // btKamayish
-            // 
-            btKamayish.BackColor = Color.LightSkyBlue;
-            btKamayish.Font = new Font("Trebuchet MS", 18F);
-            btKamayish.Location = new Point(1069, 125);
-            btKamayish.Name = "btKamayish";
-            btKamayish.Size = new Size(142, 47);
-            btKamayish.TabIndex = 87;
-            btKamayish.Text = "Kamayish";
-            btKamayish.UseVisualStyleBackColor = false;
-            btKamayish.Click += btKamayish_Click;
-            // 
-            // btQaytarish
-            // 
-            btQaytarish.BackColor = Color.LightSkyBlue;
-            btQaytarish.Font = new Font("Trebuchet MS", 18F);
-            btQaytarish.Location = new Point(1217, 127);
-            btQaytarish.Name = "btQaytarish";
-            btQaytarish.Size = new Size(160, 49);
-            btQaytarish.TabIndex = 86;
-            btQaytarish.Text = "Qaytarish";
-            btQaytarish.UseVisualStyleBackColor = false;
-            btQaytarish.Click += btQaytarish_Click;
-            // 
-            // cbSort
-            // 
-            cbSort.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbSort.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            cbSort.FormattingEnabled = true;
-            cbSort.Location = new Point(648, 126);
-            cbSort.Name = "cbSort";
-            cbSort.Size = new Size(269, 49);
-            cbSort.TabIndex = 85;
             // 
             // cbSearch
             // 
             cbSearch.DropDownStyle = ComboBoxStyle.DropDownList;
             cbSearch.Font = new Font("Segoe UI Semilight", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
             cbSearch.FormattingEnabled = true;
-            cbSearch.Items.AddRange(new object[] { "Nomi", "Id", "Soni", "Muddati", "Narxi" });
-            cbSearch.Location = new Point(648, 71);
+            cbSearch.Items.AddRange(new object[] { "Id", "FIO", "Login", "Password", "PhoneNumber", "EmployeType" });
+            cbSearch.Location = new Point(680, 163);
             cbSearch.Name = "cbSearch";
             cbSearch.Size = new Size(269, 49);
             cbSearch.TabIndex = 84;
@@ -298,7 +257,7 @@
             // 
             btSearch.BackColor = Color.LightSkyBlue;
             btSearch.Font = new Font("Trebuchet MS", 18F);
-            btSearch.Location = new Point(1231, 71);
+            btSearch.Location = new Point(1263, 163);
             btSearch.Name = "btSearch";
             btSearch.Size = new Size(146, 49);
             btSearch.TabIndex = 82;
@@ -308,22 +267,45 @@
             // 
             // txPillInformation
             // 
-            txPillInformation.BackColor = Color.FromArgb(255, 255, 192);
+            txPillInformation.BackColor = SystemColors.Info;
             txPillInformation.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txPillInformation.Location = new Point(922, 71);
+            txPillInformation.Location = new Point(954, 163);
             txPillInformation.Name = "txPillInformation";
             txPillInformation.Size = new Size(290, 48);
             txPillInformation.TabIndex = 83;
+            // 
+            // btExit
+            // 
+            btExit.BackColor = Color.Silver;
+            btExit.Font = new Font("Trebuchet MS", 14F);
+            btExit.Location = new Point(1426, 41);
+            btExit.Name = "btExit";
+            btExit.Size = new Size(124, 44);
+            btExit.TabIndex = 89;
+            btExit.Text = "Chiqish";
+            btExit.UseVisualStyleBackColor = false;
+            btExit.Click += btExit_Click;
+            // 
+            // btBack
+            // 
+            btBack.BackColor = Color.Silver;
+            btBack.Font = new Font("Trebuchet MS", 14F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btBack.Location = new Point(1357, 869);
+            btBack.Name = "btBack";
+            btBack.Size = new Size(193, 44);
+            btBack.TabIndex = 90;
+            btBack.Text = "Orqaga qaytish";
+            btBack.UseVisualStyleBackColor = false;
+            btBack.Click += btBack_Click;
             // 
             // AddSalesmanForma
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1633, 995);
-            Controls.Add(btOsish);
-            Controls.Add(btKamayish);
-            Controls.Add(btQaytarish);
-            Controls.Add(cbSort);
+            BackColor = Color.LightSteelBlue;
+            ClientSize = new Size(1599, 1033);
+            Controls.Add(btBack);
+            Controls.Add(btExit);
             Controls.Add(cbSearch);
             Controls.Add(btSearch);
             Controls.Add(txPillInformation);
@@ -371,12 +353,10 @@
         private TextBox txAddPassword;
         private Button btAddSmsPassword;
         private Button btSaqlash;
-        private Button btOsish;
-        private Button btKamayish;
-        private Button btQaytarish;
-        private ComboBox cbSort;
         private ComboBox cbSearch;
         private Button btSearch;
         private TextBox txPillInformation;
+        private Button btExit;
+        private Button btBack;
     }
 }

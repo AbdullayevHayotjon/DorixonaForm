@@ -38,7 +38,10 @@
             employeTypeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             employeBindingSource = new BindingSource(components);
             panel1 = new Panel();
+            cbSearch = new ComboBox();
             button2 = new Button();
+            txPillInformation = new TextBox();
+            btSearch = new Button();
             txParol = new TextBox();
             txLogin = new TextBox();
             txTel = new TextBox();
@@ -53,9 +56,6 @@
             Label = new Label();
             btExit = new Button();
             btBack = new Button();
-            cbSearch = new ComboBox();
-            txPillInformation = new TextBox();
-            btSearch = new Button();
             ((System.ComponentModel.ISupportInitialize)DGVupdate).BeginInit();
             ((System.ComponentModel.ISupportInitialize)employeBindingSource).BeginInit();
             panel1.SuspendLayout();
@@ -129,7 +129,10 @@
             // panel1
             // 
             panel1.BackColor = Color.LightCyan;
+            panel1.Controls.Add(cbSearch);
             panel1.Controls.Add(button2);
+            panel1.Controls.Add(txPillInformation);
+            panel1.Controls.Add(btSearch);
             panel1.Controls.Add(txParol);
             panel1.Controls.Add(txLogin);
             panel1.Controls.Add(txTel);
@@ -146,6 +149,17 @@
             panel1.Size = new Size(792, 764);
             panel1.TabIndex = 1;
             // 
+            // cbSearch
+            // 
+            cbSearch.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbSearch.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            cbSearch.FormattingEnabled = true;
+            cbSearch.Items.AddRange(new object[] { "Id", "FIO", "Login", "Password", "PhoneNumber", "EmployeType" });
+            cbSearch.Location = new Point(24, 22);
+            cbSearch.Name = "cbSearch";
+            cbSearch.Size = new Size(315, 49);
+            cbSearch.TabIndex = 66;
+            // 
             // button2
             // 
             button2.BackColor = Color.DeepSkyBlue;
@@ -157,6 +171,27 @@
             button2.Text = "Yangilash";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
+            // 
+            // txPillInformation
+            // 
+            txPillInformation.BackColor = Color.FromArgb(255, 255, 192);
+            txPillInformation.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
+            txPillInformation.Location = new Point(365, 22);
+            txPillInformation.Name = "txPillInformation";
+            txPillInformation.Size = new Size(262, 48);
+            txPillInformation.TabIndex = 65;
+            // 
+            // btSearch
+            // 
+            btSearch.BackColor = Color.LightSkyBlue;
+            btSearch.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btSearch.Location = new Point(632, 22);
+            btSearch.Name = "btSearch";
+            btSearch.Size = new Size(138, 49);
+            btSearch.TabIndex = 64;
+            btSearch.Text = "Qidirish";
+            btSearch.UseVisualStyleBackColor = false;
+            btSearch.Click += btSearch_Click;
             // 
             // txParol
             // 
@@ -238,7 +273,7 @@
             // 
             button1.BackColor = Color.DeepSkyBlue;
             button1.Font = new Font("Trebuchet MS", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button1.Location = new Point(528, 30);
+            button1.Location = new Point(632, 113);
             button1.Name = "button1";
             button1.Size = new Size(147, 46);
             button1.TabIndex = 66;
@@ -250,20 +285,20 @@
             // 
             txId.BackColor = SystemColors.Info;
             txId.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
-            txId.Location = new Point(393, 33);
+            txId.Location = new Point(398, 116);
             txId.Name = "txId";
-            txId.Size = new Size(85, 43);
+            txId.Size = new Size(229, 43);
             txId.TabIndex = 65;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Trebuchet MS", 22.2F);
-            label1.Location = new Point(22, 30);
+            label1.Location = new Point(22, 113);
             label1.Name = "label1";
-            label1.Size = new Size(344, 46);
+            label1.Size = new Size(370, 46);
             label1.TabIndex = 64;
-            label1.Text = "Dori id sini kiriting:\r\n";
+            label1.Text = "Ishchi id sini kiriting:\r\n";
             // 
             // Label
             // 
@@ -271,9 +306,9 @@
             Label.Font = new Font("Trebuchet MS", 22.2F);
             Label.Location = new Point(183, 49);
             Label.Name = "Label";
-            Label.Size = new Size(331, 46);
+            Label.Size = new Size(285, 46);
             Label.TabIndex = 14;
-            Label.Text = "Sotuvchilar royxati\r\n";
+            Label.Text = "Ishchilar royxati\r\n";
             // 
             // btExit
             // 
@@ -299,47 +334,12 @@
             btBack.UseVisualStyleBackColor = false;
             btBack.Click += btBack_Click;
             // 
-            // cbSearch
-            // 
-            cbSearch.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbSearch.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            cbSearch.FormattingEnabled = true;
-            cbSearch.Items.AddRange(new object[] { "Id", "FIO", "Login", "Password", "PhoneNumber", "EmployeType" });
-            cbSearch.Location = new Point(619, 28);
-            cbSearch.Name = "cbSearch";
-            cbSearch.Size = new Size(373, 49);
-            cbSearch.TabIndex = 66;
-            // 
-            // txPillInformation
-            // 
-            txPillInformation.BackColor = Color.FromArgb(255, 255, 192);
-            txPillInformation.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txPillInformation.Location = new Point(999, 28);
-            txPillInformation.Name = "txPillInformation";
-            txPillInformation.Size = new Size(262, 48);
-            txPillInformation.TabIndex = 65;
-            // 
-            // btSearch
-            // 
-            btSearch.BackColor = Color.LightSkyBlue;
-            btSearch.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btSearch.Location = new Point(1266, 28);
-            btSearch.Name = "btSearch";
-            btSearch.Size = new Size(138, 49);
-            btSearch.TabIndex = 64;
-            btSearch.Text = "Qidirish";
-            btSearch.UseVisualStyleBackColor = false;
-            btSearch.Click += btSearch_Click;
-            // 
             // UpdateSalaesmanForma
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(1599, 1033);
-            Controls.Add(cbSearch);
-            Controls.Add(txPillInformation);
-            Controls.Add(btSearch);
             Controls.Add(btBack);
             Controls.Add(btExit);
             Controls.Add(Label);

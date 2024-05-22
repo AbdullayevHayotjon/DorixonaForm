@@ -20,12 +20,7 @@ namespace DorixonaForm.Forms
         {
             NewLogin = login;
             InitializeComponent();
-            List<Employe> employes = new List<Employe>();
-            foreach (Employe employe in functions.employeList)
-            {
-                employes.Add(new Employe() { Id = employe.Id, FIO = employe.FIO, Login = employe.Login, Password = employe.Password, PhoneNumber = employe.PhoneNumber, EmployeType = employe.EmployeType });
-            }
-            DGVupdate.DataSource = employes;
+            DGVupdate.DataSource = functions.employeList;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

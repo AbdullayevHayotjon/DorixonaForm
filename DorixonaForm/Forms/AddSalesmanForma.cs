@@ -23,24 +23,7 @@ namespace DorixonaForm.Forms
             NewLogin = login;
             SmsPassword = random.Next(10000, 99999);
             InitializeComponent();
-            List<Employe> employes = new List<Employe>();
-            int i = 1;
-            foreach (Employe employe in functions.employeList)
-            {
-                if (employe.EmployeType == EmployeType.Manager.ToString())
-                {
-                    continue;
-                }
-                employes.Add(new Employe() { Id = i++, FIO = employe.FIO, Login = employe.Login, Password = employe.Password, PhoneNumber = employe.PhoneNumber });
-            }
-            dGVAddEmploye.DataSource = employes;
-            foreach (Employe employe1 in functions.employeList)
-            {
-                if (employe1.Login == NewLogin)
-                {
-                    txAddFIO.Text = employe1.FIO;
-                }
-            }
+            dGVAddEmploye.DataSource = functions.employeList;
         }
 
         private void lbAddSmsPassword_Click(object sender, EventArgs e)
@@ -66,9 +49,16 @@ namespace DorixonaForm.Forms
             }
             if (sanoq == 0)
             {
-                Thread.Sleep(2000);
-                MessageBox.Show($"Tasdiqlash kodi: {SmsPassword}", "dori.uz", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txAddPhoneNumber.ReadOnly = true;
+                if (txAddPhoneNumber.Text.Length == 9 && functions.CheckNumber(txAddPhoneNumber.Text))
+                {
+                    Thread.Sleep(2000);
+                    MessageBox.Show($"Tasdiqlash kodi: {SmsPassword}", "dori.uz", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txAddPhoneNumber.ReadOnly = true;
+                }
+                else
+                {
+                    MessageBox.Show("Telefon raqam bunday bo'lishi mumkin emas", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -99,12 +89,16 @@ namespace DorixonaForm.Forms
                                 else
                                 {
                                     StreamWriter streamWriter = new StreamWriter(functions.EmployesListPath);
-                                    int i = 1;
+                                    List<Employe> employes = new List<Employe>();
+                                    int Id = 0;
                                     foreach (Employe employe in functions.employeList)
                                     {
-                                        streamWriter.WriteLine((i++) + "," + employe.FIO + "," + employe.Login + "," + employe.Password + "," + employe.PhoneNumber + "," + employe.EmployeType);
+                                        streamWriter.WriteLine(employe.Id + "," + employe.FIO + "," + employe.Login + "," + employe.Password + "," + employe.PhoneNumber + "," + employe.EmployeType);
+                                        employes.Add(new Employe() { Id = employe.Id, FIO = employe.FIO, Login = employe.Login, Password = employe.Password, PhoneNumber = employe.PhoneNumber, EmployeType = employe.EmployeType });
+                                        Id = employe.Id;
                                     }
-                                    streamWriter.WriteLine(i + "," + txAddFIO.Text + "," + txAddLogin.Text + "," + txAddPassword.Text + "," + txAddPhoneNumber.Text + "," + EmployeType.Salesman.ToString());
+                                    streamWriter.WriteLine((Id + 1) + "," + txAddFIO.Text + "," + txAddLogin.Text + "," + txAddPassword.Text + "," + txAddPhoneNumber.Text + "," + EmployeType.Salesman.ToString());
+                                    employes.Add(new Employe() { Id = Id + 1, FIO = txAddFIO.Text, Login = txAddLogin.Text, Password = txAddPassword.Text, PhoneNumber = txAddPhoneNumber.Text, EmployeType = EmployeType.Salesman.ToString() });
                                     streamWriter.Close();
                                     MessageBox.Show($"Sotuvchi qo'shildi", "Muvaffaqqiyatli!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     StreamWriter streamWriter1 = new StreamWriter(functions.AllInformationsPath);
@@ -121,12 +115,7 @@ namespace DorixonaForm.Forms
                                         }
                                     }
                                     streamWriter1.Close();
-                                    Thread.Sleep(2000);
-                                    MessageBox.Show($"FIO: {txAddFIO.Text}\nLoginingiz: {txAddLogin.Text}\nParolingiz: {txAddPassword.Text}", "dori.uz", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    this.Hide();
-                                    ManagerForm managerForm = new ManagerForm(NewLogin);
-                                    managerForm.StartPosition = FormStartPosition.CenterScreen;
-                                    managerForm.Show();
+                                    dGVAddEmploye.DataSource = employes;
                                 }
                             }
                             else
@@ -157,156 +146,6 @@ namespace DorixonaForm.Forms
 
         private void btOsish_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (cbSort.Text.Length > 0)
-                {
-                    string EmployePath = @"..\..\..\.txt files\EmployesList.txt";
-                    string[] EmployeAllLines = File.ReadAllLines(EmployePath);
-                    List<Employe> EmployeOld = new List<Employe>();
-                    foreach (var EmployeAllLinesItem in EmployeAllLines)
-                    {
-                        string[] EmployeInfo = EmployeAllLinesItem.Split(',');
-                        EmployeOld.Add(new Employe
-                        {
-                            Id = int.Parse(EmployeInfo[0]),
-                            FIO = EmployeInfo[1],
-                            Login = EmployeInfo[2],
-                            Password = EmployeInfo[3],
-                            EmployeType = EmployeInfo[4],
-                            PhoneNumber = EmployeInfo[5],
-                        });
-                    }
-                    if (cbSort.Text == "Id")
-                    {
-                        EmployeOld.Sort((x, y) => x.Id.CompareTo(y.Id));
-                    }
-                    else if (cbSort.Text == "FIO")
-                    {
-                        EmployeOld.Sort((x, y) =>
-                        {
-                            if (x.FIO.StartsWith("a", StringComparison.OrdinalIgnoreCase) && !y.FIO.StartsWith("a", StringComparison.OrdinalIgnoreCase))
-                            {
-                                return -1;
-                            }
-                            else if (!x.FIO.StartsWith("a", StringComparison.OrdinalIgnoreCase) && y.FIO.StartsWith("a", StringComparison.OrdinalIgnoreCase))
-                            {
-                                return 1;
-                            }
-                            else
-                            {
-                                return string.Compare(x.FIO, y.FIO, StringComparison.OrdinalIgnoreCase);
-                            }
-                        });
-                    }
-                    else if (cbSort.Text == "Login")
-                    {
-                        EmployeOld.Sort((x, y) => x.Login.CompareTo(y.Login));
-                    }
-                    else if (cbSort.Text == "Parol")
-                    {
-                        EmployeOld.Sort((x, y) => x.Password.CompareTo(y.Password));
-                    }
-                    else if (cbSort.Text == "Phone Number")
-                    {
-                        EmployeOld.Sort((x, y) => x.PhoneNumber.CompareTo(y.PhoneNumber));
-                    }
-                    dGVAddEmploye.DataSource = EmployeOld;
-                }
-                else
-                {
-                    MessageBox.Show("Xatolik mavjud tekshirib qaytadan kiriting.");
-                }
-            }
-            catch (FormatException)
-            {
-                MessageBox.Show("Noto'g'ri formatda qiymat kiritildi.");
-            }
-            catch (IOException ex)
-            {
-                MessageBox.Show("Faylda xatolik: " + ex.Message);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Xatolik: " + ex.Message);
-            }
-        }
-
-        private void btKamayish_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (cbSort.Text.Length > 0)
-                {
-                    string EmployePath = @"..\..\..\.txt files\EmployesList.txt";
-                    string[] EmployeAllLines = File.ReadAllLines(EmployePath);
-                    List<Employe> EmployeOld = new List<Employe>();
-                    foreach (var EmployeAllLinesItem in EmployeAllLines)
-                    {
-                        string[] EmployeInfo = EmployeAllLinesItem.Split(',');
-                        EmployeOld.Add(new Employe
-                        {
-                            Id = int.Parse(EmployeInfo[0]),
-                            FIO = EmployeInfo[1],
-                            Login = EmployeInfo[2],
-                            Password = EmployeInfo[3],
-                            EmployeType = EmployeInfo[4],
-                            PhoneNumber = EmployeInfo[5],
-                        });
-                    }
-                    if (cbSort.Text == "Id")
-                    {
-                        EmployeOld.Sort((x, y) => y.Id.CompareTo(x.Id));
-                    }
-                    else if (cbSort.Text == "FIO")
-                    {
-                        EmployeOld.Sort((x, y) =>
-                        {
-                            if (y.FIO.StartsWith("a", StringComparison.OrdinalIgnoreCase) && !x.FIO.StartsWith("a", StringComparison.OrdinalIgnoreCase))
-                            {
-                                return -1;
-                            }
-                            else if (!y.FIO.StartsWith("a", StringComparison.OrdinalIgnoreCase) && x.FIO.StartsWith("a", StringComparison.OrdinalIgnoreCase))
-                            {
-                                return 1;
-                            }
-                            else
-                            {
-                                return string.Compare(y.FIO, x.FIO, StringComparison.OrdinalIgnoreCase);
-                            }
-                        });
-                    }
-                    else if (cbSort.Text == "Login")
-                    {
-                        EmployeOld.Sort((x, y) => y.Login.CompareTo(x.Login));
-                    }
-                    else if (cbSort.Text == "Parol")
-                    {
-                        EmployeOld.Sort((x, y) => y.Password.CompareTo(x.Password));
-                    }
-                    else if (cbSort.Text == "Phone Number")
-                    {
-                        EmployeOld.Sort((x, y) => y.PhoneNumber.CompareTo(x.PhoneNumber));
-                    }
-                    dGVAddEmploye.DataSource = EmployeOld;
-                }
-                else
-                {
-                    MessageBox.Show("Xatolik mavjud tekshirib qaytadan kiriting.");
-                }
-            }
-            catch (FormatException)
-            {
-                MessageBox.Show("Noto'g'ri formatda qiymat kiritildi.");
-            }
-            catch (IOException ex)
-            {
-                MessageBox.Show("Faylda xatolik: " + ex.Message);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Xatolik: " + ex.Message);
-            }
         }
 
         private void btQaytarish_Click(object sender, EventArgs e)
@@ -316,70 +155,106 @@ namespace DorixonaForm.Forms
 
         private void btSearch_Click(object sender, EventArgs e)
         {
-            if (cbSearch.Text == "Id")
+            if (cbSearch.Text == "FIO")
             {
-                List<Employe> employesList = new List<Employe>();
-                foreach (Employe employeItem in functions.employeList)
+                List<Employe> employeList = new List<Employe>();
+                foreach (Employe employe in functions.employeList)
                 {
-                    if (employeItem.Id.ToString().Contains(txPillInformation.Text))
+                    if (employe.FIO.ToLower().Contains(txPillInformation.Text.ToLower()))
                     {
-                        employesList.Add(new Employe() { Id = employeItem.Id, FIO = employeItem.FIO, Login = employeItem.Login, Password = employeItem.Password, EmployeType = employeItem.EmployeType, PhoneNumber = employeItem.PhoneNumber });
+                        employeList.Add(new Employe() { Id = employe.Id, FIO = employe.FIO, Login = employe.Login, Password = employe.Password, PhoneNumber = employe.PhoneNumber, EmployeType = employe.EmployeType });
                     }
                 }
-                dGVAddEmploye.DataSource = employesList;
+                dGVAddEmploye.DataSource = employeList;
             }
-            else if (cbSearch.Text == "FIO")
+            else if (cbSearch.Text == "Id")
             {
-                List<Employe> employesList = new List<Employe>();
-                foreach (Employe employeItem in functions.employeList)
+                List<Employe> employeList = new List<Employe>();
+                foreach (Employe employe in functions.employeList)
                 {
-                    if (employeItem.FIO.ToLower().Contains(txPillInformation.Text.ToLower()))
+                    if (employe.Id.ToString().Contains(txPillInformation.Text))
                     {
-                        employesList.Add(new Employe() { Id = employeItem.Id, FIO = employeItem.FIO, Login = employeItem.Login, Password = employeItem.Password, EmployeType = employeItem.EmployeType, PhoneNumber = employeItem.PhoneNumber });
+                        employeList.Add(new Employe() { Id = employe.Id, FIO = employe.FIO, Login = employe.Login, Password = employe.Password, PhoneNumber = employe.PhoneNumber, EmployeType = employe.EmployeType });
                     }
                 }
-                dGVAddEmploye.DataSource = employesList;
+                dGVAddEmploye.DataSource = employeList;
             }
             else if (cbSearch.Text == "Login")
             {
-                List<Employe> employesList = new List<Employe>();
-                foreach (Employe employeItem in functions.employeList)
+                List<Employe> employeList = new List<Employe>();
+                foreach (Employe employe in functions.employeList)
                 {
-                    if (employeItem.Login.ToString().Contains(txPillInformation.Text))
+                    if (employe.Login.Contains(txPillInformation.Text))
                     {
-                        employesList.Add(new Employe() { Id = employeItem.Id, FIO = employeItem.FIO, Login = employeItem.Login, Password = employeItem.Password, EmployeType = employeItem.EmployeType, PhoneNumber = employeItem.PhoneNumber });
+                        employeList.Add(new Employe() { Id = employe.Id, FIO = employe.FIO, Login = employe.Login, Password = employe.Password, PhoneNumber = employe.PhoneNumber, EmployeType = employe.EmployeType });
                     }
                 }
-                dGVAddEmploye.DataSource = employesList;
+                dGVAddEmploye.DataSource = employeList;
             }
-            else if (cbSearch.Text == "Parol")
+            else if (cbSearch.Text == "Password")
             {
-                List<Employe> employesList = new List<Employe>();
-                foreach (Employe employeItem in functions.employeList)
+                List<Employe> employeList = new List<Employe>();
+                foreach (Employe employe in functions.employeList)
                 {
-                    if (employeItem.Password.ToString().Contains(txPillInformation.Text))
+                    if (employe.Password.Contains(txPillInformation.Text))
                     {
-                        employesList.Add(new Employe() { Id = employeItem.Id, FIO = employeItem.FIO, Login = employeItem.Login, Password = employeItem.Password, EmployeType = employeItem.EmployeType, PhoneNumber = employeItem.PhoneNumber });
+                        employeList.Add(new Employe() { Id = employe.Id, FIO = employe.FIO, Login = employe.Login, Password = employe.Password, PhoneNumber = employe.PhoneNumber, EmployeType = employe.EmployeType });
                     }
                 }
-                dGVAddEmploye.DataSource = employesList;
+                dGVAddEmploye.DataSource = employeList;
             }
-            else if (cbSearch.Text == "Phone Number")
+            else if (cbSearch.Text == "PhoneNumber")
             {
-                List<Employe> employesList = new List<Employe>();
-                foreach (Employe employeItem in functions.employeList)
+                List<Employe> employeList = new List<Employe>();
+                foreach (Employe employe in functions.employeList)
                 {
-                    if (employeItem.PhoneNumber.ToString().Contains(txPillInformation.Text))
+                    if (employe.PhoneNumber.Contains(txPillInformation.Text))
                     {
-                        employesList.Add(new Employe() { Id = employeItem.Id, FIO = employeItem.FIO, Login = employeItem.Login, Password = employeItem.Password, EmployeType = employeItem.EmployeType, PhoneNumber = employeItem.PhoneNumber });
+                        employeList.Add(new Employe() { Id = employe.Id, FIO = employe.FIO, Login = employe.Login, Password = employe.Password, PhoneNumber = employe.PhoneNumber, EmployeType = employe.EmployeType });
                     }
                 }
-                dGVAddEmploye.DataSource = employesList;
+                dGVAddEmploye.DataSource = employeList;
+            }
+            else if (cbSearch.Text == "EmployeType")
+            {
+                List<Employe> employeList = new List<Employe>();
+                foreach (Employe employe in functions.employeList)
+                {
+                    if (employe.EmployeType.ToLower().Contains(txPillInformation.Text.ToLower()))
+                    {
+                        employeList.Add(new Employe() { Id = employe.Id, FIO = employe.FIO, Login = employe.Login, Password = employe.Password, PhoneNumber = employe.PhoneNumber, EmployeType = employe.EmployeType });
+                    }
+                }
+                dGVAddEmploye.DataSource = employeList;
             }
             else
             {
                 MessageBox.Show("Bo'limdan birini tanlang", "Ma'lumot", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        private void dGVAddEmploye_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.StartPosition = FormStartPosition.CenterScreen;
+            loginForm.Show();
+        }
+
+        private void btBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerForm managerForm = new ManagerForm(NewLogin);
+            managerForm.StartPosition = FormStartPosition.CenterScreen;
+            managerForm.Show();
+        }
     }
 }
+
+
+
+
+
