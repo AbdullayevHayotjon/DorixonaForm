@@ -9,3 +9,26 @@
 4,Orazbaev Merxat,Kardioleks,5,22.05.2024 12:25:40,20000
 1,Muqimov Quvonch,Tefestrol,3,22.05.2024 12:54:50,6000
 4,Muqimov Quvonch,Xolosas,9,22.05.2024 12:54:50,729000
+1,Hafizov Sardorbek,Tefestrol,10,22.05.2024 16:33:11,20000
+3,Hafizov Sardorbek,Kardioleks,10,22.05.2024 16:33:11,40000
+2,Hafizov Sardorbek,Kukumazim,10,22.05.2024 16:33:11,30000
+5,Hafizov Sardorbek,Permetrin,10,22.05.2024 16:33:11,600000
+4,Hafizov Sardorbek,Xolosas,10,22.05.2024 16:33:11,810000
+8,Hafizov Sardorbek,Siprofloksatsin,10,22.05.2024 16:33:11,700000
+6,Hafizov Sardorbek,Asiklovir,10,22.05.2024 16:33:11,730000
+7,Hafizov Sardorbek,Levofloksatsin,15,22.05.2024 16:33:11,1080000
+15,Hafizov Sardorbek,Natriy tiosulfati,5,22.05.2024 16:33:11,120000
+25,Hafizov Sardorbek,Tebir,36,22.05.2024 16:33:11,108000
+24,Hafizov Sardorbek,Ko'k nori,3,22.05.2024 16:33:11,299700000
+1,Hafizov Sardorbek,Tefestrol,10,22.05.2024 16:38:35,20000
+3,Hafizov Sardorbek,Kardioleks,10,22.05.2024 16:38:35,40000
+2,Hafizov Sardorbek,Kukumazim,10,22.05.2024 16:38:35,30000
+5,Hafizov Sardorbek,Permetrin,10,22.05.2024 16:38:35,600000
+4,Hafizov Sardorbek,Xolosas,10,22.05.2024 16:38:35,810000
+8,Hafizov Sardorbek,Siprofloksatsin,20,22.05.2024 16:38:35,1400000
+6,Hafizov Sardorbek,Asiklovir,5,22.05.2024 16:38:35,365000
+7,Hafizov Sardorbek,Levofloksatsin,35,22.05.2024 16:38:35,2520000
+9,Hafizov Sardorbek,Ofloksatsin,26,22.05.2024 16:38:35,1378000
+12,Hafizov Sardorbek,Sefazolin,36,22.05.2024 16:38:35,1548000
+20,Hafizov Sardorbek,Natriy xlorid,35,22.05.2024 16:38:35,1610000
+18,Hafizov Sardorbek,Tioktat kislotasi,25,22.05.2024 16:38:35,850000

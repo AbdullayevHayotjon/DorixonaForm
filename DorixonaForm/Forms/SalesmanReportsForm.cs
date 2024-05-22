@@ -98,29 +98,21 @@ namespace DorixonaForm.Forms
             {
                 if (cbSort.Text.Length > 0)
                 {
-                    string PillPath = @"..\..\..\.txt files\PillesList.txt";
-                    string[] PillAllLines = File.ReadAllLines(PillPath);
-                    List<Pill> PillOld = new List<Pill>();
-                    foreach (var PillAllLinesItem in PillAllLines)
+                    List<SalesmanReport> pillList = new List<SalesmanReport>();
+                    foreach (SalesmanReport pill in salesmanReports)
                     {
-                        string[] PillInfo = PillAllLinesItem.Split(',');
-                        PillOld.Add(new Pill
+                        if (pill.Nomi.ToLower().Contains(txPillInformation.Text.ToLower()))
                         {
-                            Id = int.Parse(PillInfo[0]),
-                            Nomi = PillInfo[1],
-                            Soni = int.Parse(PillInfo[2]),
-                            Muddati = int.Parse(PillInfo[3]),
-                            Narxi = int.Parse(PillInfo[4]),
-                            QoshilganSana = DateTime.Parse(PillInfo[5]),
-                        });
+                            pillList.Add(new SalesmanReport() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, SotilganVaqti = pill.SotilganVaqti, Narxi = pill.Narxi });
+                        }
                     }
                     if (cbSort.Text == "Id")
                     {
-                        PillOld.Sort((x, y) => x.Id.CompareTo(y.Id));
+                        pillList.Sort((x, y) => x.Id.CompareTo(y.Id));
                     }
                     else if (cbSort.Text == "Nomi")
                     {
-                        PillOld.Sort((x, y) =>
+                        pillList.Sort((x, y) =>
                         {
                             if (x.Nomi.StartsWith("a", StringComparison.OrdinalIgnoreCase) && !y.Nomi.StartsWith("a", StringComparison.OrdinalIgnoreCase))
                             {
@@ -138,21 +130,17 @@ namespace DorixonaForm.Forms
                     }
                     else if (cbSort.Text == "Soni")
                     {
-                        PillOld.Sort((x, y) => x.Soni.CompareTo(y.Soni));
+                        pillList.Sort((x, y) => x.Soni.CompareTo(y.Soni));
                     }
-                    else if (cbSort.Text == "Muddati")
+                    else if (cbSort.Text == "Sotilgan vaqti")
                     {
-                        PillOld.Sort((x, y) => x.Muddati.CompareTo(y.Muddati));
+                        pillList.Sort((x, y) => x.SotilganVaqti.CompareTo(y.SotilganVaqti));
                     }
                     else if (cbSort.Text == "Narxi")
                     {
-                        PillOld.Sort((x, y) => x.Narxi.CompareTo(y.Narxi));
+                        pillList.Sort((x, y) => x.Narxi.CompareTo(y.Narxi));
                     }
-                    else if (cbSort.Text == "Qo'shilgan sanasi")
-                    {
-                        PillOld.Sort((x, y) => x.QoshilganSana.CompareTo(y.QoshilganSana));
-                    }
-                    dGWPills.DataSource = PillOld;
+                    dGWPills.DataSource = pillList;
                 }
                 else
                 {
@@ -254,29 +242,21 @@ namespace DorixonaForm.Forms
             {
                 if (cbSort.Text.Length > 0)
                 {
-                    string PillPath = @"..\..\..\.txt files\PillesList.txt";
-                    string[] PillAllLines = File.ReadAllLines(PillPath);
-                    List<Pill> PillOld = new List<Pill>();
-                    foreach (var PillAllLinesItem in PillAllLines)
+                    List<SalesmanReport> pillList = new List<SalesmanReport>();
+                    foreach (SalesmanReport pill in salesmanReports)
                     {
-                        string[] PillInfo = PillAllLinesItem.Split(',');
-                        PillOld.Add(new Pill
+                        if (pill.Nomi.ToLower().Contains(txPillInformation.Text.ToLower()))
                         {
-                            Id = int.Parse(PillInfo[0]),
-                            Nomi = PillInfo[1],
-                            Soni = int.Parse(PillInfo[2]),
-                            Muddati = int.Parse(PillInfo[3]),
-                            Narxi = int.Parse(PillInfo[4]),
-                            QoshilganSana = DateTime.Parse(PillInfo[5])
-                        });
+                            pillList.Add(new SalesmanReport() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, SotilganVaqti = pill.SotilganVaqti, Narxi = pill.Narxi });
+                        }
                     }
                     if (cbSort.Text == "Id")
                     {
-                        PillOld.Sort((x, y) => y.Id.CompareTo(x.Id));
+                        pillList.Sort((x, y) => y.Id.CompareTo(x.Id));
                     }
                     else if (cbSort.Text == "Nomi")
                     {
-                        PillOld.Sort((x, y) =>
+                        pillList.Sort((x, y) =>
                         {
                             if (y.Nomi.StartsWith("a", StringComparison.OrdinalIgnoreCase) && !x.Nomi.StartsWith("a", StringComparison.OrdinalIgnoreCase))
                             {
@@ -294,22 +274,17 @@ namespace DorixonaForm.Forms
                     }
                     else if (cbSort.Text == "Soni")
                     {
-                        PillOld.Sort((x, y) => y.Soni.CompareTo(x.Soni));
+                        pillList.Sort((x, y) => y.Soni.CompareTo(x.Soni));
                     }
-                    else if (cbSort.Text == "Muddati")
+                    else if (cbSort.Text == "Sotilgan vaqti")
                     {
-                        PillOld.Sort((x, y) => y.Muddati.CompareTo(x.Muddati));
+                        pillList.Sort((x, y) => y.SotilganVaqti.CompareTo(x.SotilganVaqti));
                     }
                     else if (cbSort.Text == "Narxi")
                     {
-                        PillOld.Sort((x, y) => y.Narxi.CompareTo(x.Narxi));
+                        pillList.Sort((x, y) => y.Narxi.CompareTo(x.Narxi));
                     }
-                    else if (cbSort.Text == "Qo'shilgan sanasi")
-                    {
-                        PillOld.Sort((x, y) => y.QoshilganSana.CompareTo(x.QoshilganSana));
-
-                    }
-                    dGWPills.DataSource = PillOld;
+                    dGWPills.DataSource = pillList;
                 }
                 else
                 {

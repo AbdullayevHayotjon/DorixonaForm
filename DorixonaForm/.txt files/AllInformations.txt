@@ -136,3 +136,29 @@
 136,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 15:41:04
 137,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 15:42:50
 138,Abdullayev Hayot,EmployeEnter,Profilga kirdi,22.05.2024 15:46:11
+139,Hafizov Sardorbek,EmployeEnter,Profilga kirdi,22.05.2024 16:31:25
+140,Hafizov Sardorbek,SalesPill,Id=1|Nomi=Tefestrol|Soni=10|Narxi=20000,22.05.2024 16:33:11
+141,Hafizov Sardorbek,SalesPill,Id=3|Nomi=Kardioleks|Soni=10|Narxi=40000,22.05.2024 16:33:11
+142,Hafizov Sardorbek,SalesPill,Id=2|Nomi=Kukumazim|Soni=10|Narxi=30000,22.05.2024 16:33:11
+143,Hafizov Sardorbek,SalesPill,Id=5|Nomi=Permetrin|Soni=10|Narxi=600000,22.05.2024 16:33:11
+144,Hafizov Sardorbek,SalesPill,Id=4|Nomi=Xolosas|Soni=10|Narxi=810000,22.05.2024 16:33:11
+145,Hafizov Sardorbek,SalesPill,Id=8|Nomi=Siprofloksatsin|Soni=10|Narxi=700000,22.05.2024 16:33:11
+146,Hafizov Sardorbek,SalesPill,Id=6|Nomi=Asiklovir|Soni=10|Narxi=730000,22.05.2024 16:33:11
+147,Hafizov Sardorbek,SalesPill,Id=7|Nomi=Levofloksatsin|Soni=15|Narxi=1080000,22.05.2024 16:33:11
+148,Hafizov Sardorbek,SalesPill,Id=15|Nomi=Natriy tiosulfati|Soni=5|Narxi=120000,22.05.2024 16:33:11
+149,Hafizov Sardorbek,SalesPill,Id=25|Nomi=Tebir|Soni=36|Narxi=108000,22.05.2024 16:33:11
+150,Hafizov Sardorbek,SalesPill,Id=24|Nomi=Ko'k nori|Soni=3|Narxi=299700000,22.05.2024 16:33:11
+151,Hafizov Sardorbek,EmployeExit,Profildan chiqdi,22.05.2024 16:33:24
+152,Hafizov Sardorbek,EmployeEnter,Profilga kirdi,22.05.2024 16:37:21
+153,Hafizov Sardorbek,SalesPill,Id=1|Nomi=Tefestrol|Soni=10|Narxi=20000,22.05.2024 16:38:35
+153,Hafizov Sardorbek,SalesPill,Id=3|Nomi=Kardioleks|Soni=10|Narxi=40000,22.05.2024 16:38:35
+153,Hafizov Sardorbek,SalesPill,Id=2|Nomi=Kukumazim|Soni=10|Narxi=30000,22.05.2024 16:38:35
+153,Hafizov Sardorbek,SalesPill,Id=5|Nomi=Permetrin|Soni=10|Narxi=600000,22.05.2024 16:38:35
+153,Hafizov Sardorbek,SalesPill,Id=4|Nomi=Xolosas|Soni=10|Narxi=810000,22.05.2024 16:38:35
+153,Hafizov Sardorbek,SalesPill,Id=8|Nomi=Siprofloksatsin|Soni=20|Narxi=1400000,22.05.2024 16:38:35
+153,Hafizov Sardorbek,SalesPill,Id=6|Nomi=Asiklovir|Soni=5|Narxi=365000,22.05.2024 16:38:35
+153,Hafizov Sardorbek,SalesPill,Id=7|Nomi=Levofloksatsin|Soni=35|Narxi=2520000,22.05.2024 16:38:35
+153,Hafizov Sardorbek,SalesPill,Id=9|Nomi=Ofloksatsin|Soni=26|Narxi=1378000,22.05.2024 16:38:35
+153,Hafizov Sardorbek,SalesPill,Id=12|Nomi=Sefazolin|Soni=36|Narxi=1548000,22.05.2024 16:38:35
+153,Hafizov Sardorbek,SalesPill,Id=20|Nomi=Natriy xlorid|Soni=35|Narxi=1610000,22.05.2024 16:38:35
+153,Hafizov Sardorbek,SalesPill,Id=18|Nomi=Tioktat kislotasi|Soni=25|Narxi=850000,22.05.2024 16:38:35
