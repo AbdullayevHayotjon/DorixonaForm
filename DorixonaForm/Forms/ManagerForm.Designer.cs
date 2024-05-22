@@ -223,7 +223,7 @@
             cbSearch.DropDownStyle = ComboBoxStyle.DropDownList;
             cbSearch.Font = new Font("Segoe UI Semilight", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
             cbSearch.FormattingEnabled = true;
-            cbSearch.Items.AddRange(new object[] { "Nomi", "Id", "Soni", "Muddati", "Narxi" });
+            cbSearch.Items.AddRange(new object[] { "Id", "FIO", "Login", "Password", "PhoneNumber", "EmployeType" });
             cbSearch.Location = new Point(782, 165);
             cbSearch.Name = "cbSearch";
             cbSearch.Size = new Size(269, 49);
@@ -306,6 +306,7 @@
             button1.TabIndex = 82;
             button1.Text = "Qo'shimcha hisobotlar";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
             // 
             // ManagerForm
             // 

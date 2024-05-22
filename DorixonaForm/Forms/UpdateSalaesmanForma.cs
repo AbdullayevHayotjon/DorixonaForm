@@ -174,12 +174,7 @@ namespace DorixonaForm.Forms
 
         private void UpdateSalaesmanForma_Load(object sender, EventArgs e)
         {
-//FIO
-//Id
-//Login
-//Password
-//PhoneNumber
-//EmployeType
+
         }
 
         private void btSearch_Click(object sender, EventArgs e)

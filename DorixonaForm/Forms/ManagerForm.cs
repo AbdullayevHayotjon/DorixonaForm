@@ -1,4 +1,5 @@
 ﻿using DorixonaForm.Actions;
+using Microsoft.VisualBasic.Logging;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -299,7 +300,12 @@ namespace DorixonaForm.Forms
 
         private void btSearch_Click(object sender, EventArgs e)
         {
-            
+            //Id
+            //FIO
+            //Login
+            //Password
+            //PhoneNumber
+            //EmployeType
             if (cbSearch.Text == "Id")
             {
                 List<Employe> employesList = new List<Employe>();
@@ -336,7 +342,7 @@ namespace DorixonaForm.Forms
                 }
                 dGVEmploye.DataSource = employesList;
             }
-            else if (cbSearch.Text == "Parol")
+            else if (cbSearch.Text == "Password")
             {
                 List<Employe> employesList = new List<Employe>();
                 foreach (Employe employeItem in functions.employeList)
@@ -348,7 +354,7 @@ namespace DorixonaForm.Forms
                 }
                 dGVEmploye.DataSource = employesList;
             }
-            else if (cbSearch.Text == "Phone Number")
+            else if (cbSearch.Text == "PhoneNumber")
             {
                 List<Employe> employesList = new List<Employe>();
                 foreach (Employe employeItem in functions.employeList)
@@ -360,10 +366,27 @@ namespace DorixonaForm.Forms
                 }
                 dGVEmploye.DataSource = employesList;
             }
+            else if (cbSearch.Text == "EmployeType")
+            {
+                List<Employe> employeList = new List<Employe>();
+                foreach (Employe employe in functions.employeList)
+                {
+                    if (employe.EmployeType.ToLower().Contains(txPillInformation.Text.ToLower()))
+                    {
+                        employeList.Add(new Employe() { Id = employe.Id, FIO = employe.FIO, Login = employe.Login, Password = employe.Password, PhoneNumber = employe.PhoneNumber, EmployeType = employe.EmployeType });
+                    }
+                }
+                dGVEmploye.DataSource = employeList;
+            }
             else
             {
                 MessageBox.Show("Bo'limdan birini tanlang", "Ma'lumot", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
