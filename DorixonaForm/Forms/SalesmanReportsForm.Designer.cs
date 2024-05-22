@@ -39,6 +39,7 @@
             lbPrice = new Label();
             label9 = new Label();
             panel2 = new Panel();
+            btBack1 = new Button();
             label7 = new Label();
             txId = new TextBox();
             lbCount = new Label();
@@ -62,7 +63,6 @@
             salesmanReportBindingSource2 = new BindingSource(components);
             salesmanReportBindingSource1 = new BindingSource(components);
             salesmanReportBindingSource = new BindingSource(components);
-            btBack1 = new Button();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dGWPills).BeginInit();
             ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource5).BeginInit();
@@ -191,6 +191,18 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(729, 565);
             panel2.TabIndex = 132;
+            // 
+            // btBack1
+            // 
+            btBack1.BackColor = Color.LightSkyBlue;
+            btBack1.Font = new Font("Trebuchet MS", 18F);
+            btBack1.Location = new Point(523, 475);
+            btBack1.Name = "btBack1";
+            btBack1.Size = new Size(175, 47);
+            btBack1.TabIndex = 146;
+            btBack1.Text = "Qaytarish";
+            btBack1.UseVisualStyleBackColor = false;
+            btBack1.Click += btBack1_Click;
             // 
             // label7
             // 
@@ -359,18 +371,6 @@
             // salesmanReportBindingSource5
             // 
             salesmanReportBindingSource5.DataSource = typeof(Actions.SalesmanReport);
-            // 
-            // btBack1
-            // 
-            btBack1.BackColor = Color.LightSkyBlue;
-            btBack1.Font = new Font("Trebuchet MS", 18F);
-            btBack1.Location = new Point(523, 475);
-            btBack1.Name = "btBack1";
-            btBack1.Size = new Size(175, 47);
-            btBack1.TabIndex = 146;
-            btBack1.Text = "Qaytarish";
-            btBack1.UseVisualStyleBackColor = false;
-            btBack1.Click += btBack1_Click;
             // 
             // SalesmanReportsForm
             // 

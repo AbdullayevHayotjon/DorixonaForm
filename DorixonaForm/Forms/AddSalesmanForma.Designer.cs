@@ -66,10 +66,10 @@
             dGVAddEmploye.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dGVAddEmploye.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, fIODataGridViewTextBoxColumn, loginDataGridViewTextBoxColumn, passwordDataGridViewTextBoxColumn, phoneNumberDataGridViewTextBoxColumn, employeTypeDataGridViewTextBoxColumn });
             dGVAddEmploye.DataSource = employeBindingSource;
-            dGVAddEmploye.Location = new Point(729, 182);
+            dGVAddEmploye.Location = new Point(648, 182);
             dGVAddEmploye.Name = "dGVAddEmploye";
             dGVAddEmploye.RowHeadersWidth = 51;
-            dGVAddEmploye.Size = new Size(804, 544);
+            dGVAddEmploye.Size = new Size(805, 544);
             dGVAddEmploye.TabIndex = 0;
             // 
             // idDataGridViewTextBoxColumn
@@ -128,7 +128,7 @@
             // 
             lbAddPhoneNumber.AutoSize = true;
             lbAddPhoneNumber.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            lbAddPhoneNumber.Location = new Point(12, 125);
+            lbAddPhoneNumber.Location = new Point(11, 125);
             lbAddPhoneNumber.Name = "lbAddPhoneNumber";
             lbAddPhoneNumber.Size = new Size(224, 41);
             lbAddPhoneNumber.TabIndex = 1;
@@ -138,7 +138,7 @@
             // 
             lbAddSmsPassword.AutoSize = true;
             lbAddSmsPassword.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            lbAddSmsPassword.Location = new Point(12, 195);
+            lbAddSmsPassword.Location = new Point(11, 195);
             lbAddSmsPassword.Name = "lbAddSmsPassword";
             lbAddSmsPassword.Size = new Size(219, 41);
             lbAddSmsPassword.TabIndex = 2;
@@ -149,7 +149,7 @@
             // 
             lbAddFIO.AutoSize = true;
             lbAddFIO.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            lbAddFIO.Location = new Point(12, 270);
+            lbAddFIO.Location = new Point(11, 270);
             lbAddFIO.Name = "lbAddFIO";
             lbAddFIO.Size = new Size(72, 41);
             lbAddFIO.TabIndex = 3;
@@ -159,7 +159,7 @@
             // 
             lbAddLogin.AutoSize = true;
             lbAddLogin.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            lbAddLogin.Location = new Point(12, 338);
+            lbAddLogin.Location = new Point(11, 338);
             lbAddLogin.Name = "lbAddLogin";
             lbAddLogin.Size = new Size(102, 41);
             lbAddLogin.TabIndex = 4;
@@ -169,7 +169,7 @@
             // 
             lbAddPassword.AutoSize = true;
             lbAddPassword.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            lbAddPassword.Location = new Point(12, 409);
+            lbAddPassword.Location = new Point(11, 409);
             lbAddPassword.Name = "lbAddPassword";
             lbAddPassword.Size = new Size(95, 41);
             lbAddPassword.TabIndex = 5;
@@ -178,49 +178,49 @@
             // txAddPhoneNumber
             // 
             txAddPhoneNumber.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            txAddPhoneNumber.Location = new Point(250, 119);
+            txAddPhoneNumber.Location = new Point(222, 119);
             txAddPhoneNumber.Name = "txAddPhoneNumber";
-            txAddPhoneNumber.Size = new Size(460, 47);
+            txAddPhoneNumber.Size = new Size(409, 47);
             txAddPhoneNumber.TabIndex = 6;
             // 
             // txAddSmsPassword
             // 
             txAddSmsPassword.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            txAddSmsPassword.Location = new Point(250, 195);
+            txAddSmsPassword.Location = new Point(222, 195);
             txAddSmsPassword.Name = "txAddSmsPassword";
-            txAddSmsPassword.Size = new Size(178, 47);
+            txAddSmsPassword.Size = new Size(159, 47);
             txAddSmsPassword.TabIndex = 7;
             // 
             // txAddFIO
             // 
             txAddFIO.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            txAddFIO.Location = new Point(250, 270);
+            txAddFIO.Location = new Point(222, 270);
             txAddFIO.Name = "txAddFIO";
-            txAddFIO.Size = new Size(460, 47);
+            txAddFIO.Size = new Size(409, 47);
             txAddFIO.TabIndex = 8;
             // 
             // txAddLogin
             // 
             txAddLogin.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            txAddLogin.Location = new Point(250, 338);
+            txAddLogin.Location = new Point(222, 338);
             txAddLogin.Name = "txAddLogin";
-            txAddLogin.Size = new Size(460, 47);
+            txAddLogin.Size = new Size(409, 47);
             txAddLogin.TabIndex = 9;
             // 
             // txAddPassword
             // 
             txAddPassword.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            txAddPassword.Location = new Point(250, 409);
+            txAddPassword.Location = new Point(222, 409);
             txAddPassword.Name = "txAddPassword";
-            txAddPassword.Size = new Size(460, 47);
+            txAddPassword.Size = new Size(409, 47);
             txAddPassword.TabIndex = 10;
             // 
             // btAddSmsPassword
             // 
             btAddSmsPassword.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            btAddSmsPassword.Location = new Point(460, 195);
+            btAddSmsPassword.Location = new Point(409, 195);
             btAddSmsPassword.Name = "btAddSmsPassword";
-            btAddSmsPassword.Size = new Size(250, 47);
+            btAddSmsPassword.Size = new Size(222, 47);
             btAddSmsPassword.TabIndex = 11;
             btAddSmsPassword.Text = "SMS ni jo'natish";
             btAddSmsPassword.UseVisualStyleBackColor = true;
@@ -229,9 +229,9 @@
             // btSaqlash
             // 
             btSaqlash.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            btSaqlash.Location = new Point(12, 493);
+            btSaqlash.Location = new Point(11, 493);
             btSaqlash.Name = "btSaqlash";
-            btSaqlash.Size = new Size(698, 54);
+            btSaqlash.Size = new Size(620, 54);
             btSaqlash.TabIndex = 12;
             btSaqlash.Text = "SAQLASH";
             btSaqlash.UseVisualStyleBackColor = true;
@@ -241,9 +241,9 @@
             // 
             btOsish.BackColor = Color.LightSkyBlue;
             btOsish.Font = new Font("Trebuchet MS", 18F);
-            btOsish.Location = new Point(1037, 123);
+            btOsish.Location = new Point(922, 123);
             btOsish.Name = "btOsish";
-            btOsish.Size = new Size(160, 49);
+            btOsish.Size = new Size(142, 49);
             btOsish.TabIndex = 88;
             btOsish.Text = "O'sish";
             btOsish.UseVisualStyleBackColor = false;
@@ -253,9 +253,9 @@
             // 
             btKamayish.BackColor = Color.LightSkyBlue;
             btKamayish.Font = new Font("Trebuchet MS", 18F);
-            btKamayish.Location = new Point(1203, 125);
+            btKamayish.Location = new Point(1069, 125);
             btKamayish.Name = "btKamayish";
-            btKamayish.Size = new Size(160, 47);
+            btKamayish.Size = new Size(142, 47);
             btKamayish.TabIndex = 87;
             btKamayish.Text = "Kamayish";
             btKamayish.UseVisualStyleBackColor = false;
@@ -265,9 +265,9 @@
             // 
             btQaytarish.BackColor = Color.LightSkyBlue;
             btQaytarish.Font = new Font("Trebuchet MS", 18F);
-            btQaytarish.Location = new Point(1369, 127);
+            btQaytarish.Location = new Point(1217, 127);
             btQaytarish.Name = "btQaytarish";
-            btQaytarish.Size = new Size(164, 49);
+            btQaytarish.Size = new Size(160, 49);
             btQaytarish.TabIndex = 86;
             btQaytarish.Text = "Qaytarish";
             btQaytarish.UseVisualStyleBackColor = false;
@@ -278,9 +278,9 @@
             cbSort.DropDownStyle = ComboBoxStyle.DropDownList;
             cbSort.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
             cbSort.FormattingEnabled = true;
-            cbSort.Location = new Point(729, 126);
+            cbSort.Location = new Point(648, 126);
             cbSort.Name = "cbSort";
-            cbSort.Size = new Size(302, 49);
+            cbSort.Size = new Size(269, 49);
             cbSort.TabIndex = 85;
             // 
             // cbSearch
@@ -289,18 +289,18 @@
             cbSearch.Font = new Font("Segoe UI Semilight", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
             cbSearch.FormattingEnabled = true;
             cbSearch.Items.AddRange(new object[] { "Nomi", "Id", "Soni", "Muddati", "Narxi" });
-            cbSearch.Location = new Point(729, 71);
+            cbSearch.Location = new Point(648, 71);
             cbSearch.Name = "cbSearch";
-            cbSearch.Size = new Size(302, 49);
+            cbSearch.Size = new Size(269, 49);
             cbSearch.TabIndex = 84;
             // 
             // btSearch
             // 
             btSearch.BackColor = Color.LightSkyBlue;
             btSearch.Font = new Font("Trebuchet MS", 18F);
-            btSearch.Location = new Point(1369, 71);
+            btSearch.Location = new Point(1231, 71);
             btSearch.Name = "btSearch";
-            btSearch.Size = new Size(164, 49);
+            btSearch.Size = new Size(146, 49);
             btSearch.TabIndex = 82;
             btSearch.Text = "Qidirish";
             btSearch.UseVisualStyleBackColor = false;
@@ -310,16 +310,16 @@
             // 
             txPillInformation.BackColor = Color.FromArgb(255, 255, 192);
             txPillInformation.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txPillInformation.Location = new Point(1037, 71);
+            txPillInformation.Location = new Point(922, 71);
             txPillInformation.Name = "txPillInformation";
-            txPillInformation.Size = new Size(326, 48);
+            txPillInformation.Size = new Size(290, 48);
             txPillInformation.TabIndex = 83;
             // 
             // AddSalesmanForma
             // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1837, 995);
+            ClientSize = new Size(1633, 995);
             Controls.Add(btOsish);
             Controls.Add(btKamayish);
             Controls.Add(btQaytarish);

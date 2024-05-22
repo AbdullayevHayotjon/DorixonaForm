@@ -20,14 +20,9 @@ namespace DorixonaForm.Forms
             NewLogin = login;
             InitializeComponent();
             List<Employe> employes = new List<Employe>();
-            int i = 1;
             foreach (Employe employe in functions.employeList)
             {
-                if (employe.EmployeType == EmployeType.Manager.ToString())
-                {
-                    continue;
-                }
-                employes.Add(new Employe() { Id = i++, FIO = employe.FIO, Login = employe.Login, Password = employe.Password, PhoneNumber = employe.PhoneNumber });
+                employes.Add(new Employe() { Id = employe.Id, FIO = employe.FIO, Login = employe.Login, Password = employe.Password, PhoneNumber = employe.PhoneNumber, EmployeType = employe.EmployeType });
             }
             dGVEmploye.DataSource = employes;
             foreach (Employe employe1 in functions.employeList)
@@ -120,13 +115,15 @@ namespace DorixonaForm.Forms
 
         private void btUpdateSalesman_Click(object sender, EventArgs e)
         {
-            UpdateSalaesmanForma updateSalaesmanForma = new UpdateSalaesmanForma();
+            this.Hide();
+            UpdateSalaesmanForma updateSalaesmanForma = new UpdateSalaesmanForma(NewLogin);
             updateSalaesmanForma.StartPosition = FormStartPosition.CenterScreen;
             updateSalaesmanForma.Show();
         }
 
         private void btAddSalesman_Click_1(object sender, EventArgs e)
         {
+            this.Hide();
             AddSalesmanForma addSalesmanForma = new AddSalesmanForma(NewLogin);
             addSalesmanForma.StartPosition = FormStartPosition.CenterScreen;
             addSalesmanForma.Show();
@@ -135,7 +132,10 @@ namespace DorixonaForm.Forms
 
         private void btDeleteSalesman_Click_1(object sender, EventArgs e)
         {
-
+            this.Hide();
+            DeleteSalesmanForma deleteSalesmanForma = new DeleteSalesmanForma(NewLogin);
+            deleteSalesmanForma.StartPosition = FormStartPosition.CenterScreen;
+            deleteSalesmanForma.Show();
         }
 
         private void btOsish_Click(object sender, EventArgs e)

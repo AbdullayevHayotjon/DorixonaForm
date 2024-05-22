@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DorixonaForm.Actions;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,17 @@ namespace DorixonaForm.Forms
 {
     public partial class DeleteSalesmanForma : Form
     {
-        public DeleteSalesmanForma()
+        Functions functions = new Functions();
+        public string NewLogin { get; set; }
+        public DeleteSalesmanForma(string login)
         {
+            NewLogin = login;
             InitializeComponent();
+        }
+
+        private void DeleteSalesmanForma_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

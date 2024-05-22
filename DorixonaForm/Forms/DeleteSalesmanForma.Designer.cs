@@ -32,11 +32,12 @@
             // 
             // DeleteSalesmanForma
             // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1262, 496);
+            ClientSize = new Size(1122, 496);
             Name = "DeleteSalesmanForma";
             Text = "DeleteSalesmanForma";
+            Load += DeleteSalesmanForma_Load;
             ResumeLayout(false);
         }
 

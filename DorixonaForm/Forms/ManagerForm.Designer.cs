@@ -54,6 +54,7 @@
             btQaytarish = new Button();
             btKamayish = new Button();
             btOsish = new Button();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dGVEmploye).BeginInit();
             ((System.ComponentModel.ISupportInitialize)employeBindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)employeBindingSource).BeginInit();
@@ -68,7 +69,7 @@
             btReports.Name = "btReports";
             btReports.Size = new Size(362, 54);
             btReports.TabIndex = 10;
-            btReports.Text = "Hisobotlar";
+            btReports.Text = "Asosiy hisobotlar";
             btReports.UseVisualStyleBackColor = false;
             btReports.Click += btReports_Click;
             // 
@@ -295,12 +296,24 @@
             btOsish.UseVisualStyleBackColor = false;
             btOsish.Click += btOsish_Click;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.LightSkyBlue;
+            button1.Font = new Font("Trebuchet MS", 17F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            button1.Location = new Point(174, 476);
+            button1.Name = "button1";
+            button1.Size = new Size(362, 54);
+            button1.TabIndex = 82;
+            button1.Text = "Qo'shimcha hisobotlar";
+            button1.UseVisualStyleBackColor = false;
+            // 
             // ManagerForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightCyan;
             ClientSize = new Size(1599, 1033);
+            Controls.Add(button1);
             Controls.Add(btOsish);
             Controls.Add(btKamayish);
             Controls.Add(btQaytarish);
@@ -365,5 +378,6 @@
         private Button btQaytarish;
         private Button btKamayish;
         private Button btOsish;
+        private Button button1;
     }
 }
