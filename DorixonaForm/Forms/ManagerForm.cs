@@ -33,6 +33,16 @@ namespace DorixonaForm.Forms
                     lbFIO.Text = employe1.FIO;
                 }
             }
+            List<Pill> pillManyList = new List<Pill>();
+            foreach (Pill pill in functions.pillsList)
+            {
+                if(pill.Soni <= 10)
+                {
+                    pillManyList.Add(new Pill() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Narxi, QoshilganSana = pill.QoshilganSana });
+                }
+            }
+            dgwLess.DataSource = pillManyList;
+
         }
 
         private void btExit_Click(object sender, EventArgs e)

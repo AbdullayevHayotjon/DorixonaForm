@@ -185,7 +185,178 @@ namespace DorixonaForm.Forms
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-             
+
+        }
+
+        private void btOsish_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbSort.Text.Length > 0)
+                {
+                    List<ReportSelesPill> reportSelesPillList = new List<ReportSelesPill>();
+                    foreach (var reportSelesPillsItem in functions.reportSelesPills)
+                    {
+                        reportSelesPillList.Add(new ReportSelesPill
+                        {
+                            SotuvchiId = reportSelesPillsItem.SotuvchiId,
+                            FIO = reportSelesPillsItem.FIO,
+                            DoriId = reportSelesPillsItem.DoriId,
+                            Nomi = reportSelesPillsItem.Nomi,
+                            Soni = reportSelesPillsItem.Soni,
+                            SotilganVaqti = reportSelesPillsItem.SotilganVaqti,
+                            Narxi = reportSelesPillsItem.Narxi
+                        });
+                    }
+                    if (cbSort.Text == "Sotuvchi Id")
+                    {
+                        reportSelesPillList.Sort((x, y) => x.SotuvchiId.CompareTo(y.SotuvchiId));
+                    }
+                    else if (cbSort.Text == "FIO")
+                    {
+                        reportSelesPillList.Sort((x, y) =>
+                        {
+                            if (x.FIO.StartsWith("a", StringComparison.OrdinalIgnoreCase) && !y.FIO.StartsWith("a", StringComparison.OrdinalIgnoreCase))
+                            {
+                                return -1;
+                            }
+                            else if (!x.FIO.StartsWith("a", StringComparison.OrdinalIgnoreCase) && y.FIO.StartsWith("a", StringComparison.OrdinalIgnoreCase))
+                            {
+                                return 1;
+                            }
+                            else
+                            {
+                                return string.Compare(x.FIO, y.FIO, StringComparison.OrdinalIgnoreCase);
+                            }
+                        });
+                    }
+                    else if (cbSort.Text == "Dori Id")
+                    {
+                        reportSelesPillList.Sort((x, y) => x.DoriId.CompareTo(y.DoriId));
+                    }
+                    else if (cbSort.Text == "Nomi")
+                    {
+                        reportSelesPillList.Sort((x, y) => x.Nomi.CompareTo(y.Nomi));
+                    }
+                    else if (cbSort.Text == "Soni")
+                    {
+                        reportSelesPillList.Sort((x, y) => x.Soni.CompareTo(y.Soni));
+                    }
+                    else if (cbSort.Text == "Sotilgan vaqti")
+                    {
+                        reportSelesPillList.Sort((x, y) => x.SotilganVaqti.CompareTo(y.SotilganVaqti));
+                    }
+                    else if (cbSort.Text == "Narxi")
+                    {
+                        reportSelesPillList.Sort((x, y) => x.Narxi.CompareTo(y.Narxi));
+                    }
+                    dGVEmploye.DataSource = reportSelesPillList;
+                }
+                else
+                {
+                    MessageBox.Show("Xatolik mavjud tekshirib qaytadan kiriting.");
+                }
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Noto'g'ri formatda qiymat kiritildi.");
+            }
+            catch (IOException ex)
+            {
+                MessageBox.Show("Faylda xatolik: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Xatolik: " + ex.Message);
+            }
+        }
+
+        private void btKamayish_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbSort.Text.Length > 0)
+                {
+                    List<ReportSelesPill> reportSelesPillList = new List<ReportSelesPill>();
+                    foreach (var reportSelesPillsItem in functions.reportSelesPills)
+                    {
+                        reportSelesPillList.Add(new ReportSelesPill
+                        {
+                            SotuvchiId = reportSelesPillsItem.SotuvchiId,
+                            FIO = reportSelesPillsItem.FIO,
+                            DoriId = reportSelesPillsItem.DoriId,
+                            Nomi = reportSelesPillsItem.Nomi,
+                            Soni = reportSelesPillsItem.Soni,
+                            SotilganVaqti = reportSelesPillsItem.SotilganVaqti,
+                            Narxi = reportSelesPillsItem.Narxi
+                        });
+                    }
+                    if (cbSort.Text == "Sotuvchi Id")
+                    {
+                        reportSelesPillList.Sort((x, y) => y.SotuvchiId.CompareTo(x.SotuvchiId));
+                    }
+                    else if (cbSort.Text == "FIO")
+                    {
+                        reportSelesPillList.Sort((x, y) =>
+                        {
+                            if (y.FIO.StartsWith("a", StringComparison.OrdinalIgnoreCase) && !x.FIO.StartsWith("a", StringComparison.OrdinalIgnoreCase))
+                            {
+                                return -1;
+                            }
+                            else if (!y.FIO.StartsWith("a", StringComparison.OrdinalIgnoreCase) && x.FIO.StartsWith("a", StringComparison.OrdinalIgnoreCase))
+                            {
+                                return 1;
+                            }
+                            else
+                            {
+                                return string.Compare(y.FIO, x.FIO, StringComparison.OrdinalIgnoreCase);
+                            }
+                        });
+                    }
+                    else if (cbSort.Text == "Dori Id")
+                    {
+                        reportSelesPillList.Sort((x, y) => y.DoriId.CompareTo(x.DoriId));
+                    }
+                    else if (cbSort.Text == "Nomi")
+                    {
+                        reportSelesPillList.Sort((x, y) => y.Nomi.CompareTo(x.Nomi));
+                    }
+                    else if (cbSort.Text == "Soni")
+                    {
+                        reportSelesPillList.Sort((x, y) => y.Soni.CompareTo(x.Soni));
+                    }
+                    else if (cbSort.Text == "Sotilgan vaqti")
+                    {
+                        reportSelesPillList.Sort((x, y) => y.SotilganVaqti.CompareTo(x.SotilganVaqti));
+                    }
+                    else if (cbSort.Text == "Narxi")
+                    {
+                        reportSelesPillList.Sort((x, y) => y.Narxi.CompareTo(x.Narxi));
+                    }
+                    dGVEmploye.DataSource = reportSelesPillList;
+                }
+                else
+                {
+                    MessageBox.Show("Xatolik mavjud tekshirib qaytadan kiriting.");
+                }
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Noto'g'ri formatda qiymat kiritildi.");
+            }
+            catch (IOException ex)
+            {
+                MessageBox.Show("Faylda xatolik: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Xatolik: " + ex.Message);
+            }
+        }
+
+        private void btQaytarish_Click(object sender, EventArgs e)
+        {
+            dGVEmploye.DataSource = functions.reportSelesPills;
         }
     }
 }
