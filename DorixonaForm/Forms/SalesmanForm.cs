@@ -96,6 +96,15 @@ namespace DorixonaForm
                     streamWriter1.WriteLine(pill.Id + "," + pill.Nomi + "," + pill.Soni + "," + pill.Muddati + "," + pill.Narxi + "," + pill.QoshilganSana);
                 }
                 streamWriter1.Close();
+                int Id1 = 0;
+                foreach (Employe employe in functions.employeList)
+                {
+                    if (employe.Login == NewLogin)
+                    {
+                        Id1 = employe.Id;
+                        break;
+                    }
+                }
                 MessageBox.Show("Dorilar sotildi", "Muvaffaqqiyatli", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 StreamWriter stream = new StreamWriter(functions.AllInformationsPath);
                 int Id = 0;
@@ -107,12 +116,12 @@ namespace DorixonaForm
                 StreamWriter streamWriter2 = new StreamWriter(functions.ReportSelesPillsPath);
                 foreach (ReportSelesPill reportSelesPill in functions.reportSelesPills)
                 {
-                    streamWriter2.WriteLine(reportSelesPill.DoriId + "," + reportSelesPill.FIO + "," + reportSelesPill.Nomi + "," + reportSelesPill.Soni + "," + reportSelesPill.SotilganVaqti + "," + reportSelesPill.Narxi);
+                    streamWriter2.WriteLine(reportSelesPill.SotuvchiId + "," + reportSelesPill.FIO + "," + reportSelesPill.DoriId + "," + reportSelesPill.Nomi + "," + reportSelesPill.Soni + "," + reportSelesPill.SotilganVaqti + "," + reportSelesPill.Narxi);
                 }
                 foreach (SellingPill sellingPill in functions.sellingPillesList)
                 {
                     stream.WriteLine((Id + 1) + "," + FIO + "," + InformationType.SalesPill.ToString() + "," + $"Id={sellingPill.Id}|Nomi={sellingPill.Nomi}|Soni={sellingPill.Soni}|Narxi={sellingPill.Narxi}" + "," + DateTime.Now.ToString());
-                    streamWriter2.WriteLine(sellingPill.Id + "," + FIO + "," + sellingPill.Nomi + "," + sellingPill.Soni + "," + DateTime.Now.ToString() + "," + sellingPill.Narxi);
+                    streamWriter2.WriteLine(Id1 + "," + FIO + "," + sellingPill.Id + "," + sellingPill.Nomi + "," + sellingPill.Soni + "," + DateTime.Now.ToString() + "," + sellingPill.Narxi);
                 }
                 streamWriter2.Close();
                 stream.Close();

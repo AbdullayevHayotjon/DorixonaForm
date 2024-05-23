@@ -8,8 +8,9 @@ namespace DorixonaForm.Actions
 {
     public class ReportSelesPill
     {
-        public int DoriId { get; set; }
+        public int SotuvchiId { get; set; }
         public string FIO { get; set; }
+        public int DoriId { get; set; }
         public string Nomi { get; set; }
         public int Soni { get; set; }
         public string SotilganVaqti { get; set; }

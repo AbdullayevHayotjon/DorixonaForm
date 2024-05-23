@@ -52,7 +52,7 @@ namespace DorixonaForm.Actions
             for (int i = 0; i < ReportSelesPills.Length; i++)
             {
                 string[] ReportSelesPillsLine = ReportSelesPills[i].Split(",");
-                reportSelesPills.Add(new ReportSelesPill() { DoriId = int.Parse(ReportSelesPillsLine[0]), FIO = ReportSelesPillsLine[1], Nomi = ReportSelesPillsLine[2], Soni = int.Parse(ReportSelesPillsLine[3]), SotilganVaqti = ReportSelesPillsLine[4], Narxi = int.Parse(ReportSelesPillsLine[5]) });
+                reportSelesPills.Add(new ReportSelesPill() { SotuvchiId = int.Parse(ReportSelesPillsLine[0]), FIO = ReportSelesPillsLine[1], DoriId = int.Parse(ReportSelesPillsLine[2]), Nomi = ReportSelesPillsLine[3], Soni = int.Parse(ReportSelesPillsLine[4]), SotilganVaqti = ReportSelesPillsLine[5], Narxi = int.Parse(ReportSelesPillsLine[6]) });
             }
         }
         public bool CheckProbel(string str)
