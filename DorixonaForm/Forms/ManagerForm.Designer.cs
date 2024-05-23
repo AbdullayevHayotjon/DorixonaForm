@@ -255,7 +255,8 @@
             cbSort.DropDownStyle = ComboBoxStyle.DropDownList;
             cbSort.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
             cbSort.FormattingEnabled = true;
-            cbSort.Location = new Point(782, 220);
+            cbSort.Items.AddRange(new object[] { "Id", "FIO", "Login", "Password", "PhoneNumber", "EmployeType" });
+            cbSort.Location = new Point(783, 219);
             cbSort.Name = "cbSort";
             cbSort.Size = new Size(269, 49);
             cbSort.TabIndex = 78;
@@ -264,7 +265,7 @@
             // 
             btQaytarish.BackColor = Color.LightSkyBlue;
             btQaytarish.Font = new Font("Trebuchet MS", 18F);
-            btQaytarish.Location = new Point(1351, 221);
+            btQaytarish.Location = new Point(1369, 220);
             btQaytarish.Name = "btQaytarish";
             btQaytarish.Size = new Size(167, 49);
             btQaytarish.TabIndex = 79;
@@ -278,7 +279,7 @@
             btKamayish.Font = new Font("Trebuchet MS", 18F);
             btKamayish.Location = new Point(1204, 221);
             btKamayish.Name = "btKamayish";
-            btKamayish.Size = new Size(142, 49);
+            btKamayish.Size = new Size(152, 49);
             btKamayish.TabIndex = 80;
             btKamayish.Text = "Kamayish";
             btKamayish.UseVisualStyleBackColor = false;

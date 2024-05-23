@@ -110,7 +110,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label10.Location = new Point(1004, 258);
+            label10.Location = new Point(1100, 206);
             label10.Name = "label10";
             label10.Size = new Size(165, 38);
             label10.TabIndex = 155;
@@ -120,7 +120,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label7.Location = new Point(1004, 204);
+            label7.Location = new Point(1100, 270);
             label7.Name = "label7";
             label7.Size = new Size(107, 38);
             label7.TabIndex = 154;
@@ -130,7 +130,7 @@
             // 
             txSalesmanId.BackColor = Color.FromArgb(255, 255, 192);
             txSalesmanId.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txSalesmanId.Location = new Point(1215, 248);
+            txSalesmanId.Location = new Point(1311, 196);
             txSalesmanId.Name = "txSalesmanId";
             txSalesmanId.Size = new Size(243, 48);
             txSalesmanId.TabIndex = 153;
@@ -139,7 +139,7 @@
             // 
             txPillId.BackColor = Color.FromArgb(255, 255, 192);
             txPillId.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txPillId.Location = new Point(1215, 194);
+            txPillId.Location = new Point(1311, 260);
             txPillId.Name = "txPillId";
             txPillId.Size = new Size(243, 48);
             txPillId.TabIndex = 152;

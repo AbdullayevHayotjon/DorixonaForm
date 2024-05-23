@@ -145,20 +145,17 @@ namespace DorixonaForm.Forms
             {
                 if (cbSort.Text.Length > 0)
                 {
-                    string EmployePath = @"..\..\..\.txt files\EmployesList.txt";
-                    string[] EmployeAllLines = File.ReadAllLines(EmployePath);
                     List<Employe> EmployeOld = new List<Employe>();
-                    foreach (var EmployeAllLinesItem in EmployeAllLines)
+                    foreach (var EmployeAllLinesItem in functions.employeList)
                     {
-                        string[] EmployeInfo = EmployeAllLinesItem.Split(',');
                         EmployeOld.Add(new Employe
                         {
-                            Id = int.Parse(EmployeInfo[0]),
-                            FIO = EmployeInfo[1],
-                            Login = EmployeInfo[2],
-                            Password = EmployeInfo[3],
-                            EmployeType = EmployeInfo[4],
-                            PhoneNumber = EmployeInfo[5],
+                            Id = EmployeAllLinesItem.Id,
+                            FIO = EmployeAllLinesItem.FIO,
+                            Login = EmployeAllLinesItem.Login,
+                            Password = EmployeAllLinesItem.Password,
+                            EmployeType = EmployeAllLinesItem.EmployeType,
+                            PhoneNumber = EmployeAllLinesItem.PhoneNumber,
                         });
                     }
                     if (cbSort.Text == "Id")
@@ -222,20 +219,17 @@ namespace DorixonaForm.Forms
             {
                 if (cbSort.Text.Length > 0)
                 {
-                    string EmployePath = @"..\..\..\.txt files\EmployesList.txt";
-                    string[] EmployeAllLines = File.ReadAllLines(EmployePath);
                     List<Employe> EmployeOld = new List<Employe>();
-                    foreach (var EmployeAllLinesItem in EmployeAllLines)
+                    foreach (var EmployeAllLinesItem in functions.employeList)
                     {
-                        string[] EmployeInfo = EmployeAllLinesItem.Split(',');
                         EmployeOld.Add(new Employe
                         {
-                            Id = int.Parse(EmployeInfo[0]),
-                            FIO = EmployeInfo[1],
-                            Login = EmployeInfo[2],
-                            Password = EmployeInfo[3],
-                            EmployeType = EmployeInfo[4],
-                            PhoneNumber = EmployeInfo[5],
+                            Id = EmployeAllLinesItem.Id,
+                            FIO = EmployeAllLinesItem.FIO,
+                            Login = EmployeAllLinesItem.Login,
+                            Password = EmployeAllLinesItem.Password,
+                            EmployeType = EmployeAllLinesItem.EmployeType,
+                            PhoneNumber = EmployeAllLinesItem.PhoneNumber,
                         });
                     }
                     if (cbSort.Text == "Id")
@@ -300,12 +294,6 @@ namespace DorixonaForm.Forms
 
         private void btSearch_Click(object sender, EventArgs e)
         {
-            //Id
-            //FIO
-            //Login
-            //Password
-            //PhoneNumber
-            //EmployeType
             if (cbSearch.Text == "Id")
             {
                 List<Employe> employesList = new List<Employe>();
@@ -386,7 +374,10 @@ namespace DorixonaForm.Forms
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            this.Hide();
+            HelpReportsForm helpReportsForm = new HelpReportsForm(NewLogin);
+            helpReportsForm.StartPosition = FormStartPosition.CenterScreen;
+            helpReportsForm.Show();
         }
     }
 }
