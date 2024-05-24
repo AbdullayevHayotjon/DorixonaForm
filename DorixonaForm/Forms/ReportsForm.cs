@@ -174,10 +174,7 @@ namespace DorixonaForm.Forms
 
         private void btBack1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            ReportsForm reportsForm = new ReportsForm(NewLogin);
-            reportsForm.StartPosition = FormStartPosition.CenterScreen;
-            reportsForm.Show();
+            
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -542,7 +539,10 @@ namespace DorixonaForm.Forms
 
         private void btQaytarish_Click(object sender, EventArgs e)
         {
-            dGVEmploye.DataSource = functions.reportSelesPills;
+            this.Hide();
+            ReportsForm reportsForm = new ReportsForm(NewLogin);
+            reportsForm.StartPosition = FormStartPosition.CenterScreen;
+            reportsForm.Show();
         }
 
         private void ReportsForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -565,6 +565,11 @@ namespace DorixonaForm.Forms
             LoginForm loginForm = new LoginForm();
             loginForm.StartPosition = FormStartPosition.CenterScreen;
             loginForm.Show();
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

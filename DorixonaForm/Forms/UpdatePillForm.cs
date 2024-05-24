@@ -461,5 +461,10 @@ namespace DorixonaForm.Forms
             loginForm.StartPosition = FormStartPosition.CenterScreen;
             loginForm.Show();
         }
+
+        private void txPillInformation_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

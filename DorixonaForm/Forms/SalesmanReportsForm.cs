@@ -271,7 +271,10 @@ namespace DorixonaForm.Forms
 
         private void button9_Click(object sender, EventArgs e)
         {
-            dGWPills.DataSource = functions.pillsList;
+            this.Hide();
+            SalesmanReportsForm salesmanReportsForm = new SalesmanReportsForm(NewLogin);
+            salesmanReportsForm.StartPosition = FormStartPosition.CenterScreen;
+            salesmanReportsForm.Show();
         }
 
         private void btSearch_Click(object sender, EventArgs e)
@@ -344,10 +347,7 @@ namespace DorixonaForm.Forms
 
         private void btBack1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            SalesmanReportsForm salesmanReportsForm = new SalesmanReportsForm(NewLogin);
-            salesmanReportsForm.StartPosition = FormStartPosition.CenterScreen;
-            salesmanReportsForm.Show();
+            
         }
 
         private void SalesmanReportsForm_FormClosed(object sender, FormClosedEventArgs e)

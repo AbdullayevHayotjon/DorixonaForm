@@ -56,9 +56,10 @@ namespace DorixonaForm.Forms
                         sanoq = 1;
                         txFio.Text = employe.FIO;
                         txTel.Text = employe.PhoneNumber.ToString();
+                        txFio.ReadOnly = true;
+                        txTel.ReadOnly = true;
                         break;
                     }
-
                 }
                 if (sanoq == 0)
                 {
@@ -160,7 +161,11 @@ namespace DorixonaForm.Forms
                 {
                     if (int.Parse(txId.Text) == employe.Id)
                     {
-                        sanoq = 1;
+                        sanoq = 2;
+                        if (employe.EmployeType != EmployeType.Manager.ToString())
+                        {
+                            sanoq = 1;
+                        }
                     }
                 }
                 if (sanoq == 1)
@@ -193,6 +198,13 @@ namespace DorixonaForm.Forms
                     }
                     streamWriter1.Close();
                     DGVdelete.DataSource = employes;
+                    txId.Clear();
+                    txFio.Clear();
+                    txTel.Clear();
+                }
+                else if (sanoq == 2)
+                {
+                    MessageBox.Show("Siz managerni o'chirolmaysiz", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txId.Clear();
                     txFio.Clear();
                     txTel.Clear();

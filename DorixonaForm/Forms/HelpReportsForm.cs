@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -176,7 +177,10 @@ namespace DorixonaForm.Forms
 
         private void btQaytarish_Click(object sender, EventArgs e)
         {
-            dGVEmploye.DataSource = functions.allInformations;
+            this.Hide();
+            HelpReportsForm helpReportsForm = new HelpReportsForm(NewLogin);
+            helpReportsForm.StartPosition = FormStartPosition.CenterScreen;
+            helpReportsForm.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -112,10 +112,7 @@ namespace DorixonaForm.Forms
 
         private void btReports_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            ReportsForm reportsForm = new ReportsForm(NewLogin);
-            reportsForm.StartPosition = FormStartPosition.CenterScreen;
-            reportsForm.Show();
+            
         }
 
         private void btSettings_Click(object sender, EventArgs e)
@@ -416,10 +413,7 @@ namespace DorixonaForm.Forms
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
-            HelpReportsForm helpReportsForm = new HelpReportsForm(NewLogin);
-            helpReportsForm.StartPosition = FormStartPosition.CenterScreen;
-            helpReportsForm.Show();
+
         }
 
         private void ManagerForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -441,6 +435,22 @@ namespace DorixonaForm.Forms
             LoginForm loginForm = new LoginForm();
             loginForm.StartPosition = FormStartPosition.CenterScreen;
             loginForm.Show();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            HelpReportsForm helpReportsForm = new HelpReportsForm(NewLogin);
+            helpReportsForm.StartPosition = FormStartPosition.CenterScreen;
+            helpReportsForm.Show();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            ReportsForm reportsForm = new ReportsForm(NewLogin);
+            reportsForm.StartPosition = FormStartPosition.CenterScreen;
+            reportsForm.Show();
         }
     }
 }

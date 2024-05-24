@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            btReports = new Button();
             dGVEmploye = new DataGridView();
             dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
@@ -54,7 +53,6 @@
             btQaytarish = new Button();
             btKamayish = new Button();
             btOsish = new Button();
-            button1 = new Button();
             pillBindingSource = new BindingSource(components);
             dgwLess = new DataGridView();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
@@ -72,6 +70,10 @@
             soniDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             sotilganVaqtiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             narxiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            label1 = new Label();
+            label2 = new Label();
+            linkLabel1 = new LinkLabel();
+            linkLabel2 = new LinkLabel();
             ((System.ComponentModel.ISupportInitialize)dGVEmploye).BeginInit();
             ((System.ComponentModel.ISupportInitialize)employeBindingSource2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)employeBindingSource1).BeginInit();
@@ -85,25 +87,13 @@
             ((System.ComponentModel.ISupportInitialize)dgwMany).BeginInit();
             SuspendLayout();
             // 
-            // btReports
-            // 
-            btReports.BackColor = Color.LightSkyBlue;
-            btReports.Font = new Font("Trebuchet MS", 17F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btReports.Location = new Point(490, 857);
-            btReports.Name = "btReports";
-            btReports.Size = new Size(321, 54);
-            btReports.TabIndex = 10;
-            btReports.Text = "Asosiy hisobotlar";
-            btReports.UseVisualStyleBackColor = false;
-            btReports.Click += btReports_Click;
-            // 
             // dGVEmploye
             // 
             dGVEmploye.AutoGenerateColumns = false;
             dGVEmploye.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dGVEmploye.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7, dataGridViewTextBoxColumn8, dataGridViewTextBoxColumn9, dataGridViewTextBoxColumn10, dataGridViewTextBoxColumn11 });
             dGVEmploye.DataSource = employeBindingSource2;
-            dGVEmploye.Location = new Point(881, 274);
+            dGVEmploye.Location = new Point(875, 261);
             dGVEmploye.Name = "dGVEmploye";
             dGVEmploye.RowHeadersWidth = 51;
             dGVEmploye.Size = new Size(804, 532);
@@ -165,7 +155,7 @@
             // 
             lbFIO.AutoSize = true;
             lbFIO.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            lbFIO.Location = new Point(14, 9);
+            lbFIO.Location = new Point(12, 9);
             lbFIO.Name = "lbFIO";
             lbFIO.Size = new Size(61, 38);
             lbFIO.TabIndex = 20;
@@ -176,9 +166,9 @@
             // 
             lnklSettings.AutoSize = true;
             lnklSettings.Font = new Font("Segoe UI", 14F);
-            lnklSettings.Location = new Point(14, 47);
+            lnklSettings.Location = new Point(12, 47);
             lnklSettings.Name = "lnklSettings";
-            lnklSettings.Size = new Size(133, 32);
+            lnklSettings.Size = new Size(129, 32);
             lnklSettings.TabIndex = 30;
             lnklSettings.TabStop = true;
             lnklSettings.Text = "Sozlamalar";
@@ -188,7 +178,7 @@
             // 
             lbPillsList.AutoSize = true;
             lbPillsList.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            lbPillsList.Location = new Point(1143, 112);
+            lbPillsList.Location = new Point(1142, 99);
             lbPillsList.Name = "lbPillsList";
             lbPillsList.Size = new Size(276, 38);
             lbPillsList.TabIndex = 31;
@@ -198,9 +188,9 @@
             // 
             btDeleteSalesman.BackColor = Color.FromArgb(255, 128, 128);
             btDeleteSalesman.Font = new Font("Trebuchet MS", 13.8F);
-            btDeleteSalesman.Location = new Point(1451, 814);
+            btDeleteSalesman.Location = new Point(1472, 799);
             btDeleteSalesman.Name = "btDeleteSalesman";
-            btDeleteSalesman.Size = new Size(233, 44);
+            btDeleteSalesman.Size = new Size(207, 44);
             btDeleteSalesman.TabIndex = 39;
             btDeleteSalesman.Text = "Sotuvchi o'chirish";
             btDeleteSalesman.UseVisualStyleBackColor = false;
@@ -210,9 +200,9 @@
             // 
             btUpdateSalesman.BackColor = Color.FromArgb(255, 255, 128);
             btUpdateSalesman.Font = new Font("Trebuchet MS", 13.8F);
-            btUpdateSalesman.Location = new Point(1166, 814);
+            btUpdateSalesman.Location = new Point(1174, 799);
             btUpdateSalesman.Name = "btUpdateSalesman";
-            btUpdateSalesman.Size = new Size(253, 44);
+            btUpdateSalesman.Size = new Size(225, 44);
             btUpdateSalesman.TabIndex = 38;
             btUpdateSalesman.Text = "Sotuvchi yangilash";
             btUpdateSalesman.UseVisualStyleBackColor = false;
@@ -222,9 +212,9 @@
             // 
             btAddSalesman.BackColor = Color.FromArgb(128, 255, 128);
             btAddSalesman.Font = new Font("Trebuchet MS", 13.8F);
-            btAddSalesman.Location = new Point(881, 814);
+            btAddSalesman.Location = new Point(875, 801);
             btAddSalesman.Name = "btAddSalesman";
-            btAddSalesman.Size = new Size(233, 44);
+            btAddSalesman.Size = new Size(207, 44);
             btAddSalesman.TabIndex = 37;
             btAddSalesman.Text = "Sotuvchi qo'shish";
             btAddSalesman.UseVisualStyleBackColor = false;
@@ -236,18 +226,18 @@
             cbSearch.Font = new Font("Segoe UI Semilight", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
             cbSearch.FormattingEnabled = true;
             cbSearch.Items.AddRange(new object[] { "Id", "FIO", "Login", "Password", "PhoneNumber", "EmployeType" });
-            cbSearch.Location = new Point(880, 165);
+            cbSearch.Location = new Point(911, 152);
             cbSearch.Name = "cbSearch";
-            cbSearch.Size = new Size(302, 49);
+            cbSearch.Size = new Size(269, 49);
             cbSearch.TabIndex = 77;
             // 
             // btSearch
             // 
             btSearch.BackColor = Color.LightSkyBlue;
-            btSearch.Font = new Font("Trebuchet MS", 18F);
-            btSearch.Location = new Point(1520, 165);
+            btSearch.Font = new Font("Trebuchet MS", 14F);
+            btSearch.Location = new Point(1480, 158);
             btSearch.Name = "btSearch";
-            btSearch.Size = new Size(164, 49);
+            btSearch.Size = new Size(146, 44);
             btSearch.TabIndex = 75;
             btSearch.Text = "Qidirish";
             btSearch.UseVisualStyleBackColor = false;
@@ -257,9 +247,9 @@
             // 
             txPillInformation.BackColor = Color.FromArgb(255, 255, 192);
             txPillInformation.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txPillInformation.Location = new Point(1188, 165);
+            txPillInformation.Location = new Point(1185, 152);
             txPillInformation.Name = "txPillInformation";
-            txPillInformation.Size = new Size(326, 48);
+            txPillInformation.Size = new Size(290, 48);
             txPillInformation.TabIndex = 76;
             // 
             // cbSort
@@ -268,18 +258,18 @@
             cbSort.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
             cbSort.FormattingEnabled = true;
             cbSort.Items.AddRange(new object[] { "Id", "FIO", "Login", "Password", "PhoneNumber", "EmployeType" });
-            cbSort.Location = new Point(881, 219);
+            cbSort.Location = new Point(912, 206);
             cbSort.Name = "cbSort";
-            cbSort.Size = new Size(302, 49);
+            cbSort.Size = new Size(269, 49);
             cbSort.TabIndex = 78;
             // 
             // btQaytarish
             // 
             btQaytarish.BackColor = Color.LightSkyBlue;
-            btQaytarish.Font = new Font("Trebuchet MS", 18F);
-            btQaytarish.Location = new Point(1520, 220);
+            btQaytarish.Font = new Font("Trebuchet MS", 14F);
+            btQaytarish.Location = new Point(1480, 212);
             btQaytarish.Name = "btQaytarish";
-            btQaytarish.Size = new Size(165, 49);
+            btQaytarish.Size = new Size(147, 44);
             btQaytarish.TabIndex = 79;
             btQaytarish.Text = "Qaytarish";
             btQaytarish.UseVisualStyleBackColor = false;
@@ -288,10 +278,10 @@
             // btKamayish
             // 
             btKamayish.BackColor = Color.LightSkyBlue;
-            btKamayish.Font = new Font("Trebuchet MS", 18F);
-            btKamayish.Location = new Point(1354, 221);
+            btKamayish.Font = new Font("Trebuchet MS", 14F);
+            btKamayish.Location = new Point(1332, 212);
             btKamayish.Name = "btKamayish";
-            btKamayish.Size = new Size(160, 49);
+            btKamayish.Size = new Size(142, 44);
             btKamayish.TabIndex = 80;
             btKamayish.Text = "Kamayish";
             btKamayish.UseVisualStyleBackColor = false;
@@ -300,26 +290,14 @@
             // btOsish
             // 
             btOsish.BackColor = Color.LightSkyBlue;
-            btOsish.Font = new Font("Trebuchet MS", 18F);
-            btOsish.Location = new Point(1188, 221);
+            btOsish.Font = new Font("Trebuchet MS", 14F);
+            btOsish.Location = new Point(1185, 212);
             btOsish.Name = "btOsish";
-            btOsish.Size = new Size(160, 49);
+            btOsish.Size = new Size(142, 44);
             btOsish.TabIndex = 81;
             btOsish.Text = "O'sish";
             btOsish.UseVisualStyleBackColor = false;
             btOsish.Click += btOsish_Click;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.LightSkyBlue;
-            button1.Font = new Font("Trebuchet MS", 17F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button1.Location = new Point(72, 857);
-            button1.Name = "button1";
-            button1.Size = new Size(321, 54);
-            button1.TabIndex = 82;
-            button1.Text = "Qo'shimcha hisobotlar";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click_1;
             // 
             // pillBindingSource
             // 
@@ -331,10 +309,10 @@
             dgwLess.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgwLess.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn13 });
             dgwLess.DataSource = pillBindingSource;
-            dgwLess.Location = new Point(40, 499);
+            dgwLess.Location = new Point(32, 486);
             dgwLess.Name = "dgwLess";
             dgwLess.RowHeadersWidth = 51;
-            dgwLess.Size = new Size(803, 307);
+            dgwLess.Size = new Size(805, 307);
             dgwLess.TabIndex = 84;
             // 
             // dataGridViewTextBoxColumn1
@@ -403,10 +381,10 @@
             dgwMany.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgwMany.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, nomiDataGridViewTextBoxColumn, soniDataGridViewTextBoxColumn, sotilganVaqtiDataGridViewTextBoxColumn, narxiDataGridViewTextBoxColumn });
             dgwMany.DataSource = salesmanReportBindingSource2;
-            dgwMany.Location = new Point(40, 165);
+            dgwMany.Location = new Point(96, 241);
             dgwMany.Name = "dgwMany";
             dgwMany.RowHeadersWidth = 51;
-            dgwMany.Size = new Size(803, 328);
+            dgwMany.Size = new Size(680, 187);
             dgwMany.TabIndex = 85;
             // 
             // idDataGridViewTextBoxColumn
@@ -449,15 +427,63 @@
             narxiDataGridViewTextBoxColumn.Name = "narxiDataGridViewTextBoxColumn";
             narxiDataGridViewTextBoxColumn.Width = 125;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label1.Location = new Point(272, 193);
+            label1.Name = "label1";
+            label1.Size = new Size(365, 38);
+            label1.TabIndex = 86;
+            label1.Text = "Eng ko'p sotilgan 5 ta dori";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label2.ForeColor = Color.Red;
+            label2.Location = new Point(230, 445);
+            label2.Name = "label2";
+            label2.Size = new Size(398, 38);
+            label2.TabIndex = 87;
+            label2.Text = "10 tadan kam qolgan dorilar";
+            // 
+            // linkLabel1
+            // 
+            linkLabel1.AutoSize = true;
+            linkLabel1.Font = new Font("Segoe UI", 14F);
+            linkLabel1.Location = new Point(347, 47);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(253, 32);
+            linkLabel1.TabIndex = 88;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Qo'shimcha hisobotlar";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            // 
+            // linkLabel2
+            // 
+            linkLabel2.AutoSize = true;
+            linkLabel2.Font = new Font("Segoe UI", 14F);
+            linkLabel2.Location = new Point(147, 47);
+            linkLabel2.Name = "linkLabel2";
+            linkLabel2.Size = new Size(194, 32);
+            linkLabel2.TabIndex = 89;
+            linkLabel2.TabStop = true;
+            linkLabel2.Text = "Asosiy hisobotlar";
+            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
+            // 
             // ManagerForm
             // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightCyan;
-            ClientSize = new Size(1799, 1033);
+            ClientSize = new Size(1717, 943);
+            Controls.Add(linkLabel2);
+            Controls.Add(linkLabel1);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(dgwMany);
             Controls.Add(dgwLess);
-            Controls.Add(button1);
             Controls.Add(btOsish);
             Controls.Add(btKamayish);
             Controls.Add(btQaytarish);
@@ -472,7 +498,6 @@
             Controls.Add(lnklSettings);
             Controls.Add(lbFIO);
             Controls.Add(dGVEmploye);
-            Controls.Add(btReports);
             Name = "ManagerForm";
             Text = "ManagerForm";
             FormClosed += ManagerForm_FormClosed;
@@ -493,8 +518,6 @@
         }
 
         #endregion
-
-        private Button btReports;
         private DataGridView dGVEmploye;
         private BindingSource employeBindingSource;
         private DataGridViewTextBoxColumn fIODataGridViewTextBoxColumn;
@@ -527,7 +550,6 @@
         private Button btQaytarish;
         private Button btKamayish;
         private Button btOsish;
-        private Button button1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
@@ -547,5 +569,9 @@
         private DataGridViewTextBoxColumn soniDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn sotilganVaqtiDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn narxiDataGridViewTextBoxColumn;
+        private Label label1;
+        private Label label2;
+        private LinkLabel linkLabel1;
+        private LinkLabel linkLabel2;
     }
 }
