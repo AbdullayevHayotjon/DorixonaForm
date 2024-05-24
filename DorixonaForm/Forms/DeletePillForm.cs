@@ -190,6 +190,10 @@ namespace DorixonaForm.Forms
                         txDeletePillCount.Text = pill.Soni.ToString();
                         txDeletePillLifeTime.Text = pill.Muddati.ToString();
                         txDeletePillPrice.Text = pill.Narxi.ToString();
+                        txDeletePillName.ReadOnly = true;
+                        txDeletePillCount.ReadOnly = true;
+                        txDeletePillLifeTime.ReadOnly = true;
+                        txDeletePillPrice.ReadOnly = true;
                         break;
                     }
                 }

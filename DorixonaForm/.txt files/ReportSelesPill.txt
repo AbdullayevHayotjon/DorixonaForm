@@ -4,9 +4,14 @@
 4,Hafizov Sardorbek,7,Kukumazim,15,22.05.2024 20:30:51,45000
 4,Hafizov Sardorbek,20,Amikatsin,10,23.05.2024 20:30:51,360000
 4,Hafizov Sardorbek,9,Xolosas,20,24.05.2024 20:30:51,810000
-2,Muqimov Quvonch,3,Tramadol,16,24.05.2024 20:53:08,36800
-2,Muqimov Quvonch,15,Ofloksatsin,5,24.05.2024 20:53:08,265000
-2,Muqimov Quvonch,23,Kalsiy xlorid,8,24.05.2024 20:53:08,296000
-2,Muqimov Quvonch,14,Siprofloksatsin,23,24.05.2024 20:53:08,1610000
-2,Muqimov Quvonch,12,Asiklovir,12,24.05.2024 20:53:08,876000
-2,Muqimov Quvonch,1,Deklofenak,20,24.05.2024 20:57:47,64000
+2,Muqimov Quvonch,3,Tramadol,16,10.05.2024 20:53:08,36800
+2,Muqimov Quvonch,15,Ofloksatsin,5,15.05.2024 20:53:08,265000
+2,Muqimov Quvonch,23,Kalsiy xlorid,8,17.05.2024 20:53:08,296000
+2,Muqimov Quvonch,14,Siprofloksatsin,23,20.05.2024 20:53:08,1610000
+2,Muqimov Quvonch,12,Asiklovir,12,21.05.2024 20:53:08,876000
+2,Muqimov Quvonch,1,Deklofenak,20,21.05.2024 20:57:47,64000
+3,Orazbaev Merxat,3,Tramadol,10,22.05.2024 21:26:45,23000
+3,Orazbaev Merxat,30,Trimol,15,22.05.2024 21:26:45,45000
+3,Orazbaev Merxat,2,Izofluran,8,24.05.2024 21:27:15,52000
+3,Orazbaev Merxat,10,Permetrin,10,24.05.2024 21:27:15,800000
+2,Muqimov Quvonch,3,Tramadol,7,24.05.2024 21:55:25,16100

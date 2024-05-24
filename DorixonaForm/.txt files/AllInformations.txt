@@ -14,17 +14,32 @@
 4,Hafizov Sardorbek,AddPill,Nomi=Ko'k nori|Soni=50|Muddati=300|Narxi=30000,24.05.2024 20:34:54
 4,Hafizov Sardorbek,UpdatePill,|Nomi: Ko'k nori|Soni: 50|Muddati: 300|Narxi: 300000|,24.05.2024 20:35:29
 4,Hafizov Sardorbek,DeletePill,Ko'k nori nomli dori o'chirildi,24.05.2024 20:35:47
-2,Muqimov Quvonch,EmployeEnter,Profilga kirdi,24.05.2024 20:50:26
+2,Muqimov Quvonch,EmployeEnter,Profilga kirdi,19.05.2024 07:50:26
 2,Muqimov Quvonch,SalesPill,Id=3|Nomi=Tramadol|Soni=16|Narxi=36800,24.05.2024 20:53:08
 2,Muqimov Quvonch,SalesPill,Id=15|Nomi=Ofloksatsin|Soni=5|Narxi=265000,24.05.2024 20:53:08
 2,Muqimov Quvonch,SalesPill,Id=23|Nomi=Kalsiy xlorid|Soni=8|Narxi=296000,24.05.2024 20:53:08
 2,Muqimov Quvonch,SalesPill,Id=14|Nomi=Siprofloksatsin|Soni=23|Narxi=1610000,24.05.2024 20:53:08
 2,Muqimov Quvonch,SalesPill,Id=12|Nomi=Asiklovir|Soni=12|Narxi=876000,24.05.2024 20:53:08
-2,Muqimov Quvonch,EmployeExit,Profildan chiqdi,24.05.2024 20:56:37
-1,Abdullayev Hayot,EmployeEnter,Profilga kirdi,24.05.2024 20:56:50
-1,Abdullayev Hayot,EmployeExit,Profildan chiqdi,24.05.2024 20:57:09
-2,Muqimov Quvonch,EmployeEnter,Profilga kirdi,24.05.2024 20:57:19
+2,Muqimov Quvonch,EmployeExit,Profildan chiqdi,19.05.2024 20:56:37
+1,Abdullayev Hayot,EmployeEnter,Profilga kirdi,23.05.2024 08:56:50
+1,Abdullayev Hayot,EmployeExit,Profildan chiqdi,23.05.2024 19:57:09
+2,Muqimov Quvonch,EmployeEnter,Profilga kirdi,23.05.2024 07:57:19
 2,Muqimov Quvonch,SalesPill,Id=1|Nomi=Deklofenak|Soni=20|Narxi=64000,24.05.2024 20:57:47
-2,Muqimov Quvonch,EmployeExit,Profildan chiqdi,24.05.2024 20:57:49
+2,Muqimov Quvonch,EmployeExit,Profildan chiqdi,23.05.2024 20:57:49
 1,Abdullayev Hayot,EmployeEnter,Profilga kirdi,24.05.2024 20:57:57
 1,Abdullayev Hayot,EmployeExit,Profildan chiqdi,24.05.2024 21:00:47
+3,Orazbaev Merxat,EmployeEnter,Profilga kirdi,24.05.2024 09:25:50
+3,Orazbaev Merxat,SalesPill,Id=3|Nomi=Tramadol|Soni=10|Narxi=23000,24.05.2024 21:26:45
+3,Orazbaev Merxat,SalesPill,Id=30|Nomi=Trimol|Soni=15|Narxi=45000,24.05.2024 21:26:45
+3,Orazbaev Merxat,SalesPill,Id=2|Nomi=Izofluran|Soni=8|Narxi=52000,24.05.2024 21:27:15
+3,Orazbaev Merxat,SalesPill,Id=10|Nomi=Permetrin|Soni=10|Narxi=800000,24.05.2024 21:27:15
+2,Muqimov Quvonch,EmployeEnter,Profilga kirdi,24.05.2024 21:33:51
+2,Muqimov Quvonch,AddPill,Nomi=Omiz|Soni=30|Muddati=25|Narxi=4300,24.05.2024 21:38:15
+2,Muqimov Quvonch,UpdatePill,|Nomi: Xolosas|Soni: 60|Muddati: 75|Narxi: 8100|,24.05.2024 21:40:04
+2,Muqimov Quvonch,EmployeExit,Profildan chiqdi,24.05.2024 21:41:32
+2,Muqimov Quvonch,EmployeEnter,Profilga kirdi,24.05.2024 21:42:53
+2,Muqimov Quvonch,DeletePill,Diklofenak nomli dori o'chirildi,24.05.2024 21:43:46
+2,Muqimov Quvonch,EmployeExit,Profildan chiqdi,24.05.2024 21:50:41
+2,Muqimov Quvonch,EmployeEnter,Profilga kirdi,24.05.2024 21:54:41
+2,Muqimov Quvonch,SalesPill,Id=3|Nomi=Tramadol|Soni=7|Narxi=16100,24.05.2024 21:55:25
+2,Muqimov Quvonch,EmployeExit,Profildan chiqdi,24.05.2024 21:58:52

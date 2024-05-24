@@ -231,6 +231,7 @@ namespace DorixonaForm
                                     if (sellingPill.Id == int.Parse(txId.Text))
                                     {
                                         sanoq = 4;
+                                        sellingPill.Narxi = sellingPill.Narxi + int.Parse(txPillCount.Text) * (sellingPill.Narxi / sellingPill.Soni);
                                         sellingPill.Soni = sellingPill.Soni + int.Parse(txPillCount.Text);
                                     }
                                     streamWriter.WriteLine(sellingPill.Id + "," + sellingPill.Nomi + "," + sellingPill.Soni + "," + sellingPill.Narxi);

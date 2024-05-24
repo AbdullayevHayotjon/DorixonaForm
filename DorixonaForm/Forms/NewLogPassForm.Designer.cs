@@ -33,7 +33,6 @@
             lbSmsPassword = new Label();
             lbPhoneNumber = new Label();
             txConfirmation = new Button();
-            btBack = new Button();
             lb998 = new Label();
             btNewLogPass = new Button();
             txNewPassword = new TextBox();
@@ -94,18 +93,6 @@
             txConfirmation.UseVisualStyleBackColor = false;
             txConfirmation.Click += txConfirmation_Click;
             // 
-            // btBack
-            // 
-            btBack.BackColor = Color.Silver;
-            btBack.Font = new Font("Trebuchet MS", 14F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btBack.Location = new Point(740, 696);
-            btBack.Name = "btBack";
-            btBack.Size = new Size(197, 44);
-            btBack.TabIndex = 19;
-            btBack.Text = "Orqaga qaytish";
-            btBack.UseVisualStyleBackColor = false;
-            btBack.Click += btBack_Click;
-            // 
             // lb998
             // 
             lb998.AutoSize = true;
@@ -157,7 +144,6 @@
             panel1.Controls.Add(lbSmsPassword);
             panel1.Controls.Add(lb998);
             panel1.Controls.Add(txSmsPassword);
-            panel1.Controls.Add(btBack);
             panel1.Controls.Add(txPhoneNumber);
             panel1.Controls.Add(txConfirmation);
             panel1.Location = new Point(373, 68);
@@ -187,7 +173,6 @@
         private Label lbSmsPassword;
         private Label lbPhoneNumber;
         private Button txConfirmation;
-        private Button btBack;
         private Label lb998;
         private Button btNewLogPass;
         private TextBox txNewPassword;
