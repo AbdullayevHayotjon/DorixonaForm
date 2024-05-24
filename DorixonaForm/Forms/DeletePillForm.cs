@@ -395,6 +395,12 @@ namespace DorixonaForm.Forms
 
         private void btExit_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void DeletePillForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
             StreamWriter streamWriter1 = new StreamWriter(functions.AllInformationsPath);
             foreach (AllInformations allInformations in functions.allInformations)
             {

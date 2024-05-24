@@ -47,7 +47,6 @@
             panel2 = new Panel();
             label1 = new Label();
             label2 = new Label();
-            button1 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -56,9 +55,9 @@
             // 
             btBack.BackColor = Color.Silver;
             btBack.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btBack.Location = new Point(1407, 902);
+            btBack.Location = new Point(1583, 902);
             btBack.Name = "btBack";
-            btBack.Size = new Size(249, 53);
+            btBack.Size = new Size(280, 53);
             btBack.TabIndex = 41;
             btBack.Text = "Orqaga qaytish";
             btBack.UseVisualStyleBackColor = false;
@@ -68,9 +67,9 @@
             // 
             btSaveNewPassword.BackColor = Color.LightSkyBlue;
             btSaveNewPassword.Font = new Font("Trebuchet MS", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btSaveNewPassword.Location = new Point(29, 584);
+            btSaveNewPassword.Location = new Point(33, 584);
             btSaveNewPassword.Name = "btSaveNewPassword";
-            btSaveNewPassword.Size = new Size(677, 60);
+            btSaveNewPassword.Size = new Size(762, 60);
             btSaveNewPassword.TabIndex = 55;
             btSaveNewPassword.Text = "Saqlash";
             btSaveNewPassword.UseVisualStyleBackColor = false;
@@ -80,16 +79,16 @@
             // 
             txNewPassword2.BackColor = Color.FromArgb(255, 255, 192);
             txNewPassword2.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txNewPassword2.Location = new Point(474, 307);
+            txNewPassword2.Location = new Point(533, 307);
             txNewPassword2.Name = "txNewPassword2";
-            txNewPassword2.Size = new Size(233, 48);
+            txNewPassword2.Size = new Size(262, 48);
             txNewPassword2.TabIndex = 54;
             // 
             // lbNewPassword2
             // 
             lbNewPassword2.AutoSize = true;
             lbNewPassword2.Font = new Font("Trebuchet MS", 22.2F);
-            lbNewPassword2.Location = new Point(29, 305);
+            lbNewPassword2.Location = new Point(33, 305);
             lbNewPassword2.Name = "lbNewPassword2";
             lbNewPassword2.Size = new Size(261, 46);
             lbNewPassword2.TabIndex = 53;
@@ -99,25 +98,25 @@
             // 
             txOldPassword.BackColor = Color.FromArgb(255, 255, 192);
             txOldPassword.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txOldPassword.Location = new Point(474, 140);
+            txOldPassword.Location = new Point(533, 140);
             txOldPassword.Name = "txOldPassword";
-            txOldPassword.Size = new Size(233, 48);
+            txOldPassword.Size = new Size(262, 48);
             txOldPassword.TabIndex = 52;
             // 
             // txNewPassword
             // 
             txNewPassword.BackColor = Color.FromArgb(255, 255, 192);
             txNewPassword.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txNewPassword.Location = new Point(474, 224);
+            txNewPassword.Location = new Point(533, 224);
             txNewPassword.Name = "txNewPassword";
-            txNewPassword.Size = new Size(233, 48);
+            txNewPassword.Size = new Size(262, 48);
             txNewPassword.TabIndex = 51;
             // 
             // lbNewPassword
             // 
             lbNewPassword.AutoSize = true;
             lbNewPassword.Font = new Font("Trebuchet MS", 22.2F);
-            lbNewPassword.Location = new Point(29, 222);
+            lbNewPassword.Location = new Point(33, 222);
             lbNewPassword.Name = "lbNewPassword";
             lbNewPassword.Size = new Size(379, 46);
             lbNewPassword.TabIndex = 50;
@@ -127,7 +126,7 @@
             // 
             lbNewLogin.AutoSize = true;
             lbNewLogin.Font = new Font("Trebuchet MS", 22.2F);
-            lbNewLogin.Location = new Point(29, 138);
+            lbNewLogin.Location = new Point(33, 138);
             lbNewLogin.Name = "lbNewLogin";
             lbNewLogin.Size = new Size(489, 46);
             lbNewLogin.TabIndex = 49;
@@ -137,9 +136,9 @@
             // 
             button2.BackColor = Color.LightSkyBlue;
             button2.Font = new Font("Trebuchet MS", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button2.Location = new Point(141, 584);
+            button2.Location = new Point(159, 584);
             button2.Name = "button2";
-            button2.Size = new Size(677, 60);
+            button2.Size = new Size(762, 60);
             button2.TabIndex = 63;
             button2.Text = "Saqlash";
             button2.UseVisualStyleBackColor = false;
@@ -149,7 +148,7 @@
             // 
             lb998.AutoSize = true;
             lb998.Font = new Font("Calibri Light", 22.2F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            lb998.Location = new Point(587, 139);
+            lb998.Location = new Point(660, 139);
             lb998.Name = "lb998";
             lb998.Size = new Size(95, 45);
             lb998.TabIndex = 61;
@@ -160,9 +159,9 @@
             // 
             txSendPassword.BackColor = Color.LightSkyBlue;
             txSendPassword.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            txSendPassword.Location = new Point(676, 228);
+            txSendPassword.Location = new Point(760, 228);
             txSendPassword.Name = "txSendPassword";
-            txSendPassword.Size = new Size(213, 53);
+            txSendPassword.Size = new Size(240, 53);
             txSendPassword.TabIndex = 60;
             txSendPassword.Text = "Kod olish";
             txSendPassword.UseVisualStyleBackColor = false;
@@ -172,9 +171,9 @@
             // 
             txNewPhoneNumber.BackColor = Color.FromArgb(255, 255, 192);
             txNewPhoneNumber.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txNewPhoneNumber.Location = new Point(676, 136);
+            txNewPhoneNumber.Location = new Point(760, 136);
             txNewPhoneNumber.Name = "txNewPhoneNumber";
-            txNewPhoneNumber.Size = new Size(213, 48);
+            txNewPhoneNumber.Size = new Size(239, 48);
             txNewPhoneNumber.TabIndex = 59;
             txNewPhoneNumber.Tag = "";
             // 
@@ -182,9 +181,9 @@
             // 
             txSmsPassword.BackColor = Color.FromArgb(255, 255, 192);
             txSmsPassword.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txSmsPassword.Location = new Point(334, 228);
+            txSmsPassword.Location = new Point(376, 228);
             txSmsPassword.Name = "txSmsPassword";
-            txSmsPassword.Size = new Size(264, 48);
+            txSmsPassword.Size = new Size(296, 48);
             txSmsPassword.TabIndex = 58;
             txSmsPassword.Tag = "";
             // 
@@ -192,7 +191,7 @@
             // 
             lbSmsPassword.AutoSize = true;
             lbSmsPassword.Font = new Font("Trebuchet MS", 22.2F);
-            lbSmsPassword.Location = new Point(9, 226);
+            lbSmsPassword.Location = new Point(10, 226);
             lbSmsPassword.Name = "lbSmsPassword";
             lbSmsPassword.Size = new Size(331, 46);
             lbSmsPassword.TabIndex = 57;
@@ -202,7 +201,7 @@
             // 
             lbNewPhoneNumber.AutoSize = true;
             lbNewPhoneNumber.Font = new Font("Trebuchet MS", 22.2F);
-            lbNewPhoneNumber.Location = new Point(9, 138);
+            lbNewPhoneNumber.Location = new Point(10, 138);
             lbNewPhoneNumber.Name = "lbNewPhoneNumber";
             lbNewPhoneNumber.Size = new Size(608, 46);
             lbNewPhoneNumber.TabIndex = 56;
@@ -218,9 +217,9 @@
             panel1.Controls.Add(txOldPassword);
             panel1.Controls.Add(lbNewPassword2);
             panel1.Controls.Add(txNewPassword2);
-            panel1.Location = new Point(14, 102);
+            panel1.Location = new Point(16, 102);
             panel1.Name = "panel1";
-            panel1.Size = new Size(724, 794);
+            panel1.Size = new Size(814, 794);
             panel1.TabIndex = 65;
             // 
             // panel2
@@ -233,16 +232,16 @@
             panel2.Controls.Add(lb998);
             panel2.Controls.Add(txNewPhoneNumber);
             panel2.Controls.Add(txSendPassword);
-            panel2.Location = new Point(758, 102);
+            panel2.Location = new Point(853, 102);
             panel2.Name = "panel2";
-            panel2.Size = new Size(898, 794);
+            panel2.Size = new Size(1010, 794);
             panel2.TabIndex = 66;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Trebuchet MS", 24F);
-            label1.Location = new Point(269, 50);
+            label1.Location = new Point(303, 50);
             label1.Name = "label1";
             label1.Size = new Size(352, 49);
             label1.TabIndex = 56;
@@ -252,31 +251,18 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Trebuchet MS", 24F);
-            label2.Location = new Point(974, 50);
+            label2.Location = new Point(1096, 50);
             label2.Name = "label2";
             label2.Size = new Size(519, 49);
             label2.TabIndex = 57;
             label2.Text = "Telefon raqamni o'zgartirish";
             // 
-            // button1
-            // 
-            button1.BackColor = Color.Silver;
-            button1.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button1.Location = new Point(1504, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(152, 53);
-            button1.TabIndex = 67;
-            button1.Text = "Chiqish";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
             // SettingsForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(1689, 1033);
-            Controls.Add(button1);
+            ClientSize = new Size(1900, 1033);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(panel2);
@@ -285,6 +271,7 @@
             Name = "SettingsForm";
             RightToLeft = RightToLeft.No;
             Text = "SettingsForm";
+            FormClosed += SettingsForm_FormClosed;
             Load += SettingsForm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -314,6 +301,5 @@
         private Panel panel2;
         private Label label1;
         private Label label2;
-        private Button button1;
     }
 }

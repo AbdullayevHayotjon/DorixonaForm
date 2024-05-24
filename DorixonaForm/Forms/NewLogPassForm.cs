@@ -26,10 +26,7 @@ namespace DorixonaForm
 
         private void btBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            LoginForm loginForm = new LoginForm();
-            loginForm.StartPosition = FormStartPosition.CenterScreen;
-            loginForm.Show();
+
         }
         private void txConfirmation_Click(object sender, EventArgs e)
         {
@@ -113,6 +110,14 @@ namespace DorixonaForm
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void NewLogPassForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.StartPosition = FormStartPosition.CenterScreen;
+            loginForm.Show();
         }
     }
 }

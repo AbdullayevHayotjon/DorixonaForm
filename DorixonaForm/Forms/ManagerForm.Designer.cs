@@ -44,7 +44,6 @@
             lnklSettings = new LinkLabel();
             lbPillsList = new Label();
             allInformationsBindingSource = new BindingSource(components);
-            button2 = new Button();
             btDeleteSalesman = new Button();
             btUpdateSalesman = new Button();
             btAddSalesman = new Button();
@@ -194,18 +193,6 @@
             lbPillsList.Size = new Size(276, 38);
             lbPillsList.TabIndex = 31;
             lbPillsList.Text = "Sotuvchilar ro'yxati";
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.Silver;
-            button2.Font = new Font("Trebuchet MS", 18F);
-            button2.Location = new Point(1540, 12);
-            button2.Name = "button2";
-            button2.Size = new Size(184, 50);
-            button2.TabIndex = 35;
-            button2.Text = "Chiqish";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
             // 
             // btDeleteSalesman
             // 
@@ -481,7 +468,6 @@
             Controls.Add(btDeleteSalesman);
             Controls.Add(btUpdateSalesman);
             Controls.Add(btAddSalesman);
-            Controls.Add(button2);
             Controls.Add(lbPillsList);
             Controls.Add(lnklSettings);
             Controls.Add(lbFIO);
@@ -489,6 +475,7 @@
             Controls.Add(btReports);
             Name = "ManagerForm";
             Text = "ManagerForm";
+            FormClosed += ManagerForm_FormClosed;
             Load += ManagerForm_Load;
             ((System.ComponentModel.ISupportInitialize)dGVEmploye).EndInit();
             ((System.ComponentModel.ISupportInitialize)employeBindingSource2).EndInit();
@@ -523,7 +510,6 @@
         private DataGridViewTextBoxColumn informationDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn processTimeDataGridViewTextBoxColumn;
         private BindingSource allInformationsBindingSource;
-        private Button button2;
         private Button btDeleteSalesman;
         private Button btUpdateSalesman;
         private Button btAddSalesman;

@@ -82,9 +82,9 @@ namespace DorixonaForm.Forms
             int sanoq = 0;
             foreach (SalesmanReport consolidatedReport in consolidatedList)
             {
-                if(dateTimeOld <= DateTime.Parse(consolidatedReport.SotilganVaqti) && DateTime.Parse(consolidatedReport.SotilganVaqti) <= dateTimeNow)
+                if (dateTimeOld <= DateTime.Parse(consolidatedReport.SotilganVaqti) && DateTime.Parse(consolidatedReport.SotilganVaqti) <= dateTimeNow)
                 {
-                    if(sanoq < 5)
+                    if (sanoq < 5)
                     {
                         pillManyList2.Add(new SalesmanReport() { Id = consolidatedReport.Id, Nomi = consolidatedReport.Nomi, Soni = consolidatedReport.Soni, SotilganVaqti = consolidatedReport.SotilganVaqti, Narxi = consolidatedReport.Narxi });
                         sanoq++;
@@ -153,23 +153,7 @@ namespace DorixonaForm.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            StreamWriter streamWriter1 = new StreamWriter(functions.AllInformationsPath);
-            foreach (AllInformations allInformations in functions.allInformations)
-            {
-                streamWriter1.WriteLine(allInformations.Id + "," + allInformations.FIO + "," + allInformations.ProcessType + "," + allInformations.Information + "," + allInformations.ProcessTime);
-            }
-            foreach (Employe employe in functions.employeList)
-            {
-                if (NewLogin == employe.Login)
-                {
-                    streamWriter1.WriteLine(employe.Id + "," + employe.FIO + "," + InformationType.EmployeExit + "," + "Profildan chiqdi" + "," + DateTime.Now.ToString());
-                }
-            }
-            streamWriter1.Close();
-            this.Hide();
-            LoginForm loginForm = new LoginForm();
-            loginForm.StartPosition = FormStartPosition.CenterScreen;
-            loginForm.Show();
+
         }
 
         private void btUpdateSalesman_Click(object sender, EventArgs e)
@@ -436,6 +420,27 @@ namespace DorixonaForm.Forms
             HelpReportsForm helpReportsForm = new HelpReportsForm(NewLogin);
             helpReportsForm.StartPosition = FormStartPosition.CenterScreen;
             helpReportsForm.Show();
+        }
+
+        private void ManagerForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            StreamWriter streamWriter1 = new StreamWriter(functions.AllInformationsPath);
+            foreach (AllInformations allInformations in functions.allInformations)
+            {
+                streamWriter1.WriteLine(allInformations.Id + "," + allInformations.FIO + "," + allInformations.ProcessType + "," + allInformations.Information + "," + allInformations.ProcessTime);
+            }
+            foreach (Employe employe in functions.employeList)
+            {
+                if (NewLogin == employe.Login)
+                {
+                    streamWriter1.WriteLine(employe.Id + "," + employe.FIO + "," + InformationType.EmployeExit + "," + "Profildan chiqdi" + "," + DateTime.Now.ToString());
+                }
+            }
+            streamWriter1.Close();
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.StartPosition = FormStartPosition.CenterScreen;
+            loginForm.Show();
         }
     }
 }

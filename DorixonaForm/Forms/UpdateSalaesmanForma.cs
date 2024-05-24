@@ -38,23 +38,7 @@ namespace DorixonaForm.Forms
 
         private void btExit_Click(object sender, EventArgs e)
         {
-            StreamWriter streamWriter1 = new StreamWriter(functions.AllInformationsPath);
-            foreach (AllInformations allInformations in functions.allInformations)
-            {
-                streamWriter1.WriteLine(allInformations.Id + "," + allInformations.FIO + "," + allInformations.ProcessType + "," + allInformations.Information + "," + allInformations.ProcessTime);
-            }
-            foreach (Employe employe in functions.employeList)
-            {
-                if (NewLogin == employe.Login)
-                {
-                    streamWriter1.WriteLine(employe.Id + "," + employe.FIO + "," + InformationType.EmployeExit + "," + "Profildan chiqdi" + "," + DateTime.Now.ToString());
-                }
-            }
-            streamWriter1.Close();
-            this.Hide();
-            LoginForm loginForm = new LoginForm();
-            loginForm.StartPosition = FormStartPosition.CenterScreen;
-            loginForm.Show();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -194,7 +178,7 @@ namespace DorixonaForm.Forms
                 {
                     if (employe.FIO.ToLower().Contains(txPillInformation.Text.ToLower()))
                     {
-                        employeList.Add(new Employe() { Id = employe.Id, FIO = employe.FIO, Login = employe.Login, Password = employe.Password, PhoneNumber = employe.PhoneNumber, EmployeType = employe.EmployeType});
+                        employeList.Add(new Employe() { Id = employe.Id, FIO = employe.FIO, Login = employe.Login, Password = employe.Password, PhoneNumber = employe.PhoneNumber, EmployeType = employe.EmployeType });
                     }
                 }
                 DGVupdate.DataSource = employeList;
@@ -263,6 +247,27 @@ namespace DorixonaForm.Forms
             {
                 MessageBox.Show("Bo'limdan birini tanlang", "Ma'lumot", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void UpdateSalaesmanForma_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            StreamWriter streamWriter1 = new StreamWriter(functions.AllInformationsPath);
+            foreach (AllInformations allInformations in functions.allInformations)
+            {
+                streamWriter1.WriteLine(allInformations.Id + "," + allInformations.FIO + "," + allInformations.ProcessType + "," + allInformations.Information + "," + allInformations.ProcessTime);
+            }
+            foreach (Employe employe in functions.employeList)
+            {
+                if (NewLogin == employe.Login)
+                {
+                    streamWriter1.WriteLine(employe.Id + "," + employe.FIO + "," + InformationType.EmployeExit + "," + "Profildan chiqdi" + "," + DateTime.Now.ToString());
+                }
+            }
+            streamWriter1.Close();
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.StartPosition = FormStartPosition.CenterScreen;
+            loginForm.Show();
         }
     }
 }

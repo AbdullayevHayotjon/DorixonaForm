@@ -34,3 +34,5 @@
 3,Orazbaev Merxat,EmployeEnter,Profilga kirdi,24.05.2024 15:46:07
 3,Orazbaev Merxat,EmployeEnter,Profilga kirdi,24.05.2024 15:47:17
 3,Orazbaev Merxat,EmployeEnter,Profilga kirdi,24.05.2024 15:47:51
+4,Hafizov Sardorbek,EmployeEnter,Profilga kirdi,24.05.2024 17:01:54
+4,Hafizov Sardorbek,EmployeExit,Profildan chiqdi,24.05.2024 17:02:11

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            btExit = new Button();
             Label = new Label();
             panel1 = new Panel();
             cbSearch = new ComboBox();
@@ -57,23 +56,11 @@
             ((System.ComponentModel.ISupportInitialize)employeBindingSource).BeginInit();
             SuspendLayout();
             // 
-            // btExit
-            // 
-            btExit.BackColor = Color.Silver;
-            btExit.Font = new Font("Trebuchet MS", 14F);
-            btExit.Location = new Point(1462, 38);
-            btExit.Name = "btExit";
-            btExit.Size = new Size(124, 44);
-            btExit.TabIndex = 66;
-            btExit.Text = "Chiqish";
-            btExit.UseVisualStyleBackColor = false;
-            btExit.Click += btExit_Click;
-            // 
             // Label
             // 
             Label.AutoSize = true;
             Label.Font = new Font("Trebuchet MS", 22.2F);
-            Label.Location = new Point(182, 47);
+            Label.Location = new Point(205, 47);
             Label.Name = "Label";
             Label.Size = new Size(285, 46);
             Label.TabIndex = 65;
@@ -93,9 +80,9 @@
             panel1.Controls.Add(button1);
             panel1.Controls.Add(txId);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(794, 108);
+            panel1.Location = new Point(893, 108);
             panel1.Name = "panel1";
-            panel1.Size = new Size(792, 764);
+            panel1.Size = new Size(891, 764);
             panel1.TabIndex = 64;
             // 
             // cbSearch
@@ -104,18 +91,18 @@
             cbSearch.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
             cbSearch.FormattingEnabled = true;
             cbSearch.Items.AddRange(new object[] { "Id", "FIO", "Login", "Password", "PhoneNumber", "EmployeType" });
-            cbSearch.Location = new Point(24, 22);
+            cbSearch.Location = new Point(27, 22);
             cbSearch.Name = "cbSearch";
-            cbSearch.Size = new Size(315, 49);
+            cbSearch.Size = new Size(354, 49);
             cbSearch.TabIndex = 66;
             // 
             // button2
             // 
             button2.BackColor = Color.DeepSkyBlue;
             button2.Font = new Font("Trebuchet MS", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button2.Location = new Point(219, 643);
+            button2.Location = new Point(246, 643);
             button2.Name = "button2";
-            button2.Size = new Size(259, 46);
+            button2.Size = new Size(291, 46);
             button2.TabIndex = 75;
             button2.Text = "O'chirish";
             button2.UseVisualStyleBackColor = false;
@@ -125,18 +112,18 @@
             // 
             txPillInformation.BackColor = Color.FromArgb(255, 255, 192);
             txPillInformation.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txPillInformation.Location = new Point(365, 22);
+            txPillInformation.Location = new Point(411, 22);
             txPillInformation.Name = "txPillInformation";
-            txPillInformation.Size = new Size(262, 48);
+            txPillInformation.Size = new Size(294, 48);
             txPillInformation.TabIndex = 65;
             // 
             // btSearch
             // 
             btSearch.BackColor = Color.LightSkyBlue;
             btSearch.Font = new Font("Trebuchet MS", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btSearch.Location = new Point(632, 22);
+            btSearch.Location = new Point(711, 22);
             btSearch.Name = "btSearch";
-            btSearch.Size = new Size(138, 49);
+            btSearch.Size = new Size(155, 49);
             btSearch.TabIndex = 64;
             btSearch.Text = "Qidirish";
             btSearch.UseVisualStyleBackColor = false;
@@ -146,25 +133,25 @@
             // 
             txTel.BackColor = SystemColors.Info;
             txTel.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
-            txTel.Location = new Point(268, 391);
+            txTel.Location = new Point(302, 391);
             txTel.Name = "txTel";
-            txTel.Size = new Size(407, 43);
+            txTel.Size = new Size(457, 43);
             txTel.TabIndex = 72;
             // 
             // txFio
             // 
             txFio.BackColor = SystemColors.Info;
             txFio.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
-            txFio.Location = new Point(268, 290);
+            txFio.Location = new Point(302, 290);
             txFio.Name = "txFio";
-            txFio.Size = new Size(472, 43);
+            txFio.Size = new Size(530, 43);
             txFio.TabIndex = 71;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Trebuchet MS", 22.2F);
-            label3.Location = new Point(22, 391);
+            label3.Location = new Point(25, 391);
             label3.Name = "label3";
             label3.Size = new Size(204, 46);
             label3.TabIndex = 68;
@@ -174,7 +161,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Trebuchet MS", 22.2F);
-            label2.Location = new Point(22, 290);
+            label2.Location = new Point(25, 290);
             label2.Name = "label2";
             label2.Size = new Size(88, 46);
             label2.TabIndex = 67;
@@ -184,9 +171,9 @@
             // 
             button1.BackColor = Color.DeepSkyBlue;
             button1.Font = new Font("Trebuchet MS", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button1.Location = new Point(632, 113);
+            button1.Location = new Point(711, 113);
             button1.Name = "button1";
-            button1.Size = new Size(147, 46);
+            button1.Size = new Size(165, 46);
             button1.TabIndex = 66;
             button1.Text = "Joylash";
             button1.UseVisualStyleBackColor = false;
@@ -196,16 +183,16 @@
             // 
             txId.BackColor = SystemColors.Info;
             txId.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
-            txId.Location = new Point(397, 113);
+            txId.Location = new Point(447, 113);
             txId.Name = "txId";
-            txId.Size = new Size(229, 43);
+            txId.Size = new Size(257, 43);
             txId.TabIndex = 65;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Trebuchet MS", 22.2F);
-            label1.Location = new Point(12, 113);
+            label1.Location = new Point(14, 113);
             label1.Name = "label1";
             label1.Size = new Size(370, 46);
             label1.TabIndex = 64;
@@ -217,10 +204,10 @@
             DGVdelete.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DGVdelete.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, fIODataGridViewTextBoxColumn, loginDataGridViewTextBoxColumn, passwordDataGridViewTextBoxColumn, phoneNumberDataGridViewTextBoxColumn, employeTypeDataGridViewTextBoxColumn });
             DGVdelete.DataSource = employeBindingSource;
-            DGVdelete.Location = new Point(11, 108);
+            DGVdelete.Location = new Point(12, 108);
             DGVdelete.Name = "DGVdelete";
             DGVdelete.RowHeadersWidth = 51;
-            DGVdelete.Size = new Size(777, 764);
+            DGVdelete.Size = new Size(874, 764);
             DGVdelete.TabIndex = 63;
             DGVdelete.CellContentClick += DGVdelete_CellContentClick;
             // 
@@ -280,9 +267,9 @@
             // 
             btBack.BackColor = Color.Silver;
             btBack.Font = new Font("Trebuchet MS", 14F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btBack.Location = new Point(1393, 963);
+            btBack.Location = new Point(1567, 963);
             btBack.Name = "btBack";
-            btBack.Size = new Size(193, 44);
+            btBack.Size = new Size(217, 44);
             btBack.TabIndex = 67;
             btBack.Text = "Orqaga qaytish";
             btBack.UseVisualStyleBackColor = false;
@@ -290,17 +277,17 @@
             // 
             // DeleteSalesmanForma
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(1599, 1033);
+            ClientSize = new Size(1799, 1033);
             Controls.Add(btBack);
-            Controls.Add(btExit);
             Controls.Add(Label);
             Controls.Add(panel1);
             Controls.Add(DGVdelete);
             Name = "DeleteSalesmanForma";
             Text = "DeleteSalesmanForma";
+            FormClosed += DeleteSalesmanForma_FormClosed;
             Load += DeleteSalesmanForma_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -311,8 +298,6 @@
         }
 
         #endregion
-
-        private Button btExit;
         private Label Label;
         private Panel panel1;
         private ComboBox cbSearch;

@@ -43,42 +43,7 @@ namespace DorixonaForm
 
         private void btExit_Click(object sender, EventArgs e)
         {
-            StreamWriter streamWriter1 = new StreamWriter(functions.AllInformationsPath);
-            foreach (AllInformations allInformations in functions.allInformations)
-            {
-                streamWriter1.WriteLine(allInformations.Id + "," + allInformations.FIO + "," + allInformations.ProcessType + "," + allInformations.Information + "," + allInformations.ProcessTime);
-            }
-            foreach (Employe employe in functions.employeList)
-            {
-                if (NewLogin == employe.Login)
-                {
-                    streamWriter1.WriteLine(employe.Id + "," + employe.FIO + "," + InformationType.EmployeExit + "," + "Profildan chiqdi" + "," + DateTime.Now.ToString());
-                }
-            }
-            streamWriter1.Close();
-            foreach (SellingPill sellingPill in functions.sellingPillesList)
-            {
-                foreach (Pill pill in functions.pillsList)
-                {
-                    if (sellingPill.Id == pill.Id)
-                    {
-                        pill.Soni = pill.Soni + sellingPill.Soni;
-                        break;
-                    }
-                }
-            }
-            StreamWriter streamWriter = new StreamWriter(functions.PillsListPath);
-            foreach (Pill pill1 in functions.pillsList)
-            {
-                streamWriter.WriteLine(pill1.Id + "," + pill1.Nomi + "," + pill1.Soni + "," + pill1.Muddati + "," + pill1.Narxi + "," + pill1.QoshilganSana);
-            }
-            streamWriter.Close();
-            StreamWriter streamWriter2 = new StreamWriter(functions.SellingPillesListPath);
-            streamWriter2.Close();
-            this.Hide();
-            LoginForm loginForm = new LoginForm();
-            loginForm.StartPosition = FormStartPosition.CenterScreen;
-            loginForm.Show();
+
         }
 
         private void btSellPill_Click(object sender, EventArgs e)
@@ -614,6 +579,46 @@ namespace DorixonaForm
         private void btQaytarish_Click(object sender, EventArgs e)
         {
             dGWPills.DataSource = functions.pillsList;
+        }
+
+        private void SalesmanForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            StreamWriter streamWriter1 = new StreamWriter(functions.AllInformationsPath);
+            foreach (AllInformations allInformations in functions.allInformations)
+            {
+                streamWriter1.WriteLine(allInformations.Id + "," + allInformations.FIO + "," + allInformations.ProcessType + "," + allInformations.Information + "," + allInformations.ProcessTime);
+            }
+            foreach (Employe employe in functions.employeList)
+            {
+                if (NewLogin == employe.Login)
+                {
+                    streamWriter1.WriteLine(employe.Id + "," + employe.FIO + "," + InformationType.EmployeExit + "," + "Profildan chiqdi" + "," + DateTime.Now.ToString());
+                }
+            }
+            streamWriter1.Close();
+            foreach (SellingPill sellingPill in functions.sellingPillesList)
+            {
+                foreach (Pill pill in functions.pillsList)
+                {
+                    if (sellingPill.Id == pill.Id)
+                    {
+                        pill.Soni = pill.Soni + sellingPill.Soni;
+                        break;
+                    }
+                }
+            }
+            StreamWriter streamWriter = new StreamWriter(functions.PillsListPath);
+            foreach (Pill pill1 in functions.pillsList)
+            {
+                streamWriter.WriteLine(pill1.Id + "," + pill1.Nomi + "," + pill1.Soni + "," + pill1.Muddati + "," + pill1.Narxi + "," + pill1.QoshilganSana);
+            }
+            streamWriter.Close();
+            StreamWriter streamWriter2 = new StreamWriter(functions.SellingPillesListPath);
+            streamWriter2.Close();
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.StartPosition = FormStartPosition.CenterScreen;
+            loginForm.Show();
         }
     }
 }

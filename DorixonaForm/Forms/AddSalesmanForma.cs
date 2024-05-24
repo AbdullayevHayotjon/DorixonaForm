@@ -237,6 +237,19 @@ namespace DorixonaForm.Forms
 
         private void btExit_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerForm managerForm = new ManagerForm(NewLogin);
+            managerForm.StartPosition = FormStartPosition.CenterScreen;
+            managerForm.Show();
+        }
+
+        private void AddSalesmanForma_FormClosed(object sender, FormClosedEventArgs e)
+        {
             StreamWriter streamWriter1 = new StreamWriter(functions.AllInformationsPath);
             foreach (AllInformations allInformations in functions.allInformations)
             {
@@ -254,14 +267,6 @@ namespace DorixonaForm.Forms
             LoginForm loginForm = new LoginForm();
             loginForm.StartPosition = FormStartPosition.CenterScreen;
             loginForm.Show();
-        }
-
-        private void btBack_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ManagerForm managerForm = new ManagerForm(NewLogin);
-            managerForm.StartPosition = FormStartPosition.CenterScreen;
-            managerForm.Show();
         }
     }
 }

@@ -52,27 +52,27 @@
             button3 = new Button();
             cbSort = new ComboBox();
             dGWPills = new DataGridView();
+            dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn11 = new DataGridViewTextBoxColumn();
+            salesmanReportBindingSource6 = new BindingSource(components);
             salesmanReportBindingSource5 = new BindingSource(components);
             salesmanReportBindingSource4 = new BindingSource(components);
             salesmanReportBindingSource3 = new BindingSource(components);
             salesmanReportBindingSource2 = new BindingSource(components);
             salesmanReportBindingSource1 = new BindingSource(components);
             salesmanReportBindingSource = new BindingSource(components);
-            salesmanReportBindingSource6 = new BindingSource(components);
-            dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn11 = new DataGridViewTextBoxColumn();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dGWPills).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource6).BeginInit();
             SuspendLayout();
             // 
             // cbSearch
@@ -330,10 +330,6 @@
             dGWPills.TabIndex = 137;
             dGWPills.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // salesmanReportBindingSource6
-            // 
-            salesmanReportBindingSource6.DataSource = typeof(Actions.SalesmanReport);
-            // 
             // dataGridViewTextBoxColumn7
             // 
             dataGridViewTextBoxColumn7.DataPropertyName = "Id";
@@ -374,6 +370,10 @@
             dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             dataGridViewTextBoxColumn11.Width = 125;
             // 
+            // salesmanReportBindingSource6
+            // 
+            salesmanReportBindingSource6.DataSource = typeof(Actions.SalesmanReport);
+            // 
             // SalesmanReportsForm
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
@@ -393,17 +393,18 @@
             Controls.Add(txPillInformation);
             Name = "SalesmanReportsForm";
             Text = "SalesmanReportsForm";
+            FormClosed += SalesmanReportsForm_FormClosed;
             Load += SalesmanReportsForm_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dGWPills).EndInit();
+            ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource6).EndInit();
             ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource5).EndInit();
             ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource4).EndInit();
             ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource3).EndInit();
             ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource2).EndInit();
             ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource1).EndInit();
             ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource).EndInit();
-            ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource6).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }

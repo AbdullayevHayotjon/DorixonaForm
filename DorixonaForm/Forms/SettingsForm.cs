@@ -228,6 +228,16 @@ namespace DorixonaForm.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void lb998_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SettingsForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
             StreamWriter streamWriter1 = new StreamWriter(functions.AllInformationsPath);
             foreach (AllInformations allInformations in functions.allInformations)
             {
@@ -245,11 +255,6 @@ namespace DorixonaForm.Forms
             LoginForm loginForm = new LoginForm();
             loginForm.StartPosition = FormStartPosition.CenterScreen;
             loginForm.Show();
-        }
-
-        private void lb998_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

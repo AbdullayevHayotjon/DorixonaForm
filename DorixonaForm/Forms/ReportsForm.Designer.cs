@@ -62,7 +62,6 @@
             cbSearch = new ComboBox();
             btSearch = new Button();
             txPillInformation = new TextBox();
-            button2 = new Button();
             lbFIO = new Label();
             btBack = new Button();
             ((System.ComponentModel.ISupportInitialize)reportSelesPillBindingSource).BeginInit();
@@ -379,18 +378,6 @@
             txPillInformation.Size = new Size(273, 48);
             txPillInformation.TabIndex = 148;
             // 
-            // button2
-            // 
-            button2.BackColor = Color.Silver;
-            button2.Font = new Font("Trebuchet MS", 18F);
-            button2.Location = new Point(1763, 68);
-            button2.Name = "button2";
-            button2.Size = new Size(184, 50);
-            button2.TabIndex = 146;
-            button2.Text = "Chiqish";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
-            // 
             // lbFIO
             // 
             lbFIO.AutoSize = true;
@@ -432,11 +419,11 @@
             Controls.Add(cbSearch);
             Controls.Add(btSearch);
             Controls.Add(txPillInformation);
-            Controls.Add(button2);
             Controls.Add(lbFIO);
             Controls.Add(btBack);
             Name = "ReportsForm";
             Text = "ReportsForm";
+            FormClosing += ReportsForm_FormClosing;
             Load += ReportsForm_Load;
             ((System.ComponentModel.ISupportInitialize)reportSelesPillBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)allInformationsBindingSource).EndInit();
@@ -480,7 +467,6 @@
         private ComboBox cbSearch;
         private Button btSearch;
         private TextBox txPillInformation;
-        private Button button2;
         private Label lbFIO;
         private Button btBack;
         private DataGridViewTextBoxColumn sotuvchiIdDataGridViewTextBoxColumn;
