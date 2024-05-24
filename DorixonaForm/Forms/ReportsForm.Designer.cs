@@ -49,6 +49,10 @@
             dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
             reportSelesPillBindingSource1 = new BindingSource(components);
             panel2 = new Panel();
+            label3 = new Label();
+            label4 = new Label();
+            label8 = new Label();
+            label1 = new Label();
             lbCount = new Label();
             dtDay1 = new DateTimePicker();
             dtDay2 = new DateTimePicker();
@@ -59,10 +63,6 @@
             txPillInformation = new TextBox();
             lbFIO = new Label();
             btBack = new Button();
-            label8 = new Label();
-            label1 = new Label();
-            label3 = new Label();
-            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)reportSelesPillBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)allInformationsBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dGVEmploye).BeginInit();
@@ -74,7 +74,7 @@
             // 
             btOsish.BackColor = Color.LightSkyBlue;
             btOsish.Font = new Font("Trebuchet MS", 14F);
-            btOsish.Location = new Point(409, 196);
+            btOsish.Location = new Point(412, 143);
             btOsish.Name = "btOsish";
             btOsish.Size = new Size(142, 44);
             btOsish.TabIndex = 159;
@@ -86,7 +86,7 @@
             // 
             btKamayish.BackColor = Color.LightSkyBlue;
             btKamayish.Font = new Font("Trebuchet MS", 14F);
-            btKamayish.Location = new Point(557, 196);
+            btKamayish.Location = new Point(560, 143);
             btKamayish.Name = "btKamayish";
             btKamayish.Size = new Size(142, 44);
             btKamayish.TabIndex = 158;
@@ -98,7 +98,7 @@
             // 
             btQaytarish.BackColor = Color.LightSkyBlue;
             btQaytarish.Font = new Font("Trebuchet MS", 14F);
-            btQaytarish.Location = new Point(705, 196);
+            btQaytarish.Location = new Point(708, 143);
             btQaytarish.Name = "btQaytarish";
             btQaytarish.Size = new Size(149, 44);
             btQaytarish.TabIndex = 157;
@@ -109,10 +109,10 @@
             // cbSort
             // 
             cbSort.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbSort.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            cbSort.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
             cbSort.FormattingEnabled = true;
             cbSort.Items.AddRange(new object[] { "Sotuvchi Id", "FIO", "Dori Id", "Nomi", "Soni", "Sotilgan vaqti", "Narxi" });
-            cbSort.Location = new Point(135, 195);
+            cbSort.Location = new Point(138, 142);
             cbSort.Name = "cbSort";
             cbSort.Size = new Size(269, 49);
             cbSort.TabIndex = 156;
@@ -121,7 +121,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label10.Location = new Point(31, 35);
+            label10.Location = new Point(37, 75);
             label10.Name = "label10";
             label10.Size = new Size(337, 38);
             label10.TabIndex = 155;
@@ -132,7 +132,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label7.Location = new Point(31, 104);
+            label7.Location = new Point(37, 144);
             label7.Name = "label7";
             label7.Size = new Size(279, 38);
             label7.TabIndex = 154;
@@ -142,7 +142,7 @@
             // 
             txSalesmanId.BackColor = Color.FromArgb(255, 255, 192);
             txSalesmanId.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txSalesmanId.Location = new Point(383, 31);
+            txSalesmanId.Location = new Point(389, 71);
             txSalesmanId.Name = "txSalesmanId";
             txSalesmanId.Size = new Size(250, 48);
             txSalesmanId.TabIndex = 153;
@@ -151,7 +151,7 @@
             // 
             txPillId.BackColor = Color.FromArgb(255, 255, 192);
             txPillId.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txPillId.Location = new Point(383, 100);
+            txPillId.Location = new Point(389, 140);
             txPillId.Name = "txPillId";
             txPillId.Size = new Size(250, 48);
             txPillId.TabIndex = 152;
@@ -162,7 +162,7 @@
             dGVEmploye.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dGVEmploye.Columns.AddRange(new DataGridViewColumn[] { sotuvchiIdDataGridViewTextBoxColumn, dataGridViewTextBoxColumn1, doriIdDataGridViewTextBoxColumn, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5 });
             dGVEmploye.DataSource = reportSelesPillBindingSource1;
-            dGVEmploye.Location = new Point(32, 248);
+            dGVEmploye.Location = new Point(35, 195);
             dGVEmploye.Name = "dGVEmploye";
             dGVEmploye.RowHeadersWidth = 51;
             dGVEmploye.Size = new Size(930, 637);
@@ -246,15 +246,55 @@
             panel2.Controls.Add(lbPrice);
             panel2.Location = new Point(992, 195);
             panel2.Name = "panel2";
-            panel2.Size = new Size(673, 571);
+            panel2.Size = new Size(673, 637);
             panel2.TabIndex = 150;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label3.Location = new Point(37, 510);
+            label3.Name = "label3";
+            label3.Size = new Size(288, 38);
+            label3.TabIndex = 172;
+            label3.Text = "Sotgan dorilari soni:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label4.Location = new Point(37, 447);
+            label4.Name = "label4";
+            label4.Size = new Size(196, 38);
+            label4.TabIndex = 173;
+            label4.Text = "Ishlagan puli:";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label8.Location = new Point(37, 219);
+            label8.Name = "label8";
+            label8.Size = new Size(259, 38);
+            label8.TabIndex = 173;
+            label8.Text = "Boshlang'ich sana:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label1.Location = new Point(37, 288);
+            label1.Name = "label1";
+            label1.Size = new Size(185, 38);
+            label1.TabIndex = 172;
+            label1.Text = "Tugash sana:";
             // 
             // lbCount
             // 
             lbCount.AutoSize = true;
             lbCount.BackColor = Color.FromArgb(255, 255, 192);
             lbCount.Font = new Font("Franklin Gothic Medium", 18F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            lbCount.Location = new Point(383, 471);
+            lbCount.Location = new Point(389, 511);
             lbCount.Name = "lbCount";
             lbCount.Size = new Size(97, 38);
             lbCount.TabIndex = 143;
@@ -263,7 +303,7 @@
             // dtDay1
             // 
             dtDay1.Font = new Font("Segoe UI", 15F);
-            dtDay1.Location = new Point(383, 176);
+            dtDay1.Location = new Point(389, 216);
             dtDay1.Name = "dtDay1";
             dtDay1.Size = new Size(250, 41);
             dtDay1.TabIndex = 139;
@@ -271,7 +311,7 @@
             // dtDay2
             // 
             dtDay2.Font = new Font("Segoe UI", 15F);
-            dtDay2.Location = new Point(383, 246);
+            dtDay2.Location = new Point(389, 286);
             dtDay2.Name = "dtDay2";
             dtDay2.Size = new Size(250, 41);
             dtDay2.TabIndex = 137;
@@ -280,7 +320,7 @@
             // 
             button1.BackColor = Color.LightSkyBlue;
             button1.Font = new Font("Trebuchet MS", 20F);
-            button1.Location = new Point(31, 324);
+            button1.Location = new Point(37, 364);
             button1.Name = "button1";
             button1.Size = new Size(602, 60);
             button1.TabIndex = 129;
@@ -293,7 +333,7 @@
             lbPrice.AutoSize = true;
             lbPrice.BackColor = Color.FromArgb(255, 255, 192);
             lbPrice.Font = new Font("Franklin Gothic Medium", 18F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            lbPrice.Location = new Point(383, 407);
+            lbPrice.Location = new Point(389, 447);
             lbPrice.Name = "lbPrice";
             lbPrice.Size = new Size(97, 38);
             lbPrice.TabIndex = 131;
@@ -305,7 +345,7 @@
             cbSearch.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
             cbSearch.FormattingEnabled = true;
             cbSearch.Items.AddRange(new object[] { "SotuvchiId", "FIO", "DoriId", "Nomi", "Soni", "SotilganVaqti", "Narxi" });
-            cbSearch.Location = new Point(135, 140);
+            cbSearch.Location = new Point(138, 87);
             cbSearch.Name = "cbSearch";
             cbSearch.Size = new Size(269, 49);
             cbSearch.TabIndex = 149;
@@ -314,7 +354,7 @@
             // 
             btSearch.BackColor = Color.LightSkyBlue;
             btSearch.Font = new Font("Trebuchet MS", 14F);
-            btSearch.Location = new Point(705, 143);
+            btSearch.Location = new Point(708, 90);
             btSearch.Name = "btSearch";
             btSearch.Size = new Size(149, 44);
             btSearch.TabIndex = 147;
@@ -326,7 +366,7 @@
             // 
             txPillInformation.BackColor = Color.FromArgb(255, 255, 192);
             txPillInformation.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txPillInformation.Location = new Point(410, 142);
+            txPillInformation.Location = new Point(413, 89);
             txPillInformation.Name = "txPillInformation";
             txPillInformation.Size = new Size(289, 48);
             txPillInformation.TabIndex = 148;
@@ -335,7 +375,7 @@
             // 
             lbFIO.AutoSize = true;
             lbFIO.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            lbFIO.Location = new Point(332, 89);
+            lbFIO.Location = new Point(335, 36);
             lbFIO.Name = "lbFIO";
             lbFIO.Size = new Size(383, 38);
             lbFIO.TabIndex = 145;
@@ -345,53 +385,13 @@
             // 
             btBack.BackColor = Color.Silver;
             btBack.Font = new Font("Trebuchet MS", 14F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btBack.Location = new Point(1503, 841);
+            btBack.Location = new Point(1470, 852);
             btBack.Name = "btBack";
             btBack.Size = new Size(195, 44);
             btBack.TabIndex = 144;
             btBack.Text = "Orqaga qaytish";
             btBack.UseVisualStyleBackColor = false;
             btBack.Click += btBack_Click_1;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label8.Location = new Point(31, 179);
-            label8.Name = "label8";
-            label8.Size = new Size(259, 38);
-            label8.TabIndex = 173;
-            label8.Text = "Boshlang'ich sana:";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label1.Location = new Point(31, 248);
-            label1.Name = "label1";
-            label1.Size = new Size(185, 38);
-            label1.TabIndex = 172;
-            label1.Text = "Tugash sana:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label3.Location = new Point(31, 470);
-            label3.Name = "label3";
-            label3.Size = new Size(288, 38);
-            label3.TabIndex = 172;
-            label3.Text = "Sotgan dorilari soni:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label4.Location = new Point(31, 407);
-            label4.Name = "label4";
-            label4.Size = new Size(196, 38);
-            label4.TabIndex = 173;
-            label4.Text = "Ishlagan puli:";
             // 
             // ReportsForm
             // 

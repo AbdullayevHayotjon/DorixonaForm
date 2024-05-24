@@ -1,15 +1,30 @@
-1,Abdullayev Hayot,EmployeEnter,Profilga kirdi,20.05.2024 05:15:14
-1,Abdullayev Hayot,EmployeExit,Profildan chiqdi,20.05.2024 13:15:16
-4,Hafizov Sardorbek,EmployeEnter,Profilga kirdi,21.05.2024 10:15:38
-4,Hafizov Sardorbek,EmployeExit,Profildan chiqdi,21.05.2024 19:15:44
-3,Orazbaev Merxat,EmployeEnter,Profilga kirdi,22.05.2024 11:15:50
-3,Orazbaev Merxat,EmployeExit,Profildan chiqdi,22.05.2024 23:30:52
-3,Orazbaev Merxat,EmployeEnter,Profilga kirdi,23.05.2024 10:15:50
-3,Orazbaev Merxat,EmployeExit,Profildan chiqdi,23.05.2024 22:45:52
-2,Muqimov Quvonch,EmployeEnter,Profilga kirdi,24.05.2024 08:16:00
-2,Muqimov Quvonch,AddPill,Nomi=Ko'k nori|Soni=3|Muddati=2000000|Narxi=99900000,24.05.2024 13:17:01
-2,Muqimov Quvonch,EmployeExit,Profildan chiqdi,24.05.2024 18:17:09
-4,Hafizov Sardorbek,EmployeEnter,Profilga kirdi,24.05.2024 10:15:38
+4,Hafizov Sardorbek,EmployeEnter,Profilga kirdi,20.05.2024 10:15:38
 4,Hafizov Sardorbek,ChangePassword,Parol 4643 dan 2003 ga o'zgartirildi,24.05.2024 20:04:05
-4,Hafizov Sardorbek,EmployeEnter,Profilga kirdi,24.05.2024 20:04:17
-4,Hafizov Sardorbek,EmployeExit,Profildan chiqdi,24.05.2024 20:06:26
+4,Hafizov Sardorbek,EmployeExit,Profildan chiqdi,20.05.2024 22:06:26
+4,Hafizov Sardorbek,EmployeEnter,Profilga kirdi,21.05.2024 08:26:09
+4,Hafizov Sardorbek,ChangePhoneNumber,505514643 dan 777777777 ga o'zgartirildi,24.05.2024 20:27:16
+4,Hafizov Sardorbek,EmployeExit,Profildan chiqdi,21.05.2024 20:27:26
+4,Hafizov Sardorbek,EmployeEnter,Profilga kirdi,24.05.2024 07:27:47
+4,Hafizov Sardorbek,SalesPill,Id=3|Nomi=Tramadol|Soni=10|Narxi=23000,24.05.2024 20:30:51
+4,Hafizov Sardorbek,SalesPill,Id=5|Nomi=Diklofenak|Soni=10|Narxi=45000,24.05.2024 20:30:51
+4,Hafizov Sardorbek,SalesPill,Id=2|Nomi=Izofluran|Soni=5|Narxi=32500,24.05.2024 20:30:51
+4,Hafizov Sardorbek,SalesPill,Id=7|Nomi=Kukumazim|Soni=15|Narxi=45000,24.05.2024 20:30:51
+4,Hafizov Sardorbek,SalesPill,Id=20|Nomi=Amikatsin|Soni=10|Narxi=360000,24.05.2024 20:30:51
+4,Hafizov Sardorbek,SalesPill,Id=9|Nomi=Xolosas|Soni=20|Narxi=810000,24.05.2024 20:30:51
+4,Hafizov Sardorbek,AddPill,Nomi=Ko'k nori|Soni=50|Muddati=300|Narxi=30000,24.05.2024 20:34:54
+4,Hafizov Sardorbek,UpdatePill,|Nomi: Ko'k nori|Soni: 50|Muddati: 300|Narxi: 300000|,24.05.2024 20:35:29
+4,Hafizov Sardorbek,DeletePill,Ko'k nori nomli dori o'chirildi,24.05.2024 20:35:47
+2,Muqimov Quvonch,EmployeEnter,Profilga kirdi,24.05.2024 20:50:26
+2,Muqimov Quvonch,SalesPill,Id=3|Nomi=Tramadol|Soni=16|Narxi=36800,24.05.2024 20:53:08
+2,Muqimov Quvonch,SalesPill,Id=15|Nomi=Ofloksatsin|Soni=5|Narxi=265000,24.05.2024 20:53:08
+2,Muqimov Quvonch,SalesPill,Id=23|Nomi=Kalsiy xlorid|Soni=8|Narxi=296000,24.05.2024 20:53:08
+2,Muqimov Quvonch,SalesPill,Id=14|Nomi=Siprofloksatsin|Soni=23|Narxi=1610000,24.05.2024 20:53:08
+2,Muqimov Quvonch,SalesPill,Id=12|Nomi=Asiklovir|Soni=12|Narxi=876000,24.05.2024 20:53:08
+2,Muqimov Quvonch,EmployeExit,Profildan chiqdi,24.05.2024 20:56:37
+1,Abdullayev Hayot,EmployeEnter,Profilga kirdi,24.05.2024 20:56:50
+1,Abdullayev Hayot,EmployeExit,Profildan chiqdi,24.05.2024 20:57:09
+2,Muqimov Quvonch,EmployeEnter,Profilga kirdi,24.05.2024 20:57:19
+2,Muqimov Quvonch,SalesPill,Id=1|Nomi=Deklofenak|Soni=20|Narxi=64000,24.05.2024 20:57:47
+2,Muqimov Quvonch,EmployeExit,Profildan chiqdi,24.05.2024 20:57:49
+1,Abdullayev Hayot,EmployeEnter,Profilga kirdi,24.05.2024 20:57:57
+1,Abdullayev Hayot,EmployeExit,Profildan chiqdi,24.05.2024 21:00:47
