@@ -16,6 +16,31 @@ namespace DorixonaForm.Forms
     {
         Functions functions = new Functions();
         public string NewLogin { get; set; }
+        public static List<SalesmanReport> ConsolidateSalesmanReports(List<SalesmanReport> reports)
+        {
+            Dictionary<int, SalesmanReport> consolidatedReports = new Dictionary<int, SalesmanReport>();
+
+            foreach (var report in reports)
+            {
+                if (consolidatedReports.ContainsKey(report.Id))
+                {
+                    consolidatedReports[report.Id].Soni += report.Soni;
+                }
+                else
+                {
+                    consolidatedReports[report.Id] = new SalesmanReport
+                    {
+                        Id = report.Id,
+                        Nomi = report.Nomi,
+                        Soni = report.Soni,
+                        SotilganVaqti = report.SotilganVaqti,
+                        Narxi = report.Narxi
+                    };
+                }
+            }
+
+            return consolidatedReports.Values.ToList();
+        }
         public ManagerForm(string login)
         {
             NewLogin = login;
@@ -33,15 +58,40 @@ namespace DorixonaForm.Forms
                     lbFIO.Text = employe1.FIO;
                 }
             }
-            List<Pill> pillManyList = new List<Pill>();
+            List<Pill> pillLessList = new List<Pill>();
             foreach (Pill pill in functions.pillsList)
             {
-                if(pill.Soni <= 10)
+                if (pill.Soni <= 10)
                 {
-                    pillManyList.Add(new Pill() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Narxi, QoshilganSana = pill.QoshilganSana });
+                    pillLessList.Add(new Pill() { Id = pill.Id, Nomi = pill.Nomi, Soni = pill.Soni, Muddati = pill.Muddati, Narxi = pill.Narxi, QoshilganSana = pill.QoshilganSana });
                 }
             }
-            dgwLess.DataSource = pillManyList;
+            dgwLess.DataSource = pillLessList;
+
+            List<SalesmanReport> pillManyList = new List<SalesmanReport>();
+            List<SalesmanReport> pillManyList2 = new List<SalesmanReport>();
+            foreach (ReportSelesPill reportSelesPillItem in functions.reportSelesPills)
+            {
+
+                pillManyList.Add(new SalesmanReport() { Id = reportSelesPillItem.DoriId, Nomi = reportSelesPillItem.Nomi, Soni = reportSelesPillItem.Soni, SotilganVaqti = reportSelesPillItem.SotilganVaqti, Narxi = reportSelesPillItem.Narxi });
+            }
+            List<SalesmanReport> consolidatedList = ConsolidateSalesmanReports(pillManyList);
+            consolidatedList.Sort((x, y) => y.Soni.CompareTo(x.Soni));
+            DateTime dateTimeOld = DateTime.Now.AddMonths(-1);
+            DateTime dateTimeNow = DateTime.Now;
+            int sanoq = 0;
+            foreach (SalesmanReport consolidatedReport in consolidatedList)
+            {
+                if(dateTimeOld <= DateTime.Parse(consolidatedReport.SotilganVaqti) && DateTime.Parse(consolidatedReport.SotilganVaqti) <= dateTimeNow)
+                {
+                    if(sanoq < 5)
+                    {
+                        pillManyList2.Add(new SalesmanReport() { Id = consolidatedReport.Id, Nomi = consolidatedReport.Nomi, Soni = consolidatedReport.Soni, SotilganVaqti = consolidatedReport.SotilganVaqti, Narxi = consolidatedReport.Narxi });
+                        sanoq++;
+                    }
+                }
+            }
+            dgwMany.DataSource = pillManyList2;
 
         }
 

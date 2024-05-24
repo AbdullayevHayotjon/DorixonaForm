@@ -56,13 +56,6 @@
             btKamayish = new Button();
             btOsish = new Button();
             button1 = new Button();
-            dgwMany = new DataGridView();
-            dataGridViewTextBoxColumn12 = new DataGridViewTextBoxColumn();
-            nomiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            soniDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            muddatiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            narxiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            qoshilganSanaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             pillBindingSource = new BindingSource(components);
             dgwLess = new DataGridView();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
@@ -71,14 +64,26 @@
             dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn13 = new DataGridViewTextBoxColumn();
+            salesmanReportBindingSource = new BindingSource(components);
+            salesmanReportBindingSource1 = new BindingSource(components);
+            salesmanReportBindingSource2 = new BindingSource(components);
+            dgwMany = new DataGridView();
+            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            nomiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            soniDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            sotilganVaqtiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            narxiDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dGVEmploye).BeginInit();
             ((System.ComponentModel.ISupportInitialize)employeBindingSource2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)employeBindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)employeBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)allInformationsBindingSource).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgwMany).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pillBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgwLess).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgwMany).BeginInit();
             SuspendLayout();
             // 
             // btReports
@@ -329,66 +334,6 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click_1;
             // 
-            // dgwMany
-            // 
-            dgwMany.AutoGenerateColumns = false;
-            dgwMany.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgwMany.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn12, nomiDataGridViewTextBoxColumn, soniDataGridViewTextBoxColumn, muddatiDataGridViewTextBoxColumn, narxiDataGridViewTextBoxColumn, qoshilganSanaDataGridViewTextBoxColumn });
-            dgwMany.DataSource = pillBindingSource;
-            dgwMany.Location = new Point(40, 165);
-            dgwMany.Name = "dgwMany";
-            dgwMany.RowHeadersWidth = 51;
-            dgwMany.Size = new Size(803, 307);
-            dgwMany.TabIndex = 83;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            dataGridViewTextBoxColumn12.DataPropertyName = "Id";
-            dataGridViewTextBoxColumn12.HeaderText = "Id";
-            dataGridViewTextBoxColumn12.MinimumWidth = 6;
-            dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            dataGridViewTextBoxColumn12.Width = 125;
-            // 
-            // nomiDataGridViewTextBoxColumn
-            // 
-            nomiDataGridViewTextBoxColumn.DataPropertyName = "Nomi";
-            nomiDataGridViewTextBoxColumn.HeaderText = "Nomi";
-            nomiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            nomiDataGridViewTextBoxColumn.Name = "nomiDataGridViewTextBoxColumn";
-            nomiDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // soniDataGridViewTextBoxColumn
-            // 
-            soniDataGridViewTextBoxColumn.DataPropertyName = "Soni";
-            soniDataGridViewTextBoxColumn.HeaderText = "Soni";
-            soniDataGridViewTextBoxColumn.MinimumWidth = 6;
-            soniDataGridViewTextBoxColumn.Name = "soniDataGridViewTextBoxColumn";
-            soniDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // muddatiDataGridViewTextBoxColumn
-            // 
-            muddatiDataGridViewTextBoxColumn.DataPropertyName = "Muddati";
-            muddatiDataGridViewTextBoxColumn.HeaderText = "Muddati";
-            muddatiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            muddatiDataGridViewTextBoxColumn.Name = "muddatiDataGridViewTextBoxColumn";
-            muddatiDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // narxiDataGridViewTextBoxColumn
-            // 
-            narxiDataGridViewTextBoxColumn.DataPropertyName = "Narxi";
-            narxiDataGridViewTextBoxColumn.HeaderText = "Narxi";
-            narxiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            narxiDataGridViewTextBoxColumn.Name = "narxiDataGridViewTextBoxColumn";
-            narxiDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // qoshilganSanaDataGridViewTextBoxColumn
-            // 
-            qoshilganSanaDataGridViewTextBoxColumn.DataPropertyName = "QoshilganSana";
-            qoshilganSanaDataGridViewTextBoxColumn.HeaderText = "QoshilganSana";
-            qoshilganSanaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            qoshilganSanaDataGridViewTextBoxColumn.Name = "qoshilganSanaDataGridViewTextBoxColumn";
-            qoshilganSanaDataGridViewTextBoxColumn.Width = 125;
-            // 
             // pillBindingSource
             // 
             pillBindingSource.DataSource = typeof(Actions.Pill);
@@ -453,14 +398,78 @@
             dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             dataGridViewTextBoxColumn13.Width = 125;
             // 
+            // salesmanReportBindingSource
+            // 
+            salesmanReportBindingSource.DataSource = typeof(Actions.SalesmanReport);
+            // 
+            // salesmanReportBindingSource1
+            // 
+            salesmanReportBindingSource1.DataSource = typeof(Actions.SalesmanReport);
+            // 
+            // salesmanReportBindingSource2
+            // 
+            salesmanReportBindingSource2.DataSource = typeof(Actions.SalesmanReport);
+            // 
+            // dgwMany
+            // 
+            dgwMany.AutoGenerateColumns = false;
+            dgwMany.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgwMany.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, nomiDataGridViewTextBoxColumn, soniDataGridViewTextBoxColumn, sotilganVaqtiDataGridViewTextBoxColumn, narxiDataGridViewTextBoxColumn });
+            dgwMany.DataSource = salesmanReportBindingSource2;
+            dgwMany.Location = new Point(40, 165);
+            dgwMany.Name = "dgwMany";
+            dgwMany.RowHeadersWidth = 51;
+            dgwMany.Size = new Size(803, 328);
+            dgwMany.TabIndex = 85;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            idDataGridViewTextBoxColumn.HeaderText = "Id";
+            idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nomiDataGridViewTextBoxColumn
+            // 
+            nomiDataGridViewTextBoxColumn.DataPropertyName = "Nomi";
+            nomiDataGridViewTextBoxColumn.HeaderText = "Nomi";
+            nomiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            nomiDataGridViewTextBoxColumn.Name = "nomiDataGridViewTextBoxColumn";
+            nomiDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // soniDataGridViewTextBoxColumn
+            // 
+            soniDataGridViewTextBoxColumn.DataPropertyName = "Soni";
+            soniDataGridViewTextBoxColumn.HeaderText = "Soni";
+            soniDataGridViewTextBoxColumn.MinimumWidth = 6;
+            soniDataGridViewTextBoxColumn.Name = "soniDataGridViewTextBoxColumn";
+            soniDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // sotilganVaqtiDataGridViewTextBoxColumn
+            // 
+            sotilganVaqtiDataGridViewTextBoxColumn.DataPropertyName = "SotilganVaqti";
+            sotilganVaqtiDataGridViewTextBoxColumn.HeaderText = "SotilganVaqti";
+            sotilganVaqtiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            sotilganVaqtiDataGridViewTextBoxColumn.Name = "sotilganVaqtiDataGridViewTextBoxColumn";
+            sotilganVaqtiDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // narxiDataGridViewTextBoxColumn
+            // 
+            narxiDataGridViewTextBoxColumn.DataPropertyName = "Narxi";
+            narxiDataGridViewTextBoxColumn.HeaderText = "Narxi";
+            narxiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            narxiDataGridViewTextBoxColumn.Name = "narxiDataGridViewTextBoxColumn";
+            narxiDataGridViewTextBoxColumn.Width = 125;
+            // 
             // ManagerForm
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightCyan;
             ClientSize = new Size(1799, 1033);
-            Controls.Add(dgwLess);
             Controls.Add(dgwMany);
+            Controls.Add(dgwLess);
             Controls.Add(button1);
             Controls.Add(btOsish);
             Controls.Add(btKamayish);
@@ -486,9 +495,12 @@
             ((System.ComponentModel.ISupportInitialize)employeBindingSource1).EndInit();
             ((System.ComponentModel.ISupportInitialize)employeBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)allInformationsBindingSource).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgwMany).EndInit();
             ((System.ComponentModel.ISupportInitialize)pillBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgwLess).EndInit();
+            ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)salesmanReportBindingSource2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgwMany).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -498,7 +510,6 @@
         private Button btReports;
         private DataGridView dGVEmploye;
         private BindingSource employeBindingSource;
-        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn fIODataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
@@ -538,15 +549,17 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private BindingSource employeBindingSource2;
-        private DataGridView dgwMany;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private DataGridViewTextBoxColumn nomiDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn soniDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn muddatiDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn narxiDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn qoshilganSanaDataGridViewTextBoxColumn;
         private BindingSource pillBindingSource;
         private DataGridView dgwLess;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private BindingSource salesmanReportBindingSource;
+        private BindingSource salesmanReportBindingSource1;
+        private BindingSource salesmanReportBindingSource2;
+        private DataGridView dgwMany;
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn nomiDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn soniDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn sotilganVaqtiDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn narxiDataGridViewTextBoxColumn;
     }
 }
