@@ -37,11 +37,13 @@
             processTimeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             allInformationsBindingSource = new BindingSource(components);
             panel2 = new Panel();
-            label2 = new Label();
+            lbMinut = new Label();
+            label4 = new Label();
+            lbHour = new Label();
             label3 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            dtDay1 = new DateTimePicker();
             label1 = new Label();
-            dateTimePicker2 = new DateTimePicker();
+            dtDay2 = new DateTimePicker();
             button1 = new Button();
             label6 = new Label();
             lbFIO = new Label();
@@ -67,10 +69,10 @@
             dGVEmploye.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dGVEmploye.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, fIODataGridViewTextBoxColumn, processTypeDataGridViewTextBoxColumn, informationDataGridViewTextBoxColumn, processTimeDataGridViewTextBoxColumn });
             dGVEmploye.DataSource = allInformationsBindingSource;
-            dGVEmploye.Location = new Point(143, 192);
+            dGVEmploye.Location = new Point(127, 192);
             dGVEmploye.Name = "dGVEmploye";
             dGVEmploye.RowHeadersWidth = 51;
-            dGVEmploye.Size = new Size(765, 532);
+            dGVEmploye.Size = new Size(680, 532);
             dGVEmploye.TabIndex = 150;
             // 
             // idDataGridViewTextBoxColumn
@@ -120,79 +122,103 @@
             // panel2
             // 
             panel2.BackColor = Color.LightCyan;
-            panel2.Controls.Add(label2);
+            panel2.Controls.Add(lbMinut);
+            panel2.Controls.Add(label4);
+            panel2.Controls.Add(lbHour);
             panel2.Controls.Add(label3);
-            panel2.Controls.Add(dateTimePicker1);
+            panel2.Controls.Add(dtDay1);
             panel2.Controls.Add(label1);
-            panel2.Controls.Add(dateTimePicker2);
+            panel2.Controls.Add(dtDay2);
             panel2.Controls.Add(button1);
             panel2.Controls.Add(label6);
-            panel2.Location = new Point(1102, 252);
+            panel2.Location = new Point(980, 252);
             panel2.Name = "panel2";
-            panel2.Size = new Size(794, 571);
+            panel2.Size = new Size(706, 571);
             panel2.TabIndex = 148;
             // 
-            // label2
+            // lbMinut
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.FromArgb(255, 255, 192);
-            label2.Font = new Font("Franklin Gothic Medium", 18F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            label2.Location = new Point(386, 312);
-            label2.Name = "label2";
-            label2.Size = new Size(97, 38);
-            label2.TabIndex = 141;
-            label2.Text = "          ";
+            lbMinut.AutoSize = true;
+            lbMinut.BackColor = Color.FromArgb(255, 255, 192);
+            lbMinut.Font = new Font("Franklin Gothic Medium", 18F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            lbMinut.Location = new Point(343, 375);
+            lbMinut.Name = "lbMinut";
+            lbMinut.Size = new Size(97, 38);
+            lbMinut.TabIndex = 143;
+            lbMinut.Text = "          ";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Trebuchet MS", 22.2F);
+            label4.Location = new Point(211, 368);
+            label4.Name = "label4";
+            label4.Size = new Size(126, 46);
+            label4.TabIndex = 142;
+            label4.Text = "Minut:";
+            // 
+            // lbHour
+            // 
+            lbHour.AutoSize = true;
+            lbHour.BackColor = Color.FromArgb(255, 255, 192);
+            lbHour.Font = new Font("Franklin Gothic Medium", 18F, FontStyle.Italic, GraphicsUnit.Point, 204);
+            lbHour.Location = new Point(343, 312);
+            lbHour.Name = "lbHour";
+            lbHour.Size = new Size(97, 38);
+            lbHour.TabIndex = 141;
+            lbHour.Text = "          ";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Trebuchet MS", 22.2F);
-            label3.Location = new Point(258, 305);
+            label3.Location = new Point(229, 305);
             label3.Name = "label3";
-            label3.Size = new Size(108, 46);
+            label3.Size = new Size(106, 46);
             label3.TabIndex = 140;
-            label3.Text = "Vaqt:";
+            label3.Text = "Soat:";
             // 
-            // dateTimePicker1
+            // dtDay1
             // 
-            dateTimePicker1.Location = new Point(302, 122);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(281, 27);
-            dateTimePicker1.TabIndex = 139;
+            dtDay1.Location = new Point(268, 122);
+            dtDay1.Name = "dtDay1";
+            dtDay1.Size = new Size(250, 27);
+            dtDay1.TabIndex = 139;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Trebuchet MS", 22.2F);
-            label1.Location = new Point(177, 107);
+            label1.Location = new Point(157, 107);
             label1.Name = "label1";
             label1.Size = new Size(113, 46);
             label1.TabIndex = 138;
             label1.Text = "Kun1:";
             // 
-            // dateTimePicker2
+            // dtDay2
             // 
-            dateTimePicker2.Location = new Point(302, 180);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(281, 27);
-            dateTimePicker2.TabIndex = 137;
+            dtDay2.Location = new Point(268, 180);
+            dtDay2.Name = "dtDay2";
+            dtDay2.Size = new Size(250, 27);
+            dtDay2.TabIndex = 137;
             // 
             // button1
             // 
             button1.BackColor = Color.LightSkyBlue;
             button1.Font = new Font("Trebuchet MS", 18F);
-            button1.Location = new Point(177, 236);
+            button1.Location = new Point(157, 236);
             button1.Name = "button1";
-            button1.Size = new Size(406, 47);
+            button1.Size = new Size(361, 47);
             button1.TabIndex = 129;
             button1.Text = "Ma'lumot";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Trebuchet MS", 22.2F);
-            label6.Location = new Point(177, 165);
+            label6.Location = new Point(157, 165);
             label6.Name = "label6";
             label6.Size = new Size(113, 46);
             label6.TabIndex = 128;
@@ -202,7 +228,7 @@
             // 
             lbFIO.AutoSize = true;
             lbFIO.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            lbFIO.Location = new Point(310, 48);
+            lbFIO.Location = new Point(276, 48);
             lbFIO.Name = "lbFIO";
             lbFIO.Size = new Size(383, 38);
             lbFIO.TabIndex = 143;
@@ -212,9 +238,9 @@
             // 
             btOsish.BackColor = Color.LightSkyBlue;
             btOsish.Font = new Font("Trebuchet MS", 18F);
-            btOsish.Location = new Point(415, 107);
+            btOsish.Location = new Point(369, 107);
             btOsish.Name = "btOsish";
-            btOsish.Size = new Size(160, 49);
+            btOsish.Size = new Size(142, 49);
             btOsish.TabIndex = 163;
             btOsish.Text = "O'sish";
             btOsish.UseVisualStyleBackColor = false;
@@ -224,9 +250,9 @@
             // 
             btKamayish.BackColor = Color.LightSkyBlue;
             btKamayish.Font = new Font("Trebuchet MS", 18F);
-            btKamayish.Location = new Point(582, 107);
+            btKamayish.Location = new Point(517, 107);
             btKamayish.Name = "btKamayish";
-            btKamayish.Size = new Size(160, 49);
+            btKamayish.Size = new Size(142, 49);
             btKamayish.TabIndex = 162;
             btKamayish.Text = "Kamayish";
             btKamayish.UseVisualStyleBackColor = false;
@@ -236,9 +262,9 @@
             // 
             btQaytarish.BackColor = Color.LightSkyBlue;
             btQaytarish.Font = new Font("Trebuchet MS", 18F);
-            btQaytarish.Location = new Point(747, 107);
+            btQaytarish.Location = new Point(664, 107);
             btQaytarish.Name = "btQaytarish";
-            btQaytarish.Size = new Size(188, 49);
+            btQaytarish.Size = new Size(167, 49);
             btQaytarish.TabIndex = 161;
             btQaytarish.Text = "Qaytarish";
             btQaytarish.UseVisualStyleBackColor = false;
@@ -250,16 +276,16 @@
             cbSort.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
             cbSort.FormattingEnabled = true;
             cbSort.Items.AddRange(new object[] { "Id", "FIO", "Process type", "Information", "Process time" });
-            cbSort.Location = new Point(107, 106);
+            cbSort.Location = new Point(95, 106);
             cbSort.Name = "cbSort";
-            cbSort.Size = new Size(302, 49);
+            cbSort.Size = new Size(269, 49);
             cbSort.TabIndex = 160;
             // 
             // label10
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label10.Location = new Point(1215, 192);
+            label10.Location = new Point(1080, 192);
             label10.Name = "label10";
             label10.Size = new Size(165, 38);
             label10.TabIndex = 165;
@@ -269,9 +295,9 @@
             // 
             txSalesmanId.BackColor = Color.FromArgb(255, 255, 192);
             txSalesmanId.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txSalesmanId.Location = new Point(1452, 182);
+            txSalesmanId.Location = new Point(1291, 182);
             txSalesmanId.Name = "txSalesmanId";
-            txSalesmanId.Size = new Size(273, 48);
+            txSalesmanId.Size = new Size(243, 48);
             txSalesmanId.TabIndex = 164;
             // 
             // cbSearch
@@ -279,60 +305,63 @@
             cbSearch.DropDownStyle = ComboBoxStyle.DropDownList;
             cbSearch.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
             cbSearch.FormattingEnabled = true;
-            cbSearch.Items.AddRange(new object[] { "SotuvchiId", "FIO", "DoriId", "Nomi", "Soni", "SotilganVaqti", "Narxi" });
-            cbSearch.Location = new Point(1098, 91);
+            cbSearch.Items.AddRange(new object[] { "Id", "FIO", "ProcessType", "Information", "ProcessTime" });
+            cbSearch.Location = new Point(976, 91);
             cbSearch.Name = "cbSearch";
-            cbSearch.Size = new Size(216, 49);
+            cbSearch.Size = new Size(192, 49);
             cbSearch.TabIndex = 168;
             // 
             // btSearch
             // 
             btSearch.BackColor = Color.LightSkyBlue;
             btSearch.Font = new Font("Trebuchet MS", 18F);
-            btSearch.Location = new Point(1623, 95);
+            btSearch.Location = new Point(1443, 95);
             btSearch.Name = "btSearch";
-            btSearch.Size = new Size(160, 47);
+            btSearch.Size = new Size(142, 47);
             btSearch.TabIndex = 166;
             btSearch.Text = "Qidirish";
             btSearch.UseVisualStyleBackColor = false;
+            btSearch.Click += btSearch_Click;
             // 
             // txPillInformation
             // 
             txPillInformation.BackColor = Color.FromArgb(255, 255, 192);
             txPillInformation.Font = new Font("Calibri Light", 19.8000011F, FontStyle.Italic);
-            txPillInformation.Location = new Point(1335, 92);
+            txPillInformation.Location = new Point(1187, 92);
             txPillInformation.Name = "txPillInformation";
-            txPillInformation.Size = new Size(273, 48);
+            txPillInformation.Size = new Size(243, 48);
             txPillInformation.TabIndex = 167;
             // 
             // button2
             // 
             button2.BackColor = Color.Silver;
             button2.Font = new Font("Trebuchet MS", 18F);
-            button2.Location = new Point(1712, 36);
+            button2.Location = new Point(1522, 36);
             button2.Name = "button2";
-            button2.Size = new Size(184, 50);
+            button2.Size = new Size(164, 50);
             button2.TabIndex = 169;
             button2.Text = "Chiqish";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // btBack
             // 
             btBack.BackColor = Color.Silver;
             btBack.Font = new Font("Trebuchet MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btBack.Location = new Point(1617, 840);
+            btBack.Location = new Point(1437, 840);
             btBack.Name = "btBack";
-            btBack.Size = new Size(280, 53);
+            btBack.Size = new Size(249, 53);
             btBack.TabIndex = 170;
             btBack.Text = "Orqaga qaytish";
             btBack.UseVisualStyleBackColor = false;
+            btBack.Click += btBack_Click;
             // 
             // HelpReportsForm
             // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(1924, 930);
+            ClientSize = new Size(1710, 930);
             Controls.Add(btBack);
             Controls.Add(button2);
             Controls.Add(cbSearch);
@@ -349,6 +378,7 @@
             Controls.Add(lbFIO);
             Name = "HelpReportsForm";
             Text = "HelpReportsForm";
+            FormClosed += HelpReportsForm_FormClosed;
             Load += HelpReportsForm_Load;
             ((System.ComponentModel.ISupportInitialize)dGVEmploye).EndInit();
             ((System.ComponentModel.ISupportInitialize)allInformationsBindingSource).EndInit();
@@ -362,11 +392,11 @@
 
         private DataGridView dGVEmploye;
         private Panel panel2;
-        private Label label2;
+        private Label lbHour;
         private Label label3;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtDay1;
         private Label label1;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dtDay2;
         private Button button1;
         private Label label6;
         private Label lbFIO;
@@ -387,5 +417,7 @@
         private DataGridViewTextBoxColumn informationDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn processTimeDataGridViewTextBoxColumn;
         private BindingSource allInformationsBindingSource;
+        private Label lbMinut;
+        private Label label4;
     }
 }

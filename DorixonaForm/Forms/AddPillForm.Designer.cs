@@ -372,8 +372,10 @@
             Controls.Add(btExit);
             Controls.Add(btBack);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "AddPillForm";
             Text = "AddPillForm";
+            FormClosed += AddPillForm_FormClosed;
             Load += AddPillForm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

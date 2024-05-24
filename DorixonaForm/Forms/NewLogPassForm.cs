@@ -62,24 +62,22 @@ namespace DorixonaForm
                         {
                             int sanoq = 0;
                             StreamWriter streamWriter = new StreamWriter(functions.EmployesListPath);
-                            int i = 1;
                             foreach (Employe employe in functions.employeList)
                             {
                                 if (employe.PhoneNumber == txPhoneNumber.Text)
                                 {
                                     StreamWriter streamWriter1 = new StreamWriter(functions.AllInformationsPath);
                                     string Password = employe.Password;
-                                    int j = 1;
                                     sanoq = 1;
                                     employe.Password = txNewPassword.Text;
                                     foreach (AllInformations allInformations in functions.allInformations)
                                     {
-                                        streamWriter1.WriteLine((j++) + "," + allInformations.FIO + "," + allInformations.ProcessType + "," + allInformations.Information + "," + allInformations.ProcessTime);
+                                        streamWriter1.WriteLine(allInformations.Id + "," + allInformations.FIO + "," + allInformations.ProcessType + "," + allInformations.Information + "," + allInformations.ProcessTime);
                                     }
-                                    streamWriter1.WriteLine(j + "," + employe.FIO + "," + InformationType.ChangePassword + "," + $"Parol {Password} dan {employe.Password} ga o'zgartirildi," + DateTime.Now.ToString());
+                                    streamWriter1.WriteLine(employe.Id + "," + employe.FIO + "," + InformationType.ChangePassword + "," + $"Parol {Password} dan {employe.Password} ga o'zgartirildi," + DateTime.Now.ToString());
                                     streamWriter1.Close();
                                 }
-                                streamWriter.WriteLine((i++) + "," + employe.FIO + "," + employe.Login + "," + employe.Password + "," + employe.PhoneNumber + "," + employe.EmployeType);
+                                streamWriter.WriteLine(employe.Id + "," + employe.FIO + "," + employe.Login + "," + employe.Password + "," + employe.PhoneNumber + "," + employe.EmployeType);
                             }
                             streamWriter.Close();
                             if (sanoq == 1)

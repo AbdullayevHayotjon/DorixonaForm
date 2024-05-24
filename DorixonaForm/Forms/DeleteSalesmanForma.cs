@@ -29,8 +29,22 @@ namespace DorixonaForm.Forms
 
         private void btExit_Click(object sender, EventArgs e)
         {
+            StreamWriter streamWriter1 = new StreamWriter(functions.AllInformationsPath);
+            foreach (AllInformations allInformations in functions.allInformations)
+            {
+                streamWriter1.WriteLine(allInformations.Id + "," + allInformations.FIO + "," + allInformations.ProcessType + "," + allInformations.Information + "," + allInformations.ProcessTime);
+            }
+            foreach (Employe employe in functions.employeList)
+            {
+                if (NewLogin == employe.Login)
+                {
+                    streamWriter1.WriteLine(employe.Id + "," + employe.FIO + "," + InformationType.EmployeExit + "," + "Profildan chiqdi" + "," + DateTime.Now.ToString());
+                }
+            }
+            streamWriter1.Close();
             this.Hide();
             LoginForm loginForm = new LoginForm();
+            loginForm.StartPosition = FormStartPosition.CenterScreen;
             loginForm.Show();
 
         }
@@ -183,16 +197,15 @@ namespace DorixonaForm.Forms
                     streamWriter.Close();
                     MessageBox.Show($"Sotuvchi o'chirildi", "Ma'lumot", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     StreamWriter streamWriter1 = new StreamWriter(functions.AllInformationsPath);
-                    int k = 1;
                     foreach (AllInformations allInformations in functions.allInformations)
                     {
-                        streamWriter1.WriteLine((k++) + "," + allInformations.FIO + "," + allInformations.ProcessType + "," + allInformations.Information + "," + allInformations.ProcessTime);
+                        streamWriter1.WriteLine(allInformations.Id + "," + allInformations.FIO + "," + allInformations.ProcessType + "," + allInformations.Information + "," + allInformations.ProcessTime);
                     }
                     foreach (Employe employe in functions.employeList)
                     {
                         if (NewLogin == employe.Login)
                         {
-                            streamWriter1.WriteLine(k + "," + employe.FIO + "," + InformationType.DeteleSalesman + "," + $"|FIO: {txFio.Text}|Telefon raqami: {txTel.Text}|" + "," + DateTime.Now.ToString());
+                            streamWriter1.WriteLine(employe.Id + "," + employe.FIO + "," + InformationType.DeteleSalesman + "," + $"|FIO: {txFio.Text}|Telefon raqami: {txTel.Text}|" + "," + DateTime.Now.ToString());
                         }
                     }
                     streamWriter1.Close();

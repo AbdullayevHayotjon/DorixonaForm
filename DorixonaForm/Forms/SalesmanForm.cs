@@ -44,16 +44,15 @@ namespace DorixonaForm
         private void btExit_Click(object sender, EventArgs e)
         {
             StreamWriter streamWriter1 = new StreamWriter(functions.AllInformationsPath);
-            int j = 1;
             foreach (AllInformations allInformations in functions.allInformations)
             {
-                streamWriter1.WriteLine((j++) + "," + allInformations.FIO + "," + allInformations.ProcessType + "," + allInformations.Information + "," + allInformations.ProcessTime);
+                streamWriter1.WriteLine(allInformations.Id + "," + allInformations.FIO + "," + allInformations.ProcessType + "," + allInformations.Information + "," + allInformations.ProcessTime);
             }
             foreach (Employe employe in functions.employeList)
             {
                 if (NewLogin == employe.Login)
                 {
-                    streamWriter1.WriteLine(j + "," + employe.FIO + "," + InformationType.EmployeExit + "," + "Profildan chiqdi" + "," + DateTime.Now.ToString());
+                    streamWriter1.WriteLine(employe.Id + "," + employe.FIO + "," + InformationType.EmployeExit + "," + "Profildan chiqdi" + "," + DateTime.Now.ToString());
                 }
             }
             streamWriter1.Close();
@@ -107,11 +106,9 @@ namespace DorixonaForm
                 }
                 MessageBox.Show("Dorilar sotildi", "Muvaffaqqiyatli", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 StreamWriter stream = new StreamWriter(functions.AllInformationsPath);
-                int Id = 0;
                 foreach (AllInformations allInformations in functions.allInformations)
                 {
                     stream.WriteLine(allInformations.Id + "," + allInformations.FIO + "," + allInformations.ProcessType + "," + allInformations.Information + "," + allInformations.ProcessTime);
-                    Id = allInformations.Id;
                 }
                 StreamWriter streamWriter2 = new StreamWriter(functions.ReportSelesPillsPath);
                 foreach (ReportSelesPill reportSelesPill in functions.reportSelesPills)
@@ -120,7 +117,7 @@ namespace DorixonaForm
                 }
                 foreach (SellingPill sellingPill in functions.sellingPillesList)
                 {
-                    stream.WriteLine((Id + 1) + "," + FIO + "," + InformationType.SalesPill.ToString() + "," + $"Id={sellingPill.Id}|Nomi={sellingPill.Nomi}|Soni={sellingPill.Soni}|Narxi={sellingPill.Narxi}" + "," + DateTime.Now.ToString());
+                    stream.WriteLine(Id1 + "," + FIO + "," + InformationType.SalesPill.ToString() + "," + $"Id={sellingPill.Id}|Nomi={sellingPill.Nomi}|Soni={sellingPill.Soni}|Narxi={sellingPill.Narxi}" + "," + DateTime.Now.ToString());
                     streamWriter2.WriteLine(Id1 + "," + FIO + "," + sellingPill.Id + "," + sellingPill.Nomi + "," + sellingPill.Soni + "," + DateTime.Now.ToString() + "," + sellingPill.Narxi);
                 }
                 streamWriter2.Close();

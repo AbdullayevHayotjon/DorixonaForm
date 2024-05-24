@@ -52,19 +52,17 @@ namespace DorixonaForm.Forms
                                     streamWriter.WriteLine((Id + 1) + "," + txAddPillName.Text + "," + txAddPillCount.Text + "," + txLifeTime.Text + "," + txAddPillPrice.Text + "," + DateTime.Now.ToString());
                                 }
                             }
-                            int Id1 = 0;
                             using (StreamWriter streamWriter1 = new StreamWriter(functions.AllInformationsPath))
                             {
                                 foreach (AllInformations allInformations in functions.allInformations)
                                 {
                                     streamWriter1.WriteLine(allInformations.Id + "," + allInformations.FIO + "," + allInformations.ProcessType + "," + allInformations.Information + "," + allInformations.ProcessTime);
-                                    Id1 = Id;
                                 }
                                 foreach (Employe employe in functions.employeList)
                                 {
                                     if (NewLogin == employe.Login)
                                     {
-                                        streamWriter1.WriteLine((Id1 + 1) + "," + employe.FIO + "," + InformationType.AddPill + "," + $"Nomi={txAddPillName.Text}|Soni={txAddPillCount.Text}|Muddati={txLifeTime.Text}|Narxi={txAddPillPrice.Text}" + "," + DateTime.Now.ToString());
+                                        streamWriter1.WriteLine(employe.Id + "," + employe.FIO + "," + InformationType.AddPill + "," + $"Nomi={txAddPillName.Text}|Soni={txAddPillCount.Text}|Muddati={txLifeTime.Text}|Narxi={txAddPillPrice.Text}" + "," + DateTime.Now.ToString());
                                     }
                                 }
                             }
@@ -363,10 +361,28 @@ namespace DorixonaForm.Forms
 
         private void btExit_Click(object sender, EventArgs e)
         {
+            StreamWriter streamWriter1 = new StreamWriter(functions.AllInformationsPath);
+            foreach (AllInformations allInformations in functions.allInformations)
+            {
+                streamWriter1.WriteLine(allInformations.Id + "," + allInformations.FIO + "," + allInformations.ProcessType + "," + allInformations.Information + "," + allInformations.ProcessTime);
+            }
+            foreach (Employe employe in functions.employeList)
+            {
+                if (NewLogin == employe.Login)
+                {
+                    streamWriter1.WriteLine(employe.Id + "," + employe.FIO + "," + InformationType.EmployeExit + "," + "Profildan chiqdi" + "," + DateTime.Now.ToString());
+                }
+            }
+            streamWriter1.Close();
             this.Hide();
             LoginForm loginForm = new LoginForm();
             loginForm.StartPosition = FormStartPosition.CenterScreen;
             loginForm.Show();
+        }
+
+        private void AddPillForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
         }
     }
 }

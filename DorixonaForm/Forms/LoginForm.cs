@@ -23,12 +23,11 @@ namespace DorixonaForm
                 {
                     sanoq = 1;
                     StreamWriter streamWriter1 = new StreamWriter(functions.AllInformationsPath);
-                    int j = 1;
                     foreach (AllInformations allInformations in functions.allInformations)
                     {
-                        streamWriter1.WriteLine((j++) + "," + allInformations.FIO + "," + allInformations.ProcessType + "," + allInformations.Information + "," + allInformations.ProcessTime);
+                        streamWriter1.WriteLine(allInformations.Id + "," + allInformations.FIO + "," + allInformations.ProcessType + "," + allInformations.Information + "," + allInformations.ProcessTime);
                     }
-                    streamWriter1.WriteLine(j + "," + employe.FIO + "," + InformationType.EmployeEnter + "," + "Profilga kirdi" + "," + DateTime.Now.ToString());
+                    streamWriter1.WriteLine(employe.Id + "," + employe.FIO + "," + InformationType.EmployeEnter + "," + "Profilga kirdi" + "," + DateTime.Now.ToString());
                     streamWriter1.Close();
                     if (employe.EmployeType == EmployeType.Manager.ToString())
                     {

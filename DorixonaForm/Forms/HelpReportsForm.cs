@@ -178,5 +178,112 @@ namespace DorixonaForm.Forms
         {
             dGVEmploye.DataSource = functions.allInformations;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            StreamWriter streamWriter1 = new StreamWriter(functions.AllInformationsPath);
+            foreach (AllInformations allInformations in functions.allInformations)
+            {
+                streamWriter1.WriteLine(allInformations.Id + "," + allInformations.FIO + "," + allInformations.ProcessType + "," + allInformations.Information + "," + allInformations.ProcessTime);
+            }
+            foreach (Employe employe in functions.employeList)
+            {
+                if (NewLogin == employe.Login)
+                {
+                    streamWriter1.WriteLine(employe.Id + "," + employe.FIO + "," + InformationType.EmployeExit + "," + "Profildan chiqdi" + "," + DateTime.Now.ToString());
+                }
+            }
+            streamWriter1.Close();
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.StartPosition = FormStartPosition.CenterScreen;
+            loginForm.Show();
+        }
+
+        private void btSearch_Click(object sender, EventArgs e)
+        {
+            if (cbSearch.Text == "Id")
+            {
+                List<AllInformations> allInformations = new List<AllInformations>();
+                foreach (AllInformations allInformation in functions.allInformations)
+                {
+                    if (allInformation.Id.ToString().Contains(txPillInformation.Text))
+                    {
+                        allInformations.Add(new AllInformations() { Id = allInformation.Id, FIO = allInformation.FIO, ProcessType = allInformation.ProcessType, Information = allInformation.Information, ProcessTime = allInformation.ProcessTime });
+                    }
+                }
+                dGVEmploye.DataSource = allInformations;
+            }
+            else if (cbSearch.Text == "FIO")
+            {
+                List<AllInformations> allInformations = new List<AllInformations>();
+                foreach (AllInformations allInformation in functions.allInformations)
+                {
+                    if (allInformation.FIO.ToLower().Contains(txPillInformation.Text.ToLower()))
+                    {
+                        allInformations.Add(new AllInformations() { Id = allInformation.Id, FIO = allInformation.FIO, ProcessType = allInformation.ProcessType, Information = allInformation.Information, ProcessTime = allInformation.ProcessTime });
+                    }
+                }
+                dGVEmploye.DataSource = allInformations;
+            }
+            else if (cbSearch.Text == "ProcessType")
+            {
+                List<AllInformations> allInformations = new List<AllInformations>();
+                foreach (AllInformations allInformation in functions.allInformations)
+                {
+                    if (allInformation.ProcessType.ToLower().Contains(txPillInformation.Text.ToLower()))
+                    {
+                        allInformations.Add(new AllInformations() { Id = allInformation.Id, FIO = allInformation.FIO, ProcessType = allInformation.ProcessType, Information = allInformation.Information, ProcessTime = allInformation.ProcessTime });
+                    }
+                }
+                dGVEmploye.DataSource = allInformations;
+            }
+            else if (cbSearch.Text == "Information")
+            {
+                List<AllInformations> allInformations = new List<AllInformations>();
+                foreach (AllInformations allInformation in functions.allInformations)
+                {
+                    if (allInformation.Information.ToLower().Contains(txPillInformation.Text.ToLower()))
+                    {
+                        allInformations.Add(new AllInformations() { Id = allInformation.Id, FIO = allInformation.FIO, ProcessType = allInformation.ProcessType, Information = allInformation.Information, ProcessTime = allInformation.ProcessTime });
+                    }
+                }
+                dGVEmploye.DataSource = allInformations;
+            }
+            else if (cbSearch.Text == "ProcessTime")
+            {
+                List<AllInformations> allInformations = new List<AllInformations>();
+                foreach (AllInformations allInformation in functions.allInformations)
+                {
+                    if (allInformation.ProcessTime.ToLower().Contains(txPillInformation.Text.ToLower()))
+                    {
+                        allInformations.Add(new AllInformations() { Id = allInformation.Id, FIO = allInformation.FIO, ProcessType = allInformation.ProcessType, Information = allInformation.Information, ProcessTime = allInformation.ProcessTime });
+                    }
+                }
+                dGVEmploye.DataSource = allInformations;
+            }
+            else
+            {
+                MessageBox.Show("Bo'limdan birini tanlang", "Ma'lumot", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerForm managerForm = new ManagerForm(NewLogin);
+            managerForm.StartPosition = FormStartPosition.CenterScreen;
+            managerForm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void HelpReportsForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
     }
 }
