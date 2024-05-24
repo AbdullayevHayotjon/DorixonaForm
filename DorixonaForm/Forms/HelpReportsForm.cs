@@ -278,7 +278,94 @@ namespace DorixonaForm.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            int Hours = 0;
+            int Minut = 0;
+            DateTime Kun1 = DateTime.Parse(dtDay1.Text).Date;
+            DateTime Kun2 = DateTime.Parse(dtDay2.Text).Date.AddHours(23).AddMinutes(59).AddSeconds(59);
+            List<AllInformations> allInformations1 = new List<AllInformations>();
+            if (txSalesmanId.Text.Length != 0)
+            {
+                if (functions.CheckNumber(txSalesmanId.Text))
+                {
+                    int sanoq = 0;
+                    foreach (AllInformations allInformations in functions.allInformations)
+                    {
+                        if (allInformations.Id == int.Parse(txSalesmanId.Text))
+                        {
+                            sanoq = 1;
+                        }
+                    }
+                    if (sanoq == 1)
+                    {
+                        if (Kun2 >= Kun1)
+                        {
+                            foreach (AllInformations allInformations in functions.allInformations)
+                            {
+                                if (allInformations.Id == int.Parse(txSalesmanId.Text) && (allInformations.ProcessType == InformationType.EmployeEnter.ToString() || allInformations.ProcessType == InformationType.EmployeExit.ToString()))
+                                {
+                                    if (Kun1 <= DateTime.Parse(allInformations.ProcessTime) && DateTime.Parse(allInformations.ProcessTime) <= Kun2)
+                                    {
+                                        allInformations1.Add(new AllInformations()
+                                        {
+                                            Id = allInformations.Id,
+                                            FIO = allInformations.FIO,
+                                            ProcessType = allInformations.ProcessType,
+                                            Information = allInformations.Information,
+                                            ProcessTime = allInformations.ProcessTime
+                                        });
+                                    }
+                                }
+                            }
+                            if (allInformations1.Count() % 2 == 0)
+                            {
+                                for (int i = 0; i < allInformations1.Count() - 1; i += 2)
+                                {
+                                    Hours += (DateTime.Parse(allInformations1[i + 1].ProcessTime) - DateTime.Parse(allInformations1[i].ProcessTime)).Hours;
+                                    Minut += (DateTime.Parse(allInformations1[i + 1].ProcessTime) - DateTime.Parse(allInformations1[i].ProcessTime)).Minutes;
+                                }
+                            }
+                            else
+                            {
+                                for (int i = 0; i < allInformations1.Count() - 2; i += 2)
+                                {
+                                    Hours += (DateTime.Parse(allInformations1[i + 1].ProcessTime) - DateTime.Parse(allInformations1[i].ProcessTime)).Hours;
+                                    Minut += (DateTime.Parse(allInformations1[i + 1].ProcessTime) - DateTime.Parse(allInformations1[i].ProcessTime)).Minutes;
+                                }
+                                Hours += (DateTime.Now - DateTime.Parse(allInformations1[allInformations1.Count() - 1].ProcessTime)).Hours;
+                                Minut += (DateTime.Now - DateTime.Parse(allInformations1[allInformations1.Count() - 1].ProcessTime)).Minutes;
+                            }
+                            if (Minut >= 60)
+                            {
+                                lbHour.Text = (Hours + Minut / 60).ToString();
+                                lbMinut.Text = (Minut % 60).ToString();
+                            }
+                            else
+                            {
+                                lbHour.Text = Hours.ToString();
+                                lbMinut.Text = Minut.ToString();
+                            }
+                            dGVEmploye.DataSource = allInformations1;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Sanalar bunday bo'lishi mumkin emas", "Xatolik!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bunday id mavjud emas", "Xatolik", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Sotuvchi id si bunday bo'lishi mumkin emas", "Xatolik", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Sotuvchi id sini kiritmadingiz", "Ma'lumot", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
 
         private void HelpReportsForm_FormClosed(object sender, FormClosedEventArgs e)
