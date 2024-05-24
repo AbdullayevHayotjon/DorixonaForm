@@ -3,7 +3,7 @@
 4,Hafizov Sardorbek,2,Izofluran,5,21.05.2024 20:30:51,32500
 4,Hafizov Sardorbek,7,Kukumazim,15,22.05.2024 20:30:51,45000
 4,Hafizov Sardorbek,20,Amikatsin,10,23.05.2024 20:30:51,360000
-4,Hafizov Sardorbek,9,Xolosas,20,24.05.2024 20:30:51,810000
+4,Hafizov Sardorbek,9,Xolosas,20,22.04.2024 20:30:51,810000
 2,Muqimov Quvonch,3,Tramadol,16,10.05.2024 20:53:08,36800
 2,Muqimov Quvonch,15,Ofloksatsin,5,15.05.2024 20:53:08,265000
 2,Muqimov Quvonch,23,Kalsiy xlorid,8,17.05.2024 20:53:08,296000

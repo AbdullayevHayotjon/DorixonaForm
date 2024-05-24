@@ -70,26 +70,28 @@ namespace DorixonaForm.Forms
 
             List<SalesmanReport> pillManyList = new List<SalesmanReport>();
             List<SalesmanReport> pillManyList2 = new List<SalesmanReport>();
+            DateTime dateTimeOld = DateTime.Now.AddMonths(-1);
+            DateTime dateTimeNow = DateTime.Now;
             foreach (ReportSelesPill reportSelesPillItem in functions.reportSelesPills)
             {
+                if (dateTimeOld <= DateTime.Parse(reportSelesPillItem.SotilganVaqti) && DateTime.Parse(reportSelesPillItem.SotilganVaqti) <= dateTimeNow)
+                {
+                    pillManyList.Add(new SalesmanReport() { Id = reportSelesPillItem.DoriId, Nomi = reportSelesPillItem.Nomi, Soni = reportSelesPillItem.Soni, SotilganVaqti = reportSelesPillItem.SotilganVaqti, Narxi = reportSelesPillItem.Narxi });
+                }
 
-                pillManyList.Add(new SalesmanReport() { Id = reportSelesPillItem.DoriId, Nomi = reportSelesPillItem.Nomi, Soni = reportSelesPillItem.Soni, SotilganVaqti = reportSelesPillItem.SotilganVaqti, Narxi = reportSelesPillItem.Narxi });
             }
             List<SalesmanReport> consolidatedList = ConsolidateSalesmanReports(pillManyList);
             consolidatedList.Sort((x, y) => y.Soni.CompareTo(x.Soni));
-            DateTime dateTimeOld = DateTime.Now.AddMonths(-1);
-            DateTime dateTimeNow = DateTime.Now;
+           
             int sanoq = 0;
             foreach (SalesmanReport consolidatedReport in consolidatedList)
             {
-                if (dateTimeOld <= DateTime.Parse(consolidatedReport.SotilganVaqti) && DateTime.Parse(consolidatedReport.SotilganVaqti) <= dateTimeNow)
-                {
                     if (sanoq < 5)
                     {
                         pillManyList2.Add(new SalesmanReport() { Id = consolidatedReport.Id, Nomi = consolidatedReport.Nomi, Soni = consolidatedReport.Soni, SotilganVaqti = consolidatedReport.SotilganVaqti, Narxi = consolidatedReport.Narxi });
                         sanoq++;
                     }
-                }
+                
             }
             dgwMany.DataSource = pillManyList2;
 
